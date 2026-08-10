@@ -1,0 +1,197 @@
+version: "3.9"
+
+# ============================================================
+# LuxRay — Docker Compose
+# Levanta: 3 PostgreSQL + Eureka + Gateway + 3 microservicios
+# ============================================================
+
+services:
+
+  # ───── Bases de datos PostgreSQL ─────
+  auth-db:
+    image: postgres:16
+    container_name: luxray-auth-db
+    environment:
+      POSTGRES_DB: auth_db
+      POSTGRES_USER: luxray
+      POSTGRES_PASSWORD: luxray_secret_2026
+    ports:
+      - "5433:5432"
+    volumes:
+      - auth-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U luxray"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks: [luxnet]
+
+  cursos-db:
+    image: postgres:16
+    container_name: luxray-cursos-db
+    environment:
+      POSTGRES_DB: cursos_db
+      POSTGRES_USER: luxray
+      POSTGRES_PASSWORD: luxray_secret_2026
+    volumes:
+      - cursos-db-volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U luxray"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks: [luxnet]
+
+  analytics-db:
+    image: postgres:16
+    container_name: luxray-analytics-db
+    environment:
+      POSTGRES_DB: analytics_db
+      POSTGRES_USER: luxray
+      POSTGRES_PASSWORD: luxray_secret_2026
+    ports:
+      - "5434:5432"
+    volumes:
+      - analytics-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U luxray"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks: [luxnet]
+
+  # ───── Service Discovery (Eureka) ─────
+  discovery-service:
+    build:
+      context: ./backend
+      dockerfile: ./discovery-service/Dockerfile
+    container_name: luxray-discovery
+    ports:
+      - "8761:8761"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8761/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    networks: [luxnet]
+
+  # ───── API Gateway ─────
+  api-gateway:
+    build:
+      context: ./backend
+      dockerfile: ./api-gateway/Dockerfile
+    container_name: luxray-gateway
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    networks: [luxnet]
+
+  # ───── Auth microservice ─────
+  auth-service:
+    build:
+      context: ./backend
+      dockerfile: ./auth-service/Dockerfile
+    container_name: luxray-auth
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://auth-db:5432/auth_db
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      auth-db:
+        condition: service_healthy
+    ports:
+      - "8081:8081"
+    networks: [luxnet]
+
+  # ───── Cursos microservice ─────
+  cursos-service:
+    build:
+      context: ./backend
+      dockerfile: ./cursos-service/Dockerfile
+    container_name: luxray-cursos
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://cursos-db:5432/cursos_db
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      cursos-db:
+        condition: service_healthy
+    ports:
+      - "8082:8082"
+    networks: [luxnet]
+
+  # ───── Analytics microservice ─────
+  analytics-service:
+    build:
+      context: ./backend
+      dockerfile: ./analytics-service/Dockerfile
+    container_name: luxray-analytics
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://analytics-db:5432/analytics_db
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      analytics-db:
+        condition: service_healthy
+    ports:
+      - "8083:8083"
+    networks: [luxnet]
+
+  # ───── Search microservice ─────
+  search-service:
+    build:
+      context: ./backend
+      dockerfile: ./search-service/Dockerfile
+    container_name: luxray-search
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+    depends_on:
+      discovery-service:
+        condition: service_healthy
+      elasticsearch:
+        condition: service_healthy
+    ports:
+      - "8084:8084"
+    networks: [luxnet]
+
+  # ───── Elasticsearch ─────
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
+    container_name: luxray-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - cluster.name=luxray-cluster
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - luxnet
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9200/_cluster/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+volumes:
+  auth-db-volume:
+  cursos-db-volume:
+  analytics-db-volume:
+  elasticsearch_data:
+
+networks:
+  luxnet:
+    driver: bridge
