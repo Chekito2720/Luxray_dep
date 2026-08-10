@@ -3,6 +3,16 @@
 
 echo "[start-all] Iniciando servicios LuxRay..."
 
+echo "=== ENV DEBUG ==="
+echo "PGHOST=$PGHOST"
+echo "PGPORT=$PGPORT"
+echo "PGUSER=$PGUSER"
+echo "PGPASSWORD=${PGPASSWORD:0:4}****"
+echo "EUREKA_URL=$EUREKA_URL"
+echo "ELASTICSEARCH_URL=$ELASTICSEARCH_URL"
+echo "JWT_SECRET=${JWT_SECRET:0:4}****"
+echo "==================="
+
 # Discovery primero (necesario para Eureka)
 java -XX:MaxRAMPercentage=12 -jar discovery-service.jar &
 sleep 8
