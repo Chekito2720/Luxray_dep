@@ -1,0 +1,21 @@
+# .dockerignore - Excluye archivos innecesarios del build context
+target/
+**/target/
+*.jar
+*.war
+*.class
+.mvn/
+.git/
+.gitignore
+README.md
+*.bat
+logs/
+**/logs/
+*.log
+*.tmp
+.idea/
+.vscode/
+*.iml
+node_modules/
+frontend-web/
+luxraywaer/

@@ -85,3 +85,13 @@ This generated password is for development use only. Your security configuration
 2026-08-10T11:17:18.032-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-08-10T11:22:18.037-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-08-10T11:27:18.043-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:32:18.049-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:37:18.064-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:42:18.074-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:47:18.086-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:52:18.101-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:57:18.113-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:02:18.121-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:07:18.127-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:12:18.139-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:17:18.144-06:00  INFO 14524 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

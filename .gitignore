@@ -1,0 +1,25 @@
+# Frontend (se mantiene en Vercel)
+frontend-web/
+luxraywaer/
+
+# Scripts locales (.bat)
+*.bat
+
+# Logs
+backend/logs/
+logs/
+
+# Qodo / configuración del IDE
+.qodo/
+.qodo/**
+
+# Archivos temporales y del sistema
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Build artifacts locales (se generan en el contenedor Docker)
+backend/**/target/
+target/

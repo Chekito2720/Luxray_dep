@@ -78,3 +78,13 @@ This generated password is for development use only. Your security configuration
 2026-08-10T11:17:32.518-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-08-10T11:22:32.535-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2026-08-10T11:27:32.544-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:32:32.552-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:37:32.557-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:42:32.572-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:47:32.574-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:52:32.584-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T11:57:32.590-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:02:32.599-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:07:32.615-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:12:32.620-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-10T12:17:32.634-06:00  INFO 6324 --- [analytics-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
