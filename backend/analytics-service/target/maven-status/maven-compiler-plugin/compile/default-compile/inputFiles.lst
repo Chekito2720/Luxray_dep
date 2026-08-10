@@ -1,0 +1,14 @@
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\AnalyticsServiceApplication.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\config\AnalyticsSecurityConfig.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\config\OpenApiConfig.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\config\WebClientConfig.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\controller\AnalyticsController.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\dto\CursoAdminDto.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\dto\CursoInscripcionDto.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\dto\DashboardResponse.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\dto\KpiDto.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\dto\TopCursoDto.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\dto\UsuarioAdminDto.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\model\AnalyticsSnapshot.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\repository\AnalyticsRepository.java
+C:\DDI\luxray\backend\analytics-service\src\main\java\com\luxray\analytics\service\DashboardService.java

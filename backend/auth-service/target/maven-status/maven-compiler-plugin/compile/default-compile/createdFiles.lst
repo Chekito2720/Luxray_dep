@@ -1,0 +1,12 @@
+com\luxray\auth\model\Usuario.class
+com\luxray\auth\dto\UsuarioRequest.class
+com\luxray\auth\repository\UsuarioRepository.class
+com\luxray\auth\dto\AuthResponse.class
+com\luxray\auth\dto\RegisterRequest.class
+com\luxray\auth\dto\LoginRequest.class
+com\luxray\auth\service\AuthService.class
+com\luxray\auth\controller\AuthController.class
+com\luxray\auth\config\AuthSecurityConfig.class
+com\luxray\auth\config\OpenApiConfig.class
+com\luxray\auth\AuthServiceApplication.class
+com\luxray\auth\dto\UsuarioResponse.class

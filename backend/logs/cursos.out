@@ -1,0 +1,106 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2026-08-03T22:25:56.089-06:00  INFO 16784 --- [cursos-service] [           main] c.l.cursos.CursosServiceApplication      : Starting CursosServiceApplication v1.0.0-SNAPSHOT using Java 22.0.2 with PID 16784 (C:\DDI\luxray\backend\cursos-service\target\cursos-service-1.0.0-SNAPSHOT.jar started by sergi in C:\DDI\luxray\backend)
+2026-08-03T22:25:56.099-06:00  INFO 16784 --- [cursos-service] [           main] c.l.cursos.CursosServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T22:26:01.154-06:00  INFO 16784 --- [cursos-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-03T22:26:01.846-06:00  INFO 16784 --- [cursos-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 623 ms. Found 4 JPA repository interfaces.
+2026-08-03T22:26:03.225-06:00  INFO 16784 --- [cursos-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f36f75de-6afc-373a-af8b-d2449db758ab
+2026-08-03T22:26:07.834-06:00  INFO 16784 --- [cursos-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-08-03T22:26:07.920-06:00  INFO 16784 --- [cursos-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-03T22:26:07.923-06:00  INFO 16784 --- [cursos-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2026-08-03T22:26:08.173-06:00  INFO 16784 --- [cursos-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-03T22:26:08.200-06:00  INFO 16784 --- [cursos-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11804 ms
+2026-08-03T22:26:11.816-06:00  INFO 16784 --- [cursos-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-03T22:26:12.868-06:00  INFO 16784 --- [cursos-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f894a6f
+2026-08-03T22:26:12.876-06:00  INFO 16784 --- [cursos-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-03T22:26:13.015-06:00  INFO 16784 --- [cursos-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/cursos_db (PostgreSQL 16.14)
+2026-08-03T22:26:13.428-06:00  INFO 16784 --- [cursos-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.206s)
+2026-08-03T22:26:13.517-06:00  INFO 16784 --- [cursos-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
+2026-08-03T22:26:13.536-06:00  INFO 16784 --- [cursos-service] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-08-03T22:26:14.000-06:00  INFO 16784 --- [cursos-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-03T22:26:14.260-06:00  INFO 16784 --- [cursos-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-08-03T22:26:14.419-06:00  INFO 16784 --- [cursos-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-03T22:26:15.451-06:00  INFO 16784 --- [cursos-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-03T22:26:15.615-06:00  WARN 16784 --- [cursos-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-03T22:26:15.652-06:00  INFO 16784 --- [cursos-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.14
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-03T22:26:17.713-06:00  INFO 16784 --- [cursos-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-03T22:26:17.809-06:00  INFO 16784 --- [cursos-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-03T22:26:18.545-06:00  INFO 16784 --- [cursos-service] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-08-03T22:26:20.413-06:00  WARN 16784 --- [cursos-service] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4c7dee5b-0384-4c82-9764-243bf084ec80
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-08-03T22:26:20.454-06:00  INFO 16784 --- [cursos-service] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-08-03T22:26:21.381-06:00  INFO 16784 --- [cursos-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-08-03T22:26:22.789-06:00  INFO 16784 --- [cursos-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-08-03T22:26:22.967-06:00  WARN 16784 --- [cursos-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-08-03T22:26:23.157-06:00  INFO 16784 --- [cursos-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-08-03T22:26:23.213-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-08-03T22:26:23.225-06:00  INFO 16784 --- [cursos-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T22:26:23.243-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-08-03T22:26:23.244-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-08-03T22:26:23.245-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-08-03T22:26:23.245-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-08-03T22:26:23.246-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-08-03T22:26:23.247-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-08-03T22:26:23.247-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-08-03T22:26:23.902-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-08-03T22:26:23.904-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-08-03T22:26:23.907-06:00  INFO 16784 --- [cursos-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-08-03T22:26:23.913-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1785817583912 with initial instances count: 0
+2026-08-03T22:26:23.924-06:00  INFO 16784 --- [cursos-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CURSOS-SERVICE with eureka with status UP
+2026-08-03T22:26:23.926-06:00  INFO 16784 --- [cursos-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1785817583926, current=UP, previous=STARTING]
+2026-08-03T22:26:23.930-06:00  INFO 16784 --- [cursos-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CURSOS-SERVICE/PC-Sergio.mshome.net:cursos-service:8082: registering service...
+2026-08-03T22:26:23.978-06:00  INFO 16784 --- [cursos-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-08-03T22:26:23.980-06:00  INFO 16784 --- [cursos-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-08-03T22:26:24.014-06:00  INFO 16784 --- [cursos-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CURSOS-SERVICE/PC-Sergio.mshome.net:cursos-service:8082 - registration status: 204
+2026-08-03T22:26:24.023-06:00  INFO 16784 --- [cursos-service] [           main] c.l.cursos.CursosServiceApplication      : Started CursosServiceApplication in 29.551 seconds (process running for 31.688)
+2026-08-03T22:26:53.915-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-08-03T22:26:53.926-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-08-03T22:26:53.927-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-08-03T22:26:53.927-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-08-03T22:26:53.928-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-08-03T22:26:53.928-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-08-03T22:26:53.928-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-08-03T22:26:53.957-06:00  INFO 16784 --- [cursos-service] [reshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-08-03T22:31:23.258-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T22:36:23.263-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T22:41:23.267-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T22:46:23.277-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T22:51:23.288-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T22:56:23.296-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:01:23.313-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:06:23.323-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:11:23.341-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:16:23.352-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:21:23.363-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:26:23.375-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:31:23.386-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:36:23.396-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:41:23.581-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:46:23.586-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:51:23.592-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T23:56:23.599-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-04T00:01:23.607-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-04T00:06:23.621-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-04T00:11:23.631-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-04T00:16:23.634-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-04T00:21:23.645-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-04T00:26:23.654-06:00  INFO 16784 --- [cursos-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

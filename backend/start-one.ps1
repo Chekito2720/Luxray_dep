@@ -1,0 +1,3 @@
+param([string]$Service, [string]$Label)
+Set-Location C:\DDI\luxray\backend
+Start-Process -FilePath "java" -ArgumentList "-jar","$Service\target\$Label" -WorkingDirectory (Get-Location).Path -RedirectStandardOutput "logs\$($Service -replace 'api-gateway','gateway' -replace 'discovery-service','discovery' -replace 'auth-service','auth' -replace 'cursos-service','cursos' -replace 'analytics-service','analytics').out" -RedirectStandardError "logs\$($Service -replace 'api-gateway','gateway' -replace 'discovery-service','discovery' -replace 'auth-service','auth' -replace 'cursos-service','cursos' -replace 'analytics-service','analytics').err" -WindowStyle Hidden

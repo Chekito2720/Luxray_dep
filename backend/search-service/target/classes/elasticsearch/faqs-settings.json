@@ -1,0 +1,30 @@
+{
+  "analysis": {
+    "analyzer": {
+      "spanish": {
+        "type": "custom",
+        "tokenizer": "standard",
+        "filter": [
+          "lowercase",
+          "spanish_stop",
+          "spanish_stemmer",
+          "asciifolding"
+        ]
+      }
+    },
+    "filter": {
+      "spanish_stop": {
+        "type": "stop",
+        "stopwords": "_spanish_"
+      },
+      "spanish_stemmer": {
+        "type": "stemmer",
+        "language": "spanish"
+      }
+    }
+  },
+  "index": {
+    "number_of_shards": 1,
+    "number_of_replicas": 0
+  }
+}

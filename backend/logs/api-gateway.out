@@ -1,0 +1,54 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.1)
+
+2026-08-03T18:36:15.845-06:00  INFO 19592 --- [api-gateway] [           main] c.luxray.gateway.ApiGatewayApplication   : Starting ApiGatewayApplication v1.0.0-SNAPSHOT using Java 22.0.2 with PID 19592 (C:\DDI\luxray\backend\api-gateway\target\api-gateway-run.jar started by sergi in C:\DDI\luxray)
+2026-08-03T18:36:15.853-06:00  INFO 19592 --- [api-gateway] [           main] c.luxray.gateway.ApiGatewayApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-08-03T18:36:19.434-06:00  INFO 19592 --- [api-gateway] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-03T18:36:19.446-06:00  INFO 19592 --- [api-gateway] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-08-03T18:36:19.505-06:00  INFO 19592 --- [api-gateway] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2026-08-03T18:36:20.755-06:00  INFO 19592 --- [api-gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=47d09783-e3a4-30de-aafe-35159838c5cf
+2026-08-03T18:36:24.953-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-08-03T18:36:24.954-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-08-03T18:36:24.955-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-08-03T18:36:24.956-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-08-03T18:36:24.957-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-08-03T18:36:24.957-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-08-03T18:36:24.959-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-08-03T18:36:24.960-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-08-03T18:36:24.962-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-08-03T18:36:24.962-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-08-03T18:36:24.963-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-08-03T18:36:24.964-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-08-03T18:36:24.965-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-08-03T18:36:24.966-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-08-03T18:36:25.650-06:00  INFO 19592 --- [api-gateway] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-08-03T18:36:26.573-06:00  INFO 19592 --- [api-gateway] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-08-03T18:36:26.664-06:00  WARN 19592 --- [api-gateway] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-08-03T18:36:26.832-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-08-03T18:36:26.894-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-08-03T18:36:26.907-06:00  INFO 19592 --- [api-gateway] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-08-03T18:36:26.942-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-08-03T18:36:26.944-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-08-03T18:36:26.945-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-08-03T18:36:26.945-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-08-03T18:36:26.946-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-08-03T18:36:26.947-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-08-03T18:36:26.948-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-08-03T18:36:27.979-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-08-03T18:36:27.989-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-08-03T18:36:27.994-06:00  INFO 19592 --- [api-gateway] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-08-03T18:36:27.999-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1785803787997 with initial instances count: 4
+2026-08-03T18:36:28.007-06:00  INFO 19592 --- [api-gateway] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2026-08-03T18:36:28.008-06:00  INFO 19592 --- [api-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1785803788008, current=UP, previous=STARTING]
+2026-08-03T18:36:28.013-06:00  INFO 19592 --- [api-gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/PC-Sergio.mshome.net:api-gateway:8080: registering service...
+2026-08-03T18:36:28.130-06:00  INFO 19592 --- [api-gateway] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/PC-Sergio.mshome.net:api-gateway:8080 - registration status: 204
+2026-08-03T18:36:28.578-06:00  INFO 19592 --- [api-gateway] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080 (http)
+2026-08-03T18:36:28.583-06:00  INFO 19592 --- [api-gateway] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2026-08-03T18:36:28.669-06:00  INFO 19592 --- [api-gateway] [           main] c.luxray.gateway.ApiGatewayApplication   : Started ApiGatewayApplication in 14.251 seconds (process running for 15.799)

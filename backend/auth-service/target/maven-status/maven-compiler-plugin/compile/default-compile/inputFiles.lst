@@ -1,0 +1,12 @@
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\AuthServiceApplication.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\config\AuthSecurityConfig.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\config\OpenApiConfig.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\controller\AuthController.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\dto\AuthResponse.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\dto\LoginRequest.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\dto\RegisterRequest.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\dto\UsuarioRequest.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\dto\UsuarioResponse.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\model\Usuario.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\repository\UsuarioRepository.java
+C:\DDI\luxray\backend\auth-service\src\main\java\com\luxray\auth\service\AuthService.java
