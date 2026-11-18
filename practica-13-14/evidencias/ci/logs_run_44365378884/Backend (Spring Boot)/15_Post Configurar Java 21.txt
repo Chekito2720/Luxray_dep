@@ -1,0 +1,8 @@
+﻿2026-11-18T18:04:06.4995901Z Post job cleanup.
+2026-11-18T18:04:06.6369177Z (node:2938) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T18:04:06.6370793Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T18:04:06.6644533Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Luxray_dep/Luxray_dep --files-from manifest.txt --use-compress-program zstdmt
+2026-11-18T18:04:07.2727966Z (node:2938) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T18:04:08.2633448Z Sent 61276160 of 125269821 (48.9%), 58.5 MBs/sec
+2026-11-18T18:04:09.1714253Z Sent 125269821 of 125269821 (100.0%), 62.6 MBs/sec
+2026-11-18T18:04:09.3136015Z Cache saved with the key: setup-java-Linux-x64-maven-716faa0275000aff9f6e3a4030be4b02263774503311da8a4e326c1d851d8e59

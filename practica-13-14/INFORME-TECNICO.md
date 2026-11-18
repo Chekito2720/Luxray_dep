@@ -97,7 +97,10 @@ El cliente bajo prueba se apunta a un **`HttpServer` real** en localhost que imp
 | 1 | [`44239354054`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44239354054) | ❌ failure | Fallo **real** del job backend (30 s) |
 | 2 | [`44241518237`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44241518237) | ⚠️ «verde» falso | El `tee` enmascaraba el fallo de Maven |
 | 3 | [`44347435232`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44347435232) | ✅ success real | Con `pipefail` y los tests de backend versionados |
-| 4 | _reedición de documentación_ | ✅ success | Nuevo `push` → **el pipeline se re-dispara solo** |
+| 4 | [`44365052085`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365052085) | ✅ success real | Nuevo `push` (documentación) → **el pipeline se re-dispara solo**: `BUILD SUCCESS` + *«185 passed»* |
+| 5 | [`44365378884`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365378884) | ✅ success real | **Evento `pull_request`** ([PR #1](https://github.com/Chekito2720/Luxray_dep/pull/1)) → `BUILD SUCCESS` + *«No issues found!»* + *«185 passed»* |
+
+> Los **dos disparadores que exige la práctica están verificados con ejecuciones reales**: `push` (1–4) y `pull_request` (5).
 
 ### 4.3 Errores encontrados y correcciones
 

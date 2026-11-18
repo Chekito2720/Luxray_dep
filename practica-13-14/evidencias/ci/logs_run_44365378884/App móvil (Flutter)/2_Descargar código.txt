@@ -1,0 +1,91 @@
+﻿2026-11-18T18:03:03.5915535Z ##[group]Run actions/checkout@v4
+2026-11-18T18:03:03.5916700Z with:
+2026-11-18T18:03:03.5917434Z   repository: Chekito2720/Luxray_dep
+2026-11-18T18:03:03.5924556Z   token: ***
+2026-11-18T18:03:03.5925274Z   ssh-strict: true
+2026-11-18T18:03:03.5926009Z   ssh-user: git
+2026-11-18T18:03:03.5926755Z   persist-credentials: true
+2026-11-18T18:03:03.5927565Z   clean: true
+2026-11-18T18:03:03.5928322Z   sparse-checkout-cone-mode: true
+2026-11-18T18:03:03.5929202Z   fetch-depth: 1
+2026-11-18T18:03:03.5929940Z   fetch-tags: false
+2026-11-18T18:03:03.5930828Z   show-progress: true
+2026-11-18T18:03:03.5931571Z   lfs: false
+2026-11-18T18:03:03.5932273Z   submodules: false
+2026-11-18T18:03:03.5933034Z   set-safe-directory: true
+2026-11-18T18:03:03.5933878Z   allow-unsafe-pr-checkout: false
+2026-11-18T18:03:03.5934905Z env:
+2026-11-18T18:03:03.5935585Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:03.5936334Z ##[endgroup]
+2026-11-18T18:03:03.7908830Z Syncing repository: Chekito2720/Luxray_dep
+2026-11-18T18:03:03.7912405Z ##[group]Getting Git version info
+2026-11-18T18:03:03.7914234Z Working directory is '/home/runner/work/Luxray_dep/Luxray_dep'
+2026-11-18T18:03:03.7916753Z [command]/usr/bin/git version
+2026-11-18T18:03:03.7918042Z git version 2.56.1
+2026-11-18T18:03:03.7933543Z ##[endgroup]
+2026-11-18T18:03:03.7952881Z Temporarily overriding HOME='/home/runner/work/_temp/8e2d4e68-2b5f-45d1-96cb-ea97b5c3c847' before making global git config changes
+2026-11-18T18:03:03.7956141Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T18:03:03.7959105Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T18:03:03.8015801Z Deleting the contents of '/home/runner/work/Luxray_dep/Luxray_dep'
+2026-11-18T18:03:03.8019914Z ##[group]Initializing the repository
+2026-11-18T18:03:03.8024465Z [command]/usr/bin/git init /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T18:03:03.8101522Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-18T18:03:03.8104482Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-18T18:03:03.8106912Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-18T18:03:03.8108865Z hint: call:
+2026-11-18T18:03:03.8110044Z hint:
+2026-11-18T18:03:03.8113267Z hint: 	git config --global init.defaultBranch <name>
+2026-11-18T18:03:03.8114898Z hint:
+2026-11-18T18:03:03.8116419Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-18T18:03:03.8119759Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-18T18:03:03.8121728Z hint:
+2026-11-18T18:03:03.8122531Z hint: 	git branch -m <name>
+2026-11-18T18:03:03.8123600Z hint:
+2026-11-18T18:03:03.8125645Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-18T18:03:03.8127831Z Initialized empty Git repository in /home/runner/work/Luxray_dep/Luxray_dep/.git/
+2026-11-18T18:03:03.8132254Z [command]/usr/bin/git remote add origin https://github.com/Chekito2720/Luxray_dep
+2026-11-18T18:03:03.8165649Z ##[endgroup]
+2026-11-18T18:03:03.8166948Z ##[group]Disabling automatic garbage collection
+2026-11-18T18:03:03.8169855Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-18T18:03:03.8204108Z ##[endgroup]
+2026-11-18T18:03:03.8205337Z ##[group]Setting up auth
+2026-11-18T18:03:03.8210587Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T18:03:03.8246788Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T18:03:03.8618671Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T18:03:03.8652417Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T18:03:03.8893681Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T18:03:03.8926404Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T18:03:03.9168687Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-18T18:03:03.9206614Z ##[endgroup]
+2026-11-18T18:03:03.9214103Z ##[group]Fetching the repository
+2026-11-18T18:03:03.9216481Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fbcac5c70057d971310806a3c01380e78bbff110:refs/remotes/pull/1/merge
+2026-11-18T18:03:04.6552779Z From https://github.com/Chekito2720/Luxray_dep
+2026-11-18T18:03:04.6553437Z  * [new ref]         fbcac5c70057d971310806a3c01380e78bbff110 -> pull/1/merge
+2026-11-18T18:03:04.6556666Z ##[endgroup]
+2026-11-18T18:03:04.6557289Z ##[group]Determining the checkout info
+2026-11-18T18:03:04.6558956Z ##[endgroup]
+2026-11-18T18:03:04.6564011Z [command]/usr/bin/git sparse-checkout disable
+2026-11-18T18:03:04.6616452Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-18T18:03:04.6643337Z ##[group]Checking out the ref
+2026-11-18T18:03:04.6645919Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-11-18T18:03:04.6974473Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-18T18:03:04.6974889Z 
+2026-11-18T18:03:04.6975137Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-18T18:03:04.6975992Z changes and commit them, and you can discard any commits you make in this
+2026-11-18T18:03:04.6976426Z state without impacting any branches by switching back to a branch.
+2026-11-18T18:03:04.6976671Z 
+2026-11-18T18:03:04.6976846Z If you want to create a new branch to retain commits you create, you may
+2026-11-18T18:03:04.6977299Z do so (now or later) by using -c with the switch command. Example:
+2026-11-18T18:03:04.6977544Z 
+2026-11-18T18:03:04.6977668Z   git switch -c <new-branch-name>
+2026-11-18T18:03:04.6977832Z 
+2026-11-18T18:03:04.6977996Z Or undo this operation with:
+2026-11-18T18:03:04.6978146Z 
+2026-11-18T18:03:04.6978248Z   git switch -
+2026-11-18T18:03:04.6978387Z 
+2026-11-18T18:03:04.6978587Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-18T18:03:04.6978851Z 
+2026-11-18T18:03:04.6979157Z HEAD is now at fbcac5c Merge e194c7daf3f8f73f01690adde9153e5dc884e881 into 5649b9de383ea06461dfeda002971450d9bb444c
+2026-11-18T18:03:04.6985050Z ##[endgroup]
+2026-11-18T18:03:04.7028360Z [command]/usr/bin/git log -1 --format=%H
+2026-11-18T18:03:04.7051464Z fbcac5c70057d971310806a3c01380e78bbff110

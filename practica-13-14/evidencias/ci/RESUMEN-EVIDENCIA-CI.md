@@ -44,7 +44,11 @@ ejecución indicada, no se generó localmente.
 | 1 | [`44239354054`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44239354054) | `3b5ae8b` | ❌ **failure** | Job Flutter ✔ (36 s) · job backend ✘ en «Compilar y ejecutar pruebas» (30 s) |
 | 2 | [`44241518237`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44241518237) | `cf9d7d9` | ⚠️ **«verde» falso** | El paso `mvn … \| tee` devolvía el código de `tee` (0): Maven estaba en **rojo** y el pipeline lo daba por bueno |
 | 3 | [`44347435232`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44347435232) | `999306d` | ✅ **success real** | Logs y artefactos de esta carpeta |
-| 4 | _reedición de la documentación_ | — | ✅ | Cada `push` re-dispara el pipeline: lo demuestra esta cuarta ejecución |
+| 4 | [`44365052085`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365052085) | `e194c7d` | `push` | ✅ **success real** | Logs en `logs_run_44365052085/` — `BUILD SUCCESS` + *«185 passed»*. Cada `push` re-dispara el pipeline |
+| 5 | [`44365378884`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365378884) | `e194c7d` | **`pull_request`** ([PR #1](https://github.com/Chekito2720/Luxray_dep/pull/1)) | ✅ **success real** | Logs en `logs_run_44365378884/` — `BUILD SUCCESS` + *«No issues found!»* + *«185 passed»*. Verifica el **disparador `pull_request`** |
+
+> Los **dos disparadores exigidos por la práctica están verificados con ejecuciones reales**:
+> `push` (ejecuciones 1–4) y `pull_request` (ejecución 5).
 
 ### Cómo se diagnosticó el fallo de la ejecución 1
 

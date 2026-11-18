@@ -1,0 +1,644 @@
+﻿2026-11-18T18:03:01.5259782Z Current runner version: '2.338.2'
+2026-11-18T18:03:01.5282188Z ##[group]Runner Image Provisioner
+2026-11-18T18:03:01.5282991Z Hosted Compute Agent
+2026-11-18T18:03:01.5283554Z Version: 20261103.629
+2026-11-18T18:03:01.5284081Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-18T18:03:01.5284748Z Build Date: 2026-11-03T17:26:59Z
+2026-11-18T18:03:01.5285386Z Worker ID: {1253d401-fc3a-46d1-9a25-35841a60ee33}
+2026-11-18T18:03:01.5286023Z Region: westus3
+2026-11-18T18:03:01.5286522Z Cloud: Azure
+2026-11-18T18:03:01.5286974Z ##[endgroup]
+2026-11-18T18:03:01.5288120Z ##[group]Operating System
+2026-11-18T18:03:01.5288720Z Ubuntu
+2026-11-18T18:03:01.5289180Z 26.04.1
+2026-11-18T18:03:01.5289639Z LTS
+2026-11-18T18:03:01.5290078Z ##[endgroup]
+2026-11-18T18:03:01.5290906Z ##[group]Runner Image
+2026-11-18T18:03:01.5291487Z Image: ubuntu-26.04
+2026-11-18T18:03:01.5291990Z Version: 20261111.196.1
+2026-11-18T18:03:01.5293120Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-18T18:03:01.5294359Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+2026-11-18T18:03:01.5295199Z ##[endgroup]
+2026-11-18T18:03:01.5296192Z ##[group]GITHUB_TOKEN Permissions
+2026-11-18T18:03:01.5297891Z Contents: read
+2026-11-18T18:03:01.5298416Z Metadata: read
+2026-11-18T18:03:01.5298984Z Packages: read
+2026-11-18T18:03:01.5299481Z ##[endgroup]
+2026-11-18T18:03:01.5301647Z Secret source: Actions
+2026-11-18T18:03:01.5302544Z Cache mode: write
+2026-11-18T18:03:01.5303136Z Prepare workflow directory
+2026-11-18T18:03:01.5649553Z Prepare all required actions
+2026-11-18T18:03:01.5690396Z Getting action download info
+2026-11-18T18:03:01.8568740Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-18T18:03:01.9659528Z Download action repository 'subosito/flutter-action@v2' (SHA:1a449444c387b1966244ae4d4f8c696479add0b2)
+2026-11-18T18:03:02.3675223Z Download action repository 'dorny/test-reporter@v1' (SHA:3eeb9fc888e82e8be2fb356bbeec2750231672bc)
+2026-11-18T18:03:03.0097160Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-18T18:03:03.2175330Z Getting action download info
+2026-11-18T18:03:03.3253960Z Download action repository 'actions/cache@v5' (SHA:caa296126883cff596d87d8935842f9db880ef25)
+2026-11-18T18:03:03.4968445Z Complete job name: App móvil (Flutter)
+2026-11-18T18:03:03.5915573Z ##[group]Run actions/checkout@v4
+2026-11-18T18:03:03.5916708Z with:
+2026-11-18T18:03:03.5917438Z   repository: Chekito2720/Luxray_dep
+2026-11-18T18:03:03.5924561Z   token: ***
+2026-11-18T18:03:03.5925278Z   ssh-strict: true
+2026-11-18T18:03:03.5926012Z   ssh-user: git
+2026-11-18T18:03:03.5926759Z   persist-credentials: true
+2026-11-18T18:03:03.5927569Z   clean: true
+2026-11-18T18:03:03.5928326Z   sparse-checkout-cone-mode: true
+2026-11-18T18:03:03.5929213Z   fetch-depth: 1
+2026-11-18T18:03:03.5929951Z   fetch-tags: false
+2026-11-18T18:03:03.5930833Z   show-progress: true
+2026-11-18T18:03:03.5931583Z   lfs: false
+2026-11-18T18:03:03.5932277Z   submodules: false
+2026-11-18T18:03:03.5933037Z   set-safe-directory: true
+2026-11-18T18:03:03.5933882Z   allow-unsafe-pr-checkout: false
+2026-11-18T18:03:03.5934913Z env:
+2026-11-18T18:03:03.5935589Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:03.5936338Z ##[endgroup]
+2026-11-18T18:03:03.7908884Z Syncing repository: Chekito2720/Luxray_dep
+2026-11-18T18:03:03.7912520Z ##[group]Getting Git version info
+2026-11-18T18:03:03.7914249Z Working directory is '/home/runner/work/Luxray_dep/Luxray_dep'
+2026-11-18T18:03:03.7916765Z [command]/usr/bin/git version
+2026-11-18T18:03:03.7918053Z git version 2.56.1
+2026-11-18T18:03:03.7933568Z ##[endgroup]
+2026-11-18T18:03:03.7952916Z Temporarily overriding HOME='/home/runner/work/_temp/8e2d4e68-2b5f-45d1-96cb-ea97b5c3c847' before making global git config changes
+2026-11-18T18:03:03.7956154Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T18:03:03.7959112Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T18:03:03.8015864Z Deleting the contents of '/home/runner/work/Luxray_dep/Luxray_dep'
+2026-11-18T18:03:03.8019935Z ##[group]Initializing the repository
+2026-11-18T18:03:03.8024488Z [command]/usr/bin/git init /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T18:03:03.8101685Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-18T18:03:03.8104492Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-18T18:03:03.8106920Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-18T18:03:03.8108873Z hint: call:
+2026-11-18T18:03:03.8110066Z hint:
+2026-11-18T18:03:03.8113284Z hint: 	git config --global init.defaultBranch <name>
+2026-11-18T18:03:03.8114910Z hint:
+2026-11-18T18:03:03.8116427Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-18T18:03:03.8119774Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-18T18:03:03.8121735Z hint:
+2026-11-18T18:03:03.8122535Z hint: 	git branch -m <name>
+2026-11-18T18:03:03.8123611Z hint:
+2026-11-18T18:03:03.8125673Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-18T18:03:03.8127843Z Initialized empty Git repository in /home/runner/work/Luxray_dep/Luxray_dep/.git/
+2026-11-18T18:03:03.8132299Z [command]/usr/bin/git remote add origin https://github.com/Chekito2720/Luxray_dep
+2026-11-18T18:03:03.8165674Z ##[endgroup]
+2026-11-18T18:03:03.8166954Z ##[group]Disabling automatic garbage collection
+2026-11-18T18:03:03.8169880Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-18T18:03:03.8204136Z ##[endgroup]
+2026-11-18T18:03:03.8205341Z ##[group]Setting up auth
+2026-11-18T18:03:03.8210606Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T18:03:03.8246832Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T18:03:03.8618769Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T18:03:03.8652946Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T18:03:03.8893770Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T18:03:03.8926433Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T18:03:03.9168787Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-18T18:03:03.9206657Z ##[endgroup]
+2026-11-18T18:03:03.9214127Z ##[group]Fetching the repository
+2026-11-18T18:03:03.9216487Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +fbcac5c70057d971310806a3c01380e78bbff110:refs/remotes/pull/1/merge
+2026-11-18T18:03:04.6552863Z From https://github.com/Chekito2720/Luxray_dep
+2026-11-18T18:03:04.6553442Z  * [new ref]         fbcac5c70057d971310806a3c01380e78bbff110 -> pull/1/merge
+2026-11-18T18:03:04.6556678Z ##[endgroup]
+2026-11-18T18:03:04.6557368Z ##[group]Determining the checkout info
+2026-11-18T18:03:04.6558964Z ##[endgroup]
+2026-11-18T18:03:04.6564020Z [command]/usr/bin/git sparse-checkout disable
+2026-11-18T18:03:04.6616516Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-18T18:03:04.6643363Z ##[group]Checking out the ref
+2026-11-18T18:03:04.6645930Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-11-18T18:03:04.6974560Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-18T18:03:04.6974929Z 
+2026-11-18T18:03:04.6975141Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-18T18:03:04.6975997Z changes and commit them, and you can discard any commits you make in this
+2026-11-18T18:03:04.6976430Z state without impacting any branches by switching back to a branch.
+2026-11-18T18:03:04.6976675Z 
+2026-11-18T18:03:04.6976849Z If you want to create a new branch to retain commits you create, you may
+2026-11-18T18:03:04.6977320Z do so (now or later) by using -c with the switch command. Example:
+2026-11-18T18:03:04.6977547Z 
+2026-11-18T18:03:04.6977671Z   git switch -c <new-branch-name>
+2026-11-18T18:03:04.6977835Z 
+2026-11-18T18:03:04.6977998Z Or undo this operation with:
+2026-11-18T18:03:04.6978148Z 
+2026-11-18T18:03:04.6978251Z   git switch -
+2026-11-18T18:03:04.6978396Z 
+2026-11-18T18:03:04.6978590Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-18T18:03:04.6978853Z 
+2026-11-18T18:03:04.6979161Z HEAD is now at fbcac5c Merge e194c7daf3f8f73f01690adde9153e5dc884e881 into 5649b9de383ea06461dfeda002971450d9bb444c
+2026-11-18T18:03:04.6985072Z ##[endgroup]
+2026-11-18T18:03:04.7028391Z [command]/usr/bin/git log -1 --format=%H
+2026-11-18T18:03:04.7051493Z fbcac5c70057d971310806a3c01380e78bbff110
+2026-11-18T18:03:04.7358782Z ##[group]Run subosito/flutter-action@v2
+2026-11-18T18:03:04.7359083Z with:
+2026-11-18T18:03:04.7359295Z   flutter-version: 3.44.6
+2026-11-18T18:03:04.7359529Z   channel: stable
+2026-11-18T18:03:04.7359731Z   cache: true
+2026-11-18T18:03:04.7359932Z   architecture: X64
+2026-11-18T18:03:04.7360314Z   pub-cache-path: default
+2026-11-18T18:03:04.7360540Z   dry-run: false
+2026-11-18T18:03:04.7360803Z   git-source: https://github.com/flutter/flutter.git
+2026-11-18T18:03:04.7361102Z env:
+2026-11-18T18:03:04.7361301Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:04.7361518Z ##[endgroup]
+2026-11-18T18:03:04.7410536Z ##[start-action display=Make yq tool available on Windows runners;id=__subosito_flutter-action.__run]
+2026-11-18T18:03:04.7428681Z ##[end-action id=__subosito_flutter-action.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-18T18:03:04.7430901Z ##[start-action display=Make setup script executable;id=__subosito_flutter-action.__run_2]
+2026-11-18T18:03:04.7468600Z ##[group]Run chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+2026-11-18T18:03:04.7469000Z [36;1mchmod +x "$GITHUB_ACTION_PATH/setup.sh"[0m
+2026-11-18T18:03:04.7517740Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T18:03:04.7518091Z env:
+2026-11-18T18:03:04.7518305Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:04.7518538Z ##[endgroup]
+2026-11-18T18:03:04.7656632Z ##[end-action id=__subosito_flutter-action.__run_2;outcome=success;conclusion=success;duration_ms=22]
+2026-11-18T18:03:04.7659242Z ##[start-action display=Set action inputs;id=__subosito_flutter-action.flutter-action]
+2026-11-18T18:03:04.7700689Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh -p \
+2026-11-18T18:03:04.7701070Z [36;1m$GITHUB_ACTION_PATH/setup.sh -p \[0m
+2026-11-18T18:03:04.7701354Z [36;1m  -n '3.44.6' \[0m
+2026-11-18T18:03:04.7701597Z [36;1m  -f '' \[0m
+2026-11-18T18:03:04.7701806Z [36;1m  -a 'X64' \[0m
+2026-11-18T18:03:04.7702016Z [36;1m  -k '' \[0m
+2026-11-18T18:03:04.7702216Z [36;1m  -c '' \[0m
+2026-11-18T18:03:04.7702429Z [36;1m  -l '' \[0m
+2026-11-18T18:03:04.7702635Z [36;1m  -d 'default' \[0m
+2026-11-18T18:03:04.7702962Z [36;1m  -g 'https://github.com/flutter/flutter.git' \[0m
+2026-11-18T18:03:04.7703269Z [36;1m  stable[0m
+2026-11-18T18:03:04.7746796Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T18:03:04.7747111Z env:
+2026-11-18T18:03:04.7747323Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:04.7747574Z ##[endgroup]
+2026-11-18T18:03:04.9647374Z ##[end-action id=__subosito_flutter-action.flutter-action;outcome=success;conclusion=success;duration_ms=198]
+2026-11-18T18:03:04.9652904Z ##[start-action display=Cache Flutter;id=__subosito_flutter-action.cache-flutter]
+2026-11-18T18:03:04.9734282Z ##[group]Run actions/cache@v5
+2026-11-18T18:03:04.9734611Z with:
+2026-11-18T18:03:04.9734893Z   path: /opt/hostedtoolcache/flutter/stable-3.44.6-x64
+2026-11-18T18:03:04.9735530Z   key: flutter-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6
+2026-11-18T18:03:04.9735926Z   enableCrossOsArchive: false
+2026-11-18T18:03:04.9736186Z   fail-on-cache-miss: false
+2026-11-18T18:03:04.9736427Z   lookup-only: false
+2026-11-18T18:03:04.9736646Z   save-always: false
+2026-11-18T18:03:04.9736859Z env:
+2026-11-18T18:03:04.9737069Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:04.9737290Z ##[endgroup]
+2026-11-18T18:03:05.2889637Z Cache not found for input keys: flutter-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6
+2026-11-18T18:03:05.2949305Z ##[end-action id=__subosito_flutter-action.cache-flutter;outcome=success;conclusion=success;duration_ms=329]
+2026-11-18T18:03:05.2952250Z ##[start-action display=Cache pub dependencies;id=__subosito_flutter-action.cache-pub]
+2026-11-18T18:03:05.3885073Z ##[group]Run actions/cache@v5
+2026-11-18T18:03:05.3885342Z with:
+2026-11-18T18:03:05.3885561Z   path: /home/runner/.pub-cache
+2026-11-18T18:03:05.3886179Z   key: flutter-pub-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6-d57a2899b5b1f3b7b2ea23a44862870333d9eedcc949aaea58ad8caeb4b8db4a
+2026-11-18T18:03:05.3887047Z   enableCrossOsArchive: false
+2026-11-18T18:03:05.3887295Z   fail-on-cache-miss: false
+2026-11-18T18:03:05.3887522Z   lookup-only: false
+2026-11-18T18:03:05.3887729Z   save-always: false
+2026-11-18T18:03:05.3887926Z env:
+2026-11-18T18:03:05.3888117Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:05.3888452Z ##[endgroup]
+2026-11-18T18:03:05.6956474Z Cache not found for input keys: flutter-pub-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6-d57a2899b5b1f3b7b2ea23a44862870333d9eedcc949aaea58ad8caeb4b8db4a
+2026-11-18T18:03:05.7035242Z ##[end-action id=__subosito_flutter-action.cache-pub;outcome=success;conclusion=success;duration_ms=408]
+2026-11-18T18:03:05.7037562Z ##[start-action display=Run setup script;id=__subosito_flutter-action.__run_3]
+2026-11-18T18:03:05.7070526Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh \
+2026-11-18T18:03:05.7070822Z [36;1m$GITHUB_ACTION_PATH/setup.sh \[0m
+2026-11-18T18:03:05.7071051Z [36;1m  -n '3.44.6' \[0m
+2026-11-18T18:03:05.7071264Z [36;1m  -a 'x64' \[0m
+2026-11-18T18:03:05.7071513Z [36;1m  -c '/opt/hostedtoolcache/flutter/stable-3.44.6-x64' \[0m
+2026-11-18T18:03:05.7071802Z [36;1m  -d '/home/runner/.pub-cache' \[0m
+2026-11-18T18:03:05.7072014Z [36;1m  stable[0m
+2026-11-18T18:03:05.7117147Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T18:03:05.7117429Z env:
+2026-11-18T18:03:05.7117605Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:05.7117797Z ##[endgroup]
+2026-11-18T18:03:05.8868290Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+2026-11-18T18:03:05.8869033Z                                  Dload  Upload  Total   Spent   Left   Speed
+2026-11-18T18:03:05.8869362Z 
+2026-11-18T18:03:06.8861110Z   0      0   0      0   0      0      0      0                              0
+2026-11-18T18:03:07.8851456Z   7  1.43G   7 108.2M   0      0 108.3M      0   00:13           00:13 108.2M
+2026-11-18T18:03:08.8845844Z  16  1.43G  16 244.5M   0      0 122.3M      0   00:12   00:01   00:11 122.3M
+2026-11-18T18:03:09.8839420Z  22  1.43G  22 329.2M   0      0 109.8M      0   00:13   00:02   00:11 109.8M
+2026-11-18T18:03:10.8927023Z  29  1.43G  29 435.3M   0      0 108.9M      0   00:13   00:03   00:10 108.8M
+2026-11-18T18:03:11.8959077Z  38  1.43G  38 567.8M   0      0 113.4M      0   00:12   00:05   00:07 113.4M
+2026-11-18T18:03:12.8949733Z  47  1.43G  47 696.6M   0      0 115.9M      0   00:12   00:06   00:06 117.4M
+2026-11-18T18:03:13.8939944Z  54  1.43G  54 806.4M   0      0 115.0M      0   00:12   00:07   00:05 112.1M
+2026-11-18T18:03:14.8977881Z  62  1.43G  62 916.1M   0      0 114.4M      0   00:12   00:08   00:04 117.1M
+2026-11-18T18:03:15.8978436Z  68  1.43G  68  0.99G   0      0 112.5M      0   00:13   00:09   00:04 115.5M
+2026-11-18T18:03:16.8968945Z  77  1.43G  77  1.11G   0      0 113.8M      0   00:12   00:10   00:02 114.1M
+2026-11-18T18:03:17.8960260Z  83  1.43G  83  1.20G   0      0 111.8M      0   00:13   00:11   00:02 107.0M
+2026-11-18T18:03:18.5837714Z  92  1.43G  92  1.32G   0      0 113.1M      0   00:13   00:12   00:01 110.3M
+2026-11-18T18:03:18.5838284Z 100  1.43G 100  1.43G   0      0 115.9M      0   00:12   00:12         110.3M
+2026-11-18T18:03:18.5840798Z 100  1.43G 100  1.43G   0      0 115.9M      0   00:12   00:12         110.3M
+2026-11-18T18:03:18.5841511Z 100  1.43G 100  1.43G   0      0 115.9M      0   00:12   00:12         110.3M
+2026-11-18T18:03:41.0675776Z ##[end-action id=__subosito_flutter-action.__run_3;outcome=success;conclusion=success;duration_ms=35363]
+2026-11-18T18:03:41.0723501Z ##[group]Run flutter --version
+2026-11-18T18:03:41.0723739Z [36;1mflutter --version[0m
+2026-11-18T18:03:41.0770947Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:03:41.0771154Z env:
+2026-11-18T18:03:41.0771320Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:41.0771586Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:03:41.0771914Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:03:41.0772125Z ##[endgroup]
+2026-11-18T18:03:41.3837987Z Flutter 3.44.6 • channel stable • https://github.com/flutter/flutter.git
+2026-11-18T18:03:41.3838647Z Framework • revision ee80f08bbf (4 months ago) • 2026-07-08 15:02:06 -0700
+2026-11-18T18:03:41.3839490Z Engine • hash d3a3293399556a85388faf8c6f0723a7a5597aa8 (revision 83675ed276) (4 months ago) • 2026-06-30 16:59:03.000Z
+2026-11-18T18:03:41.3840348Z Tools • Dart 3.12.2 • DevTools 2.57.0
+2026-11-18T18:03:41.3898762Z ##[group]Run flutter pub get
+2026-11-18T18:03:41.3898996Z [36;1mflutter pub get[0m
+2026-11-18T18:03:41.3942938Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:03:41.3943144Z env:
+2026-11-18T18:03:41.3943322Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:41.3943585Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:03:41.3943899Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:03:41.3944109Z ##[endgroup]
+2026-11-18T18:03:44.1112306Z Resolving dependencies...
+2026-11-18T18:03:44.2058988Z Downloading packages...
+2026-11-18T18:03:44.8765220Z   clock 1.1.2 (1.1.3 available)
+2026-11-18T18:03:44.8765663Z   cupertino_icons 1.0.9 (2.0.0 available)
+2026-11-18T18:03:44.8773937Z   matcher 0.12.19 (0.12.20 available)
+2026-11-18T18:03:44.8774259Z   material_color_utilities 0.13.0 (0.13.1 available)
+2026-11-18T18:03:44.8774522Z   meta 1.18.0 (1.19.0 available)
+2026-11-18T18:03:44.8774856Z   stack_trace 1.12.1 (1.12.2 available)
+2026-11-18T18:03:44.8775250Z   test_api 0.7.11 (0.7.15 available)
+2026-11-18T18:03:44.8775565Z   vector_math 2.2.0 (2.4.4 available)
+2026-11-18T18:03:44.8775856Z   vm_service 15.2.0 (15.4.0 available)
+2026-11-18T18:03:44.8776147Z   web 1.1.1 (1.1.2 available)
+2026-11-18T18:03:44.8776437Z Got dependencies!
+2026-11-18T18:03:44.8776822Z 10 packages have newer versions incompatible with dependency constraints.
+2026-11-18T18:03:44.8777386Z Try `flutter pub outdated` for more information.
+2026-11-18T18:03:44.9919876Z ##[group]Run flutter analyze
+2026-11-18T18:03:44.9920301Z [36;1mflutter analyze[0m
+2026-11-18T18:03:44.9964750Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:03:44.9964956Z env:
+2026-11-18T18:03:44.9965118Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:44.9965389Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:03:44.9965703Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:03:44.9965920Z ##[endgroup]
+2026-11-18T18:03:45.1395081Z Resolving dependencies...
+2026-11-18T18:03:45.1596529Z Downloading packages...
+2026-11-18T18:03:45.1819131Z   clock 1.1.2 (1.1.3 available)
+2026-11-18T18:03:45.1819476Z   cupertino_icons 1.0.9 (2.0.0 available)
+2026-11-18T18:03:45.1819817Z   matcher 0.12.19 (0.12.20 available)
+2026-11-18T18:03:45.1820106Z   material_color_utilities 0.13.0 (0.13.1 available)
+2026-11-18T18:03:45.1820535Z   meta 1.18.0 (1.19.0 available)
+2026-11-18T18:03:45.1820900Z   stack_trace 1.12.1 (1.12.2 available)
+2026-11-18T18:03:45.1821323Z   test_api 0.7.11 (0.7.15 available)
+2026-11-18T18:03:45.1821937Z   vector_math 2.2.0 (2.4.4 available)
+2026-11-18T18:03:45.1822236Z   vm_service 15.2.0 (15.4.0 available)
+2026-11-18T18:03:45.1822540Z   web 1.1.1 (1.1.2 available)
+2026-11-18T18:03:45.1824014Z Got dependencies!
+2026-11-18T18:03:45.1824451Z 10 packages have newer versions incompatible with dependency constraints.
+2026-11-18T18:03:45.1824973Z Try `flutter pub outdated` for more information.
+2026-11-18T18:03:51.7197729Z Analyzing luxraywaer...                                         
+2026-11-18T18:03:51.7204358Z No issues found! (ran in 6.2s)
+2026-11-18T18:03:51.7355595Z ##[group]Run flutter test --machine > ../flutter_test.json
+2026-11-18T18:03:51.7355944Z [36;1mflutter test --machine > ../flutter_test.json[0m
+2026-11-18T18:03:51.7400052Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:03:51.7400438Z env:
+2026-11-18T18:03:51.7400607Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:51.7400876Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:03:51.7401195Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:03:51.7401410Z ##[endgroup]
+2026-11-18T18:04:26.4098731Z ##[group]Run python ../practica-13-14/tools/flutter_junit.py ../flutter_test.json ../flutter_test.xml
+2026-11-18T18:04:26.4099313Z [36;1mpython ../practica-13-14/tools/flutter_junit.py ../flutter_test.json ../flutter_test.xml[0m
+2026-11-18T18:04:26.4143642Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:04:26.4143851Z env:
+2026-11-18T18:04:26.4144016Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:04:26.4144287Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:04:26.4144595Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:04:26.4144802Z ##[endgroup]
+2026-11-18T18:04:26.4404067Z convertido: 185 pruebas, 0 fallos, OK -> ../flutter_test.xml
+2026-11-18T18:04:26.4497297Z ##[group]Run dorny/test-reporter@v1
+2026-11-18T18:04:26.4497512Z with:
+2026-11-18T18:04:26.4497679Z   name: Flutter (móvil)
+2026-11-18T18:04:26.4497874Z   path: flutter_test.xml
+2026-11-18T18:04:26.4498074Z   reporter: java-junit
+2026-11-18T18:04:26.4498252Z   fail-on-error: true
+2026-11-18T18:04:26.4500721Z   token: ***
+2026-11-18T18:04:26.4500918Z   path-replace-backslashes: false
+2026-11-18T18:04:26.4501139Z   list-suites: all
+2026-11-18T18:04:26.4501313Z   list-tests: all
+2026-11-18T18:04:26.4501490Z   max-annotations: 10
+2026-11-18T18:04:26.4501664Z   fail-on-empty: true
+2026-11-18T18:04:26.4501833Z   only-summary: false
+2026-11-18T18:04:26.4502008Z   use-actions-summary: true
+2026-11-18T18:04:26.4502198Z   badge-title: tests
+2026-11-18T18:04:26.4502367Z env:
+2026-11-18T18:04:26.4502524Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:04:26.4502781Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:04:26.4503079Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:04:26.4503325Z ##[endgroup]
+2026-11-18T18:04:26.5294893Z Action was triggered by pull_request: using SHA from head of source branch
+2026-11-18T18:04:26.5302450Z Check runs will be created with SHA=e194c7daf3f8f73f01690adde9153e5dc884e881
+2026-11-18T18:04:26.5304733Z ##[group]Listing all files tracked by git
+2026-11-18T18:04:26.5354074Z [command]/usr/bin/git ls-files -z
+2026-11-18T18:04:26.5550714Z .dockerignore .github/workflows/ci-luxray.yml .gitignore Dockerfile INFORME-PRUEBAS.md backend/.dockerignore backend/.mvn/wrapper/maven-wrapper.properties backend/Dockerfile backend/README.md backend/analytics-service/Dockerfile backend/analytics-service/pom.xml backend/analytics-service/src/main/java/com/luxray/analytics/AnalyticsServiceApplication.java backend/analytics-service/src/main/java/com/luxray/analytics/config/AnalyticsSecurityConfig.java backend/analytics-service/src/main/java/com/luxray/analytics/config/OpenApiConfig.java backend/analytics-service/src/main/java/com/luxray/analytics/config/WebClientConfig.java backend/analytics-service/src/main/java/com/luxray/analytics/controller/AnalyticsController.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/CursoAdminDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/CursoInscripcionDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/DashboardResponse.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/KpiDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/TopCursoDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/UsuarioAdminDto.java backend/analytics-service/src/main/java/com/luxray/analytics/model/AnalyticsSnapshot.java backend/analytics-service/src/main/java/com/luxray/analytics/repository/AnalyticsRepository.java backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java backend/analytics-service/src/main/resources/application.yml backend/analytics-service/src/main/resources/db/migration/V1__init.sql backend/api-gateway/Dockerfile backend/api-gateway/pom.xml backend/api-gateway/src/main/java/com/luxray/gateway/ApiGatewayApplication.java backend/api-gateway/src/main/java/com/luxray/gateway/RequestIdLoggingFilter.java backend/api-gateway/src/main/resources/application.yml backend/auth-service/Dockerfile backend/auth-service/pom.xml backend/auth-service/src/main/java/com/luxray/auth/AuthServiceApplication.java backend/auth-service/src/main/java/com/luxray/auth/config/AuthSecurityConfig.java backend/auth-service/src/main/java/com/luxray/auth/config/OpenApiConfig.java backend/auth-service/src/main/java/com/luxray/auth/controller/AuthController.java backend/auth-service/src/main/java/com/luxray/auth/dto/AuthResponse.java backend/auth-service/src/main/java/com/luxray/auth/dto/LoginRequest.java backend/auth-service/src/main/java/com/luxray/auth/dto/RegisterRequest.java backend/auth-service/src/main/java/com/luxray/auth/dto/UsuarioRequest.java backend/auth-service/src/main/java/com/luxray/auth/dto/UsuarioResponse.java backend/auth-service/src/main/java/com/luxray/auth/model/Usuario.java backend/auth-service/src/main/java/com/luxray/auth/repository/UsuarioRepository.java backend/auth-service/src/main/java/com/luxray/auth/service/AuthService.java backend/auth-service/src/main/resources/application.yml backend/auth-service/src/main/resources/db/migration/V1__init.sql backend/auth-service/src/main/resources/db/migration/V2__add_rol_column.sql backend/auth-service/src/main/resources/db/migration/V3__seed_admin_and_fix_user.sql backend/auth-service/src/main/resources/db/migration/V4__add_activo_column.sql backend/auth-service/src/test/java/com/luxray/auth/controller/AuthControllerIntegrationTest.java backend/auth-service/src/test/java/com/luxray/auth/controller/RegistroIntegracionTest.java backend/auth-service/src/test/java/com/luxray/auth/service/AuthServiceTest.java backend/auth-service/src/test/resources/application-test.properties backend/common-lib/pom.xml backend/common-lib/src/main/java/com/luxray/common/dto/ApiError.java backend/common-lib/src/main/java/com/luxray/common/dto/ApiResponse.java backend/common-lib/src/main/java/com/luxray/common/exception/BusinessException.java backend/common-lib/src/main/java/com/luxray/common/exception/GlobalExceptionHandler.java backend/common-lib/src/main/java/com/luxray/common/exception/ResourceNotFoundException.java backend/common-lib/src/main/java/com/luxray/common/jwt/JwtTokenProvider.java backend/common-lib/src/main/java/com/luxray/common/security/BaseSecurityConfig.java backend/common-lib/src/main/java/com/luxray/common/security/JwtAuthenticationFilter.java backend/cursos-service/Dockerfile backend/cursos-service/pom.xml backend/cursos-service/src/main/java/com/luxray/cursos/CursosServiceApplication.java backend/cursos-service/src/main/java/com/luxray/cursos/config/CursosSecurityConfig.java backend/cursos-service/src/main/java/com/luxray/cursos/config/OpenApiConfig.java backend/cursos-service/src/main/java/com/luxray/cursos/controller/CursosController.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/BusquedaResponse.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/CursoRequest.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/CursoResponse.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/InscripcionResponse.java backend/cursos-service/src/main/java/com/luxray/cursos/model/Curso.java backend/cursos-service/src/main/java/com/luxray/cursos/model/Inscripcion.java backend/cursos-service/src/main/java/com/luxray/cursos/model/Leccion.java backend/cursos-service/src/main/java/com/luxray/cursos/model/ProgresoLeccion.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/CursoRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/InscripcionRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/LeccionRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/ProgresoLeccionRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/service/CursosService.java backend/cursos-service/src/main/java/com/luxray/cursos/service/FaqElectrico.java backend/cursos-service/src/main/java/com/luxray/cursos/service/GlosarioElectrico.java backend/cursos-service/src/main/resources/application.yml backend/cursos-service/src/main/resources/db/migration/V10__fix_youtube_urls_verified.sql backend/cursos-service/src/main/resources/db/migration/V1__init.sql backend/cursos-service/src/main/resources/db/migration/V2__lecciones.sql backend/cursos-service/src/main/resources/db/migration/V3__inscripciones_progreso.sql backend/cursos-service/src/main/resources/db/migration/V4__seed_lecciones.sql backend/cursos-service/src/main/resources/db/migration/V5__add_contenido_to_lecciones.sql backend/cursos-service/src/main/resources/db/migration/V6__widen_icon_color.sql backend/cursos-service/src/main/resources/db/migration/V7__add_preguntas_to_lecciones.sql backend/cursos-service/src/main/resources/db/migration/V8__seed_quiz_preguntas_fix_videos.sql backend/cursos-service/src/main/resources/db/migration/V9__fix_youtube_urls.sql backend/discovery-service/Dockerfile backend/discovery-service/pom.xml backend/discovery-service/src/main/java/com/luxray/discovery/DiscoveryServiceApplication.java backend/discovery-service/src/main/resources/application.yml backend/docker-compose.elasticsearch.yml backend/entrypoint.sh backend/inicio.ps1 backend/inicio2.ps1 backend/logs/analytics-service.err backend/logs/analytics-service.out backend/logs/analytics.err backend/logs/analytics.out backend/logs/analytics_final.log backend/logs/analytics_new.log backend/logs/api-gateway.err backend/logs/api-gateway.out backend/logs/auth-job.out backend/logs/auth-service.err backend/logs/auth-service.out backend/logs/auth.err backend/logs/auth.out backend/logs/auth4.out backend/logs/auth_final.err backend/logs/auth_final.log backend/logs/auth_new.log backend/logs/control.out backend/logs/cursos-service.err backend/logs/cursos-service.out backend/logs/cursos.err backend/logs/cursos.out backend/logs/cursos_final.log backend/logs/cursos_new.log backend/logs/discovery.err backend/logs/discovery.out backend/logs/gateway.err backend/logs/gateway.log backend/logs/gateway.out backend/logs/inicio.err backend/logs/inicio.out backend/logs/search.err backend/logs/search.out backend/logs/search_new.log backend/mvnw backend/mvnw.cmd backend/pom.xml backend/search-service/Dockerfile backend/search-service/pom.xml backend/search-service/src/main/java/com/luxray/search/SearchServiceApplication.java backend/search-service/src/main/java/com/luxray/search/controller/SearchController.java backend/search-service/src/main/java/com/luxray/search/document/ConceptoDocument.java backend/search-service/src/main/java/com/luxray/search/document/CursoDocument.java backend/search-service/src/main/java/com/luxray/search/document/FaqDocument.java backend/search-service/src/main/java/com/luxray/search/document/LeccionDocument.java backend/search-service/src/main/java/com/luxray/search/dto/ConceptoHit.java backend/search-service/src/main/java/com/luxray/search/dto/CursoHit.java backend/search-service/src/main/java/com/luxray/search/dto/FaqHit.java backend/search-service/src/main/java/com/luxray/search/dto/HighlightDTO.java backend/search-service/src/main/java/com/luxray/search/dto/LeccionHit.java backend/search-service/src/main/java/com/luxray/search/dto/SearchHitDTO.java backend/search-service/src/main/java/com/luxray/search/dto/SearchRequest.java backend/search-service/src/main/java/com/luxray/search/dto/SearchResponse.java backend/search-service/src/main/java/com/luxray/search/repository/ConceptoDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/repository/CursoDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/repository/FaqDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/repository/LeccionDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/service/SearchService.java backend/search-service/src/main/resources/application.yml backend/search-service/src/main/resources/elasticsearch/conceptos-settings.json backend/search-service/src/main/resources/elasticsearch/cursos-settings.json backend/search-service/src/main/resources/elasticsearch/faqs-settings.json backend/search-service/src/main/resources/elasticsearch/lecciones-settings.json backend/start-auth.bat backend/start-one.ps1 docker-compose.yml luxraywaer/.gitignore luxraywaer/.metadata luxraywaer/README.md luxraywaer/analysis_options.yaml luxraywaer/android/.gitignore luxraywaer/android/app/build.gradle.kts luxraywaer/android/app/src/debug/AndroidManifest.xml luxraywaer/android/app/src/main/AndroidManifest.xml luxraywaer/android/app/src/main/kotlin/com/luxray/waer/MainActivity.kt luxraywaer/android/app/src/main/res/drawable-v21/launch_background.xml luxraywaer/android/app/src/main/res/drawable/launch_background.xml luxraywaer/android/app/src/main/res/mipmap-hdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-mdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png luxraywaer/android/app/src/main/res/values-night/styles.xml luxraywaer/android/app/src/main/res/values/styles.xml luxraywaer/android/app/src/profile/AndroidManifest.xml luxraywaer/android/build.gradle.kts luxraywaer/android/gradle.properties luxraywaer/android/gradle/wrapper/gradle-wrapper.properties luxraywaer/android/settings.gradle.kts luxraywaer/lib/main.dart luxraywaer/lib/models/busqueda.dart luxraywaer/lib/screens/detalle_concepto_screen.dart luxraywaer/lib/screens/home_screen.dart luxraywaer/lib/screens/resultados_screen.dart luxraywaer/lib/services/luxray_api.dart luxraywaer/lib/theme/wear_theme.dart luxraywaer/lib/widgets/circular_safe_area.dart luxraywaer/pubspec.lock luxraywaer/pubspec.yaml luxraywaer/test/fase2_whitebox_detalle_test.dart luxraywaer/test/fase2_whitebox_navegacion_test.dart luxraywaer/test/fase2_whitebox_tema_test.dart luxraywaer/test/fase2_whitebox_test.dart luxraywaer/test/practica12_optimizacion_test.dart luxraywaer/test/practica12_resiliencia_test.dart luxraywaer/test/practica13_integracion_test.dart luxraywaer/test/practica13_unitarias_test.dart luxraywaer/test/regresion_def04_navegacion_test.dart luxraywaer/test/seguridad_test.dart luxraywaer/test/widget_test.dart practica-11/ENTREGABLE-PRACTICA-11.md practica-11/INFORME-PRUEBA-11-WHITEBOX.md practica-11/README.md practica-11/evidencias/fase1_flutter_analyze.txt practica-11/evidencias/fase1_mvn_test_jacoco.txt practica-11/evidencias/fase1_ng_build.txt practica-11/evidencias/fase1_ng_test.txt practica-11/evidencias/fase2_cobertura_movil.json practica-11/evidencias/fase2_cobertura_movil.md practica-11/evidencias/fase2_mutacion_condiciones.json practica-11/evidencias/fase2_mutacion_condiciones.md practica-11/evidencias/fase2_mutacion_consola.txt practica-11/evidencias/fase3_mvn_test_jacoco.txt practica-11/evidencias/fase3_newman.json practica-11/evidencias/fase3_newman_consola.txt practica-11/evidencias/fase3_sonda_http.json practica-11/evidencias/fase4_concurrencia.txt practica-11/evidencias/fase4_crud_integridad.txt practica-11/evidencias/fase4_planes_ejecucion.txt practica-11/evidencias/fase5_carga_consola.txt practica-11/evidencias/fase5_carga_consolidado.json practica-11/evidencias/fase5_carga_consolidado.md practica-11/evidencias/fase5_carga_escritura_10usuarios.json practica-11/evidencias/fase5_carga_escritura_10usuarios.md practica-11/evidencias/fase5_carga_escritura_10usuarios_consola.txt practica-11/evidencias/fase5_carga_escritura_1usuarios.json practica-11/evidencias/fase5_carga_escritura_1usuarios.md practica-11/evidencias/fase5_carga_escritura_1usuarios_consola.txt practica-11/evidencias/fase5_carga_escritura_5usuarios.json practica-11/evidencias/fase5_carga_escritura_5usuarios.md practica-11/evidencias/fase5_carga_escritura_5usuarios_consola.txt practica-11/evidencias/fase5_carga_k6.json practica-11/evidencias/fase5_carga_k6_consola.txt practica-11/evidencias/fase5_carga_lectura_10usuarios.json practica-11/evidencias/fase5_carga_lectura_10usuarios.md practica-11/evidencias/fase5_carga_lectura_10usuarios_consola.txt practica-11/evidencias/fase5_carga_lectura_1usuarios.json practica-11/evidencias/fase5_carga_lectura_1usuarios.md practica-11/evidencias/fase5_carga_lectura_1usuarios_consola.txt practica-11/evidencias/fase5_carga_lectura_5usuarios.json practica-11/evidencias/fase5_carga_lectura_5usuarios.md practica-11/evidencias/fase5_carga_lectura_5usuarios_consola.txt practica-11/evidencias/fase5_consola.txt practica-11/evidencias/fase5_mediciones.json practica-11/evidencias/relay_consola.txt practica-11/evidencias/wb11_disp_antes_buscar.png practica-11/evidencias/wb11_disp_estado_inicial.png practica-11/evidencias/wb11_disp_home_corregido.png practica-11/evidencias/wb11_disp_home_limpio.png practica-11/evidencias/wb11_disp_recuperacion.png practica-11/evidencias/wb11_disp_resultado_real.png practica-11/evidencias/wb11_disp_sin_conectividad.png practica-11/evidencias/wb11_disp_sugerencias.png practica-11/evidencias/wb11_dispositivo_busqueda.png practica-11/evidencias/wb11_dispositivo_home.png practica-11/evidencias/wb11_dispositivo_home4.png practica-11/evidencias/wb11_dispositivo_teclado.png practica-11/fase1-analisis-estatico/REPORTE-ANALISIS-ESTATICO.md practica-11/fase2-movil-whitebox/FLUJOS-CONTROL.md practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_detalle_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_navegacion_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_tema_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/regresion_def04_navegacion_test.dart practica-11/fase3-web-api/luxray-whitebox-fase3.postman_collection.json practica-11/fase4-base-datos/01_crud_integridad_cursos.sql practica-11/fase4-base-datos/02a_conc_s1_A.sql practica-11/fase4-base-datos/02b_conc_s1_B.sql practica-11/fase4-base-datos/03_planes_ejecucion.sql practica-11/fase5-conectividad/carga_k6.js practica-11/fase6-defectos/DEFECTOS.md practica-11/tools/analizar_cobertura.py practica-11/tools/ejecutar_carga.py practica-11/tools/ejecutar_concurrencia.py practica-11/tools/medir_conectividad.py practica-11/tools/mutacion_condiciones.py practica-11/tools/relay_dispositivo.py practica-11/tools/sonda_http.py practica-12/INFORME-PRACTICA-12.md practica-12/README.md practica-12/evidencias/codigo-optimizado/luxray_api.dart practica-12/evidencias/codigo-optimizado/main.dart practica-12/evidencias/codigo-optimizado/resultados_screen.dart practica-12/evidencias/codigo-original/luxray_api.dart practica-12/evidencias/codigo-original/main.dart practica-12/evidencias/fase3_codigos_escritura.jsonl practica-12/evidencias/fase3_codigos_http.json practica-12/evidencias/fase3_codigos_http.md practica-12/evidencias/fase3_codigos_lectura.jsonl practica-12/evidencias/fase3_estres_consola.txt practica-12/evidencias/fase3_estres_consolidado.json practica-12/evidencias/fase3_estres_consolidado.md practica-12/evidencias/fase3_estres_escritura_10usuarios.json practica-12/evidencias/fase3_estres_escritura_10usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_1usuarios.json practica-12/evidencias/fase3_estres_escritura_1usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_20usuarios.json practica-12/evidencias/fase3_estres_escritura_20usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_40usuarios.json practica-12/evidencias/fase3_estres_escritura_40usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_5usuarios.json practica-12/evidencias/fase3_estres_escritura_5usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_80usuarios.json practica-12/evidencias/fase3_estres_escritura_80usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_10usuarios.json practica-12/evidencias/fase3_estres_lectura_10usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_1usuarios.json practica-12/evidencias/fase3_estres_lectura_1usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_20usuarios.json practica-12/evidencias/fase3_estres_lectura_20usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_40usuarios.json practica-12/evidencias/fase3_estres_lectura_40usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_5usuarios.json practica-12/evidencias/fase3_estres_lectura_5usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_80usuarios.json practica-12/evidencias/fase3_estres_lectura_80usuarios_consola.txt practica-12/evidencias/fase4_comparativa_bd.txt practica-12/evidencias/fase4_optimizacion_bd.txt practica-12/evidencias/fase4_pruebas_avanzadas.txt practica-12/evidencias/fase5_resiliencia_api.json practica-12/evidencias/fase5_resiliencia_api.md practica-12/evidencias/fase5_resiliencia_consola.txt practica-12/evidencias/fase6_comparativa_api_bd.json practica-12/evidencias/fase6_comparativa_api_bd.txt practica-12/evidencias/perfil_consola_antes.txt practica-12/evidencias/perfil_consola_antes_release.txt practica-12/evidencias/perfil_consola_antes_release_m2.txt practica-12/evidencias/perfil_consola_despues_release.txt practica-12/evidencias/perfil_movil_antes.json practica-12/evidencias/perfil_movil_antes_release.json practica-12/evidencias/perfil_movil_antes_release_m2.json practica-12/evidencias/perfil_movil_despues_release.json practica-12/evidencias/relay2.txt practica-12/evidencias/relay_8099.txt practica-12/evidencias/relay_consola.txt practica-12/evidencias/relay_estado.json practica-12/evidencias/wb11_disp_estado_inicial.png practica-12/evidencias/wb11_disp_home_corregido.png practica-12/evidencias/wb11_disp_recuperacion.png practica-12/evidencias/wb11_disp_resultado_real.png practica-12/evidencias/wb11_disp_sin_conectividad.png practica-12/fase1-diagnostico/DIAGNOSTICO-HEREDADO.md practica-12/fase3-estres-api/estres_api.js practica-12/fase4-bd/01_pruebas_avanzadas.sql practica-12/fase4-bd/02_optimizacion_bd.sql practica-12/fase4-bd/03_comparativa_antes_despues.sql practica-12/fase5-resiliencia/MATRIZ-RESILIENCIA.md practica-12/tools/comparar_api_bd.py practica-12/tools/ejecutar_estres.py practica-12/tools/perfil_movil.py practica-12/tools/resiliencia_api.py practica-12/tools/validar_entrega.py practica-12/tools/verificar_codigos_http.py practica-13-14/INFORME-TECNICO.md practica-13-14/MATRIZ-AUTOMATIZACION.md practica-13-14/README.md practica-13-14/evidencias/act_backend.txt practica-13-14/evidencias/ci/RESUMEN-EVIDENCIA-CI.md practica-13-14/evidencias/ci/artifact_backend-test-results.zip practica-13-14/evidencias/ci/artifact_flutter-test-results.zip practica-13-14/evidencias/ci/artifacts/flutter/flutter_test.json practica-13-14/evidencias/ci/artifacts/flutter/flutter_test.xml practica-13-14/evidencias/ci/logs/0_App móvil (Flutter).txt practica-13-14/evidencias/ci/logs/1_Backend (Spring Boot).txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/10_Archivar resultados.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/19_Post Configurar Flutter.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/1_Set up job.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/20_Post Descargar código.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/21_Complete job.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/2_Descargar código.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/3_Configurar Flutter.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/4_Verificar versión de Flutter.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/5_Dependencias.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/6_Análisis estático (0 incidencias).txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/7_Pruebas unitarias y de integración.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/8_Convertir a JUnit.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/9_Publicar resultados.txt practica-13-14/evidencias/ci/logs/App móvil (Flutter)/system.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/15_Post Configurar Java 21.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/16_Post Descargar código.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/17_Complete job.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/1_Set up job.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/2_Descargar código.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/3_Configurar Java 21.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/4_Diagnóstico del entorno.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/5_Compilar y ejecutar pruebas.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/7_Publicar resultados.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/8_Archivar resultados.txt practica-13-14/evidencias/ci/logs/Backend (Spring Boot)/system.txt practica-13-14/evidencias/ci/run_44347435232_logs.zip practica-13-14/evidencias/flutter_stderr.txt practica-13-14/evidencias/flutter_test.xml practica-13-14/evidencias/flutter_test_err.txt practica-13-14/evidencias/flutter_test_machine.json practica-13-14/evidencias/mvn_reproducible_17_pruebas.txt practica-13-14/evidencias/mvn_working_tree_74_pruebas.txt practica-13-14/tools/flutter_junit.py prueba-caja-roja/PRUEBA-CAJA-ROJA-LUXRAY.md railway.toml start-all.sh 
+2026-11-18T18:04:26.5660448Z ##[endgroup]
+2026-11-18T18:04:26.5660732Z Found 414 files tracked by GitHub
+2026-11-18T18:04:26.5661074Z Using test report parser 'java-junit'
+2026-11-18T18:04:26.5661853Z ##[group]Creating test report Flutter (móvil)
+2026-11-18T18:04:26.5662342Z Processing test results for check run Flutter (móvil)
+2026-11-18T18:04:26.5690978Z Generating check run summary
+2026-11-18T18:04:26.5833371Z Summary content:
+2026-11-18T18:04:26.5833998Z ![Tests passed successfully](https://img.shields.io/badge/tests-185%20passed-success)
+2026-11-18T18:04:26.5834703Z <details><summary>Expand for details</summary>
+2026-11-18T18:04:26.5835147Z  
+2026-11-18T18:04:26.5835681Z |Report|Passed|Failed|Skipped|Time|
+2026-11-18T18:04:26.5836027Z |:---|---:|---:|---:|---:|
+2026-11-18T18:04:26.5836569Z |flutter_test.xml|185 ✅|||NaNms|
+2026-11-18T18:04:26.5837086Z ## ✅ <a id="user-content-r0" href="#r0">flutter_test.xml</a>
+2026-11-18T18:04:26.5837802Z **185** tests were completed in **NaNms** with **185** passed, **0** failed and **0** skipped.
+2026-11-18T18:04:26.5838487Z |Test suite|Passed|Failed|Skipped|Time|
+2026-11-18T18:04:26.5838825Z |:---|---:|---:|---:|---:|
+2026-11-18T18:04:26.5839556Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_detalle_test.dart](#r0s0)|15 ✅|||NaNms|
+2026-11-18T18:04:26.5840791Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_navegacion_test.dart](#r0s1)|6 ✅|||NaNms|
+2026-11-18T18:04:26.5841841Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_tema_test.dart](#r0s2)|43 ✅|||NaNms|
+2026-11-18T18:04:26.5842842Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_test.dart](#r0s3)|45 ✅|||NaNms|
+2026-11-18T18:04:26.5843965Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica12_optimizacion_test.dart](#r0s4)|26 ✅|||NaNms|
+2026-11-18T18:04:26.5845427Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica12_resiliencia_test.dart](#r0s5)|11 ✅|||NaNms|
+2026-11-18T18:04:26.5846697Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica13_integracion_test.dart](#r0s6)|5 ✅|||NaNms|
+2026-11-18T18:04:26.5848134Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica13_unitarias_test.dart](#r0s7)|12 ✅|||NaNms|
+2026-11-18T18:04:26.5849232Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/regresion_def04_navegacion_test.dart](#r0s8)|3 ✅|||NaNms|
+2026-11-18T18:04:26.5850362Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/seguridad_test.dart](#r0s9)|11 ✅|||NaNms|
+2026-11-18T18:04:26.5851284Z |[/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/widget_test.dart](#r0s10)|8 ✅|||NaNms|
+2026-11-18T18:04:26.5852386Z ### ✅ <a id="user-content-r0s0" href="#r0s0">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_detalle_test.dart</a>
+2026-11-18T18:04:26.5853084Z ```
+2026-11-18T18:04:26.5853653Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_detalle_test.dart
+2026-11-18T18:04:26.5854601Z ✅ DetalleConceptoScreen · concepto muestra termino, definicion, sinonimos y temas
+2026-11-18T18:04:26.5855372Z ✅ DetalleConceptoScreen · concepto la cabecera indica CONCEPTO
+2026-11-18T18:04:26.5856077Z ✅ DetalleConceptoScreen · concepto el chip muestra el primer tema y el boton vuelve
+2026-11-18T18:04:26.5856884Z ✅ DetalleConceptoScreen · concepto sin sinonimos ni temas no se muestran esas secciones
+2026-11-18T18:04:26.5857695Z ✅ DetalleConceptoScreen · concepto sin snippet no se muestra el bloque resaltado
+2026-11-18T18:04:26.5858434Z ✅ DetalleConceptoScreen · concepto el snippet se recorta a 100 caracteres
+2026-11-18T18:04:26.5859116Z ✅ DetalleConceptoScreen · FAQ muestra pregunta, respuesta y categoria
+2026-11-18T18:04:26.5859968Z ✅ DetalleConceptoScreen · FAQ la categoria determina el color del badge
+2026-11-18T18:04:26.5861116Z ✅ DetalleConceptoScreen · FAQ sin snippet no se muestra el bloque resaltado
+2026-11-18T18:04:26.5861868Z ✅ ResultadosScreen · rutas de navegacion pulsar un concepto invoca onAbrirConcepto
+2026-11-18T18:04:26.5862609Z ✅ ResultadosScreen · rutas de navegacion pulsar una FAQ invoca onAbrirFaq
+2026-11-18T18:04:26.5863336Z ✅ ResultadosScreen · rutas de navegacion el boton de volver invoca onVolver
+2026-11-18T18:04:26.5864079Z ✅ ResultadosScreen · rutas de navegacion el encabezado muestra la consulta
+2026-11-18T18:04:26.5864844Z ✅ ResultadosScreen · rutas de navegacion un grupo sin resultados no se muestra
+2026-11-18T18:04:26.5865349Z ```
+2026-11-18T18:04:26.5866201Z ### ✅ <a id="user-content-r0s1" href="#r0s1">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_navegacion_test.dart</a>
+2026-11-18T18:04:26.5866997Z ```
+2026-11-18T18:04:26.5867626Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_navegacion_test.dart
+2026-11-18T18:04:26.5868447Z ✅ NAV-1 · el estado inicial es la pagina 0 (inicio)
+2026-11-18T18:04:26.5868989Z ✅ NAV-2 · al buscar, la app navega a la pagina 1 (resultados)
+2026-11-18T18:04:26.5869471Z ✅ NAV-3 · una sugerencia dispara la busqueda
+2026-11-18T18:04:26.5870020Z ✅ NAV-4 · tras la busqueda, la pagina visible es la de resultados
+2026-11-18T18:04:26.5870744Z ✅ NAV-5 · una query de 1 caracter NO genera red pero SÍ navega
+2026-11-18T18:04:26.5871139Z ```
+2026-11-18T18:04:26.5871984Z ### ✅ <a id="user-content-r0s2" href="#r0s2">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_tema_test.dart</a>
+2026-11-18T18:04:26.5872731Z ```
+2026-11-18T18:04:26.5873340Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_tema_test.dart
+2026-11-18T18:04:26.5874114Z ✅ M4 · luxBadgeFromNivelKey (switch de nivel) caso basico
+2026-11-18T18:04:26.5874735Z ✅ M4 · luxBadgeFromNivelKey (switch de nivel) caso intermedio
+2026-11-18T18:04:26.5875459Z ✅ M4 · luxBadgeFromNivelKey (switch de nivel) caso avanzado
+2026-11-18T18:04:26.5876264Z ✅ M4 · luxBadgeFromNivelKey (switch de nivel) rama por defecto (nivel desconocido)
+2026-11-18T18:04:26.5877101Z ✅ M4 · luxBadgeFromNivelKey (switch de nivel) es insensible a mayusculas/minusculas
+2026-11-18T18:04:26.5878309Z ✅ M4 · luxBadgeFromNivelKey (switch de nivel) valor limite: cadena vacia -> rama por defecto
+2026-11-18T18:04:26.5879089Z ✅ M4 · luxBadgeFromTipoLeccion (switch de tipo de leccion) caso VIDEO
+2026-11-18T18:04:26.5879771Z ✅ M4 · luxBadgeFromTipoLeccion (switch de tipo de leccion) caso QUIZ
+2026-11-18T18:04:26.5880546Z ✅ M4 · luxBadgeFromTipoLeccion (switch de tipo de leccion) caso LECTURA
+2026-11-18T18:04:26.5881221Z ✅ M4 · luxBadgeFromTipoLeccion (switch de tipo de leccion) rama por defecto con tipo desconocido
+2026-11-18T18:04:26.5882040Z ✅ M4 · luxBadgeFromTipoLeccion (switch de tipo de leccion) valor limite: null -> rama por defecto (no lanza)
+2026-11-18T18:04:26.5882885Z ✅ M4 · luxBadgeFromTipoLeccion (switch de tipo de leccion) valor limite: cadena vacia -> rama por defecto
+2026-11-18T18:04:26.5883681Z ✅ M4 · luxBadgeFromTipoLeccion (switch de tipo de leccion) normaliza a mayusculas antes de comparar
+2026-11-18T18:04:26.5884422Z ✅ M4 · luxBadgeFromCategoriaFaq (switch de categoria) caso cursos
+2026-11-18T18:04:26.5885069Z ✅ M4 · luxBadgeFromCategoriaFaq (switch de categoria) caso pagos
+2026-11-18T18:04:26.5885704Z ✅ M4 · luxBadgeFromCategoriaFaq (switch de categoria) caso certificados
+2026-11-18T18:04:26.5886329Z ✅ M4 · luxBadgeFromCategoriaFaq (switch de categoria) caso tecnico
+2026-11-18T18:04:26.5887055Z ✅ M4 · luxBadgeFromCategoriaFaq (switch de categoria) rama por defecto (categoria desconocida)
+2026-11-18T18:04:26.5887955Z ✅ M4 · luxBadgeFromCategoriaFaq (switch de categoria) valor limite: cadena vacia -> rama por defecto
+2026-11-18T18:04:26.5888780Z ✅ M4 · luxBadgeFromCategoriaFaq (switch de categoria) es insensible a mayusculas/minusculas
+2026-11-18T18:04:26.5890417Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) CursoHit.fromJson con todos los campos
+2026-11-18T18:04:26.5891477Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) CursoHit.fromJson con campos ausentes usa los valores por defecto
+2026-11-18T18:04:26.5892483Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) LeccionHit.fromJson con todos los campos
+2026-11-18T18:04:26.5893429Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) LeccionHit.fromJson cae a cursoId cuando falta cursoTitulo
+2026-11-18T18:04:26.5894390Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) LeccionHit.fromJson sin cursoId ni cursoTitulo
+2026-11-18T18:04:26.5895275Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) ConceptoHit.fromJson con listas de cadenas
+2026-11-18T18:04:26.5896069Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) FaqHit.fromJson con todos los campos
+2026-11-18T18:04:26.5896868Z ✅ M5 · Factories de modelos (parseo tolerante a nulls) FaqHit.fromJson con campos ausentes
+2026-11-18T18:04:26.5901946Z ✅ M4 · LuxSnippet (truncado de texto) no trunca si el texto cabe en maxChars
+2026-11-18T18:04:26.5902608Z ✅ M4 · LuxSnippet (truncado de texto) trunca y anade elipsis si supera maxChars
+2026-11-18T18:04:26.5903294Z ✅ M4 · LuxSnippet (truncado de texto) valor limite: exactamente maxChars no se trunca
+2026-11-18T18:04:26.5903982Z ✅ M4 · LuxBadge (render de cada variante de color) renderiza el badge basico
+2026-11-18T18:04:26.5904619Z ✅ M4 · LuxBadge (render de cada variante de color) renderiza el badge intermedio
+2026-11-18T18:04:26.5905252Z ✅ M4 · LuxBadge (render de cada variante de color) renderiza el badge avanzado
+2026-11-18T18:04:26.5905873Z ✅ M4 · LuxBadge (render de cada variante de color) renderiza el badge leccion
+2026-11-18T18:04:26.5906543Z ✅ M4 · LuxBadge (render de cada variante de color) renderiza el badge faq
+2026-11-18T18:04:26.5907164Z ✅ M4 · LuxBadge (render de cada variante de color) renderiza el badge blue
+2026-11-18T18:04:26.5908035Z ✅ M4 · luxrayWearTheme (construccion del ThemeData del wearable) construye un ThemeData completo y usable
+2026-11-18T18:04:26.5909074Z ✅ M4 · luxrayWearTheme (construccion del ThemeData del wearable) la app se monta con el tema del wearable
+2026-11-18T18:04:26.5909980Z ✅ M6 · CircularSafeArea (layout para pantalla redonda) aplica el padding de pantalla redonda
+2026-11-18T18:04:26.5911278Z ✅ M6 · CircularSafeArea (layout para pantalla redonda) isWearRound distingue pantallas de mas de 240 dp
+2026-11-18T18:04:26.5912271Z ✅ M6 · CircularSafeArea (layout para pantalla redonda) isWearRound detecta la pantalla redonda del wearable
+2026-11-18T18:04:26.5912875Z ```
+2026-11-18T18:04:26.5913580Z ### ✅ <a id="user-content-r0s3" href="#r0s3">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_test.dart</a>
+2026-11-18T18:04:26.5914247Z ```
+2026-11-18T18:04:26.5914752Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/fase2_whitebox_test.dart
+2026-11-18T18:04:26.5915574Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-P2 · camino falso: longitud <= 80 se devuelve intacta
+2026-11-18T18:04:26.5916407Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-P1 · camino verdadero: longitud > 80 se trunca a 80
+2026-11-18T18:04:26.5917238Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-LIM · valor límite exacto: 80 caracteres NO se trunca
+2026-11-18T18:04:26.5918068Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-LIM · valor límite: 81 caracteres sí se trunca
+2026-11-18T18:04:26.5918778Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-VAC · cadena vacía y solo espacios
+2026-11-18T18:04:26.5919569Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-CTRL · elimina caracteres de control C0 y DEL
+2026-11-18T18:04:26.5920628Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-CTRL · conserva acentos, ñ y símbolos (no son de control)
+2026-11-18T18:04:26.5921604Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-IDEM · es idempotente: sanitizar(sanitizar(x)) == sanitizar(x)
+2026-11-18T18:04:26.5922434Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-ORD · el recorte ocurre después de normalizar (no antes)
+2026-11-18T18:04:26.5923318Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-DEF · sanitizar es estático y no toca la red
+2026-11-18T18:04:26.5924514Z ✅ M1 · LuxrayApi.sanitizar (validación) M1-CTOR · el constructor por defecto crea su propio cliente HTTP
+2026-11-18T18:04:26.5926107Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-P1 · camino verdadero: envoltura data como Map se procesa
+2026-11-18T18:04:26.5927659Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-P2 · camino falso: data ausente o de otro tipo → respuesta vacía
+2026-11-18T18:04:26.5929281Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-D2..D5 · coalescencia: campos ausentes usan valores por defecto
+2026-11-18T18:04:26.5931053Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-D6 · _extractSources con lista ausente (null) → lista vacía
+2026-11-18T18:04:26.5932665Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-D6 · _extractSources con valor NO-lista (String) → lista vacía
+2026-11-18T18:04:26.5934145Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-D7/D8 · hit sin campo source se descarta sin romper el resto
+2026-11-18T18:04:26.5935319Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-D8 · elementos de la lista que no son Map se descartan
+2026-11-18T18:04:26.5936516Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-NEST · conceptos: listas de sinonimos/temas no-lista → vacías
+2026-11-18T18:04:26.5937776Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-LEG · fromApiResponse (endpoint legacy) sin envoltura SearchHit
+2026-11-18T18:04:26.5938933Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-LEG-P2 · fromApiResponse con data inválido → vacía
+2026-11-18T18:04:26.5940039Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-LEG-D6 · _list con lista ausente (null) → lista vacía
+2026-11-18T18:04:26.5941065Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-LEG-D6 · _list con valor NO-lista → lista vacía
+2026-11-18T18:04:26.5941990Z ✅ M2 · BusquedaResponse.fromSearchApiResponse (procesamiento) M2-EMPTY · empty() es consistente en todos sus campos
+2026-11-18T18:04:26.5942823Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-P1 · query demasiado corta: NO se genera ninguna petición HTTP
+2026-11-18T18:04:26.5943758Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-P1b · query de 1 carácter tras sanear: sin red
+2026-11-18T18:04:26.5944736Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-LIM · query de exactamente 2 caracteres SÍ genera petición
+2026-11-18T18:04:26.5945752Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-P2 · camino con hits: usa /search y NO hace fallback
+2026-11-18T18:04:26.5946761Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-P3 · camino sin hits: hace fallback a /cursos/buscar
+2026-11-18T18:04:26.5947804Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-URL · la query viaja parametrizada (URL-encoding) y saneada
+2026-11-18T18:04:26.5948852Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-HEAD · envía la cabecera Accept: application/json
+2026-11-18T18:04:26.5949811Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-D3/D4 · status no-2xx en /search: cae al fallback
+2026-11-18T18:04:26.5951069Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-D3/D4 · status no-2xx en el endpoint legacy: resultado vacío
+2026-11-18T18:04:26.5952223Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-D3/D4 · status 199 (< 200) también se considera error
+2026-11-18T18:04:26.5953282Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-D3/D4 · status 300 exacto también se considera error
+2026-11-18T18:04:26.5954488Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-D5 · body JSON que NO es un Map → respuesta vacía
+2026-11-18T18:04:26.5955692Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-D6 · excepción de red: degrada a vacío, NO propaga
+2026-11-18T18:04:26.5957815Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-D6 · timeout: degrada a vacío tras el timeout configurado
+2026-11-18T18:04:26.5959075Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-EXC · JSON malformado: degrada a vacío sin lanzar
+2026-11-18T18:04:26.5960457Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-EXC · el cliente se cierra sin dejar conexiones abiertas
+2026-11-18T18:04:26.5961747Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-SEG · no se exponen detalles internos del servidor en el error
+2026-11-18T18:04:26.5962962Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-LIM · query de 500 caracteres llega truncada a 80
+2026-11-18T18:04:26.5963901Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-BASE · baseUrl inyectable: respeta el prefijo configurado
+2026-11-18T18:04:26.5964531Z ✅ M3 · LuxrayApi.buscar (comunicación con el servicio) M3-FALLBACK-ERR · si /search falla y el legacy también, queda vacío
+2026-11-18T18:04:26.5964912Z ```
+2026-11-18T18:04:26.5965396Z ### ✅ <a id="user-content-r0s4" href="#r0s4">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica12_optimizacion_test.dart</a>
+2026-11-18T18:04:26.5965827Z ```
+2026-11-18T18:04:26.5966187Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica12_optimizacion_test.dart
+2026-11-18T18:04:26.5966716Z ✅ P12-01 · Caché LRU con TTL la segunda búsqueda idéntica NO genera peticiones HTTP
+2026-11-18T18:04:26.5967158Z ✅ P12-01 · Caché LRU con TTL la caché es insensible a mayúsculas y espacios sobrantes
+2026-11-18T18:04:26.5967564Z ✅ P12-01 · Caché LRU con TTL una consulta DISTINTA sí genera una petición
+2026-11-18T18:04:26.5967940Z ✅ P12-01 · Caché LRU con TTL la entrada de caché CADUCA pasado el TTL
+2026-11-18T18:04:26.5968320Z ✅ P12-01 · Caché LRU con TTL la caché se recorta al máximo de entradas (LRU)
+2026-11-18T18:04:26.5968690Z ✅ P12-01 · Caché LRU con TTL los FALLOS de red NO se memorizan
+2026-11-18T18:04:26.5969017Z ✅ P12-01 · Caché LRU con TTL limpiarCache() vacía la caché
+2026-11-18T18:04:26.5969546Z ✅ P12-01 · Coalescencia de peticiones en vuelo dos búsquedas idénticas SIMULTÁNEAS comparten una petición
+2026-11-18T18:04:26.5970102Z ✅ P12-01 · Coalescencia de peticiones en vuelo búsquedas CONCURRENTES de texto distinto NO se coalescen
+2026-11-18T18:04:26.5971414Z ✅ P12-02 · Cancelación lógica del resultado obsoleto una búsqueda posterior invalida la anterior (no hay fallback extra)
+2026-11-18T18:04:26.5972004Z ✅ P12-02 · Cancelación lógica del resultado obsoleto la búsqueda vigente sí usa el fallback legacy
+2026-11-18T18:04:26.5972543Z ✅ P12-03 · Reintento con backoff exponencial un fallo de TRANSPORTE se reintenta (hasta reintentosMax)
+2026-11-18T18:04:26.5973102Z ✅ P12-03 · Reintento con backoff exponencial un 5xx NO se reintenta: el respaldo legacy es mejor respuesta
+2026-11-18T18:04:26.5973587Z ✅ P12-03 · Reintento con backoff exponencial un 4xx NO se reintenta
+2026-11-18T18:04:26.5974165Z ✅ P12-03 · Reintento con backoff exponencial el reintento respeta el presupuesto global de tiempo
+2026-11-18T18:04:26.5974910Z ✅ P12-04 · Estado explícito de la búsqueda 2xx con resultados -> ok
+2026-11-18T18:04:26.5975497Z ✅ P12-04 · Estado explícito de la búsqueda 2xx sin resultados (y sin respaldo) -> vacio
+2026-11-18T18:04:26.5976064Z ✅ P12-04 · Estado explícito de la búsqueda fallo de red -> sinConexion
+2026-11-18T18:04:26.5976643Z ✅ P12-04 · Estado explícito de la búsqueda 5xx en AMBOS endpoints -> errorServidor
+2026-11-18T18:04:26.5977250Z ✅ P12-04 · Estado explícito de la búsqueda query demasiado corta -> vacio sin tocar la red
+2026-11-18T18:04:26.5977924Z ✅ P12-04 · Estado explícito de la búsqueda el estado differentiate "vacio" de "sinConexion" (DEF-18)
+2026-11-18T18:04:26.5978595Z ✅ P12-05 · Cabeceras HTTP centralizadas las peticiones incluyen Accept y User-Agent
+2026-11-18T18:04:26.5979307Z ✅ Regresión · el comportamiento original se conserva con resultados NO se llama al respaldo legacy
+2026-11-18T18:04:26.5979842Z ✅ Regresión · el comportamiento original se conserva sin resultados SÍ se llama al respaldo legacy
+2026-11-18T18:04:26.5980933Z ✅ Regresión · el comportamiento original se conserva la firma original `buscar()` sigue devolviendo la respuesta
+2026-11-18T18:04:26.5981578Z ```
+2026-11-18T18:04:26.5982349Z ### ✅ <a id="user-content-r0s5" href="#r0s5">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica12_resiliencia_test.dart</a>
+2026-11-18T18:04:26.5983080Z ```
+2026-11-18T18:04:26.5983646Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica12_resiliencia_test.dart
+2026-11-18T18:04:26.5984655Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-01 · corte de conexión durante la consulta -> error controlado
+2026-11-18T18:04:26.5985737Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-03 · servidor que no responde -> timeout controlado
+2026-11-18T18:04:26.5986761Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-04 · HTTP 500 -> estado de error de servidor, sin caída
+2026-11-18T18:04:26.5987716Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-05 · HTTP 401 -> no se confunde con 403
+2026-11-18T18:04:26.5988624Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-05 · HTTP 403 -> no se confunde con 401
+2026-11-18T18:04:26.5989493Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-06 · tras restaurar la conexión la búsqueda vuelve a funcionar
+2026-11-18T18:04:26.5990374Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-08 · respuesta tardía -> se respeta el presupuesto y no se duplica
+2026-11-18T18:04:26.5991341Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-07 · el reintento NO duplica peticiones ni resultados
+2026-11-18T18:04:26.5992112Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) RES-07 · ante avería, el reintento está acotado (no infinito)
+2026-11-18T18:04:26.5992740Z ✅ Fase 5 · Resiliencia del cliente (LuxrayApi optimizado) tras una secuencia de averías, la app sigue respondiendo
+2026-11-18T18:04:26.5993108Z ```
+2026-11-18T18:04:26.5993582Z ### ✅ <a id="user-content-r0s6" href="#r0s6">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica13_integracion_test.dart</a>
+2026-11-18T18:04:26.5994006Z ```
+2026-11-18T18:04:26.5994348Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica13_integracion_test.dart
+2026-11-18T18:04:26.5995285Z ✅ I-01 · comunicación cliente↔servicio: petición válida y respuesta válida
+2026-11-18T18:04:26.5995668Z ✅ I-02 · el código HTTP se corresponde con el resultado real
+2026-11-18T18:04:26.5996017Z ✅ I-03 · sin respuesta del servidor la app muestra un aviso claro
+2026-11-18T18:04:26.5996674Z ✅ I-04 · el contrato de petición coincide con lo que consume el servicio
+2026-11-18T18:04:26.5997109Z ```
+2026-11-18T18:04:26.5997765Z ### ✅ <a id="user-content-r0s7" href="#r0s7">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica13_unitarias_test.dart</a>
+2026-11-18T18:04:26.5998178Z ```
+2026-11-18T18:04:26.5998514Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/practica13_unitarias_test.dart
+2026-11-18T18:04:26.5998979Z ✅ U-01 · entrada válida: responde ok con los datos del contrato
+2026-11-18T18:04:26.5999337Z ✅ U-02 · entrada vacía o nula: no toca la red y queda en estado vacío
+2026-11-18T18:04:26.5999701Z ✅ U-03 · query de 500 caracteres: se trunca al límite antes de enviar
+2026-11-18T18:04:26.6000081Z ✅ U-04 · el resultado se ajusta al contrato: respaldo y parseo fiel
+2026-11-18T18:04:26.6000603Z ✅ U-04b · respuesta con forma inesperada: se clasifica, no se traga
+2026-11-18T18:04:26.6000972Z ✅ U-05 · red caída: no propaga la excepción y el estado es explícito
+2026-11-18T18:04:26.6001323Z ✅ U-05b · servidor que no responde: el timeout corta la espera
+2026-11-18T18:04:26.6001650Z ✅ U-05c · HTTP 500: estado de error de servidor, no de red
+2026-11-18T18:04:26.6002135Z ✅ U-05d · HTTP 401 y 403: no se confunden con un fallo de red
+2026-11-18T18:04:26.6002480Z ✅ U-06 · regresión DEF-18: un fallo de red NO dice «sin resultados»
+2026-11-18T18:04:26.6002832Z ✅ U-07 · la caché evita repetir la descarga de la misma consulta
+2026-11-18T18:04:26.6003229Z ```
+2026-11-18T18:04:26.6003705Z ### ✅ <a id="user-content-r0s8" href="#r0s8">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/regresion_def04_navegacion_test.dart</a>
+2026-11-18T18:04:26.6004140Z ```
+2026-11-18T18:04:26.6004511Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/regresion_def04_navegacion_test.dart
+2026-11-18T18:04:26.6004975Z ✅ DEF-04 · al arrancar, la app debe mostrar la pantalla de INICIO
+2026-11-18T18:04:26.6005319Z ✅ DEF-04 · no debe aparecer "Sin coincidencias" antes de buscar
+2026-11-18T18:04:26.6005564Z ```
+2026-11-18T18:04:26.6005982Z ### ✅ <a id="user-content-r0s9" href="#r0s9">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/seguridad_test.dart</a>
+2026-11-18T18:04:26.6006360Z ```
+2026-11-18T18:04:26.6006657Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/seguridad_test.dart
+2026-11-18T18:04:26.6007095Z ✅ Validación de entradas — sanitizar() elimina caracteres de control
+2026-11-18T18:04:26.6007518Z ✅ Validación de entradas — sanitizar() recorta la longitud máxima a 80 caracteres
+2026-11-18T18:04:26.6007916Z ✅ Validación de entradas — sanitizar() recorta espacios alrededor
+2026-11-18T18:04:26.6008368Z ✅ Validación de entradas — buscar() no genera peticiones inválidas query de 1 carácter no toca la red
+2026-11-18T18:04:26.6008959Z ✅ Validación de entradas — buscar() no genera peticiones inválidas query de solo caracteres de control no toca la red
+2026-11-18T18:04:26.6009581Z ✅ Validación de entradas — buscar() no genera peticiones inválidas query de 500 caracteres se trunca a 80 antes de enviar
+2026-11-18T18:04:26.6010349Z ✅ Prevención de exposición de información sensible error HTTP del servidor no lanza ni expone detalles
+2026-11-18T18:04:26.6010951Z ✅ Prevención de exposición de información sensible JSON malformado del servidor degrada a respuesta vacía
+2026-11-18T18:04:26.6011546Z ✅ Prevención de exposición de información sensible fallo de red degrada a respuesta vacía sin propagar la excepción
+2026-11-18T18:04:26.6012163Z ✅ Prevención de exposición de información sensible la query del usuario nunca aparece expuesta en excepciones
+2026-11-18T18:04:26.6012523Z ```
+2026-11-18T18:04:26.6012928Z ### ✅ <a id="user-content-r0s10" href="#r0s10">/home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/widget_test.dart</a>
+2026-11-18T18:04:26.6013441Z ```
+2026-11-18T18:04:26.6013736Z ✅ loading /home/runner/work/Luxray_dep/Luxray_dep/luxraywaer/test/widget_test.dart
+2026-11-18T18:04:26.6014158Z ✅ Modelos Busqueda BusquedaResponse.fromJson parsea hits vacíos
+2026-11-18T18:04:26.6014509Z ✅ Modelos Busqueda ConceptoHit.fromJson tolera nulls
+2026-11-18T18:04:26.6014845Z ✅ Modelos Busqueda BusquedaResponse.fromApiResponse extrae data
+2026-11-18T18:04:26.6015158Z ✅ HomeScreen render sin petición previa
+2026-11-18T18:04:26.6015446Z ✅ HomeScreen el botón BUSCAR llama a onBuscar con texto
+2026-11-18T18:04:26.6015805Z ✅ ResultadosScreen estado vacío muestra mensaje de sin coincidencias
+2026-11-18T18:04:26.6016155Z ✅ ResultadosScreen muestra grupos cuando hay hits
+2026-11-18T18:04:26.6016387Z ```
+2026-11-18T18:04:26.6016526Z </details>
+2026-11-18T18:04:26.6017341Z ##[endgroup]
+2026-11-18T18:04:26.6128941Z ##[group]Run actions/upload-artifact@v4
+2026-11-18T18:04:26.6129187Z with:
+2026-11-18T18:04:26.6129364Z   name: flutter-test-results
+2026-11-18T18:04:26.6129583Z   path: flutter_test.json
+flutter_test.xml
+
+2026-11-18T18:04:26.6129818Z   if-no-files-found: warn
+2026-11-18T18:04:26.6130017Z   compression-level: 6
+2026-11-18T18:04:26.6130394Z   overwrite: false
+2026-11-18T18:04:26.6130571Z   include-hidden-files: false
+2026-11-18T18:04:26.6130760Z env:
+2026-11-18T18:04:26.6130914Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:04:26.6131165Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:04:26.6131457Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:04:26.6131658Z ##[endgroup]
+2026-11-18T18:04:26.7492343Z (node:2846) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T18:04:26.7493115Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T18:04:26.7582129Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-18T18:04:26.7584511Z The least common ancestor is /home/runner/work/Luxray_dep/Luxray_dep. This will be the root directory of the artifact
+2026-11-18T18:04:26.7585524Z With the provided path, there will be 2 files uploaded
+2026-11-18T18:04:26.7606376Z Artifact name is valid!
+2026-11-18T18:04:26.7606993Z Root directory input is valid!
+2026-11-18T18:04:27.1141445Z Beginning upload of artifact content to blob storage
+2026-11-18T18:04:27.1324219Z (node:2846) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T18:04:27.3846042Z Uploaded bytes 16221
+2026-11-18T18:04:27.4440544Z Finished uploading artifact content to blob storage!
+2026-11-18T18:04:27.4441392Z SHA256 digest of uploaded artifact zip is 4ffd1c5f66a0dce3727dd9b9d00513b19d6d7b2098685941b5fc3a495dddeff7
+2026-11-18T18:04:27.4442335Z Finalizing artifact upload
+2026-11-18T18:04:27.8240411Z Artifact flutter-test-results.zip successfully finalized. Artifact ID 14456159526
+2026-11-18T18:04:27.8241258Z Artifact flutter-test-results has been successfully uploaded! Final size is 16221 bytes. Artifact ID is 14456159526
+2026-11-18T18:04:27.8246147Z Artifact download URL: https://github.com/Chekito2720/Luxray_dep/actions/runs/44365378884/artifacts/14456159526
+2026-11-18T18:04:27.8474074Z Post job cleanup.
+2026-11-18T18:04:27.8477253Z ##[start-action display=Cache pub dependencies;id=__c455f5ea-8940-4323-a657-1826b4fbf3fa.cache-pub]
+2026-11-18T18:04:27.9372908Z Post job cleanup.
+2026-11-18T18:04:28.0540396Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Luxray_dep/Luxray_dep --files-from manifest.txt --use-compress-program zstdmt
+2026-11-18T18:04:29.6917881Z Sent 28699090 of 28699090 (100.0%), 27.4 MBs/sec
+2026-11-18T18:04:30.1805384Z Cache saved with key: flutter-pub-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6-d57a2899b5b1f3b7b2ea23a44862870333d9eedcc949aaea58ad8caeb4b8db4a
+2026-11-18T18:04:30.1891350Z ##[end-action id=__c455f5ea-8940-4323-a657-1826b4fbf3fa.cache-pub;outcome=success;conclusion=success;duration_ms=2341]
+2026-11-18T18:04:30.1893648Z ##[start-action display=Cache Flutter;id=__c455f5ea-8940-4323-a657-1826b4fbf3fa.cache-flutter]
+2026-11-18T18:04:30.1925364Z Post job cleanup.
+2026-11-18T18:04:30.3078705Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Luxray_dep/Luxray_dep --files-from manifest.txt --use-compress-program zstdmt
+2026-11-18T18:04:36.0424798Z Sent 0 of 1691092783 (0.0%), 0.0 MBs/sec
+2026-11-18T18:04:37.0461655Z Sent 201326592 of 1691092783 (11.9%), 96.0 MBs/sec
+2026-11-18T18:04:38.0471507Z Sent 536870912 of 1691092783 (31.7%), 170.6 MBs/sec
+2026-11-18T18:04:39.0444802Z Sent 1006632960 of 1691092783 (59.5%), 239.9 MBs/sec
+2026-11-18T18:04:40.0481766Z Sent 1140850688 of 1691092783 (67.5%), 217.5 MBs/sec
+2026-11-18T18:04:41.0463248Z Sent 1623983919 of 1691092783 (96.0%), 258.0 MBs/sec
+2026-11-18T18:04:41.5322729Z Sent 1691092783 of 1691092783 (100.0%), 248.5 MBs/sec
+2026-11-18T18:04:41.8703169Z Cache saved with key: flutter-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6
+2026-11-18T18:04:41.8806301Z ##[end-action id=__c455f5ea-8940-4323-a657-1826b4fbf3fa.cache-flutter;outcome=success;conclusion=success;duration_ms=11691]
+2026-11-18T18:04:41.8894496Z Post job cleanup.
+2026-11-18T18:04:41.9577650Z [command]/usr/bin/git version
+2026-11-18T18:04:41.9610896Z git version 2.56.1
+2026-11-18T18:04:41.9642001Z Temporarily overriding HOME='/home/runner/work/_temp/1406ffb5-7618-4ae8-872c-8637f162559c' before making global git config changes
+2026-11-18T18:04:41.9642882Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T18:04:41.9646271Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T18:04:41.9680558Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T18:04:41.9711650Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T18:04:41.9981602Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T18:04:41.9996457Z http.https://github.com/.extraheader
+2026-11-18T18:04:42.0009320Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-18T18:04:42.0038566Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T18:04:42.0313577Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T18:04:42.0348180Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T18:04:42.0722448Z Cleaning up orphan processes
+2026-11-18T18:04:42.1001799Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/upload-artifact@v4, dorny/test-reporter@v1. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

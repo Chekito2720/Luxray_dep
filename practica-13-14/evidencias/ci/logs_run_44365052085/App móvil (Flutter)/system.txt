@@ -1,0 +1,8 @@
+2026-11-18T18:01:12.6590000Z Evaluating flutter.if
+2026-11-18T18:01:12.6590000Z Evaluating: success()
+2026-11-18T18:01:12.6590000Z Result: true
+2026-11-18T18:01:12.8020000Z Job is about to start running on the hosted runner: GitHub Actions 1000000019
+2026-11-18T18:01:12.6630000Z Requested labels: ubuntu-latest
+2026-11-18T18:01:12.6630000Z Job defined at: Chekito2720/Luxray_dep/.github/workflows/ci-luxray.yml@refs/heads/practica-pruebas
+2026-11-18T18:01:12.6630000Z Waiting for a runner to pick up this job...
+2026-11-18T18:01:12.8020000Z Job is waiting for a hosted runner to come online.

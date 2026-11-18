@@ -114,7 +114,10 @@ Todas las ejecuciones están en la pestaña **Actions** del repositorio y sus lo
 | 1 | [`44239354054`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44239354054) | `3b5ae8b` | `push` | ❌ **failure** | Job Flutter ✔ (36 s) · **Job backend ✘** en «Compilar y ejecutar pruebas» (30 s) |
 | 2 | [`44241518237`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44241518237) | `cf9d7d9` | `push` | ⚠️ **«verde» falso** | El paso `mvn ... \| tee` devolvía el código de `tee` (0): **Maven estaba en rojo** y el pipeline lo dabă por bueno (ver **E-6**) |
 | 3 | [`44347435232`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44347435232) | `999306d` | `push` | ✅ **success real** | `set -o pipefail` + tests de backend versionados. **BUILD SUCCESS** en el log (no enmascarado) · Flutter: *«No issues found!»* + *«185 passed»* |
-| 4 | [`_ver README_`](_README) | documentación | `push` | ✅ | reedición tras documentar: demuestra que **cada push re-dispara el pipeline** |
+| 4 | [`44365052085`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365052085) | `e194c7d` | `push` | ✅ **success real** | reedición tras documentar: `BUILD SUCCESS` + *«185 passed»*. Demuestra que **cada push re-dispara el pipeline** |
+| 5 | [`44365378884`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365378884) | `e194c7d` | **`pull_request`** ([PR #1](https://github.com/Chekito2720/Luxray_dep/pull/1)) | ✅ **success real** | **`BUILD SUCCESS`** + *«No issues found!»* + *«185 passed»*. Demuestra el **disparador `pull_request`** |
+
+> **AUT-07 verificado con los dos eventos que exige la práctica:** `push` (ejecuciones 1–4) y `pull_request` (ejecución 5, sobre el PR #1).
 
 ### 5.2 Resultados verificados de la ejecución 3 (la verde real)
 

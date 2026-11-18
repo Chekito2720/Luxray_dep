@@ -68,7 +68,8 @@ cd backend
    * [`44239354054`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44239354054) — ❌ fallo real del backend (diagnosticado y corregido)
    * [`44241518237`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44241518237) — ⚠️ verde **falso** (`tee` enmascaraba el fallo de Maven)
    * [`44347435232`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44347435232) — ✅ verde **real** (con `pipefail` y los tests de backend versionados)
-   * La reedición de este README es la **cuarta ejecución**: cada `push` re-dispara el pipeline.
+   * [`44365052085`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365052085) — ✅ evento **`push`** (reedición de la documentación)
+   * [`44365378884`](https://github.com/Chekito2720/Luxray_dep/actions/runs/44365378884) — ✅ evento **`pull_request`** ([PR #1](https://github.com/Chekito2720/Luxray_dep/pull/1))
 
 ---
 
