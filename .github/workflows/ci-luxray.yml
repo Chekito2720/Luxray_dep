@@ -4,9 +4,9 @@
 # Ejecuta automáticamente las pruebas del proyecto cuando se realiza un PUSH
 # o un PULL REQUEST, tal y como exige la práctica.
 #
-#   job flutter  -> flutter pub get | flutter analyze | flutter test
+#   job flutter  -> flutter pub get | flutter analyze | flutter test --machine
 #                   (unitarias + widget + integración contra un HttpServer real)
-#   job backend  -> mvn -B test     (unitarias + integración contra H2)
+#   job backend  -> ./mvnw -B test  (unitarias + integración contra H2)
 #
 # Ambos publican los resultados en la pestaña «Checks» y archivan el informe
 # JUnit como artefacto descargable.
@@ -26,6 +26,10 @@ on:
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
+
+env:
+  # El wrapper fija la versión de Maven (no depende de la del runner).
+  MAVEN_VERSION: '3.9.16'
 
 jobs:
   # ─────────────────────────────────────────────────────────────────────
@@ -48,6 +52,9 @@ jobs:
           channel: stable
           cache: true
 
+      - name: Verificar versión de Flutter
+        run: flutter --version
+
       - name: Dependencias
         run: flutter pub get
 
@@ -69,6 +76,7 @@ jobs:
           path: flutter_test.xml
           reporter: java-junit
           fail-on-error: true
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Archivar resultados
         uses: actions/upload-artifact@v4
@@ -100,8 +108,23 @@ jobs:
           java-version: '21'
           cache: maven
 
+      # Diagnóstico: si el build falla, la causa queda escrita en las
+      # anotaciones del check (visibles desde la API y la pestaña Checks).
+      - name: Diagnóstico del entorno
+        run: |
+          echo "JAVA_HOME=$JAVA_HOME"
+          java -version
+          ./mvnw -v
+
       - name: Compilar y ejecutar pruebas
-        run: mvn -B test
+        run: ./mvnw -B test 2>&1 | tee ../mvn.log
+
+      - name: Diagnóstico del fallo
+        if: failure()
+        run: |
+          echo '⛔ Fallo del backend. Líneas de error de Maven:'
+          grep -E '\[ERROR\]|BUILD FAILURE|Failed to execute|Could not resolve|invalid target|No plugin found' ../mvn.log \
+            | head -40 | sed 's/^/::error:: /' || true
 
       - name: Publicar resultados
         uses: dorny/test-reporter@v1
@@ -111,11 +134,14 @@ jobs:
           path: '**/target/surefire-reports/*.xml'
           reporter: java-junit
           fail-on-error: false
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Archivar resultados
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: backend-test-results
-          path: '**/target/surefire-reports/*.xml'
+          path: |
+            **/target/surefire-reports/*.xml
+            mvn.log
           if-no-files-found: warn
