@@ -1,0 +1,108 @@
+{
+  "etiqueta": "antes",
+  "fecha": "2026-11-11 11:37:48",
+  "dispositivo": "emulador Wear OS API 36 (454x454)",
+  "pid": "30650",
+  "escenarios": {
+    "S0_reposo": {
+      "muestras_ram": 14,
+      "ram_pss_inicial_mb": 218.74,
+      "ram_pss_max_mb": 218.74,
+      "ram_pss_final_mb": 218.55,
+      "ram_rss_max_mb": 320.21,
+      "java_heap_max_mb": 11.43,
+      "native_heap_max_mb": 28.0,
+      "descripcion": "Proceso en reposo, sin interaccion",
+      "duracion_s": 8.56,
+      "cpu_muestras": 6,
+      "cpu_promedio_pct": 0.0,
+      "cpu_max_pct": 0.0,
+      "rss_max_mb": 320.0,
+      "ram_pss_antes_mb": 213.62,
+      "ram_pss_despues_mb": 218.55,
+      "frames": {
+        "total_frames": 0,
+        "janky_frames": 0,
+        "p50_ms": 4950,
+        "p90_ms": 4950,
+        "p95_ms": 4950,
+        "p99_ms": 4950
+      }
+    },
+    "S1_consulta_repetida": {
+      "muestras_ram": 105,
+      "ram_pss_inicial_mb": 218.6,
+      "ram_pss_max_mb": 259.91,
+      "ram_pss_final_mb": 239.32,
+      "ram_rss_max_mb": 362.2,
+      "java_heap_max_mb": 11.47,
+      "native_heap_max_mb": 53.2,
+      "descripcion": "10 busquedas identicas",
+      "duracion_s": 70.48,
+      "cpu_muestras": 6,
+      "cpu_promedio_pct": 0.0,
+      "cpu_max_pct": 0.0,
+      "rss_max_mb": 341.0,
+      "ram_pss_antes_mb": 218.59,
+      "ram_pss_despues_mb": 239.28,
+      "frames": {
+        "total_frames": 0,
+        "janky_frames": 0,
+        "p50_ms": 4950,
+        "p90_ms": 4950,
+        "p95_ms": 4950,
+        "p99_ms": 4950
+      }
+    },
+    "S2_navegacion": {
+      "muestras_ram": 202,
+      "ram_pss_inicial_mb": 239.27,
+      "ram_pss_max_mb": 249.18,
+      "ram_pss_final_mb": 239.6,
+      "ram_rss_max_mb": 351.47,
+      "java_heap_max_mb": 11.47,
+      "native_heap_max_mb": 39.2,
+      "descripcion": "20 transiciones inicio <-> resultados",
+      "duracion_s": 133.51,
+      "cpu_muestras": 6,
+      "cpu_promedio_pct": 0.17,
+      "cpu_max_pct": 1.0,
+      "rss_max_mb": 341.0,
+      "ram_pss_antes_mb": 239.32,
+      "ram_pss_despues_mb": 239.58,
+      "frames": {
+        "total_frames": 0,
+        "janky_frames": 0,
+        "p50_ms": 4950,
+        "p90_ms": 4950,
+        "p95_ms": 4950,
+        "p99_ms": 4950
+      }
+    },
+    "S3_procesamiento": {
+      "muestras_ram": 131,
+      "ram_pss_inicial_mb": 239.58,
+      "ram_pss_max_mb": 251.07,
+      "ram_pss_final_mb": 242.25,
+      "ram_rss_max_mb": 352.93,
+      "java_heap_max_mb": 11.47,
+      "native_heap_max_mb": 44.29,
+      "descripcion": "8 busquedas con parseo y render del detalle",
+      "duracion_s": 85.01,
+      "cpu_muestras": 6,
+      "cpu_promedio_pct": 0.0,
+      "cpu_max_pct": 0.0,
+      "rss_max_mb": 344.0,
+      "ram_pss_antes_mb": 239.62,
+      "ram_pss_despues_mb": 242.23,
+      "frames": {
+        "total_frames": 0,
+        "janky_frames": 0,
+        "p50_ms": 4950,
+        "p90_ms": 4950,
+        "p95_ms": 4950,
+        "p99_ms": 4950
+      }
+    }
+  }
+}

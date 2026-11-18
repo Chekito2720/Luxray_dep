@@ -1,0 +1,57 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: C:\DDI\luxray\practica-11\fase5-conectividad\carga_k6.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 10m30s max duration (incl. graceful stop):
+              * carga: 20 iterations for each of 5 VUs (maxDuration: 10m0s, exec: lectura, gracefulStop: 30s)
+
+
+running (00m01.0s), 5/5 VUs, 20 complete and 0 interrupted iterations
+carga   [  20% ] 5 VUs  00m01.0s/10m0s  020/100 iters, 20 per VU
+
+running (00m02.0s), 5/5 VUs, 45 complete and 0 interrupted iterations
+carga   [  45% ] 5 VUs  00m02.0s/10m0s  045/100 iters, 20 per VU
+
+running (00m03.0s), 5/5 VUs, 65 complete and 0 interrupted iterations
+carga   [  65% ] 5 VUs  00m03.0s/10m0s  065/100 iters, 20 per VU
+
+running (00m04.0s), 5/5 VUs, 90 complete and 0 interrupted iterations
+carga   [  90% ] 5 VUs  00m04.0s/10m0s  090/100 iters, 20 per VU
+# Fase 5 (NET-07) — Escenario: lectura_5usuarios
+
+- **Modo**: lectura
+- **Usuarios concurrentes (VUs)**: 5
+- **Iteraciones por VU**: 20
+- **Peticiones totales**: 100
+- **Fecha**: 2026-11-11T15:36:47.394Z
+
+| Indicador | Valor |
+|---|---|
+| Latencia media | 13.56 ms |
+| Latencia mediana | 12.50 ms |
+| Latencia P90 | 17.65 ms |
+| Latencia P95 | 20.50 ms |
+| Latencia P99 | - ms |
+| Latencia mínima | 8.07 ms |
+| Latencia máxima | 24.86 ms |
+| Peticiones fallidas | 0 |
+| Tasa de fallo | 0.00 % |
+| Checks correctos | 100.00 % |
+| Tasa de peticiones | 23.22 req/s |
+| Datos recibidos | 306.49 KB |
+| Datos enviados | 10.94 KB |
+
+### Umbrales evaluados (criterios de referencia de la practica)
+
+- `http_req_duration p(95) < 500 ms`
+- `http_req_failed rate < 0.05`
+- `checks rate > 0.95`
+running (00m04.3s), 0/5 VUs, 100 complete and 0 interrupted iterations
+carga ✓ [ 100% ] 5 VUs  00m04.3s/10m0s  100/100 iters, 20 per VU

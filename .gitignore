@@ -1,6 +1,10 @@
 # Frontend (se mantiene en Vercel)
 frontend-web/
-luxraywaer/
+
+# PRÁCTICA 13/14: la aplicaciÃn móvil SÍ debe estar versionada:
+# sin ella el pipeline de CI no puede ejecutar sus pruebas (DEF-14 de la Práctica 11).
+# Los artefactos de compilación siguen excluidos por el .gitignore interno
+# de luxraywaer (/build/, .dart_tool/, .flutter-plugins-dependencies, ...).
 
 # Scripts locales (.bat)
 *.bat
@@ -23,3 +27,18 @@ Thumbs.db
 # Build artifacts locales (se generan en el contenedor Docker)
 backend/**/target/
 target/
+
+# Artefactos de compilacion de Android/Gradle del proyecto movil
+luxraywaer/android/build/
+luxraywaer/android/.gradle/
+luxraywaer/build/
+
+
+# APKs y binarios pesados (artefactos reproducibles, no codigo fuente)
+*.apk
+*.aab
+
+
+# Binarios de herramientas descargables (no codigo fuente)
+practica-11/tools/k6/
+

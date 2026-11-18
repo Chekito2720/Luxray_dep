@@ -1,0 +1,165 @@
+{
+    "metrics": {
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 20,
+            "thresholds": {
+                "rate<0.05": false
+            },
+            "value": 0
+        },
+        "iteration_duration": {
+            "med": 522.0053499999999,
+            "max": 606.1749,
+            "p(90)": 581.77704,
+            "p(95)": 604.7442,
+            "avg": 528.074035,
+            "min": 484.274
+        },
+        "wb11_latencia_ms": {
+            "med": 320.9257,
+            "max": 405.6192,
+            "p(90)": 381.56013,
+            "p(95)": 404.275995,
+            "avg": 327.5016499999999,
+            "min": 283.7469
+        },
+        "iterations": {
+            "count": 20,
+            "rate": 1.8935821416949907
+        },
+        "http_req_sending": {
+            "p(90)": 0,
+            "p(95)": 0,
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0
+        },
+        "http_req_waiting": {
+            "max": 405.0102,
+            "p(90)": 380.8971,
+            "p(95)": 404.24554500000005,
+            "avg": 326.8584,
+            "min": 283.2737,
+            "med": 320.03205
+        },
+        "data_sent": {
+            "count": 6239,
+            "rate": 590.7029491017523
+        },
+        "wb11_bytes_recibidos": {
+            "count": 16716,
+            "rate": 1582.6559540286732
+        },
+        "http_reqs": {
+            "count": 20,
+            "rate": 1.8935821416949907
+        },
+        "vus": {
+            "min": 1,
+            "max": 1,
+            "value": 1
+        },
+        "vus_max": {
+            "value": 1,
+            "min": 1,
+            "max": 1
+        },
+        "http_req_duration": {
+            "min": 283.7469,
+            "med": 320.9257,
+            "max": 405.6192,
+            "p(90)": 381.56013,
+            "p(95)": 404.275995,
+            "avg": 327.5016499999999,
+            "thresholds": {
+                "p(95)<500": false
+            }
+        },
+        "http_req_connecting": {
+            "min": 0,
+            "med": 0,
+            "max": 1.5269,
+            "p(90)": 0,
+            "p(95)": 0.07634500000000108,
+            "avg": 0.076345
+        },
+        "http_req_receiving": {
+            "avg": 0.64325,
+            "min": 0,
+            "med": 0.6795,
+            "max": 1.714,
+            "p(90)": 1.1244000000000005,
+            "p(95)": 1.4240600000000003
+        },
+        "data_received": {
+            "count": 24480,
+            "rate": 2317.7445414346685
+        },
+        "checks": {
+            "passes": 40,
+            "fails": 0,
+            "thresholds": {
+                "rate>0.95": false
+            },
+            "value": 1
+        },
+        "http_req_blocked": {
+            "avg": 0.076345,
+            "min": 0,
+            "med": 0,
+            "max": 1.5269,
+            "p(90)": 0,
+            "p(95)": 0.07634500000000108
+        },
+        "wb11_tasa_ok": {
+            "passes": 20,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_duration{expected_response:true}": {
+            "min": 283.7469,
+            "med": 320.9257,
+            "max": 405.6192,
+            "p(90)": 381.56013,
+            "p(95)": 404.275995,
+            "avg": 327.5016499999999
+        },
+        "wb11_tasa_error": {
+            "passes": 0,
+            "fails": 20,
+            "value": 0
+        },
+        "http_req_tls_handshaking": {
+            "avg": 0,
+            "min": 0,
+            "med": 0,
+            "max": 0,
+            "p(90)": 0,
+            "p(95)": 0
+        }
+    },
+    "root_group": {
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "escritura: HTTP 200": {
+                    "passes": 20,
+                    "fails": 0,
+                    "name": "escritura: HTTP 200",
+                    "path": "::escritura: HTTP 200",
+                    "id": "dcdb900f1fbf5db1e190d75dea524970"
+                },
+                "escritura: devuelve token": {
+                    "fails": 0,
+                    "name": "escritura: devuelve token",
+                    "path": "::escritura: devuelve token",
+                    "id": "9a2ef1a5ce3eb799bd5af786a221b362",
+                    "passes": 20
+                }
+            },
+        "name": "",
+        "path": ""
+    }
+}

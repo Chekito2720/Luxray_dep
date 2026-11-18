@@ -1,0 +1,1001 @@
+{
+  "base": "http://localhost:8080/api",
+  "fecha": "2026-11-11T09:13:17",
+  "resultados": [
+    {
+      "label": "GET /cursos (lista publica)",
+      "method": "GET",
+      "path": "/cursos",
+      "http": 200,
+      "ms": 1972.94,
+      "bytes": 2750,
+      "body": {
+        "data": [
+          {
+            "id": "78a8d5a5-40e2-4188-8500-5ba7607a166d",
+            "titulo": "Sistemas Industriales",
+            "descripcion": "Motores trifasicos, variadores, PLCs y protecciones para entornos industriales de alta potencia.",
+            "nivel": "Avanzado",
+            "nivelKey": "avanzado",
+            "semanas": 12,
+            "lecciones": 8,
+            "estudiantes": 980,
+            "rating": 4.9,
+            "instructor": "Roberto Silva",
+            "icon": "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc",
+            "color": "#37474f",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          },
+          {
+            "id": "75140c96-1070-497b-b188-ce8eecbabd17",
+            "titulo": "Energía Solar Fotovoltaica",
+            "descripcion": "Paneles solares, inversores y diseño de sistemas fotovoltaicos.",
+            "nivel": "Intermedio",
+            "nivelKey": "intermedio",
+            "semanas": 8,
+            "lecciones": 8,
+            "estudiantes": 1100,
+            "rating": 4.85,
+            "instructor": "Lucía Ramírez",
+            "icon": "https://images.unsplash.com/photo-1509391366360-2e959784a276",
+            "color": "#f59e0b",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          },
+          {
+            "id": "aa8e0603-6a1e-4417-aaca-289dc553adbf",
+            "titulo": "Seguridad Eléctrica NFPA 70E",
+            "descripcion": "Arc flash, EPP, LOTO y procedimientos para trabajo seguro.",
+            "nivel": "Intermedio",
+            "nivelKey": "intermedio",
+            "semanas": 6,
+            "lecciones": 8,
+            "estudiantes": 480,
+            "rating": 4.5,
+            "instructor": "Patricia Núñez",
+            "icon": "https://images.unsplash.com/photo-1581092160562-40aa08e78837",
+            "color": "#8b5cf6",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          },
+          {
+            "id": "64045d61-4e71-42bd-96aa-d18dd6f0fd41",
+            "titulo": "Normativa NOM-001-SEDE",
+            "descripcion": "Cumplimiento de la NOM-001-SEDE para instalaciones eléctricas.",
+            "nivel": "Avanzado",
+            "nivelKey": "avanzado",
+            "semanas": 10,
+            "lecciones": 8,
+            "estudiantes": 720,
+            "rating": 4.6,
+            "instructor": "Miguel Ángel Pérez",
+            "icon": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+            "color": "#dc2626",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          },
+          {
+            "id": "34d4d37b-5f4d-4507-8b02-753a7a0a0590",
+            "titulo": "Fundamentos de Electricidad",
+            "descripcion": "Aprende los principios básicos de la electricidad.",
+            "nivel": "Basico",
+            "nivelKey": "basico",
+            "semanas": 4,
+            "lecciones": 8,
+            "estudiantes": 2400,
+            "rating": 4.8,
+            "instructor": "Carlos Méndez",
+            "icon": "https://images.unsplash.com/photo-1581094288338-2314dddb7ece",
+            "color": "#16a34a",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          },
+          {
+            "id": "b5265365-9cf8-4963-820a-160f4205eacd",
+            "titulo": "Instalaciones Residenciales",
+            "descripcion": "Diseno y ejecucion de instalaciones electricas residenciales seguras. Cables, protecciones, puesta a tierra.",
+            "nivel": "Intermedio",
+            "nivelKey": "intermedio",
+            "semanas": 8,
+            "lecciones": 8,
+            "estudiantes": 1850,
+            "rating": 4.7,
+            "instructor": "Ana Torres",
+            "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+            "color": "#1565c0",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          }
+        ],
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /cursos?nivel=BASICO",
+      "method": "GET",
+      "path": "/cursos?nivel=BASICO",
+      "http": 200,
+      "ms": 1146.2,
+      "bytes": 477,
+      "body": {
+        "data": [
+          {
+            "id": "34d4d37b-5f4d-4507-8b02-753a7a0a0590",
+            "titulo": "Fundamentos de Electricidad",
+            "descripcion": "Aprende los principios básicos de la electricidad.",
+            "nivel": "Basico",
+            "nivelKey": "basico",
+            "semanas": 4,
+            "lecciones": 8,
+            "estudiantes": 2400,
+            "rating": 4.8,
+            "instructor": "Carlos Méndez",
+            "icon": "https://images.unsplash.com/photo-1581094288338-2314dddb7ece",
+            "color": "#16a34a",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          }
+        ],
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /cursos?q=electrica",
+      "method": "GET",
+      "path": "/cursos?q=electrica",
+      "http": 200,
+      "ms": 100.14,
+      "bytes": 535,
+      "body": {
+        "data": [
+          {
+            "id": "b5265365-9cf8-4963-820a-160f4205eacd",
+            "titulo": "Instalaciones Residenciales",
+            "descripcion": "Diseno y ejecucion de instalaciones electricas residenciales seguras. Cables, protecciones, puesta a tierra.",
+            "nivel": "Intermedio",
+            "nivelKey": "intermedio",
+            "semanas": 8,
+            "lecciones": 8,
+            "estudiantes": 1850,
+            "rating": 4.7,
+            "instructor": "Ana Torres",
+            "icon": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
+            "color": "#1565c0",
+            "publicado": true,
+            "creadoEn": "2026-08-03T16:12:07.345947"
+          }
+        ],
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /cursos/buscar?q=ohm",
+      "method": "GET",
+      "path": "/cursos/buscar?q=ohm",
+      "http": 200,
+      "ms": 1960.28,
+      "bytes": 1969,
+      "body": {
+        "data": {
+          "query": "ohm",
+          "total": 6,
+          "cursos": [],
+          "lecciones": [
+            {
+              "id": "729a1fa1-def6-4d08-b2a5-6d294c1f1604",
+              "cursoId": "34d4d37b-5f4d-4507-8b02-753a7a0a0590",
+              "cursoTitulo": "Fundamentos de Electricidad",
+              "titulo": "La ley de Ohm explicada",
+              "descripcion": "V = I × R, con ejemplos prácticos.",
+              "tipo": "VIDEO",
+              "snippet": "La ley de Ohm explicada V = I × R, con ejemplos prácticos. Ley de Ohm"
+            },
+            {
+              "id": "a32c136d-3cbc-4c4f-80dd-c535578e9e94",
+              "cursoId": "34d4d37b-5f4d-4507-8b02-753a7a0a0590",
+              "cursoTitulo": "Fundamentos de Electricidad",
+              "titulo": "Cálculo de resistencias",
+              "descripcion": "Ejercicios resueltos paso a paso.",
+              "tipo": "LECTURA",
+              "snippet": "…jercicios resueltos paso a paso. Ley de Ohm"
+            }
+          ],
+          "conceptos": [
+            {
+              "termino": "Corriente eléctrica",
+              "definicion": "Flujo de electrones que circula por un conductor. Se mide en amperios (A).",
+              "sinonimos": [
+                "intensidad",
+                "amperaje",
+                "flujo de carga"
+              ],
+              "temas": [
+                "fundamentos",
+                "ley de ohm"
+              ],
+              "snippet": ""
+            },
+            {
+              "termino": "Resistencia eléctrica",
+              "definicion": "Oposición que ofrece un material al paso de la corriente. Se mide en ohms (Ω).",
+              "sinonimos": [
+                "impedancia",
+                "ohm"
+              ],
+              "temas": [
+                "ley de ohm",
+                "conductores"
+              ],
+              "snippet": "…ial al paso de la corriente. Se mide en ohms (Ω)."
+            },
+            {
+              "termino": "Ley de Ohm",
+              "definicion": "V = I · R. Relaciona voltaje (V), corriente (I) y resistencia (R) en un circuito.",
+              "sinonimos": [
+                "V=IR"
+              ],
+              "temas": [
+                "fundamentos",
+                "cálculo"
+              ],
+              "snippet": "Ley de Ohm V = I · R. Relaciona voltaje (V), corriente (I) y resistenc…"
+            }
+          ],
+          "faqs": [
+            {
+              "id": "g3",
+              "pregunta": "¿Necesito conocimientos previos para empezar?",
+              "respuesta": "No. El curso Fundamentos de Electricidad (Básico) parte de cero: voltaje, corriente, resistencia, ley de Ohm, circuitos simples, seguridad básica. Existen evaluaciones de ubicación para saltar a Intermedio/Avanzado.",
+              "categoria": "general",
+              "snippet": "…voltaje, corriente, resistencia, ley de Ohm, circuitos simples, seguridad básica. Existen evaluaciones …"
+            }
+          ]
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /search?q=ohm",
+      "method": "GET",
+      "path": "/search?q=ohm&page=0&size=10",
+      "http": 200,
+      "ms": 1281.83,
+      "bytes": 1329,
+      "body": {
+        "data": {
+          "query": "ohm",
+          "total": 4,
+          "page": 0,
+          "size": 10,
+          "cursos": [
+            {
+              "id": "curso-1",
+              "score": 0.5753642,
+              "source": {
+                "id": "curso-1",
+                "titulo": "Fundamentos de Electricidad",
+                "descripcion": "Curso básico de electricidad, ley de Ohm, circuitos",
+                "instructor": "Prof. García",
+                "nivel": "PRINCIPIANTE",
+                "icon": "zap",
+                "color": "#FFD700",
+                "semanas": 4,
+                "lecciones": 12,
+                "publicado": true
+              },
+              "highlight": null
+            }
+          ],
+          "lecciones": [
+            {
+              "id": "leccion-1",
+              "score": 0.8630463,
+              "source": {
+                "id": "leccion-1",
+                "cursoId": "curso-1",
+                "titulo": "Ley de Ohm",
+                "descripcion": "Explicación de V=I*R y aplicaciones prácticas",
+                "seccionTitulo": "Módulo 1: Conceptos básicos",
+                "tipo": "VIDEO",
+                "duracion": "900"
+              },
+              "highlight": null
+            }
+          ],
+          "conceptos": [
+            {
+              "id": "concepto-1",
+              "score": 0.8630463,
+              "source": {
+                "id": "concepto-1",
+                "termino": "Ley de Ohm",
+                "definicion": "La corriente que circula por un conductor es directamente proporcional al voltaje e inversamente proporcional a la resistencia",
+                "sinonimos": [
+                  "V=IR",
+                  "Relación voltaje-corriente-resistencia"
+                ],
+                "temas": [
+                  "electricidad",
+                  "física",
+                  "circuitos"
+                ]
+              },
+              "highlight": null
+            }
+          ],
+          "faqs": [
+            {
+              "id": "faq-1",
+              "score": 0.8630463,
+              "source": {
+                "id": "faq-1",
+                "pregunta": "¿Qué es la ley de Ohm?",
+                "respuesta": "Es la relación fundamental entre voltaje (V), corriente (I) y resistencia (R): V = I × R",
+                "categoria": "electricidad"
+              },
+              "highlight": null
+            }
+          ]
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /search (sin q)",
+      "method": "GET",
+      "path": "/search",
+      "http": 400,
+      "ms": 673.28,
+      "bytes": 101,
+      "body": {
+        "timestamp": "2026-11-11T15:12:54.276+00:00",
+        "status": 400,
+        "error": "Bad Request",
+        "path": "/api/search"
+      }
+    },
+    {
+      "label": "GET /search?q= (q vacio)",
+      "method": "GET",
+      "path": "/search?q=",
+      "http": 200,
+      "ms": 279.34,
+      "bytes": 146,
+      "body": {
+        "data": {
+          "query": "",
+          "total": 0,
+          "page": 0,
+          "size": 10,
+          "cursos": [],
+          "lecciones": [],
+          "conceptos": [],
+          "faqs": []
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /cursos/{uuid inexistente}",
+      "method": "GET",
+      "path": "/cursos/00000000-0000-0000-0000-000000000000",
+      "http": 404,
+      "ms": 261.06,
+      "bytes": 184,
+      "body": {
+        "timestamp": "2026-11-11T15:12:54.891921176Z",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Curso no encontrado",
+        "path": "/cursos/00000000-0000-0000-0000-000000000000",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "GET /cursos/no-es-uuid",
+      "method": "GET",
+      "path": "/cursos/no-es-uuid",
+      "http": 500,
+      "ms": 186.27,
+      "bytes": 198,
+      "body": {
+        "timestamp": "2026-11-11T15:12:55.080888589Z",
+        "status": 500,
+        "error": "Internal Server Error",
+        "message": "Error interno del servidor. Intenta más tarde.",
+        "path": "/cursos/no-es-uuid",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /auth/registro (valido)",
+      "method": "POST",
+      "path": "/auth/registro",
+      "http": 200,
+      "ms": 6023.98,
+      "bytes": 779,
+      "body": {
+        "data": {
+          "token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ3YjExXzE3OTQ0MDk5NjdAbHV4cmF5LnRlc3QiLCJpYXQiOjE3OTQ0MDk5ODAsImV4cCI6MTc5NDQ5NjM4MCwicm9sZSI6IlVTRVIiLCJ1aWQiOiI1YjkyNmZkYi1mMDlkLTQ1YzMtOWNlZi0yMDM4ZTVmM2IzZGEifQ.cxjatwMNOkHfO4HOs2HIIQjqwMdfz7PmGWDDKzuTm5xRi_6HJV7O3LPwdu1IAzJS",
+          "refreshToken": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ3YjExXzE3OTQ0MDk5NjdAbHV4cmF5LnRlc3QiLCJpYXQiOjE3OTQ0MDk5ODAsImV4cCI6MTc5NDQ5NjM4MCwidHlwZSI6InJlZnJlc2gifQ.cVvp5c1rT0FCID1LmC7L0EcWQta-th_L2p29Qzz1_YQZjTbtHZa0wEiVSS9aaeV3",
+          "expiresInMs": 86400000,
+          "usuario": {
+            "id": "5b926fdb-f09d-45c3-9cef-2038e5f3b3da",
+            "nombre": "Al",
+            "apellido": "Uno",
+            "email": "wb11_1794409967@luxray.test",
+            "avatar": null,
+            "rol": "USER",
+            "activo": true,
+            "creadoEn": "2026-11-11T15:12:59.710260372"
+          }
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "POST /auth/registro (DUPLICADO)",
+      "method": "POST",
+      "path": "/auth/registro",
+      "http": 400,
+      "ms": 69.35,
+      "bytes": 192,
+      "body": {
+        "timestamp": "2026-11-11T15:13:01.196249577Z",
+        "status": 400,
+        "error": "Bad Request",
+        "message": "El correo ya está registrado. Intenta iniciar sesión.",
+        "path": "/auth/registro",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /auth/registro (email invalido)",
+      "method": "POST",
+      "path": "/auth/registro",
+      "http": 400,
+      "ms": 133.59,
+      "bytes": 301,
+      "body": {
+        "timestamp": "2026-11-11T15:13:01.328124337Z",
+        "status": 400,
+        "error": "Validation Error",
+        "message": "Uno o más campos son inválidos",
+        "path": "/auth/registro",
+        "fieldErrors": {
+          "apellido": "size must be between 2 and 80",
+          "nombre": "size must be between 2 and 80",
+          "email": "must be a well-formed email address"
+        }
+      }
+    },
+    {
+      "label": "POST /auth/registro (password corta)",
+      "method": "POST",
+      "path": "/auth/registro",
+      "http": 400,
+      "ms": 46.21,
+      "bytes": 298,
+      "body": {
+        "timestamp": "2026-11-11T15:13:01.374182501Z",
+        "status": 400,
+        "error": "Validation Error",
+        "message": "Uno o más campos son inválidos",
+        "path": "/auth/registro",
+        "fieldErrors": {
+          "password": "size must be between 8 and 64",
+          "apellido": "size must be between 2 and 80",
+          "nombre": "size must be between 2 and 80"
+        }
+      }
+    },
+    {
+      "label": "POST /auth/registro (sin aceptar terminos)",
+      "method": "POST",
+      "path": "/auth/registro",
+      "http": 400,
+      "ms": 62.17,
+      "bytes": 179,
+      "body": {
+        "timestamp": "2026-11-11T15:13:01.438839668Z",
+        "status": 400,
+        "error": "Bad Request",
+        "message": "Debes aceptar los términos y condiciones.",
+        "path": "/auth/registro",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /auth/registro (body incompleto)",
+      "method": "POST",
+      "path": "/auth/registro",
+      "http": 400,
+      "ms": 55.76,
+      "bytes": 262,
+      "body": {
+        "timestamp": "2026-11-11T15:13:01.496001560Z",
+        "status": 400,
+        "error": "Validation Error",
+        "message": "Uno o más campos son inválidos",
+        "path": "/auth/registro",
+        "fieldErrors": {
+          "password": "must not be blank",
+          "apellido": "must not be blank",
+          "nombre": "must not be blank"
+        }
+      }
+    },
+    {
+      "label": "POST /auth/registro (JSON malformado)",
+      "method": "POST",
+      "path": "/auth/registro",
+      "http": 400,
+      "ms": 52.25,
+      "bytes": 164,
+      "body": "{\"timestamp\":\"2026-11-11T15:13:01.545780311Z\",\"status\":400,\"error\":\"Bad Request\",\"message\":\"La solicitud no es válida.\",\"path\":\"/auth/registro\",\"fieldErrors\":null}"
+    },
+    {
+      "label": "POST /auth/login (correcto)",
+      "method": "POST",
+      "path": "/auth/login",
+      "http": 200,
+      "ms": 485.55,
+      "bytes": 775,
+      "body": {
+        "data": {
+          "token": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ3YjExXzE3OTQ0MDk5NjdAbHV4cmF5LnRlc3QiLCJpYXQiOjE3OTQ0MDk5ODIsImV4cCI6MTc5NDQ5NjM4Miwicm9sZSI6IlVTRVIiLCJ1aWQiOiI1YjkyNmZkYi1mMDlkLTQ1YzMtOWNlZi0yMDM4ZTVmM2IzZGEifQ.EXruGTM3Ft5_Nx6EZnrA8vGEwS1gKpZGRmZAuQr_sMzCfbo28eTxF5vPp8CkI6RP",
+          "refreshToken": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ3YjExXzE3OTQ0MDk5NjdAbHV4cmF5LnRlc3QiLCJpYXQiOjE3OTQ0MDk5ODIsImV4cCI6MTc5NDQ5NjM4MiwidHlwZSI6InJlZnJlc2gifQ.aDtq5ucgW7YNi4kH6zkohvW5Cz52pjljxg0djER71vyMd1sGIgbsVIf2zRfGU06W",
+          "expiresInMs": 86400000,
+          "usuario": {
+            "id": "5b926fdb-f09d-45c3-9cef-2038e5f3b3da",
+            "nombre": "Al",
+            "apellido": "Uno",
+            "email": "wb11_1794409967@luxray.test",
+            "avatar": null,
+            "rol": "USER",
+            "activo": true,
+            "creadoEn": "2026-11-11T15:12:59.71026"
+          }
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "POST /auth/login (password incorrecta)",
+      "method": "POST",
+      "path": "/auth/login",
+      "http": 400,
+      "ms": 420.37,
+      "bytes": 157,
+      "body": {
+        "timestamp": "2026-11-11T15:13:02.454367834Z",
+        "status": 400,
+        "error": "Bad Request",
+        "message": "Credenciales inválidas",
+        "path": "/auth/login",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /auth/login (usuario inexistente)",
+      "method": "POST",
+      "path": "/auth/login",
+      "http": 400,
+      "ms": 147.7,
+      "bytes": 157,
+      "body": {
+        "timestamp": "2026-11-11T15:13:02.605228136Z",
+        "status": 400,
+        "error": "Bad Request",
+        "message": "Credenciales inválidas",
+        "path": "/auth/login",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /auth/login (body incompleto)",
+      "method": "POST",
+      "path": "/auth/login",
+      "http": 400,
+      "ms": 58.88,
+      "bytes": 199,
+      "body": {
+        "timestamp": "2026-11-11T15:13:02.655477676Z",
+        "status": 400,
+        "error": "Validation Error",
+        "message": "Uno o más campos son inválidos",
+        "path": "/auth/login",
+        "fieldErrors": {
+          "password": "must not be blank"
+        }
+      }
+    },
+    {
+      "label": "GET /auth/me (con token)",
+      "method": "GET",
+      "path": "/auth/me",
+      "http": 200,
+      "ms": 130.63,
+      "bytes": 247,
+      "body": {
+        "data": {
+          "id": "5b926fdb-f09d-45c3-9cef-2038e5f3b3da",
+          "nombre": "Al",
+          "apellido": "Uno",
+          "email": "wb11_1794409967@luxray.test",
+          "avatar": null,
+          "rol": "USER",
+          "activo": true,
+          "creadoEn": "2026-11-11T15:12:59.71026"
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /auth/me (SIN token)",
+      "method": "GET",
+      "path": "/auth/me",
+      "http": 403,
+      "ms": 47.54,
+      "bytes": 0,
+      "body": ""
+    },
+    {
+      "label": "GET /auth/me (token invalido)",
+      "method": "GET",
+      "path": "/auth/me",
+      "http": 403,
+      "ms": 25.79,
+      "bytes": 0,
+      "body": ""
+    },
+    {
+      "label": "GET /auth/admin/usuarios (rol USER -> 403)",
+      "method": "GET",
+      "path": "/auth/admin/usuarios",
+      "http": 403,
+      "ms": 98.28,
+      "bytes": 178,
+      "body": {
+        "timestamp": "2026-11-11T15:13:03.445471061Z",
+        "status": 403,
+        "error": "Forbidden",
+        "message": "No tienes permisos para esta acción.",
+        "path": "/auth/admin/usuarios",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "GET /auth/admin/usuarios (sin token -> 401)",
+      "method": "GET",
+      "path": "/auth/admin/usuarios",
+      "http": 403,
+      "ms": 32.4,
+      "bytes": 0,
+      "body": ""
+    },
+    {
+      "label": "GET /cursos/mis-cursos (con token)",
+      "method": "GET",
+      "path": "/cursos/mis-cursos",
+      "http": 200,
+      "ms": 1623.47,
+      "bytes": 55,
+      "body": {
+        "data": [],
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /cursos/mis-cursos (sin token)",
+      "method": "GET",
+      "path": "/cursos/mis-cursos",
+      "http": 500,
+      "ms": 54.6,
+      "bytes": 198,
+      "body": {
+        "timestamp": "2026-11-11T15:13:05.150289605Z",
+        "status": 500,
+        "error": "Internal Server Error",
+        "message": "Error interno del servidor. Intenta más tarde.",
+        "path": "/cursos/mis-cursos",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "GET /analytics/dashboard (con token)",
+      "method": "GET",
+      "path": "/analytics/dashboard",
+      "http": 200,
+      "ms": 6598.22,
+      "bytes": 765,
+      "body": {
+        "data": {
+          "kpis": [
+            {
+              "label": "Cursos inscritos",
+              "value": "0",
+              "delta": 0.0,
+              "icon": "pi pi-book",
+              "color": "#1565c0"
+            },
+            {
+              "label": "Lecciones completadas",
+              "value": "0",
+              "delta": 0.0,
+              "icon": "pi pi-check-circle",
+              "color": "#16a34a"
+            },
+            {
+              "label": "Horas de estudio",
+              "value": "0.0",
+              "delta": 0.0,
+              "icon": "pi pi-clock",
+              "color": "#f59e0b"
+            },
+            {
+              "label": "Promedio progreso",
+              "value": "0%",
+              "delta": 0.0,
+              "icon": "pi pi-graduation-cap",
+              "color": "#8b5cf6"
+            }
+          ],
+          "inscripciones6m": {
+            "labels": [
+              "jun",
+              "jul",
+              "ago",
+              "sept",
+              "oct",
+              "nov"
+            ],
+            "data": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "progresoNiveles": {
+            "labels": [
+              "Básico",
+              "Intermedio",
+              "Avanzado"
+            ],
+            "data": [
+              0,
+              0,
+              0
+            ]
+          },
+          "tiempoPorModulo": {
+            "labels": [],
+            "data": []
+          },
+          "distribucionNiveles": {
+            "labels": [
+              "Básico",
+              "Intermedio",
+              "Avanzado"
+            ],
+            "data": [
+              0,
+              0,
+              0
+            ]
+          },
+          "topCursos": []
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "GET /analytics/dashboard (sin token)",
+      "method": "GET",
+      "path": "/analytics/dashboard",
+      "http": 403,
+      "ms": 59.89,
+      "bytes": 0,
+      "body": ""
+    },
+    {
+      "label": "GET /cursos/admin/todos (rol USER -> 403)",
+      "method": "GET",
+      "path": "/cursos/admin/todos",
+      "http": 403,
+      "ms": 216.74,
+      "bytes": 177,
+      "body": {
+        "timestamp": "2026-11-11T15:13:12.029009478Z",
+        "status": 403,
+        "error": "Forbidden",
+        "message": "No tienes permisos para esta acción.",
+        "path": "/cursos/admin/todos",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /cursos/admin (rol USER -> 403)",
+      "method": "POST",
+      "path": "/cursos/admin",
+      "http": 403,
+      "ms": 782.51,
+      "bytes": 171,
+      "body": {
+        "timestamp": "2026-11-11T15:13:12.810824984Z",
+        "status": 403,
+        "error": "Forbidden",
+        "message": "No tienes permisos para esta acción.",
+        "path": "/cursos/admin",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /cursos/admin (sin token -> 401)",
+      "method": "POST",
+      "path": "/cursos/admin",
+      "http": 403,
+      "ms": 79.92,
+      "bytes": 0,
+      "body": ""
+    },
+    {
+      "label": "POST /cursos/{id}/inscripcion (con token)",
+      "method": "POST",
+      "path": "/cursos/78a8d5a5-40e2-4188-8500-5ba7607a166d/inscripcion",
+      "http": 200,
+      "ms": 982.34,
+      "bytes": 266,
+      "body": {
+        "data": {
+          "id": "d874d704-309b-40b7-a8e1-0d588d4fd20d",
+          "cursoId": "78a8d5a5-40e2-4188-8500-5ba7607a166d",
+          "cursoTitulo": "Sistemas Industriales",
+          "leccionesCompletadas": 0,
+          "totalLecciones": 8,
+          "proximaLeccion": null,
+          "porcentaje": 0
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "POST /cursos/{id}/inscripcion (REPETIDA -> 409?)",
+      "method": "POST",
+      "path": "/cursos/78a8d5a5-40e2-4188-8500-5ba7607a166d/inscripcion",
+      "http": 200,
+      "ms": 93.54,
+      "bytes": 266,
+      "body": {
+        "data": {
+          "id": "d874d704-309b-40b7-a8e1-0d588d4fd20d",
+          "cursoId": "78a8d5a5-40e2-4188-8500-5ba7607a166d",
+          "cursoTitulo": "Sistemas Industriales",
+          "leccionesCompletadas": 0,
+          "totalLecciones": 8,
+          "proximaLeccion": null,
+          "porcentaje": 0
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    },
+    {
+      "label": "POST /cursos/{id}/inscripcion (sin token -> 401)",
+      "method": "POST",
+      "path": "/cursos/78a8d5a5-40e2-4188-8500-5ba7607a166d/inscripcion",
+      "http": 403,
+      "ms": 31.52,
+      "bytes": 0,
+      "body": ""
+    },
+    {
+      "label": "POST /cursos/{inexistente}/inscripcion -> 404?",
+      "method": "POST",
+      "path": "/cursos/00000000-0000-0000-0000-000000000000/inscripcion",
+      "http": 404,
+      "ms": 53.07,
+      "bytes": 196,
+      "body": {
+        "timestamp": "2026-11-11T15:13:14.127947444Z",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Curso no encontrado",
+        "path": "/cursos/00000000-0000-0000-0000-000000000000/inscripcion",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "POST /cursos/lecciones/{id}/completar (inexistente)",
+      "method": "POST",
+      "path": "/cursos/lecciones/00000000-0000-0000-0000-000000000000/completar",
+      "http": 404,
+      "ms": 74.8,
+      "bytes": 207,
+      "body": {
+        "timestamp": "2026-11-11T15:13:14.206771766Z",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Lección no encontrada",
+        "path": "/cursos/lecciones/00000000-0000-0000-0000-000000000000/completar",
+        "fieldErrors": null
+      }
+    },
+    {
+      "label": "GET /ruta inexistente -> 404",
+      "method": "GET",
+      "path": "/ruta/que/no/existe",
+      "http": 404,
+      "ms": 563.76,
+      "bytes": 137,
+      "body": {
+        "timestamp": "2026-11-11T15:13:14.598+00:00",
+        "path": "/api/ruta/que/no/existe",
+        "status": 404,
+        "error": "Not Found",
+        "requestId": "39675e56-44"
+      }
+    },
+    {
+      "label": "DELETE /cursos (metodo no permitido)",
+      "method": "DELETE",
+      "path": "/cursos",
+      "http": 403,
+      "ms": 79.64,
+      "bytes": 0,
+      "body": ""
+    },
+    {
+      "label": "GET /search?q= (500 chars)",
+      "method": "GET",
+      "path": "/search?q=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "http": 200,
+      "ms": 3083.42,
+      "bytes": 646,
+      "body": {
+        "data": {
+          "query": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "total": 0,
+          "page": 0,
+          "size": 10,
+          "cursos": [],
+          "lecciones": [],
+          "conceptos": [],
+          "faqs": []
+        },
+        "message": null,
+        "success": true,
+        "errors": null
+      }
+    }
+  ]
+}

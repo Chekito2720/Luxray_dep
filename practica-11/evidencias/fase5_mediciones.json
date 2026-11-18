@@ -1,0 +1,368 @@
+{
+  "fecha": "2026-11-11T09:30:43",
+  "host_ping": "127.0.0.1",
+  "gateway": "http://localhost:8080",
+  "cliente": {
+    "sistema": "Windows",
+    "hostname": "PC-Sergio",
+    "ip_local": "192.168.1.153"
+  },
+  "ping": {
+    "127.0.0.1": {
+      "host": "127.0.0.1",
+      "paquetes_enviados": 20,
+      "paquetes_recibidos": 20,
+      "paquetes_perdidos": 0,
+      "porcentaje_perdida": 0.0,
+      "rtts_ms": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "min_ms": 1,
+      "max_ms": 1,
+      "promedio_ms": 1,
+      "desviacion_estandar_ms": 0.0,
+      "mediana_ms": 1.0,
+      "jitter_ms": 0,
+      "salida_cruda": "Haciendo ping a 127.0.0.1 con 32 bytes de datos:\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\nRespuesta desde 127.0.0.1: bytes=32 tiempo<1m TTL=128\n\nEstad�sticas de ping para 127.0.0.1:\n    Paquetes: enviados = 20, recibidos = 20, perdidos = 0\n    (0% perdidos),\nTiempos aproximados de ida y vuelta en milisegundos:\n    M�nimo = 0ms, M�ximo = 0ms, Media = 0ms"
+    },
+    "192.168.1.153": {
+      "host": "192.168.1.153",
+      "paquetes_enviados": 20,
+      "paquetes_recibidos": 20,
+      "paquetes_perdidos": 0,
+      "porcentaje_perdida": 0.0,
+      "rtts_ms": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "min_ms": 1,
+      "max_ms": 1,
+      "promedio_ms": 1,
+      "desviacion_estandar_ms": 0.0,
+      "mediana_ms": 1.0,
+      "jitter_ms": 0,
+      "salida_cruda": "Haciendo ping a 192.168.1.153 con 32 bytes de datos:\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\nRespuesta desde 192.168.1.153: bytes=32 tiempo<1m TTL=128\n\nEstad�sticas de ping para 192.168.1.153:\n    Paquetes: enviados = 20, recibidos = 20, perdidos = 0\n    (0% perdidos),\nTiempos aproximados de ida y vuelta en milisegundos:\n    M�nimo = 0ms, M�ximo = 0ms, Media = 0ms"
+    },
+    "172.24.0.1": {
+      "host": "172.24.0.1",
+      "paquetes_enviados": 20,
+      "paquetes_recibidos": 0,
+      "paquetes_perdidos": 20,
+      "porcentaje_perdida": 100.0,
+      "rtts_ms": [],
+      "min_ms": null,
+      "max_ms": null,
+      "promedio_ms": null,
+      "desviacion_estandar_ms": 0.0,
+      "mediana_ms": null,
+      "jitter_ms": 0.0,
+      "salida_cruda": "Haciendo ping a 172.24.0.1 con 32 bytes de datos:\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\nTiempo de espera agotado para esta solicitud.\n\nEstad�sticas de ping para 172.24.0.1:\n    Paquetes: enviados = 20, recibidos = 0, perdidos = 20\n    (100% perdidos),"
+    },
+    "8.8.8.8": {
+      "host": "8.8.8.8",
+      "paquetes_enviados": 20,
+      "paquetes_recibidos": 20,
+      "paquetes_perdidos": 0,
+      "porcentaje_perdida": 0.0,
+      "rtts_ms": [
+        63,
+        79,
+        82,
+        9,
+        13,
+        11,
+        8,
+        59,
+        67,
+        47,
+        5,
+        11,
+        6,
+        13,
+        6,
+        11,
+        31,
+        34,
+        12,
+        5
+      ],
+      "min_ms": 5,
+      "max_ms": 82,
+      "promedio_ms": 28.6,
+      "desviacion_estandar_ms": 26.44,
+      "mediana_ms": 12.5,
+      "jitter_ms": 16,
+      "salida_cruda": "Haciendo ping a 8.8.8.8 con 32 bytes de datos:\nRespuesta desde 8.8.8.8: bytes=32 tiempo=63ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=79ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=82ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=9ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=13ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=11ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=8ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=59ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=67ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=47ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=5ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=11ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=6ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=13ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=6ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=11ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=31ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=34ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=12ms TTL=118\nRespuesta desde 8.8.8.8: bytes=32 tiempo=5ms TTL=118\n\nEstad�sticas de ping para 8.8.8.8:\n    Paquetes: enviados = 20, recibidos = 20, perdidos = 0\n    (0% perdidos),\nTiempos aproximados de ida y vuelta en milisegundos:\n    M�nimo = 5ms, M�ximo = 82ms, Media = 28ms"
+    }
+  },
+  "solicitudes": {
+    "endpoint": "http://localhost:8080/api/cursos",
+    "detalle": [
+      {
+        "n": 1,
+        "http": 200,
+        "ms": 49.56,
+        "bytes": 2750
+      },
+      {
+        "n": 2,
+        "http": 200,
+        "ms": 18.2,
+        "bytes": 2750
+      },
+      {
+        "n": 3,
+        "http": 200,
+        "ms": 17.8,
+        "bytes": 2750
+      },
+      {
+        "n": 4,
+        "http": 200,
+        "ms": 16.92,
+        "bytes": 2750
+      },
+      {
+        "n": 5,
+        "http": 200,
+        "ms": 16.59,
+        "bytes": 2750
+      },
+      {
+        "n": 6,
+        "http": 200,
+        "ms": 21.31,
+        "bytes": 2750
+      },
+      {
+        "n": 7,
+        "http": 200,
+        "ms": 19.63,
+        "bytes": 2750
+      },
+      {
+        "n": 8,
+        "http": 200,
+        "ms": 16.6,
+        "bytes": 2750
+      },
+      {
+        "n": 9,
+        "http": 200,
+        "ms": 25.52,
+        "bytes": 2750
+      },
+      {
+        "n": 10,
+        "http": 200,
+        "ms": 32.83,
+        "bytes": 2750
+      }
+    ],
+    "http_200": 10,
+    "tasa_exito_pct": 100.0,
+    "tiempo_promedio_ms": 23.5,
+    "tiempo_maximo_ms": 49.56,
+    "tiempo_minimo_ms": 16.59,
+    "desviacion_estandar_ms": 9.95,
+    "tamano_promedio_bytes": 2750
+  },
+  "latencia_http": {
+    "GET /api/cursos": {
+      "url": "http://localhost:8080/api/cursos",
+      "promedio_ms": 23.86,
+      "min_ms": 16.63,
+      "max_ms": 34.53,
+      "desviacion_ms": 6.12,
+      "p95_ms": 31.49,
+      "bytes_promedio": 2750,
+      "codigos": [
+        200
+      ]
+    },
+    "GET /api/cursos?q=electrica": {
+      "url": "http://localhost:8080/api/cursos?q=electrica",
+      "promedio_ms": 30.73,
+      "min_ms": 19.16,
+      "max_ms": 40.37,
+      "desviacion_ms": 6.22,
+      "p95_ms": 37.49,
+      "bytes_promedio": 535,
+      "codigos": [
+        200
+      ]
+    },
+    "GET /api/cursos/buscar?q=ohm": {
+      "url": "http://localhost:8080/api/cursos/buscar?q=ohm",
+      "promedio_ms": 40.91,
+      "min_ms": 25.32,
+      "max_ms": 60.33,
+      "desviacion_ms": 10.93,
+      "p95_ms": 54.05,
+      "bytes_promedio": 1969,
+      "codigos": [
+        200
+      ]
+    },
+    "GET /api/search?q=ohm": {
+      "url": "http://localhost:8080/api/search?q=ohm&page=0&size=10",
+      "promedio_ms": 106.4,
+      "min_ms": 73.49,
+      "max_ms": 272.2,
+      "desviacion_ms": 56.14,
+      "p95_ms": 105.01,
+      "bytes_promedio": 1329,
+      "codigos": [
+        200
+      ]
+    },
+    "GET /api/auth/me (401 esperado)": {
+      "url": "http://localhost:8080/api/auth/me",
+      "promedio_ms": 23.36,
+      "min_ms": 15.81,
+      "max_ms": 38.77,
+      "desviacion_ms": 7.54,
+      "p95_ms": 31.25,
+      "bytes_promedio": 0,
+      "codigos": [
+        403
+      ]
+    }
+  },
+  "tasa_descarga": {
+    "url": "http://localhost:8080/api/cursos",
+    "muestras": [
+      {
+        "bytes": 2750,
+        "ms": 33.78,
+        "Mbps": 0.6512,
+        "http": 200
+      },
+      {
+        "bytes": 2750,
+        "ms": 35.68,
+        "Mbps": 0.6167,
+        "http": 200
+      },
+      {
+        "bytes": 2750,
+        "ms": 39.04,
+        "Mbps": 0.5635,
+        "http": 200
+      }
+    ],
+    "Mbps_promedio": 0.6105,
+    "bytes_promedio": 2750
+  },
+  "tasa_subida": {
+    "url": "http://localhost:8080/api/auth/login",
+    "bytes_enviados": 262157,
+    "muestras": [
+      {
+        "bytes": 227,
+        "ms": 29.72,
+        "Mbps": 70.5683,
+        "http": 400
+      },
+      {
+        "bytes": 227,
+        "ms": 107.41,
+        "Mbps": 19.5259,
+        "http": 400
+      },
+      {
+        "bytes": 227,
+        "ms": 70.98,
+        "Mbps": 29.5491,
+        "http": 400
+      }
+    ],
+    "Mbps_promedio": 39.8811
+  },
+  "interrupcion": {
+    "proxy_puerto": 8099,
+    "casos": [
+      {
+        "caso": "1 · Conectividad operativa (via proxy controlable)",
+        "http": 200,
+        "ms": 116.52,
+        "bytes": 2750,
+        "resultado": "OK"
+      },
+      {
+        "caso": "2 · Peticion enviada, respuesta nunca llega (corte de conexion)",
+        "http": 0,
+        "ms": 15.67,
+        "error": "[WinError 10053] Se ha anulado una conexión establecida por el software en su equipo host",
+        "resultado": "ERROR DETECTADO"
+      },
+      {
+        "caso": "3 · Sin conectividad (conexion rechazada)",
+        "http": 0,
+        "ms": 2047.77,
+        "error": "<urlopen error [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión>",
+        "resultado": "ERROR DETECTADO"
+      },
+      {
+        "caso": "4 · Recuperacion tras restablecer la conectividad",
+        "http": 200,
+        "ms": 39.62,
+        "bytes": 2750,
+        "resultado": "RECUPERADO"
+      }
+    ],
+    "conclusion": "El cliente detecta los tres modos de fallo (corte de conexion, ausencia de red y restauracion) sin lanzar excepcion no controlada."
+  },
+  "resumen": {
+    "ping_minimo_ms": 1,
+    "ping_promedio_ms": 1,
+    "ping_maximo_ms": 1,
+    "ping_desviacion_ms": 0.0,
+    "perdida_paquetes_pct": 0.0,
+    "latencia_http_promedio_ms": 23.5,
+    "latencia_http_maximo_ms": 49.56,
+    "latencia_http_minimo_ms": 16.59,
+    "tamano_respuesta_promedio_bytes": 2750,
+    "tasa_descarga_Mbps": 0.6105,
+    "tasa_subida_Mbps": 39.8811,
+    "respuestas_exitosas_pct": 100.0,
+    "duracion_total_s": null
+  }
+}

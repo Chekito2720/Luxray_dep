@@ -1,0 +1,238 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: C:\DDI\luxray\practica-12\fase3-estres-api\estres_api.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 40 max VUs, 10m30s max duration (incl. graceful stop):
+              * carga: 20 iterations for each of 40 VUs (maxDuration: 10m0s, exec: escritura, gracefulStop: 30s)
+
+
+running (00m01.0s), 40/40 VUs, 10 complete and 0 interrupted iterations
+carga   [   1% ] 40 VUs  00m01.0s/10m0s  010/800 iters, 20 per VU
+
+running (00m02.0s), 40/40 VUs, 28 complete and 0 interrupted iterations
+carga   [   4% ] 40 VUs  00m02.0s/10m0s  028/800 iters, 20 per VU
+
+running (00m03.0s), 40/40 VUs, 40 complete and 0 interrupted iterations
+carga   [   5% ] 40 VUs  00m03.0s/10m0s  040/800 iters, 20 per VU
+
+running (00m04.0s), 40/40 VUs, 52 complete and 0 interrupted iterations
+carga   [   6% ] 40 VUs  00m04.0s/10m0s  052/800 iters, 20 per VU
+
+running (00m05.0s), 40/40 VUs, 68 complete and 0 interrupted iterations
+carga   [   8% ] 40 VUs  00m05.0s/10m0s  068/800 iters, 20 per VU
+
+running (00m06.0s), 40/40 VUs, 79 complete and 0 interrupted iterations
+carga   [  10% ] 40 VUs  00m06.0s/10m0s  079/800 iters, 20 per VU
+
+running (00m07.0s), 40/40 VUs, 89 complete and 0 interrupted iterations
+carga   [  11% ] 40 VUs  00m07.0s/10m0s  089/800 iters, 20 per VU
+
+running (00m08.0s), 40/40 VUs, 102 complete and 0 interrupted iterations
+carga   [  13% ] 40 VUs  00m08.0s/10m0s  102/800 iters, 20 per VU
+
+running (00m09.0s), 40/40 VUs, 115 complete and 0 interrupted iterations
+carga   [  14% ] 40 VUs  00m09.0s/10m0s  115/800 iters, 20 per VU
+
+running (00m10.0s), 40/40 VUs, 131 complete and 0 interrupted iterations
+carga   [  16% ] 40 VUs  00m10.0s/10m0s  131/800 iters, 20 per VU
+
+running (00m11.0s), 40/40 VUs, 148 complete and 0 interrupted iterations
+carga   [  18% ] 40 VUs  00m11.0s/10m0s  148/800 iters, 20 per VU
+
+running (00m12.0s), 40/40 VUs, 164 complete and 0 interrupted iterations
+carga   [  20% ] 40 VUs  00m12.0s/10m0s  164/800 iters, 20 per VU
+
+running (00m13.0s), 40/40 VUs, 179 complete and 0 interrupted iterations
+carga   [  22% ] 40 VUs  00m13.0s/10m0s  179/800 iters, 20 per VU
+
+running (00m14.0s), 40/40 VUs, 194 complete and 0 interrupted iterations
+carga   [  24% ] 40 VUs  00m14.0s/10m0s  194/800 iters, 20 per VU
+
+running (00m15.0s), 40/40 VUs, 207 complete and 0 interrupted iterations
+carga   [  26% ] 40 VUs  00m15.0s/10m0s  207/800 iters, 20 per VU
+
+running (00m16.0s), 40/40 VUs, 221 complete and 0 interrupted iterations
+carga   [  28% ] 40 VUs  00m16.0s/10m0s  221/800 iters, 20 per VU
+
+running (00m17.0s), 40/40 VUs, 239 complete and 0 interrupted iterations
+carga   [  30% ] 40 VUs  00m17.0s/10m0s  239/800 iters, 20 per VU
+
+running (00m18.0s), 40/40 VUs, 254 complete and 0 interrupted iterations
+carga   [  32% ] 40 VUs  00m18.0s/10m0s  254/800 iters, 20 per VU
+
+running (00m19.0s), 40/40 VUs, 269 complete and 0 interrupted iterations
+carga   [  34% ] 40 VUs  00m19.0s/10m0s  269/800 iters, 20 per VU
+
+running (00m20.0s), 40/40 VUs, 285 complete and 0 interrupted iterations
+carga   [  36% ] 40 VUs  00m20.0s/10m0s  285/800 iters, 20 per VU
+
+running (00m21.0s), 40/40 VUs, 299 complete and 0 interrupted iterations
+carga   [  37% ] 40 VUs  00m21.0s/10m0s  299/800 iters, 20 per VU
+
+running (00m22.0s), 40/40 VUs, 318 complete and 0 interrupted iterations
+carga   [  40% ] 40 VUs  00m22.0s/10m0s  318/800 iters, 20 per VU
+
+running (00m23.0s), 40/40 VUs, 333 complete and 0 interrupted iterations
+carga   [  42% ] 40 VUs  00m23.0s/10m0s  333/800 iters, 20 per VU
+
+running (00m24.0s), 40/40 VUs, 345 complete and 0 interrupted iterations
+carga   [  43% ] 40 VUs  00m24.0s/10m0s  345/800 iters, 20 per VU
+
+running (00m25.0s), 40/40 VUs, 358 complete and 0 interrupted iterations
+carga   [  45% ] 40 VUs  00m25.0s/10m0s  358/800 iters, 20 per VU
+
+running (00m26.0s), 40/40 VUs, 372 complete and 0 interrupted iterations
+carga   [  46% ] 40 VUs  00m26.0s/10m0s  372/800 iters, 20 per VU
+
+running (00m27.0s), 40/40 VUs, 386 complete and 0 interrupted iterations
+carga   [  48% ] 40 VUs  00m27.0s/10m0s  386/800 iters, 20 per VU
+
+running (00m28.0s), 40/40 VUs, 395 complete and 0 interrupted iterations
+carga   [  49% ] 40 VUs  00m28.0s/10m0s  395/800 iters, 20 per VU
+
+running (00m29.0s), 40/40 VUs, 405 complete and 0 interrupted iterations
+carga   [  51% ] 40 VUs  00m29.0s/10m0s  405/800 iters, 20 per VU
+
+running (00m30.0s), 40/40 VUs, 417 complete and 0 interrupted iterations
+carga   [  52% ] 40 VUs  00m30.0s/10m0s  417/800 iters, 20 per VU
+
+running (00m31.0s), 40/40 VUs, 428 complete and 0 interrupted iterations
+carga   [  54% ] 40 VUs  00m31.0s/10m0s  428/800 iters, 20 per VU
+
+running (00m32.0s), 40/40 VUs, 439 complete and 0 interrupted iterations
+carga   [  55% ] 40 VUs  00m32.0s/10m0s  439/800 iters, 20 per VU
+
+running (00m33.0s), 40/40 VUs, 449 complete and 0 interrupted iterations
+carga   [  56% ] 40 VUs  00m33.0s/10m0s  449/800 iters, 20 per VU
+
+running (00m34.0s), 40/40 VUs, 462 complete and 0 interrupted iterations
+carga   [  58% ] 40 VUs  00m34.0s/10m0s  462/800 iters, 20 per VU
+
+running (00m35.0s), 40/40 VUs, 476 complete and 0 interrupted iterations
+carga   [  60% ] 40 VUs  00m35.0s/10m0s  476/800 iters, 20 per VU
+
+running (00m36.0s), 40/40 VUs, 487 complete and 0 interrupted iterations
+carga   [  61% ] 40 VUs  00m36.0s/10m0s  487/800 iters, 20 per VU
+
+running (00m37.0s), 40/40 VUs, 498 complete and 0 interrupted iterations
+carga   [  62% ] 40 VUs  00m37.0s/10m0s  498/800 iters, 20 per VU
+
+running (00m38.0s), 40/40 VUs, 512 complete and 0 interrupted iterations
+carga   [  64% ] 40 VUs  00m38.0s/10m0s  512/800 iters, 20 per VU
+
+running (00m39.0s), 40/40 VUs, 523 complete and 0 interrupted iterations
+carga   [  65% ] 40 VUs  00m39.0s/10m0s  523/800 iters, 20 per VU
+
+running (00m40.0s), 40/40 VUs, 534 complete and 0 interrupted iterations
+carga   [  67% ] 40 VUs  00m40.0s/10m0s  534/800 iters, 20 per VU
+
+running (00m41.0s), 40/40 VUs, 547 complete and 0 interrupted iterations
+carga   [  68% ] 40 VUs  00m41.0s/10m0s  547/800 iters, 20 per VU
+
+running (00m42.0s), 40/40 VUs, 558 complete and 0 interrupted iterations
+carga   [  70% ] 40 VUs  00m42.0s/10m0s  558/800 iters, 20 per VU
+
+running (00m43.0s), 40/40 VUs, 571 complete and 0 interrupted iterations
+carga   [  71% ] 40 VUs  00m43.0s/10m0s  571/800 iters, 20 per VU
+
+running (00m44.0s), 40/40 VUs, 586 complete and 0 interrupted iterations
+carga   [  73% ] 40 VUs  00m44.0s/10m0s  586/800 iters, 20 per VU
+
+running (00m45.0s), 40/40 VUs, 596 complete and 0 interrupted iterations
+carga   [  74% ] 40 VUs  00m45.0s/10m0s  596/800 iters, 20 per VU
+
+running (00m46.0s), 40/40 VUs, 608 complete and 0 interrupted iterations
+carga   [  76% ] 40 VUs  00m46.0s/10m0s  608/800 iters, 20 per VU
+
+running (00m47.0s), 40/40 VUs, 621 complete and 0 interrupted iterations
+carga   [  78% ] 40 VUs  00m47.0s/10m0s  621/800 iters, 20 per VU
+
+running (00m48.0s), 40/40 VUs, 636 complete and 0 interrupted iterations
+carga   [  80% ] 40 VUs  00m48.0s/10m0s  636/800 iters, 20 per VU
+
+running (00m49.0s), 40/40 VUs, 650 complete and 0 interrupted iterations
+carga   [  81% ] 40 VUs  00m49.0s/10m0s  650/800 iters, 20 per VU
+
+running (00m50.0s), 40/40 VUs, 656 complete and 0 interrupted iterations
+carga   [  82% ] 40 VUs  00m50.0s/10m0s  656/800 iters, 20 per VU
+
+running (00m51.0s), 40/40 VUs, 669 complete and 0 interrupted iterations
+carga   [  84% ] 40 VUs  00m51.0s/10m0s  669/800 iters, 20 per VU
+
+running (00m52.0s), 40/40 VUs, 679 complete and 0 interrupted iterations
+carga   [  85% ] 40 VUs  00m52.0s/10m0s  679/800 iters, 20 per VU
+
+running (00m53.0s), 40/40 VUs, 691 complete and 0 interrupted iterations
+carga   [  86% ] 40 VUs  00m53.0s/10m0s  691/800 iters, 20 per VU
+
+running (00m54.0s), 40/40 VUs, 701 complete and 0 interrupted iterations
+carga   [  88% ] 40 VUs  00m54.0s/10m0s  701/800 iters, 20 per VU
+
+running (00m55.0s), 39/40 VUs, 708 complete and 0 interrupted iterations
+carga   [  88% ] 40 VUs  00m55.0s/10m0s  708/800 iters, 20 per VU
+
+running (00m56.1s), 39/40 VUs, 714 complete and 0 interrupted iterations
+carga   [  89% ] 40 VUs  00m56.1s/10m0s  714/800 iters, 20 per VU
+
+running (00m57.0s), 37/40 VUs, 718 complete and 0 interrupted iterations
+carga   [  90% ] 40 VUs  00m57.0s/10m0s  718/800 iters, 20 per VU
+
+running (00m58.0s), 36/40 VUs, 728 complete and 0 interrupted iterations
+carga   [  91% ] 40 VUs  00m58.0s/10m0s  728/800 iters, 20 per VU
+
+running (00m59.0s), 36/40 VUs, 730 complete and 0 interrupted iterations
+carga   [  91% ] 40 VUs  00m59.0s/10m0s  730/800 iters, 20 per VU
+
+running (01m00.1s), 33/40 VUs, 738 complete and 0 interrupted iterations
+carga   [  92% ] 40 VUs  01m00.1s/10m0s  738/800 iters, 20 per VU
+
+running (01m01.1s), 33/40 VUs, 741 complete and 0 interrupted iterations
+carga   [  93% ] 40 VUs  01m01.1s/10m0s  741/800 iters, 20 per VU
+
+running (01m02.0s), 32/40 VUs, 749 complete and 0 interrupted iterations
+carga   [  94% ] 40 VUs  01m02.0s/10m0s  749/800 iters, 20 per VU
+
+running (01m03.0s), 31/40 VUs, 751 complete and 0 interrupted iterations
+carga   [  94% ] 40 VUs  01m03.0s/10m0s  751/800 iters, 20 per VU
+
+running (01m04.0s), 30/40 VUs, 760 complete and 0 interrupted iterations
+carga   [  95% ] 40 VUs  01m04.0s/10m0s  760/800 iters, 20 per VU
+
+running (01m05.1s), 29/40 VUs, 761 complete and 0 interrupted iterations
+carga   [  95% ] 40 VUs  01m05.1s/10m0s  761/800 iters, 20 per VU
+
+running (01m06.0s), 22/40 VUs, 771 complete and 0 interrupted iterations
+carga   [  96% ] 40 VUs  01m06.0s/10m0s  771/800 iters, 20 per VU
+
+running (01m07.0s), 18/40 VUs, 776 complete and 0 interrupted iterations
+carga   [  97% ] 40 VUs  01m07.0s/10m0s  776/800 iters, 20 per VU
+
+running (01m08.0s), 15/40 VUs, 783 complete and 0 interrupted iterations
+carga   [  98% ] 40 VUs  01m08.0s/10m0s  783/800 iters, 20 per VU
+
+running (01m09.0s), 07/40 VUs, 793 complete and 0 interrupted iterations
+carga   [  99% ] 40 VUs  01m09.0s/10m0s  793/800 iters, 20 per VU
+# Fase 3 — Escenario de estres: escritura con 40 usuarios concurrentes
+
+- **Iteraciones por usuario**: 20
+- **Peticiones totales**: 800
+- **RPS (tasa de peticiones)**: 11.55 req/s
+- **Latencia media**: 3215.73 ms
+- **Latencia P90**: 4534.54 ms
+- **Latencia P95**: 5979.80 ms
+- **Latencia P99**: - ms
+- **Latencia máxima**: 9734.19 ms
+- **Latencia mínima**: 561.59 ms
+- **Tasa de fallo HTTP**: 0.00 %
+- **Checks correctos**: 100.00 %
+- **Datos recibidos**: 955.42 KB
+- **Datos enviados**: 243.49 KB
+running (01m09.3s), 00/40 VUs, 800 complete and 0 interrupted iterations
+carga ✓ [ 100% ] 40 VUs  01m09.3s/10m0s  800/800 iters, 20 per VU

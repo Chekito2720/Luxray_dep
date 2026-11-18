@@ -1,0 +1,9 @@
+[RELAY] escuchando en 0.0.0.0:8099 -> ::1:8080
+[RELAY] conexion #1 establecida
+[RELAY] conexion #2 establecida
+[RELAY] conexion #3 establecida
+[RELAY] conexion #4 establecida
+[RELAY] conexion #5 establecida
+[RELAY] conexion #6 establecida
+[RELAY] conexion #7 establecida
+[RELAY] conexion #8 establecida
