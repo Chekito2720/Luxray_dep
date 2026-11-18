@@ -1,0 +1,8 @@
+﻿2026-11-18T16:28:09.8110908Z ##[group]Run flutter test --machine > ../flutter_test.json
+2026-11-18T16:28:09.8111688Z [36;1mflutter test --machine > ../flutter_test.json[0m
+2026-11-18T16:28:09.8154665Z shell: /usr/bin/bash -e {0}
+2026-11-18T16:28:09.8155132Z env:
+2026-11-18T16:28:09.8155484Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:28:09.8156092Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T16:28:09.8156974Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T16:28:09.8157453Z ##[endgroup]

@@ -1,0 +1,41 @@
+﻿2026-11-18T16:27:35.0822137Z ##[group]Run actions/setup-java@v4
+2026-11-18T16:27:35.0822462Z with:
+2026-11-18T16:27:35.0822679Z   distribution: temurin
+2026-11-18T16:27:35.0822912Z   java-version: 21
+2026-11-18T16:27:35.0823124Z   cache: maven
+2026-11-18T16:27:35.0823535Z   java-package: jdk
+2026-11-18T16:27:35.0823757Z   check-latest: false
+2026-11-18T16:27:35.0823983Z   server-id: github
+2026-11-18T16:27:35.0824203Z   server-username: GITHUB_ACTOR
+2026-11-18T16:27:35.0824464Z   server-password: GITHUB_TOKEN
+2026-11-18T16:27:35.0824725Z   overwrite-settings: true
+2026-11-18T16:27:35.0824965Z   job-status: success
+2026-11-18T16:27:35.0827423Z   token: ***
+2026-11-18T16:27:35.0827640Z env:
+2026-11-18T16:27:35.0827831Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:35.0828055Z ##[endgroup]
+2026-11-18T16:27:35.2576579Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-11-18T16:27:35.2589814Z ##[group]Installed distributions
+2026-11-18T16:27:35.2697303Z Resolved Java 21.0.13+9 from tool-cache
+2026-11-18T16:27:35.2697971Z Setting Java 21.0.13+9 as the default
+2026-11-18T16:27:35.2708159Z (node:2383) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T16:27:35.2709133Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T16:27:35.2711554Z Creating toolchains.xml for JDK version 21 from temurin
+2026-11-18T16:27:35.2787663Z Writing to /home/runner/.m2/toolchains.xml
+2026-11-18T16:27:35.2788340Z 
+2026-11-18T16:27:35.2788603Z Java configuration:
+2026-11-18T16:27:35.2789063Z   Distribution: temurin
+2026-11-18T16:27:35.2789502Z   Version: 21.0.13+9
+2026-11-18T16:27:35.2790098Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:27:35.2790637Z 
+2026-11-18T16:27:35.2791200Z ##[endgroup]
+2026-11-18T16:27:35.2809516Z Creating settings.xml with server-id: github
+2026-11-18T16:27:35.2847108Z Writing to /home/runner/.m2/settings.xml
+2026-11-18T16:27:35.7054581Z Cache hit for: setup-java-Linux-x64-maven-716faa0275000aff9f6e3a4030be4b02263774503311da8a4e326c1d851d8e59
+2026-11-18T16:27:35.7172352Z (node:2383) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T16:27:36.9934505Z Received 4194304 of 111221852 (3.8%), 4.0 MBs/sec
+2026-11-18T16:27:37.8957508Z Received 111221852 of 111221852 (100.0%), 55.7 MBs/sec
+2026-11-18T16:27:37.8958054Z Cache Size: ~106 MB (111221852 B)
+2026-11-18T16:27:37.9015280Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3df9ca54-2a17-4878-b87f-c8c24581293d/cache.tzst -P -C /home/runner/work/Luxray_dep/Luxray_dep --use-compress-program unzstd
+2026-11-18T16:27:38.2120158Z Cache restored successfully
+2026-11-18T16:27:38.2173868Z Cache restored from key: setup-java-Linux-x64-maven-716faa0275000aff9f6e3a4030be4b02263774503311da8a4e326c1d851d8e59

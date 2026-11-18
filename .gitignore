@@ -13,6 +13,10 @@ frontend-web/
 backend/logs/
 logs/
 
+# ...pero los logs del pipeline SI son evidencia y se versionan.
+!practica-13-14/evidencias/ci/logs/
+!practica-13-14/evidencias/ci/logs/**
+
 # Qodo / configuración del IDE
 .qodo/
 .qodo/**
