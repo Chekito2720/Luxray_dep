@@ -116,8 +116,13 @@ jobs:
           java -version
           ./mvnw -v
 
+      # `set -o pipefail` es IMPRESCINDIBLE: sin él, el código de salida del
+      # pipeline es el de `tee` (siempre 0) y Maven puede fallar sin que el
+      # paso se marque como error (pipeline "verde" falso).
       - name: Compilar y ejecutar pruebas
-        run: ./mvnw -B test 2>&1 | tee ../mvn.log
+        run: |
+          set -o pipefail
+          ./mvnw -B test 2>&1 | tee ../mvn.log
 
       - name: Diagnóstico del fallo
         if: failure()

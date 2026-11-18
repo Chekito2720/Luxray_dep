@@ -26,6 +26,10 @@ public class AuthService {
     private final PasswordEncoder passwordEncoder;
     private final JwtTokenProvider jwt;
 
+
+    private static final String HASH_CEBO =
+            "$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy";
+
     public AuthService(UsuarioRepository usuarios, PasswordEncoder passwordEncoder, JwtTokenProvider jwt) {
         this.usuarios = usuarios;
         this.passwordEncoder = passwordEncoder;
@@ -50,8 +54,14 @@ public class AuthService {
     }
 
     public AuthResponse login(LoginRequest req) {
-        Usuario u = usuarios.findByEmailAndActivoTrue(req.email().toLowerCase())
-                .orElseThrow(() -> new BusinessException("Credenciales inválidas"));
+        // Mensaje idéntico para "no existe" y "contraseña incorrecta":
+        // no se revela si un correo está registrado o no.
+        Usuario u = usuarios.findByEmailAndActivoTrue(req.email().toLowerCase()).orElse(null);
+        if (u == null) {
+            // Igualar el tiempo de respuesta: comparación BCrypt contra un hash cebo
+            passwordEncoder.matches(req.password(), HASH_CEBO);
+            throw new BusinessException("Credenciales inválidas");
+        }
         if (!passwordEncoder.matches(req.password(), u.getPasswordHash())) {
             throw new BusinessException("Credenciales inválidas");
         }
@@ -87,6 +97,21 @@ public class AuthService {
     public ApiResponse<List<UsuarioResponse>> listarUsuariosInactivosAdmin() {
         List<Usuario> lista = usuarios.findAllByActivoFalse();
         List<UsuarioResponse> data = lista.stream().map(UsuarioResponse::from).toList();
+        return ApiResponse.ok(data);
+    }
+
+    /**
+     * Resumen de alumnos por ids: lo usa el panel de revisión docente del
+     * frontend para poner nombre a los usuarioId que llegan de cursos-service.
+     * Solo usuarios activos; los ids desconocidos simplemente se omiten.
+     */
+    public ApiResponse<List<UsuarioResponse>> resumenPorIds(List<UUID> ids) {
+        if (ids == null || ids.isEmpty()) return ApiResponse.ok(List.of());
+        if (ids.size() > 500) throw new BusinessException("Máximo 500 ids por consulta");
+        List<UsuarioResponse> data = usuarios.findAllById(ids).stream()
+                .filter(u -> Boolean.TRUE.equals(u.getActivo()))
+                .map(UsuarioResponse::from)
+                .toList();
         return ApiResponse.ok(data);
     }
 
