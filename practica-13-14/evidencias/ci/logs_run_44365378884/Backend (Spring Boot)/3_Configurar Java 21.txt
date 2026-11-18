@@ -1,0 +1,34 @@
+﻿2026-11-18T18:03:03.8041463Z ##[group]Run actions/setup-java@v4
+2026-11-18T18:03:03.8042564Z with:
+2026-11-18T18:03:03.8043372Z   distribution: temurin
+2026-11-18T18:03:03.8044316Z   java-version: 21
+2026-11-18T18:03:03.8045189Z   cache: maven
+2026-11-18T18:03:03.8046049Z   java-package: jdk
+2026-11-18T18:03:03.8047086Z   check-latest: false
+2026-11-18T18:03:03.8048005Z   server-id: github
+2026-11-18T18:03:03.8048930Z   server-username: GITHUB_ACTOR
+2026-11-18T18:03:03.8050009Z   server-password: GITHUB_TOKEN
+2026-11-18T18:03:03.8051061Z   overwrite-settings: true
+2026-11-18T18:03:03.8052048Z   job-status: success
+2026-11-18T18:03:03.8060693Z   token: ***
+2026-11-18T18:03:03.8061534Z env:
+2026-11-18T18:03:03.8062355Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:03.8063266Z ##[endgroup]
+2026-11-18T18:03:03.9967137Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-11-18T18:03:03.9977200Z ##[group]Installed distributions
+2026-11-18T18:03:04.0218318Z Resolved Java 21.0.13+9 from tool-cache
+2026-11-18T18:03:04.0220059Z Setting Java 21.0.13+9 as the default
+2026-11-18T18:03:04.0229948Z (node:2399) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T18:03:04.0233590Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T18:03:04.0236898Z Creating toolchains.xml for JDK version 21 from temurin
+2026-11-18T18:03:04.0308965Z Writing to /home/runner/.m2/toolchains.xml
+2026-11-18T18:03:04.0310305Z 
+2026-11-18T18:03:04.0310887Z Java configuration:
+2026-11-18T18:03:04.0311971Z   Distribution: temurin
+2026-11-18T18:03:04.0313059Z   Version: 21.0.13+9
+2026-11-18T18:03:04.0314720Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:03:04.0316214Z 
+2026-11-18T18:03:04.0318229Z ##[endgroup]
+2026-11-18T18:03:04.0335570Z Creating settings.xml with server-id: github
+2026-11-18T18:03:04.0356677Z Writing to /home/runner/.m2/settings.xml
+2026-11-18T18:03:04.2856609Z maven cache is not found

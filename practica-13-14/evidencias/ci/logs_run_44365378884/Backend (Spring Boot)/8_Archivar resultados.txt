@@ -1,0 +1,29 @@
+﻿2026-11-18T18:04:05.3760177Z ##[group]Run actions/upload-artifact@v4
+2026-11-18T18:04:05.3760485Z with:
+2026-11-18T18:04:05.3760689Z   name: backend-test-results
+2026-11-18T18:04:05.3760970Z   path: **/target/surefire-reports/*.xml
+mvn.log
+
+2026-11-18T18:04:05.3761276Z   if-no-files-found: warn
+2026-11-18T18:04:05.3761508Z   compression-level: 6
+2026-11-18T18:04:05.3761728Z   overwrite: false
+2026-11-18T18:04:05.3761942Z   include-hidden-files: false
+2026-11-18T18:04:05.3762177Z env:
+2026-11-18T18:04:05.3762384Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:04:05.3762708Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:04:05.3763197Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:04:05.3763560Z ##[endgroup]
+2026-11-18T18:04:05.5508306Z (node:2926) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T18:04:05.5509345Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T18:04:05.7149780Z With the provided path, there will be 4 files uploaded
+2026-11-18T18:04:05.7150775Z Artifact name is valid!
+2026-11-18T18:04:05.7151270Z Root directory input is valid!
+2026-11-18T18:04:05.9521235Z Beginning upload of artifact content to blob storage
+2026-11-18T18:04:05.9896816Z (node:2926) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T18:04:06.0494840Z Uploaded bytes 50740
+2026-11-18T18:04:06.0694419Z Finished uploading artifact content to blob storage!
+2026-11-18T18:04:06.0695610Z SHA256 digest of uploaded artifact zip is 847311c667fcb73c5d0054b6afb15f2831283b92279dacbcc48b26d3ba931329
+2026-11-18T18:04:06.0697293Z Finalizing artifact upload
+2026-11-18T18:04:06.4780307Z Artifact backend-test-results.zip successfully finalized. Artifact ID 14455529018
+2026-11-18T18:04:06.4781443Z Artifact backend-test-results has been successfully uploaded! Final size is 50740 bytes. Artifact ID is 14455529018
+2026-11-18T18:04:06.4787421Z Artifact download URL: https://github.com/Chekito2720/Luxray_dep/actions/runs/44365378884/artifacts/14455529018

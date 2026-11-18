@@ -1,0 +1,574 @@
+﻿2026-11-18T18:01:20.2535423Z ##[group]Run set -o pipefail
+2026-11-18T18:01:20.2535672Z [36;1mset -o pipefail[0m
+2026-11-18T18:01:20.2535849Z [36;1m./mvnw -B test 2>&1 | tee ../mvn.log[0m
+2026-11-18T18:01:20.2564506Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:01:20.2564716Z env:
+2026-11-18T18:01:20.2564893Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:01:20.2565102Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:01:20.2565426Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:01:20.2565650Z ##[endgroup]
+2026-11-18T18:01:21.2783620Z [INFO] Scanning for projects...
+2026-11-18T18:01:21.5501129Z [INFO] ------------------------------------------------------------------------
+2026-11-18T18:01:21.5512557Z [INFO] Reactor Build Order:
+2026-11-18T18:01:21.5513721Z [INFO] 
+2026-11-18T18:01:21.5534412Z [INFO] LuxRay Backend (Parent)                                            [pom]
+2026-11-18T18:01:21.5535469Z [INFO] LuxRay :: Common Library                                           [jar]
+2026-11-18T18:01:21.5536169Z [INFO] LuxRay :: Discovery Service (Eureka)                               [jar]
+2026-11-18T18:01:21.5536730Z [INFO] LuxRay :: API Gateway                                              [jar]
+2026-11-18T18:01:21.5537322Z [INFO] LuxRay :: Auth Service                                             [jar]
+2026-11-18T18:01:21.5537902Z [INFO] LuxRay :: Cursos Service                                           [jar]
+2026-11-18T18:01:21.5538598Z [INFO] LuxRay :: Analytics Service                                        [jar]
+2026-11-18T18:01:21.5564291Z [INFO] LuxRay :: Search Service                                           [jar]
+2026-11-18T18:01:21.5627922Z [INFO] 
+2026-11-18T18:01:21.5634065Z [INFO] ---------------------< com.luxray:luxray-backend >----------------------
+2026-11-18T18:01:21.5654582Z [INFO] Building LuxRay Backend (Parent) 1.0.0-SNAPSHOT                    [1/8]
+2026-11-18T18:01:21.5665301Z [INFO]   from pom.xml
+2026-11-18T18:01:21.5668167Z [INFO] --------------------------------[ pom ]---------------------------------
+2026-11-18T18:01:21.5693795Z [INFO] 
+2026-11-18T18:01:21.5713997Z [INFO] -----------------------< com.luxray:common-lib >------------------------
+2026-11-18T18:01:21.5723976Z [INFO] Building LuxRay :: Common Library 1.0.0-SNAPSHOT                   [2/8]
+2026-11-18T18:01:21.5745266Z [INFO]   from common-lib/pom.xml
+2026-11-18T18:01:21.5774246Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T18:01:21.8302709Z [INFO] 
+2026-11-18T18:01:21.8303667Z [INFO] --- resources:3.3.1:resources (default-resources) @ common-lib ---
+2026-11-18T18:01:21.9214043Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/common-lib/src/main/resources
+2026-11-18T18:01:21.9240331Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/common-lib/src/main/resources
+2026-11-18T18:01:21.9254100Z [INFO] 
+2026-11-18T18:01:21.9291122Z [INFO] --- compiler:3.13.0:compile (default-compile) @ common-lib ---
+2026-11-18T18:01:22.0199912Z [INFO] Recompiling the module because of changed source code.
+2026-11-18T18:01:22.0268617Z [INFO] Compiling 8 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T18:01:22.9601068Z [INFO] 
+2026-11-18T18:01:22.9602535Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ common-lib ---
+2026-11-18T18:01:22.9684807Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/common-lib/src/test/resources
+2026-11-18T18:01:22.9744696Z [INFO] 
+2026-11-18T18:01:22.9754231Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ common-lib ---
+2026-11-18T18:01:22.9754985Z [INFO] No sources to compile
+2026-11-18T18:01:22.9755483Z [INFO] 
+2026-11-18T18:01:22.9774034Z [INFO] --- surefire:3.5.2:test (default-test) @ common-lib ---
+2026-11-18T18:01:23.0627699Z [INFO] No tests to run.
+2026-11-18T18:01:23.0730870Z [INFO] 
+2026-11-18T18:01:23.0746086Z [INFO] --------------------< com.luxray:discovery-service >--------------------
+2026-11-18T18:01:23.0754432Z [INFO] Building LuxRay :: Discovery Service (Eureka) 1.0.0-SNAPSHOT       [3/8]
+2026-11-18T18:01:23.0755016Z [INFO]   from discovery-service/pom.xml
+2026-11-18T18:01:23.0755553Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T18:01:23.2934029Z [INFO] 
+2026-11-18T18:01:23.2940687Z [INFO] --- resources:3.3.1:resources (default-resources) @ discovery-service ---
+2026-11-18T18:01:23.2981370Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T18:01:23.3115157Z [INFO] Copying 0 resource from src/main/resources to target/classes
+2026-11-18T18:01:23.3144457Z [INFO] 
+2026-11-18T18:01:23.3146556Z [INFO] --- compiler:3.13.0:compile (default-compile) @ discovery-service ---
+2026-11-18T18:01:23.3184423Z [INFO] Recompiling the module because of changed source code.
+2026-11-18T18:01:23.3185299Z [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/classes
+2026-11-18T18:01:23.5770300Z [INFO] 
+2026-11-18T18:01:23.5777765Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery-service ---
+2026-11-18T18:01:23.5794204Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/discovery-service/src/test/resources
+2026-11-18T18:01:23.5809151Z [INFO] 
+2026-11-18T18:01:23.5834213Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ discovery-service ---
+2026-11-18T18:01:23.5863888Z [INFO] No sources to compile
+2026-11-18T18:01:23.5864457Z [INFO] 
+2026-11-18T18:01:23.5894292Z [INFO] --- surefire:3.5.2:test (default-test) @ discovery-service ---
+2026-11-18T18:01:23.5897412Z [INFO] No tests to run.
+2026-11-18T18:01:23.5897833Z [INFO] 
+2026-11-18T18:01:23.5898242Z [INFO] -----------------------< com.luxray:api-gateway >-----------------------
+2026-11-18T18:01:23.5898880Z [INFO] Building LuxRay :: API Gateway 1.0.0-SNAPSHOT                      [4/8]
+2026-11-18T18:01:23.5899333Z [INFO]   from api-gateway/pom.xml
+2026-11-18T18:01:23.5899805Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T18:01:23.6765963Z [INFO] 
+2026-11-18T18:01:23.6773524Z [INFO] --- resources:3.3.1:resources (default-resources) @ api-gateway ---
+2026-11-18T18:01:23.6796704Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T18:01:23.6804535Z [INFO] Copying 0 resource from src/main/resources to target/classes
+2026-11-18T18:01:23.6814076Z [INFO] 
+2026-11-18T18:01:23.6814576Z [INFO] --- compiler:3.13.0:compile (default-compile) @ api-gateway ---
+2026-11-18T18:01:23.6886231Z [INFO] Recompiling the module because of changed source code.
+2026-11-18T18:01:23.6887466Z [INFO] Compiling 2 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T18:01:23.9948390Z [INFO] 
+2026-11-18T18:01:23.9974624Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ api-gateway ---
+2026-11-18T18:01:23.9994806Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/api-gateway/src/test/resources
+2026-11-18T18:01:23.9995460Z [INFO] 
+2026-11-18T18:01:23.9995797Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ api-gateway ---
+2026-11-18T18:01:24.0008342Z [INFO] No sources to compile
+2026-11-18T18:01:24.0014389Z [INFO] 
+2026-11-18T18:01:24.0034405Z [INFO] --- surefire:3.5.2:test (default-test) @ api-gateway ---
+2026-11-18T18:01:24.0087269Z [INFO] No tests to run.
+2026-11-18T18:01:24.0094151Z [INFO] 
+2026-11-18T18:01:24.0094763Z [INFO] ----------------------< com.luxray:auth-service >-----------------------
+2026-11-18T18:01:24.0095606Z [INFO] Building LuxRay :: Auth Service 1.0.0-SNAPSHOT                     [5/8]
+2026-11-18T18:01:24.0096202Z [INFO]   from auth-service/pom.xml
+2026-11-18T18:01:24.0108044Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T18:01:24.0967891Z [INFO] 
+2026-11-18T18:01:24.0968494Z [INFO] --- resources:3.3.1:resources (default-resources) @ auth-service ---
+2026-11-18T18:01:24.0992331Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T18:01:24.1004572Z [INFO] Copying 4 resources from src/main/resources to target/classes
+2026-11-18T18:01:24.1028994Z [INFO] 
+2026-11-18T18:01:24.1029853Z [INFO] --- compiler:3.13.0:compile (default-compile) @ auth-service ---
+2026-11-18T18:01:24.1091249Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T18:01:24.1094869Z [INFO] Compiling 12 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T18:01:24.6729057Z [INFO] 
+2026-11-18T18:01:24.6730108Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ auth-service ---
+2026-11-18T18:01:24.6771413Z [INFO] Copying 1 resource from src/test/resources to target/test-classes
+2026-11-18T18:01:24.6772523Z [INFO] 
+2026-11-18T18:01:24.6773018Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ auth-service ---
+2026-11-18T18:01:24.6836222Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T18:01:24.6851404Z [INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+2026-11-18T18:01:25.1334534Z [INFO] 
+2026-11-18T18:01:25.1354228Z [INFO] --- surefire:3.5.2:test (default-test) @ auth-service ---
+2026-11-18T18:01:25.1435159Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+2026-11-18T18:01:25.1775180Z [INFO] 
+2026-11-18T18:01:25.1775895Z [INFO] -------------------------------------------------------
+2026-11-18T18:01:25.1776213Z [INFO]  T E S T S
+2026-11-18T18:01:25.1776467Z [INFO] -------------------------------------------------------
+2026-11-18T18:01:25.6944712Z [INFO] Running com.luxray.auth.controller.AuthControllerIntegrationTest
+2026-11-18T18:01:25.9236765Z 18:01:25.863 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.luxray.auth.controller.AuthControllerIntegrationTest]: AuthControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T18:01:26.0245267Z 18:01:25.970 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.luxray.auth.AuthServiceApplication for test class com.luxray.auth.controller.AuthControllerIntegrationTest
+2026-11-18T18:01:26.5293913Z 
+2026-11-18T18:01:26.5324501Z   .   ____          _            __ _ _
+2026-11-18T18:01:26.5325309Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-11-18T18:01:26.5355317Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-11-18T18:01:26.5386680Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-11-18T18:01:26.5414310Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-11-18T18:01:26.5444361Z  =========|_|==============|___/=/_/_/_/
+2026-11-18T18:01:26.5444866Z 
+2026-11-18T18:01:26.5474642Z  :: Spring Boot ::                (v3.4.1)
+2026-11-18T18:01:26.5503624Z 
+2026-11-18T18:01:26.6255348Z 2026-11-18T18:01:26.570Z  INFO 2555 --- [auth-service] [           main] c.l.a.c.AuthControllerIntegrationTest    : Starting AuthControllerIntegrationTest using Java 21.0.13 with PID 2555 (started by runner in /home/runner/work/Luxray_dep/Luxray_dep/backend/auth-service)
+2026-11-18T18:01:26.6274939Z 2026-11-18T18:01:26.572Z  INFO 2555 --- [auth-service] [           main] c.l.a.c.AuthControllerIntegrationTest    : The following 1 profile is active: "test"
+2026-11-18T18:01:27.7285404Z 2026-11-18T18:01:27.649Z  INFO 2555 --- [auth-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T18:01:27.8304835Z 2026-11-18T18:01:27.764Z  INFO 2555 --- [auth-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2026-11-18T18:01:28.0308897Z 2026-11-18T18:01:27.970Z  INFO 2555 --- [auth-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4f0df6f9-7d45-32f6-b66d-298bb7b0f6f5
+2026-11-18T18:01:28.4322325Z 2026-11-18T18:01:28.389Z  INFO 2555 --- [auth-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T18:01:28.4365332Z 2026-11-18T18:01:28.419Z  INFO 2555 --- [auth-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-11-18T18:01:28.5318919Z 2026-11-18T18:01:28.440Z  INFO 2555 --- [auth-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T18:01:28.6402376Z 2026-11-18T18:01:28.582Z  INFO 2555 --- [auth-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T18:01:28.6406203Z 2026-11-18T18:01:28.601Z  INFO 2555 --- [auth-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T18:01:28.8427523Z 2026-11-18T18:01:28.791Z  INFO 2555 --- [auth-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:auth_test_db user=SA
+2026-11-18T18:01:28.8433455Z 2026-11-18T18:01:28.793Z  INFO 2555 --- [auth-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T18:01:28.8435387Z 2026-11-18T18:01:28.809Z  WARN 2555 --- [auth-service] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.3.232 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2026-11-18T18:01:28.8437486Z 2026-11-18T18:01:28.813Z  WARN 2555 --- [auth-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-18T18:01:28.8438865Z 2026-11-18T18:01:28.827Z  INFO 2555 --- [auth-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-11-18T18:01:28.8439731Z 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-11-18T18:01:28.8440295Z 	Database driver: undefined/unknown
+2026-11-18T18:01:28.8440726Z 	Database version: 2.3.232
+2026-11-18T18:01:28.8441126Z 	Autocommit mode: undefined/unknown
+2026-11-18T18:01:28.8441541Z 	Isolation level: undefined/unknown
+2026-11-18T18:01:28.8441961Z 	Minimum pool size: undefined/unknown
+2026-11-18T18:01:28.8442374Z 	Maximum pool size: undefined/unknown
+2026-11-18T18:01:29.3505973Z 2026-11-18T18:01:29.324Z  INFO 2555 --- [auth-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T18:01:29.3521753Z 2026-11-18T18:01:29.336Z  WARN 2555 --- [auth-service] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+2026-11-18T18:01:29.3524224Z     set client_min_messages = WARNING" via JDBC [Syntax error in SQL statement "\000a    set [*]client_min_messages = WARNING"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, DATABASE, COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, SCHEMA, CATALOG, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, TIME, NON_KEYWORDS, DEFAULT_NULL_ORDERING";]
+2026-11-18T18:01:29.3527639Z 
+2026-11-18T18:01:29.3527935Z org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+2026-11-18T18:01:29.3529466Z     set client_min_messages = WARNING" via JDBC [Syntax error in SQL statement "\000a    set [*]client_min_messages = WARNING"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, DATABASE, COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, SCHEMA, CATALOG, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, TIME, NON_KEYWORDS, DEFAULT_NULL_ORDERING";]
+2026-11-18T18:01:29.3531475Z 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3532464Z 	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3533540Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:213) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3534466Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:186) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3535353Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:156) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3536253Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:116) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3537319Z 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3538631Z 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3539475Z 	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+2026-11-18T18:01:29.3540234Z 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3541475Z 	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3542718Z 	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3580139Z 	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3581460Z 	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3582472Z 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3583948Z 	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3585483Z 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3586875Z 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3588594Z 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3589740Z 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3590956Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3592419Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3594152Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3595503Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3596713Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3597745Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3598861Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3599764Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3600918Z 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3602116Z 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3603016Z 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3603964Z 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3604758Z 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3605692Z 	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3606603Z 	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3607349Z 	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3608143Z 	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3609103Z 	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3610210Z 	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3611233Z 	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T18:01:29.3612464Z 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3614375Z 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3615601Z 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3616828Z 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3618270Z 	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3619365Z 	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3620412Z 	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T18:01:29.3621634Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3622940Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3644630Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3645703Z 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+2026-11-18T18:01:29.3646361Z 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+2026-11-18T18:01:29.3646988Z 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+2026-11-18T18:01:29.3647643Z 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+2026-11-18T18:01:29.3648317Z 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+2026-11-18T18:01:29.3648988Z 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+2026-11-18T18:01:29.3649672Z 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+2026-11-18T18:01:29.3650345Z 	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+2026-11-18T18:01:29.3651034Z 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+2026-11-18T18:01:29.3651673Z 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+2026-11-18T18:01:29.3652392Z 	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+2026-11-18T18:01:29.3653514Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3654862Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3656067Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3657212Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3658515Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3659833Z 	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+2026-11-18T18:01:29.3660673Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3661853Z 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3663009Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3664411Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3665489Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3666577Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T18:01:29.3667610Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3668627Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3669644Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3670602Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3671347Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-11-18T18:01:29.3672312Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3673986Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3675039Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3676135Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3677096Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3678050Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3679146Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3680215Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3681190Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3681880Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-11-18T18:01:29.3682864Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3684298Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3685797Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3686862Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3687821Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3689025Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3690092Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3691170Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3692191Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3693514Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3694862Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3696032Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3697180Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3698330Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3699443Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3700607Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3701846Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3703052Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3704413Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3705341Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3706271Z 	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T18:01:29.3707157Z 	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3708106Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3709275Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3710470Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3711847Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3712688Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3713562Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3714464Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T18:01:29.3716138Z Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    set [*]client_min_messages = WARNING"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, DATABASE, COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, SCHEMA, CATALOG, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, TIME, NON_KEYWORDS, DEFAULT_NULL_ORDERING"; SQL statement:
+2026-11-18T18:01:29.3717571Z 
+2026-11-18T18:01:29.3717706Z     set client_min_messages = WARNING [42001-232]
+2026-11-18T18:01:29.3718228Z 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3718881Z 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3719454Z 	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3720005Z 	at org.h2.command.ParserBase.getSyntaxError(ParserBase.java:762) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3720508Z 	at org.h2.command.Parser.parseSet(Parser.java:7592) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3720993Z 	at org.h2.command.Parser.parsePrepared(Parser.java:614) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3721456Z 	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3721871Z 	at org.h2.command.Parser.parse(Parser.java:561) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3722319Z 	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3722821Z 	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3723512Z 	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3724062Z 	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3724649Z 	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3725168Z 	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T18:01:29.3725765Z 	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+2026-11-18T18:01:29.3726482Z 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+2026-11-18T18:01:29.3727402Z 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T18:01:29.3728120Z 	... 116 common frames omitted
+2026-11-18T18:01:29.3728295Z 
+2026-11-18T18:01:29.4518013Z 2026-11-18T18:01:29.356Z  INFO 2555 --- [auth-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T18:01:29.9516193Z 2026-11-18T18:01:29.943Z  WARN 2555 --- [auth-service] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-11-18T18:01:29.9517966Z 
+2026-11-18T18:01:29.9518651Z Using generated security password: 6889b81c-4f45-452d-88a0-681c2dc4a555
+2026-11-18T18:01:29.9519118Z 
+2026-11-18T18:01:29.9519652Z This generated password is for development use only. Your security configuration must be updated before running your application in production.
+2026-11-18T18:01:29.9521249Z 
+2026-11-18T18:01:29.9522177Z 2026-11-18T18:01:29.947Z  INFO 2555 --- [auth-service] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-18T18:01:30.4533427Z 2026-11-18T18:01:30.445Z  INFO 2555 --- [auth-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-18T18:01:31.1566649Z 2026-11-18T18:01:31.121Z  INFO 2555 --- [auth-service] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-18T18:01:31.1570889Z 2026-11-18T18:01:31.121Z  INFO 2555 --- [auth-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-18T18:01:31.1572107Z 2026-11-18T18:01:31.123Z  INFO 2555 --- [auth-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-18T18:01:31.2620058Z 2026-11-18T18:01:31.168Z  INFO 2555 --- [auth-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T18:01:31.2645892Z 2026-11-18T18:01:31.238Z  WARN 2555 --- [auth-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T18:01:31.3581119Z 2026-11-18T18:01:31.317Z  INFO 2555 --- [auth-service] [           main] c.l.a.c.AuthControllerIntegrationTest    : Started AuthControllerIntegrationTest in 5.084 seconds (process running for 6.072)
+2026-11-18T18:01:31.4592435Z Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+2026-11-18T18:01:31.7398359Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-18T18:01:31.7596029Z WARNING: A Java agent has been loaded dynamically (/home/runner/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+2026-11-18T18:01:31.7596710Z WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+2026-11-18T18:01:31.7597131Z WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+2026-11-18T18:01:31.7597497Z WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-18T18:01:32.8669649Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.110 s -- in com.luxray.auth.controller.AuthControllerIntegrationTest
+2026-11-18T18:01:32.8670827Z [INFO] Running com.luxray.auth.controller.RegistroIntegracionTest
+2026-11-18T18:01:32.8672530Z 2026-11-18T18:01:32.803Z  INFO 2555 --- [auth-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.luxray.auth.controller.RegistroIntegracionTest]: RegistroIntegracionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T18:01:32.8674983Z 2026-11-18T18:01:32.806Z  INFO 2555 --- [auth-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.luxray.auth.AuthServiceApplication for test class com.luxray.auth.controller.RegistroIntegracionTest
+2026-11-18T18:01:33.8557858Z 2026-11-18T18:01:33.850Z  WARN 2555 --- [auth-service] [           main] c.l.c.exception.GlobalExceptionHandler   : Solicitud malformada en /auth/registro: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+2026-11-18T18:01:34.1157912Z [WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 1.293 s -- in com.luxray.auth.controller.RegistroIntegracionTest
+2026-11-18T18:01:34.1180401Z [INFO] Running com.luxray.auth.service.AuthServiceTest
+2026-11-18T18:01:34.9724858Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.861 s -- in com.luxray.auth.service.AuthServiceTest
+2026-11-18T18:01:35.0546907Z [INFO] 
+2026-11-18T18:01:35.0547307Z [INFO] Results:
+2026-11-18T18:01:35.0549706Z [INFO] 
+2026-11-18T18:01:35.0550206Z [WARNING] Tests run: 17, Failures: 0, Errors: 0, Skipped: 3
+2026-11-18T18:01:35.0550663Z [INFO] 
+2026-11-18T18:01:35.0571957Z [INFO] 
+2026-11-18T18:01:35.0572787Z [INFO] ---------------------< com.luxray:cursos-service >----------------------
+2026-11-18T18:01:35.0573610Z [INFO] Building LuxRay :: Cursos Service 1.0.0-SNAPSHOT                   [6/8]
+2026-11-18T18:01:35.0574166Z [INFO]   from cursos-service/pom.xml
+2026-11-18T18:01:35.0574616Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T18:01:35.0767302Z [INFO] 
+2026-11-18T18:01:35.0768566Z [INFO] --- resources:3.3.1:resources (default-resources) @ cursos-service ---
+2026-11-18T18:01:35.0792570Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T18:01:35.0813998Z [INFO] Copying 10 resources from src/main/resources to target/classes
+2026-11-18T18:01:35.0818024Z [INFO] 
+2026-11-18T18:01:35.0818656Z [INFO] --- compiler:3.13.0:compile (default-compile) @ cursos-service ---
+2026-11-18T18:01:35.0879656Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T18:01:35.0884102Z [INFO] Compiling 19 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T18:01:35.6744269Z [INFO] 
+2026-11-18T18:01:35.6744816Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ cursos-service ---
+2026-11-18T18:01:35.6752168Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/cursos-service/src/test/resources
+2026-11-18T18:01:35.6773923Z [INFO] 
+2026-11-18T18:01:35.6774853Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ cursos-service ---
+2026-11-18T18:01:35.6804656Z [INFO] No sources to compile
+2026-11-18T18:01:35.6805202Z [INFO] 
+2026-11-18T18:01:35.6805884Z [INFO] --- surefire:3.5.2:test (default-test) @ cursos-service ---
+2026-11-18T18:01:35.6806618Z [INFO] No tests to run.
+2026-11-18T18:01:35.6808824Z [INFO] 
+2026-11-18T18:01:35.6809473Z [INFO] --------------------< com.luxray:analytics-service >--------------------
+2026-11-18T18:01:35.6810139Z [INFO] Building LuxRay :: Analytics Service 1.0.0-SNAPSHOT                [7/8]
+2026-11-18T18:01:35.6810746Z [INFO]   from analytics-service/pom.xml
+2026-11-18T18:01:35.6811250Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T18:01:35.6998381Z [INFO] 
+2026-11-18T18:01:35.6999260Z [INFO] --- resources:3.3.1:resources (default-resources) @ analytics-service ---
+2026-11-18T18:01:35.7021006Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T18:01:35.7031152Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T18:01:35.7034320Z [INFO] 
+2026-11-18T18:01:35.7035505Z [INFO] --- compiler:3.13.0:compile (default-compile) @ analytics-service ---
+2026-11-18T18:01:35.7085319Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T18:01:35.7090165Z [INFO] Compiling 14 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T18:01:36.2026007Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java: /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java uses or overrides a deprecated API.
+2026-11-18T18:01:36.2031631Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java: Recompile with -Xlint:deprecation for details.
+2026-11-18T18:01:36.2032712Z [INFO] 
+2026-11-18T18:01:36.2033375Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ analytics-service ---
+2026-11-18T18:01:36.2053711Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/test/resources
+2026-11-18T18:01:36.2054662Z [INFO] 
+2026-11-18T18:01:36.2055617Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ analytics-service ---
+2026-11-18T18:01:36.2079715Z [INFO] No sources to compile
+2026-11-18T18:01:36.2080309Z [INFO] 
+2026-11-18T18:01:36.2080955Z [INFO] --- surefire:3.5.2:test (default-test) @ analytics-service ---
+2026-11-18T18:01:36.2114902Z [INFO] No tests to run.
+2026-11-18T18:01:36.2115516Z [INFO] 
+2026-11-18T18:01:36.2116052Z [INFO] ---------------------< com.luxray:search-service >----------------------
+2026-11-18T18:01:36.2116955Z [INFO] Building LuxRay :: Search Service 1.0.0-SNAPSHOT                   [8/8]
+2026-11-18T18:01:36.2117531Z [INFO]   from search-service/pom.xml
+2026-11-18T18:01:36.2118044Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T18:01:36.3659416Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.pom
+2026-11-18T18:01:36.6937810Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.pom (2.6 kB at 7.7 kB/s)
+2026-11-18T18:01:36.6997353Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.pom
+2026-11-18T18:01:36.7540099Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.pom (12 kB at 229 kB/s)
+2026-11-18T18:01:36.7596522Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.pom
+2026-11-18T18:01:36.8509748Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.pom (2.5 kB at 27 kB/s)
+2026-11-18T18:01:36.8540215Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.pom
+2026-11-18T18:01:36.9102577Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.pom (3.4 kB at 61 kB/s)
+2026-11-18T18:01:36.9123838Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.pom
+2026-11-18T18:01:36.9616524Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.pom (5.9 kB at 120 kB/s)
+2026-11-18T18:01:36.9651379Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-asyncclient/4.1.5/httpcomponents-asyncclient-4.1.5.pom
+2026-11-18T18:01:37.0269522Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-asyncclient/4.1.5/httpcomponents-asyncclient-4.1.5.pom (10 kB at 162 kB/s)
+2026-11-18T18:01:37.0309596Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.pom
+2026-11-18T18:01:37.0859835Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.pom (5.5 kB at 100 kB/s)
+2026-11-18T18:01:37.0898818Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom
+2026-11-18T18:01:37.1689104Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom (4.3 kB at 54 kB/s)
+2026-11-18T18:01:37.1711043Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.pom
+2026-11-18T18:01:37.2115742Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.pom (19 kB at 466 kB/s)
+2026-11-18T18:01:37.2134632Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.8/project-1.0.8.pom
+2026-11-18T18:01:37.2588781Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.8/project-1.0.8.pom (15 kB at 324 kB/s)
+2026-11-18T18:01:37.2612098Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.pom
+2026-11-18T18:01:37.3180559Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.pom (3.8 kB at 67 kB/s)
+2026-11-18T18:01:37.3197815Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/project/1.0.5/project-1.0.5.pom
+2026-11-18T18:01:37.3789241Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/project/1.0.5/project-1.0.5.pom (22 kB at 366 kB/s)
+2026-11-18T18:01:37.3815591Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.pom
+2026-11-18T18:01:37.4450891Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.pom (1.8 kB at 28 kB/s)
+2026-11-18T18:01:37.4477526Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.pom
+2026-11-18T18:01:37.5233429Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.pom (1.6 kB at 21 kB/s)
+2026-11-18T18:01:37.5266377Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.pom
+2026-11-18T18:01:37.5782393Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.pom (7.2 kB at 141 kB/s)
+2026-11-18T18:01:37.5799525Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix/4.1.0/spring-cloud-netflix-4.1.0.pom
+2026-11-18T18:01:37.6221282Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix/4.1.0/spring-cloud-netflix-4.1.0.pom (4.6 kB at 109 kB/s)
+2026-11-18T18:01:37.6238490Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.0/spring-cloud-build-4.1.0.pom
+2026-11-18T18:01:37.6688882Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.0/spring-cloud-build-4.1.0.pom (50 kB at 1.1 MB/s)
+2026-11-18T18:01:37.6730278Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.0/spring-cloud-build-dependencies-4.1.0.pom
+2026-11-18T18:01:37.7166187Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.0/spring-cloud-build-dependencies-4.1.0.pom (3.2 kB at 73 kB/s)
+2026-11-18T18:01:37.7183698Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.2.0/spring-boot-dependencies-3.2.0.pom
+2026-11-18T18:01:37.7544418Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.2.0/spring-boot-dependencies-3.2.0.pom (111 kB at 3.1 MB/s)
+2026-11-18T18:01:37.7588870Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-bom/3.24.2/assertj-bom-3.24.2.pom
+2026-11-18T18:01:37.8299923Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-bom/3.24.2/assertj-bom-3.24.2.pom (3.7 kB at 51 kB/s)
+2026-11-18T18:01:37.8323083Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/5.16.0/brave-bom-5.16.0.pom
+2026-11-18T18:01:37.9141830Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/5.16.0/brave-bom-5.16.0.pom (12 kB at 150 kB/s)
+2026-11-18T18:01:37.9164952Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/2.16.3/zipkin-reporter-bom-2.16.3.pom
+2026-11-18T18:01:37.9999761Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/2.16.3/zipkin-reporter-bom-2.16.3.pom (6.9 kB at 83 kB/s)
+2026-11-18T18:01:38.0023986Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/datastax/oss/java-driver-bom/4.17.0/java-driver-bom-4.17.0.pom
+2026-11-18T18:01:38.0754866Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/datastax/oss/java-driver-bom/4.17.0/java-driver-bom-4.17.0.pom (4.1 kB at 57 kB/s)
+2026-11-18T18:01:38.0778116Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-bom/4.2.22/metrics-bom-4.2.22.pom
+2026-11-18T18:01:38.1989639Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-bom/4.2.22/metrics-bom-4.2.22.pom (8.2 kB at 68 kB/s)
+2026-11-18T18:01:38.2005345Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.2.22/metrics-parent-4.2.22.pom
+2026-11-18T18:01:38.2832860Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.2.22/metrics-parent-4.2.22.pom (21 kB at 250 kB/s)
+2026-11-18T18:01:38.2863748Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/4.0.4/jaxb-bom-4.0.4.pom
+2026-11-18T18:01:38.3887630Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/4.0.4/jaxb-bom-4.0.4.pom (12 kB at 117 kB/s)
+2026-11-18T18:01:38.3914651Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.15/groovy-bom-4.0.15.pom
+2026-11-18T18:01:38.4646302Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.15/groovy-bom-4.0.15.pom (27 kB at 374 kB/s)
+2026-11-18T18:01:38.4670357Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/14.0.21.Final/infinispan-bom-14.0.21.Final.pom
+2026-11-18T18:01:38.5505958Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/14.0.21.Final/infinispan-bom-14.0.21.Final.pom (24 kB at 285 kB/s)
+2026-11-18T18:01:38.5529058Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/14.0.21.Final/infinispan-build-configuration-parent-14.0.21.Final.pom
+2026-11-18T18:01:38.6011268Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/14.0.21.Final/infinispan-build-configuration-parent-14.0.21.Final.pom (24 kB at 496 kB/s)
+2026-11-18T18:01:38.6032354Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/39/jboss-parent-39.pom
+2026-11-18T18:01:38.6894939Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/39/jboss-parent-39.pom (68 kB at 789 kB/s)
+2026-11-18T18:01:38.6931459Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.15.3/jackson-bom-2.15.3.pom
+2026-11-18T18:01:38.7566581Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.15.3/jackson-bom-2.15.3.pom (18 kB at 281 kB/s)
+2026-11-18T18:01:38.7588411Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.15/jackson-parent-2.15.pom
+2026-11-18T18:01:38.8289803Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.15/jackson-parent-2.15.pom (6.5 kB at 93 kB/s)
+2026-11-18T18:01:38.8334755Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/50/oss-parent-50.pom
+2026-11-18T18:01:38.9202565Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/50/oss-parent-50.pom (24 kB at 265 kB/s)
+2026-11-18T18:01:38.9231099Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/3.1.3/jersey-bom-3.1.3.pom
+2026-11-18T18:01:38.9895173Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/3.1.3/jersey-bom-3.1.3.pom (19 kB at 288 kB/s)
+2026-11-18T18:01:38.9919669Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/ee10/jetty-ee10-bom/12.0.3/jetty-ee10-bom-12.0.3.pom
+2026-11-18T18:01:39.0837362Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/ee10/jetty-ee10-bom/12.0.3/jetty-ee10-bom-12.0.3.pom (9.2 kB at 100 kB/s)
+2026-11-18T18:01:39.0858061Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/12.0.3/jetty-bom-12.0.3.pom
+2026-11-18T18:01:39.1714266Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/12.0.3/jetty-bom-12.0.3.pom (14 kB at 162 kB/s)
+2026-11-18T18:01:39.1743105Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom
+2026-11-18T18:01:39.2375937Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom (5.6 kB at 93 kB/s)
+2026-11-18T18:01:39.2384309Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.9.20/kotlin-bom-1.9.20.pom
+2026-11-18T18:01:39.2933488Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.9.20/kotlin-bom-1.9.20.pom (9.1 kB at 163 kB/s)
+2026-11-18T18:01:39.2954791Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.7.3/kotlinx-coroutines-bom-1.7.3.pom
+2026-11-18T18:01:39.3545175Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.7.3/kotlinx-coroutines-bom-1.7.3.pom (4.3 kB at 72 kB/s)
+2026-11-18T18:01:39.3566977Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.6.1/kotlinx-serialization-bom-1.6.1.pom
+2026-11-18T18:01:39.4806556Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.6.1/kotlinx-serialization-bom-1.6.1.pom (3.8 kB at 30 kB/s)
+2026-11-18T18:01:39.4827808Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.21.1/log4j-bom-2.21.1.pom
+2026-11-18T18:01:39.5455472Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.21.1/log4j-bom-2.21.1.pom (12 kB at 198 kB/s)
+2026-11-18T18:01:39.5471071Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/10.1.1/logging-parent-10.1.1.pom
+2026-11-18T18:01:39.5967972Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/10.1.1/logging-parent-10.1.1.pom (39 kB at 784 kB/s)
+2026-11-18T18:01:39.5990073Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/30/apache-30.pom
+2026-11-18T18:01:39.6478688Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/30/apache-30.pom (23 kB at 474 kB/s)
+2026-11-18T18:01:39.6504331Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.0/micrometer-bom-1.12.0.pom
+2026-11-18T18:01:39.7489587Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.0/micrometer-bom-1.12.0.pom (8.0 kB at 82 kB/s)
+2026-11-18T18:01:39.7510107Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.0/micrometer-tracing-bom-1.2.0.pom
+2026-11-18T18:01:39.8023905Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.0/micrometer-tracing-bom-1.2.0.pom (4.7 kB at 90 kB/s)
+2026-11-18T18:01:39.8043560Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/5.7.0/mockito-bom-5.7.0.pom
+2026-11-18T18:01:39.8421282Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/5.7.0/mockito-bom-5.7.0.pom (3.0 kB at 80 kB/s)
+2026-11-18T18:01:39.8439925Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.101.Final/netty-bom-4.1.101.Final.pom
+2026-11-18T18:01:39.8817630Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.101.Final/netty-bom-4.1.101.Final.pom (13 kB at 349 kB/s)
+2026-11-18T18:01:39.8839693Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.31.0/opentelemetry-bom-1.31.0.pom
+2026-11-18T18:01:39.9221411Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.31.0/opentelemetry-bom-1.31.0.pom (7.0 kB at 184 kB/s)
+2026-11-18T18:01:39.9241017Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc-bom/23.3.0.23.09/ojdbc-bom-23.3.0.23.09.pom
+2026-11-18T18:01:39.9732704Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc-bom/23.3.0.23.09/ojdbc-bom-23.3.0.23.09.pom (7.2 kB at 147 kB/s)
+2026-11-18T18:01:39.9754471Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.0.0/querydsl-bom-5.0.0.pom
+2026-11-18T18:01:40.0250872Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.0.0/querydsl-bom-5.0.0.pom (7.2 kB at 146 kB/s)
+2026-11-18T18:01:40.0269094Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.0/reactor-bom-2023.0.0.pom
+2026-11-18T18:01:40.1022529Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.0/reactor-bom-2023.0.0.pom (4.8 kB at 64 kB/s)
+2026-11-18T18:01:40.1046598Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/5.3.2/rest-assured-bom-5.3.2.pom
+2026-11-18T18:01:40.1365325Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/5.3.2/rest-assured-bom-5.3.2.pom (4.3 kB at 133 kB/s)
+2026-11-18T18:01:40.1395036Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-bom/4.14.1/selenium-bom-4.14.1.pom
+2026-11-18T18:01:40.2208769Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-bom/4.14.1/selenium-bom-4.14.1.pom (6.0 kB at 74 kB/s)
+2026-11-18T18:01:40.2229058Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.0/spring-amqp-bom-3.1.0.pom
+2026-11-18T18:01:40.3244651Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.0/spring-amqp-bom-3.1.0.pom (3.4 kB at 33 kB/s)
+2026-11-18T18:01:40.3264618Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.0/spring-batch-bom-5.1.0.pom
+2026-11-18T18:01:40.3812547Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.0/spring-batch-bom-5.1.0.pom (3.2 kB at 60 kB/s)
+2026-11-18T18:01:40.3831281Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2023.1.0/spring-data-bom-2023.1.0.pom
+2026-11-18T18:01:40.4583498Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2023.1.0/spring-data-bom-2023.1.0.pom (5.5 kB at 72 kB/s)
+2026-11-18T18:01:40.4602307Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.1/spring-framework-bom-6.1.1.pom
+2026-11-18T18:01:40.5095689Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.1/spring-framework-bom-6.1.1.pom (5.8 kB at 116 kB/s)
+2026-11-18T18:01:40.5114434Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.2.0/spring-integration-bom-6.2.0.pom
+2026-11-18T18:01:40.6336538Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.2.0/spring-integration-bom-6.2.0.pom (10 kB at 86 kB/s)
+2026-11-18T18:01:40.6355721Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.1/spring-restdocs-bom-3.0.1.pom
+2026-11-18T18:01:40.6815775Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.1/spring-restdocs-bom-3.0.1.pom (2.6 kB at 56 kB/s)
+2026-11-18T18:01:40.6833454Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.2.0/spring-security-bom-6.2.0.pom
+2026-11-18T18:01:40.7682283Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.2.0/spring-security-bom-6.2.0.pom (5.3 kB at 63 kB/s)
+2026-11-18T18:01:40.7703370Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.2.0/spring-session-bom-3.2.0.pom
+2026-11-18T18:01:40.8074833Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.2.0/spring-session-bom-3.2.0.pom (2.9 kB at 78 kB/s)
+2026-11-18T18:01:40.8094860Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.8/spring-ws-bom-4.0.8.pom
+2026-11-18T18:01:40.8540005Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.8/spring-ws-bom-4.0.8.pom (3.5 kB at 79 kB/s)
+2026-11-18T18:01:40.8558610Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.19.3/testcontainers-bom-1.19.3.pom
+2026-11-18T18:01:40.8922261Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.19.3/testcontainers-bom-1.19.3.pom (9.0 kB at 250 kB/s)
+2026-11-18T18:01:40.9106229Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.jar
+2026-11-18T18:01:40.9509269Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.jar (4.8 kB at 119 kB/s)
+2026-11-18T18:01:40.9516054Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.jar
+2026-11-18T18:01:40.9537149Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.jar
+2026-11-18T18:01:40.9538757Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/6.4.0/woodstox-core-6.4.0.jar
+2026-11-18T18:01:40.9540242Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.jar
+2026-11-18T18:01:40.9541284Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar
+2026-11-18T18:01:41.0044267Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.jar (2.9 kB at 55 kB/s)
+2026-11-18T18:01:41.0051527Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.jar
+2026-11-18T18:01:41.0376693Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.jar (1.0 MB at 12 MB/s)
+2026-11-18T18:01:41.0378576Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.jar
+2026-11-18T18:01:41.0475880Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.jar (74 kB at 774 kB/s)
+2026-11-18T18:01:41.0482885Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.jar
+2026-11-18T18:01:41.0695644Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.jar (182 kB at 1.6 MB/s)
+2026-11-18T18:01:41.0707014Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+2026-11-18T18:01:41.0957146Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.jar (369 kB at 2.6 MB/s)
+2026-11-18T18:01:41.0958643Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.jar
+2026-11-18T18:01:41.1005401Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar (20 kB at 136 kB/s)
+2026-11-18T18:01:41.1013823Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.jar
+2026-11-18T18:01:41.1370038Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.jar (119 kB at 645 kB/s)
+2026-11-18T18:01:41.1385819Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.jar
+2026-11-18T18:01:41.1482079Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.jar (49 kB at 249 kB/s)
+2026-11-18T18:01:41.1495088Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.jar
+2026-11-18T18:01:41.1610276Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar (196 kB at 937 kB/s)
+2026-11-18T18:01:41.1671877Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.jar (158 kB at 738 kB/s)
+2026-11-18T18:01:41.1805105Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.jar (13 MB at 55 MB/s)
+2026-11-18T18:01:41.1872293Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.jar (48 kB at 206 kB/s)
+2026-11-18T18:01:41.2176137Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/6.4.0/woodstox-core-6.4.0.jar (1.6 MB at 6.0 MB/s)
+2026-11-18T18:01:41.2249169Z [INFO] 
+2026-11-18T18:01:41.2294573Z [INFO] --- resources:3.3.1:resources (default-resources) @ search-service ---
+2026-11-18T18:01:41.2324641Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T18:01:41.2338679Z [INFO] Copying 4 resources from src/main/resources to target/classes
+2026-11-18T18:01:41.2362072Z [INFO] 
+2026-11-18T18:01:41.2363891Z [INFO] --- compiler:3.13.0:compile (default-compile) @ search-service ---
+2026-11-18T18:01:41.2374586Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T18:01:41.2375273Z [INFO] Compiling 19 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T18:01:41.9668323Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/main/java/com/luxray/search/service/SearchService.java: /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/main/java/com/luxray/search/service/SearchService.java uses unchecked or unsafe operations.
+2026-11-18T18:01:41.9690400Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/main/java/com/luxray/search/service/SearchService.java: Recompile with -Xlint:unchecked for details.
+2026-11-18T18:01:41.9705100Z [INFO] 
+2026-11-18T18:01:41.9711664Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ search-service ---
+2026-11-18T18:01:41.9712756Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/test/resources
+2026-11-18T18:01:41.9719300Z [INFO] 
+2026-11-18T18:01:41.9719943Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ search-service ---
+2026-11-18T18:01:41.9720508Z [INFO] No sources to compile
+2026-11-18T18:01:41.9720885Z [INFO] 
+2026-11-18T18:01:41.9721314Z [INFO] --- surefire:3.5.2:test (default-test) @ search-service ---
+2026-11-18T18:01:41.9733968Z [INFO] No tests to run.
+2026-11-18T18:01:41.9738493Z [INFO] ------------------------------------------------------------------------
+2026-11-18T18:01:41.9739177Z [INFO] Reactor Summary for LuxRay Backend (Parent) 1.0.0-SNAPSHOT:
+2026-11-18T18:01:41.9739692Z [INFO] 
+2026-11-18T18:01:41.9741210Z [INFO] LuxRay Backend (Parent) ............................ SUCCESS [  0.001 s]
+2026-11-18T18:01:41.9744425Z [INFO] LuxRay :: Common Library ........................... SUCCESS [  1.509 s]
+2026-11-18T18:01:41.9745200Z [INFO] LuxRay :: Discovery Service (Eureka) ............... SUCCESS [  0.513 s]
+2026-11-18T18:01:41.9751552Z [INFO] LuxRay :: API Gateway .............................. SUCCESS [  0.422 s]
+2026-11-18T18:01:41.9752214Z [INFO] LuxRay :: Auth Service ............................. SUCCESS [ 11.051 s]
+2026-11-18T18:01:41.9752806Z [INFO] LuxRay :: Cursos Service ........................... SUCCESS [  0.623 s]
+2026-11-18T18:01:41.9753563Z [INFO] LuxRay :: Analytics Service ........................ SUCCESS [  0.531 s]
+2026-11-18T18:01:41.9754167Z [INFO] LuxRay :: Search Service ........................... SUCCESS [  5.762 s]
+2026-11-18T18:01:41.9754778Z [INFO] ------------------------------------------------------------------------
+2026-11-18T18:01:41.9755253Z [INFO] BUILD SUCCESS
+2026-11-18T18:01:41.9755704Z [INFO] ------------------------------------------------------------------------
+2026-11-18T18:01:41.9756251Z [INFO] Total time:  20.718 s
+2026-11-18T18:01:41.9756651Z [INFO] Finished at: 2026-11-18T18:01:41Z
+2026-11-18T18:01:41.9757541Z [INFO] ------------------------------------------------------------------------

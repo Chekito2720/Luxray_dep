@@ -1,0 +1,42 @@
+[RELAY] escuchando en 0.0.0.0:8099 -> ::1:8080
+[RELAY] conexion #1 establecida
+[RELAY] peticion #1 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] conexion #2 establecida
+[RELAY] peticion #2 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #3 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #4 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #5 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #6 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #7 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #8 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #9 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #10 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #11 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] conexion #3 establecida
+[RELAY] peticion #12 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #13 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #14 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #15 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #16 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #17 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #18 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #19 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #20 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #21 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #22 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #23 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #24 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #25 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #26 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #27 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #28 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #29 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #30 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #31 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #32 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #33 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #34 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #35 GET /api/cursos/buscar?q=cortocircuito
+[RELAY] peticion #36 GET /api/search?q=ley+de+ohm&page=0&size=10
+[RELAY] peticion #37 GET /api/search?q=cortocircuito&page=0&size=10
+[RELAY] peticion #38 GET /api/cursos/buscar?q=cortocircuito

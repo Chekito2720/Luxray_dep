@@ -1,0 +1,23 @@
+﻿2026-11-18T18:01:48.2355655Z ##[group]Run flutter pub get
+2026-11-18T18:01:48.2355925Z [36;1mflutter pub get[0m
+2026-11-18T18:01:48.2399204Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:01:48.2399433Z env:
+2026-11-18T18:01:48.2399607Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:01:48.2399883Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:01:48.2400206Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:01:48.2400600Z ##[endgroup]
+2026-11-18T18:01:48.4031682Z Resolving dependencies...
+2026-11-18T18:01:48.4241947Z Downloading packages...
+2026-11-18T18:01:48.4479746Z   clock 1.1.2 (1.1.3 available)
+2026-11-18T18:01:48.4480094Z   cupertino_icons 1.0.9 (2.0.0 available)
+2026-11-18T18:01:48.4480345Z   matcher 0.12.19 (0.12.20 available)
+2026-11-18T18:01:48.4481718Z   material_color_utilities 0.13.0 (0.13.1 available)
+2026-11-18T18:01:48.4481977Z   meta 1.18.0 (1.19.0 available)
+2026-11-18T18:01:48.4482188Z   stack_trace 1.12.1 (1.12.2 available)
+2026-11-18T18:01:48.4482417Z   test_api 0.7.11 (0.7.15 available)
+2026-11-18T18:01:48.4482716Z   vector_math 2.2.0 (2.4.4 available)
+2026-11-18T18:01:48.4482929Z   vm_service 15.2.0 (15.4.0 available)
+2026-11-18T18:01:48.4483160Z   web 1.1.1 (1.1.2 available)
+2026-11-18T18:01:48.4483383Z Got dependencies!
+2026-11-18T18:01:48.4491234Z 10 packages have newer versions incompatible with dependency constraints.
+2026-11-18T18:01:48.4491756Z Try `flutter pub outdated` for more information.

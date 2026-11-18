@@ -1,0 +1,4 @@
+﻿2026-11-18T18:01:43.4032298Z Post job cleanup.
+2026-11-18T18:01:43.5137124Z (node:2667) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T18:01:43.5137620Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T18:01:43.5140823Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-716faa0275000aff9f6e3a4030be4b02263774503311da8a4e326c1d851d8e59, not saving cache.

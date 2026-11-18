@@ -1,0 +1,34 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: C:\DDI\luxray\practica-12\fase3-estres-api\estres_api.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 20 max VUs, 10m30s max duration (incl. graceful stop):
+              * carga: 20 iterations for each of 20 VUs (maxDuration: 10m0s, exec: lectura, gracefulStop: 30s)
+
+
+running (00m01.0s), 20/20 VUs, 259 complete and 0 interrupted iterations
+carga   [  65% ] 20 VUs  00m01.0s/10m0s  259/400 iters, 20 per VU
+# Fase 3 — Escenario de estres: lectura con 20 usuarios concurrentes
+
+- **Iteraciones por usuario**: 20
+- **Peticiones totales**: 400
+- **RPS (tasa de peticiones)**: 265.58 req/s
+- **Latencia media**: 20.85 ms
+- **Latencia P90**: 38.15 ms
+- **Latencia P95**: 63.32 ms
+- **Latencia P99**: - ms
+- **Latencia máxima**: 106.11 ms
+- **Latencia mínima**: 5.51 ms
+- **Tasa de fallo HTTP**: 0.00 %
+- **Checks correctos**: 100.00 %
+- **Datos recibidos**: 1225.90 KB
+- **Datos enviados**: 43.75 KB
+running (00m01.5s), 00/20 VUs, 400 complete and 0 interrupted iterations
+carga ✓ [ 100% ] 20 VUs  00m01.5s/10m0s  400/400 iters, 20 per VU

@@ -1,0 +1,278 @@
+{
+  "lcov": "C:\\DDI\\luxray\\luxraywaer\\coverage\\lcov.info",
+  "totales": {
+    "lineas_total": 525,
+    "lineas_cubiertas": 490,
+    "stmt_pct": 93.33,
+    "branches_total": 166,
+    "branches_cubiertas": 145,
+    "branch_pct": 87.35
+  },
+  "por_archivo": {
+    "lib\\main.dart": {
+      "lineas_total": 67,
+      "lineas_cubiertas": 46,
+      "stmt_pct": 68.66,
+      "branches_total": 27,
+      "branches_cubiertas": 15,
+      "branch_pct": 55.56,
+      "lineas_no_cubiertas": [
+        17,
+        18,
+        83,
+        85,
+        86,
+        87,
+        90,
+        91,
+        92,
+        95,
+        96,
+        97,
+        98,
+        100,
+        145,
+        146,
+        147,
+        151,
+        152,
+        153,
+        166
+      ],
+      "branches_no_cubiertas": [
+        "L17/b0/r0",
+        "L83/b0/r0",
+        "L85/b0/r0",
+        "L86/b0/r0",
+        "L90/b0/r0",
+        "L91/b0/r0",
+        "L95/b0/r0",
+        "L96/b0/r0",
+        "L126/b0/r0",
+        "L144/b0/r0",
+        "L150/b0/r0",
+        "L165/b0/r0"
+      ]
+    },
+    "lib\\models\\busqueda.dart": {
+      "lineas_total": 85,
+      "lineas_cubiertas": 85,
+      "stmt_pct": 100.0,
+      "branches_total": 22,
+      "branches_cubiertas": 22,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    "lib\\screens\\detalle_concepto_screen.dart": {
+      "lineas_total": 68,
+      "lineas_cubiertas": 67,
+      "stmt_pct": 98.53,
+      "branches_total": 18,
+      "branches_cubiertas": 16,
+      "branch_pct": 88.89,
+      "lineas_no_cubiertas": [
+        80
+      ],
+      "branches_no_cubiertas": [
+        "L36/b0/r0",
+        "L80/b0/r0"
+      ]
+    },
+    "lib\\screens\\home_screen.dart": {
+      "lineas_total": 74,
+      "lineas_cubiertas": 73,
+      "stmt_pct": 98.65,
+      "branches_total": 19,
+      "branches_cubiertas": 18,
+      "branch_pct": 94.74,
+      "lineas_no_cubiertas": [
+        147
+      ],
+      "branches_no_cubiertas": [
+        "L147/b0/r0"
+      ]
+    },
+    "lib\\screens\\resultados_screen.dart": {
+      "lineas_total": 125,
+      "lineas_cubiertas": 115,
+      "stmt_pct": 92.0,
+      "branches_total": 29,
+      "branches_cubiertas": 25,
+      "branch_pct": 86.21,
+      "lineas_no_cubiertas": [
+        137,
+        138,
+        139,
+        140,
+        141,
+        151,
+        152,
+        153,
+        154,
+        155
+      ],
+      "branches_no_cubiertas": [
+        "L136/b0/r0",
+        "L141/b0/r0",
+        "L150/b0/r0",
+        "L155/b0/r0"
+      ]
+    },
+    "lib\\services\\luxray_api.dart": {
+      "lineas_total": 39,
+      "lineas_cubiertas": 39,
+      "stmt_pct": 100.0,
+      "branches_total": 17,
+      "branches_cubiertas": 17,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    "lib\\theme\\wear_theme.dart": {
+      "lineas_total": 54,
+      "lineas_cubiertas": 52,
+      "stmt_pct": 96.3,
+      "branches_total": 29,
+      "branches_cubiertas": 27,
+      "branch_pct": 93.1,
+      "lineas_no_cubiertas": [
+        6,
+        41
+      ],
+      "branches_no_cubiertas": [
+        "L6/b0/r0",
+        "L41/b0/r0"
+      ]
+    },
+    "lib\\widgets\\circular_safe_area.dart": {
+      "lineas_total": 13,
+      "lineas_cubiertas": 13,
+      "stmt_pct": 100.0,
+      "branches_total": 5,
+      "branches_cubiertas": 5,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    }
+  },
+  "metodos_criticos": [
+    {
+      "metodo": "M1 · LuxrayApi.sanitizar (VALIDACION)",
+      "archivo": "lib/services/luxray_api.dart",
+      "rango": "L50-L53",
+      "lineas_total": 3,
+      "lineas_cubiertas": 3,
+      "stmt_pct": 100.0,
+      "branches_total": 1,
+      "branches_cubiertas": 1,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M3 · LuxrayApi.buscar (COMUNICACION)",
+      "archivo": "lib/services/luxray_api.dart",
+      "rango": "L61-L73",
+      "lineas_total": 6,
+      "lineas_cubiertas": 6,
+      "stmt_pct": 100.0,
+      "branches_total": 3,
+      "branches_cubiertas": 3,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M3 · LuxrayApi._buscarEnSearch (COMUNICACION)",
+      "archivo": "lib/services/luxray_api.dart",
+      "rango": "L75-L96",
+      "lineas_total": 13,
+      "lineas_cubiertas": 13,
+      "stmt_pct": 100.0,
+      "branches_total": 5,
+      "branches_cubiertas": 5,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M3 · LuxrayApi._buscarEnCursosLegacy (COMUNICACION)",
+      "archivo": "lib/services/luxray_api.dart",
+      "rango": "L98-L119",
+      "lineas_total": 13,
+      "lineas_cubiertas": 13,
+      "stmt_pct": 100.0,
+      "branches_total": 5,
+      "branches_cubiertas": 5,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M2 · BusquedaResponse.fromJson (PROCESAMIENTO)",
+      "archivo": "lib/models/busqueda.dart",
+      "rango": "L32-L43",
+      "lineas_total": 10,
+      "lineas_cubiertas": 10,
+      "stmt_pct": 100.0,
+      "branches_total": 1,
+      "branches_cubiertas": 1,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M2 · BusquedaResponse.fromSearchApiResponse (PROCESAMIENTO)",
+      "archivo": "lib/models/busqueda.dart",
+      "rango": "L47-L51",
+      "lineas_total": 4,
+      "lineas_cubiertas": 4,
+      "stmt_pct": 100.0,
+      "branches_total": 2,
+      "branches_cubiertas": 2,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M2 · BusquedaResponse.fromApiResponse (PROCESAMIENTO)",
+      "archivo": "lib/models/busqueda.dart",
+      "rango": "L54-L70",
+      "lineas_total": 11,
+      "lineas_cubiertas": 11,
+      "stmt_pct": 100.0,
+      "branches_total": 2,
+      "branches_cubiertas": 2,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M2 · BusquedaResponse._list (PROCESAMIENTO)",
+      "archivo": "lib/models/busqueda.dart",
+      "rango": "L83-L89",
+      "lineas_total": 5,
+      "lineas_cubiertas": 5,
+      "stmt_pct": 100.0,
+      "branches_total": 2,
+      "branches_cubiertas": 2,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    },
+    {
+      "metodo": "M2 · BusquedaResponse._extractSources (PROCESAMIENTO)",
+      "archivo": "lib/models/busqueda.dart",
+      "rango": "L92-L100",
+      "lineas_total": 7,
+      "lineas_cubiertas": 7,
+      "stmt_pct": 100.0,
+      "branches_total": 3,
+      "branches_cubiertas": 3,
+      "branch_pct": 100.0,
+      "lineas_no_cubiertas": [],
+      "branches_no_cubiertas": []
+    }
+  ]
+}

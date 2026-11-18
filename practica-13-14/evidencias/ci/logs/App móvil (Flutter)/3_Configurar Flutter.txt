@@ -1,0 +1,105 @@
+﻿2026-11-18T16:27:35.9596163Z ##[group]Run subosito/flutter-action@v2
+2026-11-18T16:27:35.9596454Z with:
+2026-11-18T16:27:35.9596662Z   flutter-version: 3.44.6
+2026-11-18T16:27:35.9597073Z   channel: stable
+2026-11-18T16:27:35.9597268Z   cache: true
+2026-11-18T16:27:35.9597458Z   architecture: X64
+2026-11-18T16:27:35.9597891Z   pub-cache-path: default
+2026-11-18T16:27:35.9598112Z   dry-run: false
+2026-11-18T16:27:35.9598385Z   git-source: https://github.com/flutter/flutter.git
+2026-11-18T16:27:35.9598682Z env:
+2026-11-18T16:27:35.9598867Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:35.9599070Z ##[endgroup]
+2026-11-18T16:27:35.9661950Z ##[start-action display=Make yq tool available on Windows runners;id=__subosito_flutter-action.__run]
+2026-11-18T16:27:35.9684133Z ##[end-action id=__subosito_flutter-action.__run;outcome=skipped;conclusion=skipped;duration_ms=0]
+2026-11-18T16:27:35.9686541Z ##[start-action display=Make setup script executable;id=__subosito_flutter-action.__run_2]
+2026-11-18T16:27:35.9726499Z ##[group]Run chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+2026-11-18T16:27:35.9727085Z [36;1mchmod +x "$GITHUB_ACTION_PATH/setup.sh"[0m
+2026-11-18T16:27:35.9761380Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T16:27:35.9761798Z env:
+2026-11-18T16:27:35.9762036Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:35.9762263Z ##[endgroup]
+2026-11-18T16:27:35.9879794Z ##[end-action id=__subosito_flutter-action.__run_2;outcome=success;conclusion=success;duration_ms=19]
+2026-11-18T16:27:35.9882520Z ##[start-action display=Set action inputs;id=__subosito_flutter-action.flutter-action]
+2026-11-18T16:27:35.9922391Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh -p \
+2026-11-18T16:27:35.9922784Z [36;1m$GITHUB_ACTION_PATH/setup.sh -p \[0m
+2026-11-18T16:27:35.9923059Z [36;1m  -n '3.44.6' \[0m
+2026-11-18T16:27:35.9923276Z [36;1m  -f '' \[0m
+2026-11-18T16:27:35.9923474Z [36;1m  -a 'X64' \[0m
+2026-11-18T16:27:35.9923677Z [36;1m  -k '' \[0m
+2026-11-18T16:27:35.9923863Z [36;1m  -c '' \[0m
+2026-11-18T16:27:35.9924048Z [36;1m  -l '' \[0m
+2026-11-18T16:27:35.9924279Z [36;1m  -d 'default' \[0m
+2026-11-18T16:27:35.9924611Z [36;1m  -g 'https://github.com/flutter/flutter.git' \[0m
+2026-11-18T16:27:35.9924948Z [36;1m  stable[0m
+2026-11-18T16:27:35.9954891Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T16:27:35.9955248Z env:
+2026-11-18T16:27:35.9955444Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:35.9955664Z ##[endgroup]
+2026-11-18T16:27:36.1784641Z ##[end-action id=__subosito_flutter-action.flutter-action;outcome=success;conclusion=success;duration_ms=190]
+2026-11-18T16:27:36.1790317Z ##[start-action display=Cache Flutter;id=__subosito_flutter-action.cache-flutter]
+2026-11-18T16:27:36.1843859Z ##[group]Run actions/cache@v5
+2026-11-18T16:27:36.1844124Z with:
+2026-11-18T16:27:36.1844372Z   path: /opt/hostedtoolcache/flutter/stable-3.44.6-x64
+2026-11-18T16:27:36.1844813Z   key: flutter-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6
+2026-11-18T16:27:36.1845220Z   enableCrossOsArchive: false
+2026-11-18T16:27:36.1845480Z   fail-on-cache-miss: false
+2026-11-18T16:27:36.1845702Z   lookup-only: false
+2026-11-18T16:27:36.1845905Z   save-always: false
+2026-11-18T16:27:36.1846113Z env:
+2026-11-18T16:27:36.1846289Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:36.1846504Z ##[endgroup]
+2026-11-18T16:27:36.5403023Z Cache hit for: flutter-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6
+2026-11-18T16:27:37.8043639Z Received 29360128 of 1691088675 (1.7%), 28.0 MBs/sec
+2026-11-18T16:27:38.8050619Z Received 146800640 of 1691088675 (8.7%), 70.0 MBs/sec
+2026-11-18T16:27:39.8242108Z Received 268435456 of 1691088675 (15.9%), 84.7 MBs/sec
+2026-11-18T16:27:40.8246684Z Received 402653184 of 1691088675 (23.8%), 95.5 MBs/sec
+2026-11-18T16:27:41.8269282Z Received 528482304 of 1691088675 (31.3%), 100.4 MBs/sec
+2026-11-18T16:27:42.8298802Z Received 633339904 of 1691088675 (37.5%), 100.3 MBs/sec
+2026-11-18T16:27:43.8327434Z Received 738197504 of 1691088675 (43.7%), 100.2 MBs/sec
+2026-11-18T16:27:44.8277794Z Received 826277888 of 1691088675 (48.9%), 98.2 MBs/sec
+2026-11-18T16:27:45.8278542Z Received 943718400 of 1691088675 (55.8%), 99.7 MBs/sec
+2026-11-18T16:27:46.8271708Z Received 1048576000 of 1691088675 (62.0%), 99.8 MBs/sec
+2026-11-18T16:27:47.8277502Z Received 1178599424 of 1691088675 (69.7%), 102.0 MBs/sec
+2026-11-18T16:27:48.8280422Z Received 1287651328 of 1691088675 (76.1%), 102.1 MBs/sec
+2026-11-18T16:27:49.8284545Z Received 1413480448 of 1691088675 (83.6%), 103.5 MBs/sec
+2026-11-18T16:27:50.8332418Z Received 1518338048 of 1691088675 (89.8%), 103.2 MBs/sec
+2026-11-18T16:27:51.8304316Z Received 1610612736 of 1691088675 (95.2%), 102.2 MBs/sec
+2026-11-18T16:27:52.5678967Z Received 1691088675 of 1691088675 (100.0%), 102.3 MBs/sec
+2026-11-18T16:27:52.5700349Z Cache Size: ~1613 MB (1691088675 B)
+2026-11-18T16:27:52.5808027Z [command]/usr/bin/tar -xf /home/runner/work/_temp/a2902846-3a9d-47cc-9f49-6098a05c1483/cache.tzst -P -C /home/runner/work/Luxray_dep/Luxray_dep --use-compress-program unzstd
+2026-11-18T16:27:57.3509500Z Cache restored successfully
+2026-11-18T16:27:58.3755315Z Cache restored from key: flutter-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6
+2026-11-18T16:27:58.3889003Z ##[end-action id=__subosito_flutter-action.cache-flutter;outcome=success;conclusion=success;duration_ms=22209]
+2026-11-18T16:27:58.3891534Z ##[start-action display=Cache pub dependencies;id=__subosito_flutter-action.cache-pub]
+2026-11-18T16:27:58.5295530Z ##[group]Run actions/cache@v5
+2026-11-18T16:27:58.5295797Z with:
+2026-11-18T16:27:58.5296020Z   path: /home/runner/.pub-cache
+2026-11-18T16:27:58.5296719Z   key: flutter-pub-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6-d57a2899b5b1f3b7b2ea23a44862870333d9eedcc949aaea58ad8caeb4b8db4a
+2026-11-18T16:27:58.5297431Z   enableCrossOsArchive: false
+2026-11-18T16:27:58.5297995Z   fail-on-cache-miss: false
+2026-11-18T16:27:58.5298238Z   lookup-only: false
+2026-11-18T16:27:58.5298451Z   save-always: false
+2026-11-18T16:27:58.5298648Z env:
+2026-11-18T16:27:58.5298828Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:58.5299059Z ##[endgroup]
+2026-11-18T16:27:58.9494117Z Cache hit for: flutter-pub-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6-d57a2899b5b1f3b7b2ea23a44862870333d9eedcc949aaea58ad8caeb4b8db4a
+2026-11-18T16:28:00.0739713Z Received 28696017 of 28696017 (100.0%), 31.2 MBs/sec
+2026-11-18T16:28:00.0740298Z Cache Size: ~27 MB (28696017 B)
+2026-11-18T16:28:00.0765770Z [command]/usr/bin/tar -xf /home/runner/work/_temp/ab560ec7-4c4c-46ea-a829-cb21f840a73e/cache.tzst -P -C /home/runner/work/Luxray_dep/Luxray_dep --use-compress-program unzstd
+2026-11-18T16:28:00.4251202Z Cache restored successfully
+2026-11-18T16:28:00.4350151Z Cache restored from key: flutter-pub-linux-stable-3.44.6-x64-ee80f08bbf97172ec030b8751ceab557177a34a6-d57a2899b5b1f3b7b2ea23a44862870333d9eedcc949aaea58ad8caeb4b8db4a
+2026-11-18T16:28:00.4425323Z ##[end-action id=__subosito_flutter-action.cache-pub;outcome=success;conclusion=success;duration_ms=2053]
+2026-11-18T16:28:00.4427987Z ##[start-action display=Run setup script;id=__subosito_flutter-action.__run_3]
+2026-11-18T16:28:00.4463795Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh \
+2026-11-18T16:28:00.4464173Z [36;1m$GITHUB_ACTION_PATH/setup.sh \[0m
+2026-11-18T16:28:00.4464446Z [36;1m  -n '3.44.6' \[0m
+2026-11-18T16:28:00.4464679Z [36;1m  -a 'x64' \[0m
+2026-11-18T16:28:00.4464980Z [36;1m  -c '/opt/hostedtoolcache/flutter/stable-3.44.6-x64' \[0m
+2026-11-18T16:28:00.4465336Z [36;1m  -d '/home/runner/.pub-cache' \[0m
+2026-11-18T16:28:00.4465604Z [36;1m  stable[0m
+2026-11-18T16:28:00.4494951Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-11-18T16:28:00.4495308Z env:
+2026-11-18T16:28:00.4495509Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:28:00.4495737Z ##[endgroup]
+2026-11-18T16:28:00.5688962Z ##[end-action id=__subosito_flutter-action.__run_3;outcome=success;conclusion=success;duration_ms=126]

@@ -1,0 +1,81 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: C:\DDI\luxray\practica-11\fase5-conectividad\carga_k6.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 10m30s max duration (incl. graceful stop):
+              * carga: 20 iterations for each of 5 VUs (maxDuration: 10m0s, exec: escritura, gracefulStop: 30s)
+
+
+running (00m01.0s), 5/5 VUs, 5 complete and 0 interrupted iterations
+carga   [   5% ] 5 VUs  00m01.0s/10m0s  005/100 iters, 20 per VU
+
+running (00m02.0s), 5/5 VUs, 15 complete and 0 interrupted iterations
+carga   [  15% ] 5 VUs  00m02.0s/10m0s  015/100 iters, 20 per VU
+
+running (00m03.0s), 5/5 VUs, 20 complete and 0 interrupted iterations
+carga   [  20% ] 5 VUs  00m03.0s/10m0s  020/100 iters, 20 per VU
+
+running (00m04.0s), 5/5 VUs, 30 complete and 0 interrupted iterations
+carga   [  30% ] 5 VUs  00m04.0s/10m0s  030/100 iters, 20 per VU
+
+running (00m05.0s), 5/5 VUs, 40 complete and 0 interrupted iterations
+carga   [  40% ] 5 VUs  00m05.0s/10m0s  040/100 iters, 20 per VU
+
+running (00m06.0s), 5/5 VUs, 45 complete and 0 interrupted iterations
+carga   [  45% ] 5 VUs  00m06.0s/10m0s  045/100 iters, 20 per VU
+
+running (00m07.0s), 5/5 VUs, 55 complete and 0 interrupted iterations
+carga   [  55% ] 5 VUs  00m07.0s/10m0s  055/100 iters, 20 per VU
+
+running (00m08.0s), 5/5 VUs, 61 complete and 0 interrupted iterations
+carga   [  61% ] 5 VUs  00m08.0s/10m0s  061/100 iters, 20 per VU
+
+running (00m09.0s), 5/5 VUs, 70 complete and 0 interrupted iterations
+carga   [  70% ] 5 VUs  00m09.0s/10m0s  070/100 iters, 20 per VU
+
+running (00m10.0s), 5/5 VUs, 79 complete and 0 interrupted iterations
+carga   [  79% ] 5 VUs  00m10.0s/10m0s  079/100 iters, 20 per VU
+
+running (00m11.0s), 5/5 VUs, 85 complete and 0 interrupted iterations
+carga   [  85% ] 5 VUs  00m11.0s/10m0s  085/100 iters, 20 per VU
+
+running (00m12.0s), 5/5 VUs, 95 complete and 0 interrupted iterations
+carga   [  95% ] 5 VUs  00m12.0s/10m0s  095/100 iters, 20 per VU
+# Fase 5 (NET-07) — Escenario: escritura_5usuarios
+
+- **Modo**: escritura
+- **Usuarios concurrentes (VUs)**: 5
+- **Iteraciones por VU**: 20
+- **Peticiones totales**: 100
+- **Fecha**: 2026-11-11T15:37:19.044Z
+
+| Indicador | Valor |
+|---|---|
+| Latencia media | 423.44 ms |
+| Latencia mediana | 413.22 ms |
+| Latencia P90 | 474.04 ms |
+| Latencia P95 | 492.66 ms |
+| Latencia P99 | - ms |
+| Latencia mínima | 370.77 ms |
+| Latencia máxima | 507.25 ms |
+| Peticiones fallidas | 0 |
+| Tasa de fallo | 0.00 % |
+| Checks correctos | 100.00 % |
+| Tasa de peticiones | 7.98 req/s |
+| Datos recibidos | 119.50 KB |
+| Datos enviados | 30.46 KB |
+
+### Umbrales evaluados (criterios de referencia de la practica)
+
+- `http_req_duration p(95) < 500 ms`
+- `http_req_failed rate < 0.05`
+- `checks rate > 0.95`
+running (00m12.5s), 0/5 VUs, 100 complete and 0 interrupted iterations
+carga ✓ [ 100% ] 5 VUs  00m12.5s/10m0s  100/100 iters, 20 per VU

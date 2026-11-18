@@ -1,0 +1,20 @@
+{
+  "fecha": "2026-11-11 13:36:15",
+  "base_url": "http://[::1]:8080/api",
+  "modos": {
+    "lectura": {
+      "conteo": {
+        "200": 100
+      },
+      "total": 100,
+      "traza": "C:\\DDI\\luxray\\practica-12\\evidencias\\fase3_codigos_lectura.jsonl"
+    },
+    "escritura": {
+      "conteo": {
+        "200": 100
+      },
+      "total": 100,
+      "traza": "C:\\DDI\\luxray\\practica-12\\evidencias\\fase3_codigos_escritura.jsonl"
+    }
+  }
+}

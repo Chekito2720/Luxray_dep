@@ -1,0 +1,49 @@
+{
+  "fecha": "2026-11-11 13:27:40",
+  "casos": [
+    {
+      "escenario": "RES-02 · Pérdida de Internet durante una escritura",
+      "email": "wb12_res02_1794425259@luxray.test",
+      "http": 0,
+      "ms": 34.8,
+      "error": "[WinError 10053] Se ha anulado una conexión establecida por el software en su equipo host",
+      "filas_en_bd": 0,
+      "confirmado_falsamente": false,
+      "resultado": "el cliente NO confirma la escritura (correcto)"
+    },
+    {
+      "escenario": "RES-07 · Reintento de una escritura",
+      "email": "wb12_res07_1794425259@luxray.test",
+      "intentos": [
+        {
+          "n": 1,
+          "http": 200,
+          "ms": 275.8,
+          "mensaje": null
+        },
+        {
+          "n": 2,
+          "http": 400,
+          "ms": 51.5,
+          "mensaje": "El correo ya está registrado. Intenta iniciar sesión."
+        },
+        {
+          "n": 3,
+          "http": 400,
+          "ms": 35.2,
+          "mensaje": "El correo ya está registrado. Intenta iniciar sesión."
+        }
+      ],
+      "filas_en_bd": 1,
+      "duplicados": false,
+      "resultado": "sin duplicados: la restriccion UNIQUE arbitra (correcto)"
+    },
+    {
+      "escenario": "RES-06 · Recuperación de la conexión",
+      "http": 200,
+      "ms": 274.3,
+      "filas_en_bd": 1,
+      "resultado": "comunicación restablecida"
+    }
+  ]
+}

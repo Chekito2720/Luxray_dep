@@ -1,0 +1,31 @@
+﻿2026-11-18T18:02:29.9642866Z ##[group]Run actions/upload-artifact@v4
+2026-11-18T18:02:29.9643123Z with:
+2026-11-18T18:02:29.9643312Z   name: flutter-test-results
+2026-11-18T18:02:29.9643542Z   path: flutter_test.json
+flutter_test.xml
+
+2026-11-18T18:02:29.9643782Z   if-no-files-found: warn
+2026-11-18T18:02:29.9643993Z   compression-level: 6
+2026-11-18T18:02:29.9644180Z   overwrite: false
+2026-11-18T18:02:29.9644372Z   include-hidden-files: false
+2026-11-18T18:02:29.9644577Z env:
+2026-11-18T18:02:29.9644740Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:02:29.9645013Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:02:29.9645318Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:02:29.9645530Z ##[endgroup]
+2026-11-18T18:02:30.1821012Z (node:2765) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T18:02:30.1821756Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T18:02:30.1867281Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-11-18T18:02:30.1869627Z The least common ancestor is /home/runner/work/Luxray_dep/Luxray_dep. This will be the root directory of the artifact
+2026-11-18T18:02:30.1874544Z With the provided path, there will be 2 files uploaded
+2026-11-18T18:02:30.1879275Z Artifact name is valid!
+2026-11-18T18:02:30.1879830Z Root directory input is valid!
+2026-11-18T18:02:30.5503079Z Beginning upload of artifact content to blob storage
+2026-11-18T18:02:30.6650109Z (node:2765) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T18:02:30.9105770Z Uploaded bytes 16226
+2026-11-18T18:02:30.9690176Z Finished uploading artifact content to blob storage!
+2026-11-18T18:02:30.9691033Z SHA256 digest of uploaded artifact zip is a71783e67daca7d6613e6cbb0a1ad8d59302a10eae779b359065351b63cc5986
+2026-11-18T18:02:30.9692722Z Finalizing artifact upload
+2026-11-18T18:02:31.5074934Z Artifact flutter-test-results.zip successfully finalized. Artifact ID 14456508569
+2026-11-18T18:02:31.5075703Z Artifact flutter-test-results has been successfully uploaded! Final size is 16226 bytes. Artifact ID is 14456508569
+2026-11-18T18:02:31.5080766Z Artifact download URL: https://github.com/Chekito2720/Luxray_dep/actions/runs/44365052085/artifacts/14456508569

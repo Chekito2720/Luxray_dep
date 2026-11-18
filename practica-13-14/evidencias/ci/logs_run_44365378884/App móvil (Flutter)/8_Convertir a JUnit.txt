@@ -1,0 +1,9 @@
+﻿2026-11-18T18:04:26.4098714Z ##[group]Run python ../practica-13-14/tools/flutter_junit.py ../flutter_test.json ../flutter_test.xml
+2026-11-18T18:04:26.4099310Z [36;1mpython ../practica-13-14/tools/flutter_junit.py ../flutter_test.json ../flutter_test.xml[0m
+2026-11-18T18:04:26.4143635Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:04:26.4143849Z env:
+2026-11-18T18:04:26.4144014Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:04:26.4144285Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:04:26.4144593Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:04:26.4144800Z ##[endgroup]
+2026-11-18T18:04:26.4404046Z convertido: 185 pruebas, 0 fallos, OK -> ../flutter_test.xml

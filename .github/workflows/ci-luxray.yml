@@ -1,0 +1,152 @@
+# ===========================================================================
+# PRÁCTICA 13/14 — FASE 4 · INTEGRACIÓN CONTINUA (GitHub Actions)
+#
+# Ejecuta automáticamente las pruebas del proyecto cuando se realiza un PUSH
+# o un PULL REQUEST, tal y como exige la práctica.
+#
+#   job flutter  -> flutter pub get | flutter analyze | flutter test --machine
+#                   (unitarias + widget + integración contra un HttpServer real)
+#   job backend  -> ./mvnw -B test  (unitarias + integración contra H2)
+#
+# Ambos publican los resultados en la pestaña «Checks» y archivan el informe
+# JUnit como artefacto descargable.
+#
+# Disparadores: push y pull_request sobre cualquier rama.
+# ===========================================================================
+name: CI LuxRay
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: ['**']
+  workflow_dispatch:
+
+# Un push nuevo cancela la ejecución anterior de la misma rama.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # El wrapper fija la versión de Maven (no depende de la del runner).
+  MAVEN_VERSION: '3.9.16'
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────
+  # APLICACIÓN MÓVIL (Flutter / Wear OS)
+  # ─────────────────────────────────────────────────────────────────────
+  flutter:
+    name: App móvil (Flutter)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: luxraywaer
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.44.6'
+          channel: stable
+          cache: true
+
+      - name: Verificar versión de Flutter
+        run: flutter --version
+
+      - name: Dependencias
+        run: flutter pub get
+
+      - name: Análisis estático (0 incidencias)
+        run: flutter analyze
+
+      - name: Pruebas unitarias y de integración
+        run: flutter test --machine > ../flutter_test.json
+
+      # El reporter de GitHub necesita JUnit XML; `flutter test` no lo emite.
+      - name: Convertir a JUnit
+        run: python ../practica-13-14/tools/flutter_junit.py ../flutter_test.json ../flutter_test.xml
+
+      - name: Publicar resultados
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Flutter (móvil)
+          path: flutter_test.xml
+          reporter: java-junit
+          fail-on-error: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Archivar resultados
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: flutter-test-results
+          path: |
+            flutter_test.json
+            flutter_test.xml
+          if-no-files-found: warn
+
+  # ─────────────────────────────────────────────────────────────────────
+  # BACKEND (Spring Boot, Maven)
+  # ─────────────────────────────────────────────────────────────────────
+  backend:
+    name: Backend (Spring Boot)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      # Diagnóstico: si el build falla, la causa queda escrita en las
+      # anotaciones del check (visibles desde la API y la pestaña Checks).
+      - name: Diagnóstico del entorno
+        run: |
+          echo "JAVA_HOME=$JAVA_HOME"
+          java -version
+          ./mvnw -v
+
+      # `set -o pipefail` es IMPRESCINDIBLE: sin él, el código de salida del
+      # pipeline es el de `tee` (siempre 0) y Maven puede fallar sin que el
+      # paso se marque como error (pipeline "verde" falso).
+      - name: Compilar y ejecutar pruebas
+        run: |
+          set -o pipefail
+          ./mvnw -B test 2>&1 | tee ../mvn.log
+
+      - name: Diagnóstico del fallo
+        if: failure()
+        run: |
+          echo '⛔ Fallo del backend. Líneas de error de Maven:'
+          grep -E '\[ERROR\]|BUILD FAILURE|Failed to execute|Could not resolve|invalid target|No plugin found' ../mvn.log \
+            | head -40 | sed 's/^/::error:: /' || true
+
+      - name: Publicar resultados
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          name: Backend (microservicios)
+          path: '**/target/surefire-reports/*.xml'
+          reporter: java-junit
+          fail-on-error: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Archivar resultados
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: backend-test-results
+          path: |
+            **/target/surefire-reports/*.xml
+            mvn.log
+          if-no-files-found: warn
