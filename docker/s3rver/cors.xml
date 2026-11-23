@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Política CORS del bucket "luxray-evidencias" (emulador s3rver).
+
+  Es necesaria porque la PWA, desde el navegador, hace PUT directos a las URL
+  prefirmadas (subida multipart) y luego necesita LEER el header ETag que
+  devuelve el servidor para confirmar cada parte. Sin Access-Control-Expose-Headers
+  el navegador no puede leer ese header y la subida se queda sin ETag.
+
+  Orígenes permitidos: cualquiera (solo desarrollo). GET/PUT/POST/HEAD/DELETE
+  porque la revisión docente y el expediente también leen objetos.
+-->
+<CORSConfiguration>
+  <CORSRule>
+    <AllowedOrigin>*</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <AllowedMethod>PUT</AllowedMethod>
+    <AllowedMethod>POST</AllowedMethod>
+    <AllowedMethod>HEAD</AllowedMethod>
+    <AllowedMethod>DELETE</AllowedMethod>
+    <AllowedHeader>*</AllowedHeader>
+    <ExposeHeader>ETag</ExposeHeader>
+    <MaxAgeSeconds>3000</MaxAgeSeconds>
+  </CORSRule>
+</CORSConfiguration>

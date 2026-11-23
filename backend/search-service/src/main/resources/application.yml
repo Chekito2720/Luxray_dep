@@ -19,6 +19,11 @@ eureka:
   instance:
     prefer-ip-address: true
 
+luxray:
+  search:
+    # Los datos demo solo pueden escribirse cuando se habilita explícitamente.
+    reindex-enabled: ${SEARCH_REINDEX_ENABLED:false}
+
 management:
   endpoints:
     web:

@@ -3,15 +3,7 @@
 
 echo "[start-all] Iniciando servicios LuxRay..."
 
-echo "=== ENV DEBUG ==="
-echo "PGHOST=$PGHOST"
-echo "PGPORT=$PGPORT"
-echo "PGUSER=$PGUSER"
-echo "PGPASSWORD=${PGPASSWORD:0:4}****"
-echo "EUREKA_URL=$EUREKA_URL"
-echo "ELASTICSEARCH_URL=$ELASTICSEARCH_URL"
-echo "JWT_SECRET=${JWT_SECRET:0:4}****"
-echo "==================="
+# No registrar credenciales ni fragmentos de secretos en los logs.
 
 # URLs de BD por servicio (Spring Boot estándar)
 export SPRING_DATASOURCE_URL_AUTH="jdbc:postgresql://${PGHOST}:${PGPORT}/auth_db"

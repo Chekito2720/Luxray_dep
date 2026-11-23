@@ -31,6 +31,10 @@ Thumbs.db
 # Build artifacts locales (se generan en el contenedor Docker)
 backend/**/target/
 target/
+backend/test-results/
+
+# Paquetes locales generados para entregas o respaldos
+/practica-*.zip
 
 # Artefactos de compilacion de Android/Gradle del proyecto movil
 luxraywaer/android/build/

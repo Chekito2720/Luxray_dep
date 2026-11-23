@@ -41,7 +41,7 @@ email:    demo@luxray.com
 password: Demo1234!
 ```
 
-(insertado en seed Flyway V1 del auth-service)
+Disponible únicamente en desarrollo con `DISABLE_SEED_ACCOUNTS=false`; Docker Compose ya lo configura así. En producción, la migración V5 deja inactivas las cuentas conocidas `demo@luxray.com` y `admin@luxray.com` de forma predeterminada.
 
 ## 🔐 Seguridad
 
@@ -80,6 +80,22 @@ backend/
 
 Cada servicio arranca con `spring-boot:run` ejecutando las migrations situées en
 `src/main/resources/db/migration/V*.sql` en orden cronológico.
+
+## ☁️ Despliegue en Render
+
+Para el despliegue inicial todo-en-uno se utiliza el `Dockerfile` de la raíz del repositorio y `start-all.sh`. Configura Render con Docker, `PORT=8080` y health check `/actuator/health`.
+
+Variables externas necesarias:
+
+- PostgreSQL: `PGHOST`, `PGPORT=5432`, `PGUSER` y `PGPASSWORD`. La misma instancia debe contener `auth_db`, `cursos_db` y `analytics_db`.
+- Seguridad/CORS: `JWT_SECRET` y `FRONTEND_URL=https://tu-frontend.vercel.app`.
+- Elasticsearch: `ELASTICSEARCH_URL=http://host-interno:9200`.
+- Evidencias: `S3_ENDPOINT`, `S3_PUBLIC_ENDPOINT`, `S3_REGION`, `S3_BUCKET`, `S3_ACCESS_KEY`, `S3_SECRET_KEY`, `S3_PATH_STYLE` y `S3_PREFIX`.
+- En el arranque todo-en-uno: `EUREKA_URL=http://localhost:8761/eureka/`, `SEARCH_URL=http://localhost:8084` y `LUXRAY_GATEWAY_URL=http://localhost:8080`.
+
+`DISABLE_SEED_ACCOUNTS=true` es el valor predeterminado y desactiva las cuentas conocidas mediante Flyway V5. `SEARCH_REINDEX_ENABLED=false` también es el valor predeterminado; `/api/search/reindex` solo inserta datos demo y debe permanecer deshabilitado en producción.
+
+No pongas credenciales de producción en los YAML ni en Vercel. La URL pública del API sí se configura en el frontend como `API_URL`.
 
 ## ❓ Problemas comunes
 

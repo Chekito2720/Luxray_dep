@@ -88,6 +88,24 @@ public class AuthController {
         return ResponseEntity.ok(service.reactivarUsuarioAdmin(id));
     }
 
+    /* ───── REVISIÓN DOCENTE ───── */
+    @GetMapping("/usuarios")
+    @PreAuthorize("hasAnyRole('PROFESOR','ADMIN')")
+    @Operation(summary = "Resumen de usuarios por ids (para el panel de revisión docente) — solo PROFESOR/ADMIN")
+    public ResponseEntity<ApiResponse<List<UsuarioResponse>>> usuariosPorIds(
+            @RequestParam String ids) {
+        List<UUID> parseados = java.util.Arrays.stream(ids.split(","))
+                .map(String::trim)
+                .filter(s -> !s.isEmpty())
+                .map(s -> {
+                    try { return UUID.fromString(s); }
+                    catch (IllegalArgumentException e) { return null; }
+                })
+                .filter(java.util.Objects::nonNull)
+                .toList();
+        return ResponseEntity.ok(service.resumenPorIds(parseados));
+    }
+
     @PatchMapping("/admin/usuarios/{id}/rol")
     @PreAuthorize("hasRole('ADMIN')")
     @Operation(summary = "Cambiar rol de usuario — solo ADMIN")

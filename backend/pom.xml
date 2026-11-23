@@ -30,6 +30,7 @@
         <postgresql.version>42.7.4</postgresql.version>
         <flyway.version>10.20.0</flyway.version>
         <lombok.version>1.18.32</lombok.version>
+        <jacoco.version>0.8.12</jacoco.version>
     </properties>
 
     <modules>
@@ -125,7 +126,44 @@
                         </annotationProcessorPaths>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <!--
+              Cobertura de código White Box (Práctica 11).
+              El agente se inyecta en la fase `initialize` y el informe se
+              genera en la fase `test`. Con `-DskipTests` no se genera informe
+              (no hay datos de ejecucion), por lo que la compilacion de las
+              imagenes Docker no se ve afectada.
+
+              Uso:  mvn test
+              Salida: backend/<módulo>/target/site/jacoco/index.html
+            -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>wb-prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>wb-report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>

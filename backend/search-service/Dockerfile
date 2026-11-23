@@ -12,7 +12,7 @@ COPY api-gateway/pom.xml api-gateway/
 COPY discovery-service/pom.xml discovery-service/
 COPY search-service/pom.xml search-service/
 
-RUN mvn dependency:go-offline -B -q
+RUN mvn dependency:go-offline -B -q || true
 
 COPY . .
 RUN mvn clean package -DskipTests -B -q

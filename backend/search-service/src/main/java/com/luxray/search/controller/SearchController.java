@@ -15,6 +15,8 @@ import com.luxray.search.service.SearchService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.HashMap;
 import java.util.List;
@@ -38,6 +41,9 @@ public class SearchController {
     private final LeccionDocumentRepository leccionRepo;
     private final ConceptoDocumentRepository conceptoRepo;
     private final FaqDocumentRepository faqRepo;
+
+    @Value("${luxray.search.reindex-enabled:false}")
+    private boolean reindexEnabled;
 
     @Operation(summary = "Búsqueda unificada", description = "Busca en cursos, lecciones, conceptos y FAQs")
     @GetMapping
@@ -64,9 +70,14 @@ public class SearchController {
         return ResponseEntity.ok(ApiResponse.ok(response));
     }
 
-    @Operation(summary = "Poblar índices con datos de prueba", description = "Inserta documentos de ejemplo en Elasticsearch")
+    @Operation(summary = "Poblar índices con datos de prueba", description = "Disponible solo con SEARCH_REINDEX_ENABLED=true")
     @PostMapping("/reindex")
     public ResponseEntity<ApiResponse<Map<String, Object>>> reindex() {
+        if (!reindexEnabled) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN,
+                    "La carga de datos demo está deshabilitada");
+        }
+
         CursoDocument curso = CursoDocument.builder()
                 .id("curso-1")
                 .titulo("Fundamentos de Electricidad")

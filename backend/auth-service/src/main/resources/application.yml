@@ -5,9 +5,9 @@ spring:
   application:
     name: auth-service
   datasource:
-    url: jdbc:postgresql://localhost:5433/auth_db
-    username: luxray
-    password: luxray_secret_2026
+    url: jdbc:postgresql://${PGHOST:localhost}:${PGPORT:5433}/auth_db
+    username: ${PGUSER:luxray}
+    password: ${PGPASSWORD:luxray_secret_2026}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
@@ -22,18 +22,22 @@ spring:
     enabled: true
     locations: classpath:db/migration
     baseline-on-migrate: true
+    placeholders:
+      # En producción las cuentas conocidas quedan inactivas desde V5.
+      # Docker Compose lo cambia a false únicamente para desarrollo local.
+      disableseedaccounts: ${DISABLE_SEED_ACCOUNTS:true}
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
   instance:
     prefer-ip-address: true
 
 luxray:
   security:
     jwt:
-      secret: luxray-jwt-super-secreto-para-desarrollo-min-32caracteres
+      secret: ${JWT_SECRET:luxray-jwt-super-secreto-para-desarrollo-min-32caracteres}
       expiration-minutes: 1440
 
 management:

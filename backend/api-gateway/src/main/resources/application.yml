@@ -15,7 +15,10 @@ spring:
               - "http://localhost:4200"
               - "http://localhost:4300"
               - "http://127.0.0.1:4200"
-              - "https://luxray-front-74c6.vercel.app"
+              - "http://10.13.58.24:4200"
+              # Cualquier IP local en el puerto de la PWA (desarrollo por WiFi)
+              - "http://*:4200"
+              - "${FRONTEND_URL:https://luxray-front-74c6.vercel.app}"
             allowedMethods:
               - GET
               - POST
@@ -54,14 +57,14 @@ spring:
           filters:
             - StripPrefix=1
         - id: search-service
-          uri: http://localhost:8084
+          uri: ${SEARCH_URL:http://localhost:8084}
           predicates:
             - Path=/api/search/**
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
 
 management:
   endpoints:

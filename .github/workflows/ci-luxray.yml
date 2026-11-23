@@ -22,19 +22,14 @@ on:
     branches: ['**']
   workflow_dispatch:
 
-# Un push nuevo cancela la ejecución anterior de la misma rama.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
 
 env:
-  # El wrapper fija la versión de Maven (no depende de la del runner).
   MAVEN_VERSION: '3.9.16'
 
 jobs:
-  # ─────────────────────────────────────────────────────────────────────
-  # APLICACIÓN MÓVIL (Flutter / Wear OS)
-  # ─────────────────────────────────────────────────────────────────────
   flutter:
     name: App móvil (Flutter)
     runs-on: ubuntu-latest
