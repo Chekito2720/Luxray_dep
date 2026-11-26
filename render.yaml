@@ -155,12 +155,14 @@ services:
     rootDir: .
     dockerfilePath: ./render/minio.Dockerfile
     dockerContext: ./render
-    dockerCommand: server /data --console-address :9001
+    dockerCommand: server /data --address :9000 --console-address :9001
     healthCheckPath: /minio/health/live
     buildFilter:
       paths:
         - render/**
     envVars:
+      - key: PORT
+        value: "9000"
       - key: MINIO_ROOT_USER
         generateValue: true
       - key: MINIO_ROOT_PASSWORD
