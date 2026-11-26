@@ -64,7 +64,9 @@ spring:
           predicates:
             - Path=/api/search/**
           filters:
-            - StripPrefix=1
+            # El controlador vive bajo /cursos; StripPrefix dejaría /search,
+            # que no existe y Spring lo intenta servir como recurso estático.
+            - SetPath=/cursos/search
 
 eureka:
   client:
