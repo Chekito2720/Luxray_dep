@@ -158,7 +158,9 @@ public class AuthService {
 
     private AuthResponse generateTokens(Usuario u) {
         String access = jwt.generateToken(u.getEmail(),
-                Map.of("uid", u.getId().toString(), "role", u.getRol()));
+                Map.of("uid", u.getId().toString(),
+                        "role", u.getRol(),
+                        "nombre", (u.getNombre() + " " + u.getApellido()).trim()));
         // Refresh token más largo (7 días)
         String refresh = jwt.generateToken(u.getEmail(),
                 Map.of("type", "refresh")) ;

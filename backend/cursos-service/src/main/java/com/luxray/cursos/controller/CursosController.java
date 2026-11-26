@@ -33,13 +33,16 @@ public class CursosController {
         return ResponseEntity.ok(service.listar(nivel, q));
     }
 
-    @GetMapping("/buscar")
+    @GetMapping({"/buscar", "/search"})
     @Operation(summary = "Buscador interno del sitio: cursos, lecciones, conceptos y FAQ del giro eléctrico")
     public ResponseEntity<ApiResponse<BusquedaResponse>> buscar(@RequestParam(required = false) String q) {
         return ResponseEntity.ok(service.buscar(q));
     }
 
-    @GetMapping("/{id}")
+    // Restringir el detalle a UUID reserva /cursos/ws para el endpoint STOMP.
+    // Sin esta expresión, /cursos/{id} captura "ws" y devuelve 500 al intentar
+    // convertirlo a UUID antes de que Spring pueda resolver el WebSocket.
+    @GetMapping("/{id:[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}}")
     @Operation(summary = "Detalle completo del curso con sus lecciones")
     public ResponseEntity<ApiResponse<CursosService.CursoDetalleResponse>> detalle(@PathVariable UUID id) {
         return ResponseEntity.ok(service.detalle(id));

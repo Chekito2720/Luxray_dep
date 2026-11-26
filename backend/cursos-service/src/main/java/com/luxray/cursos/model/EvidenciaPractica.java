@@ -23,6 +23,18 @@ public class EvidenciaPractica {
     @Column(name = "leccion_id", nullable = false)
     private UUID leccionId;
 
+    /** Entrega versionada a la que pertenece este archivo. */
+    @Column(name = "entrega_id", nullable = false)
+    private UUID entregaId;
+
+    /** FOTO, PDF o VIDEO. */
+    @Column(name = "tipo_archivo", nullable = false, length = 20)
+    private String tipoArchivo = "FOTO";
+
+    /** Número de versión de la entrega dentro de la actividad. */
+    @Column(nullable = false)
+    private Integer version = 1;
+
     @Column(name = "nombre_archivo", nullable = false)
     private String nombreArchivo;
 
@@ -61,6 +73,12 @@ public class EvidenciaPractica {
     public void setUsuarioId(UUID usuarioId) { this.usuarioId = usuarioId; }
     public UUID getLeccionId() { return leccionId; }
     public void setLeccionId(UUID leccionId) { this.leccionId = leccionId; }
+    public UUID getEntregaId() { return entregaId; }
+    public void setEntregaId(UUID entregaId) { this.entregaId = entregaId; }
+    public String getTipoArchivo() { return tipoArchivo; }
+    public void setTipoArchivo(String tipoArchivo) { this.tipoArchivo = tipoArchivo; }
+    public Integer getVersion() { return version; }
+    public void setVersion(Integer version) { this.version = version; }
     public String getNombreArchivo() { return nombreArchivo; }
     public void setNombreArchivo(String nombreArchivo) { this.nombreArchivo = nombreArchivo; }
     public String getContentType() { return contentType; }

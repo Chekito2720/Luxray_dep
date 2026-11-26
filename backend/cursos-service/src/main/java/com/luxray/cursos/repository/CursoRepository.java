@@ -1,17 +1,25 @@
 package com.luxray.cursos.repository;
 
 import com.luxray.cursos.model.Curso;
+import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Repository
 public interface CursoRepository extends JpaRepository<Curso, UUID> {
     List<Curso> findByPublicadoTrue();
+
+    /** Bloquea el curso para serializar sus replacements de asignación. */
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    @Query("SELECT c FROM Curso c WHERE c.id = :id")
+    Optional<Curso> findByIdForUpdate(@Param("id") UUID id);
 
     @Query("""
             SELECT c FROM Curso c

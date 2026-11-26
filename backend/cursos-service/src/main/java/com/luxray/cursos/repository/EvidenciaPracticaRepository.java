@@ -10,6 +10,8 @@ public interface EvidenciaPracticaRepository extends JpaRepository<EvidenciaPrac
 
     List<EvidenciaPractica> findByUsuarioIdAndLeccionIdOrderByCreadoEnDesc(UUID usuarioId, UUID leccionId);
 
+    List<EvidenciaPractica> findByEntregaIdOrderByCreadoEnAsc(UUID entregaId);
+
     /* ── Revisión docente ── */
 
     /** Cola de revisión del profesor: un estado concreto, la más antigua primero. */

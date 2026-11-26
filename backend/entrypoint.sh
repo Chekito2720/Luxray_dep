@@ -6,6 +6,26 @@ set -e
 
 SERVICE=${SERVICE:-api-gateway}
 
+# Render entrega DATABASE_URL como postgresql://usuario:password@host:puerto/bd.
+# Los servicios Spring usan SPRING_DATASOURCE_URL; convertimos ese valor sin
+# imprimir credenciales en los logs.
+if [ -n "${DATABASE_URL:-}" ]; then
+  sin_esquema="${DATABASE_URL#*://}"
+  host_bd="${sin_esquema##*@}"
+  credenciales="${sin_esquema%@*}"
+  host_puerto="${host_bd%%/*}"
+  base_datos="${host_bd#*/}"
+  host="${host_puerto%:*}"
+  puerto="${host_puerto##*:}"
+  usuario="${credenciales%%:*}"
+  password="${credenciales#*:}"
+  export PGHOST="$host"
+  export PGPORT="$puerto"
+  export PGUSER="$usuario"
+  export PGPASSWORD="$password"
+  export SPRING_DATASOURCE_URL="jdbc:postgresql://${host}:${puerto}/${base_datos}"
+fi
+
 case "$SERVICE" in
   auth-service)
     echo "🚀 Iniciando Auth Service en puerto 8081"

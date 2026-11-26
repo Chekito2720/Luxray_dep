@@ -13,6 +13,9 @@ frontend-web/
 backend/logs/
 logs/
 
+# Evidencia visual local (capturas); se entrega fuera del repositorio.
+evidencia/
+
 # ...pero los logs del pipeline SI son evidencia y se versionan.
 !practica-13-14/evidencias/ci/logs/
 !practica-13-14/evidencias/ci/logs/**

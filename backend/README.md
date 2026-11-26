@@ -83,19 +83,26 @@ Cada servicio arranca con `spring-boot:run` ejecutando las migrations situées e
 
 ## ☁️ Despliegue en Render
 
-Para el despliegue inicial todo-en-uno se utiliza el `Dockerfile` de la raíz del repositorio y `start-all.sh`. Configura Render con Docker, `PORT=8080` y health check `/actuator/health`.
+`render.yaml` define la topología recomendada para la demostración:
+
+- `luxray-gateway`, `luxray-auth`, `luxray-cursos` y `luxray-analytics`: web services gratuitos construidos desde `backend/Dockerfile`; `SERVICE` selecciona el JAR y `PORT` el puerto de escucha.
+- `luxray-db`: una instancia PostgreSQL gratuita compartida. Cada microservicio usa un nombre distinto de tabla de historial Flyway (`SPRING_FLYWAY_TABLE`) para no mezclar migraciones.
+- `luxray-evidencias`: MinIO S3-compatible en plan gratuito, sin disco persistente. Las evidencias sobreviven al reinicio del servicio pero no a un redespliegue; es suficiente para la demostración.
+- El buscador se sirve desde `cursos-service` (`/api/search` → `/search`), por lo que no se despliega Elasticsearch en la demo.
+
+No se usa Eureka en Render: el gateway recibe `AUTH_SERVICE_URL`, `CURSOS_SERVICE_URL` y `ANALYTICS_SERVICE_URL`, y `EUREKA_CLIENT_ENABLED=false`.
 
 Variables externas necesarias:
 
-- PostgreSQL: `PGHOST`, `PGPORT=5432`, `PGUSER` y `PGPASSWORD`. La misma instancia debe contener `auth_db`, `cursos_db` y `analytics_db`.
-- Seguridad/CORS: `JWT_SECRET` y `FRONTEND_URL=https://tu-frontend.vercel.app`.
-- Elasticsearch: `ELASTICSEARCH_URL=http://host-interno:9200`.
+- Base de datos: `DATABASE_URL` (Render la inyecta desde Postgres; `entrypoint.sh` la convierte a `SPRING_DATASOURCE_URL`).
+- Seguridad/CORS: `JWT_SECRET` compartido y `FRONTEND_URL=https://luxray-front-74c6.vercel.app`.
 - Evidencias: `S3_ENDPOINT`, `S3_PUBLIC_ENDPOINT`, `S3_REGION`, `S3_BUCKET`, `S3_ACCESS_KEY`, `S3_SECRET_KEY`, `S3_PATH_STYLE` y `S3_PREFIX`.
-- En el arranque todo-en-uno: `EUREKA_URL=http://localhost:8761/eureka/`, `SEARCH_URL=http://localhost:8084` y `LUXRAY_GATEWAY_URL=http://localhost:8080`.
+- Permisos docentes: `LUXRAY_CURSOS_FALLBACKPROFESORGLOBAL=false` impide que un profesor sin asignaciones vea todos los cursos en producción.
+- Cuentas demo: `DISABLE_SEED_ACCOUNTS=false` mantiene activos los usuarios semilla; en un entorno público deben cambiarse las contraseñas inmediatamente.
 
-`DISABLE_SEED_ACCOUNTS=true` es el valor predeterminado y desactiva las cuentas conocidas mediante Flyway V5. `SEARCH_REINDEX_ENABLED=false` también es el valor predeterminado; `/api/search/reindex` solo inserta datos demo y debe permanecer deshabilitado en producción.
+`SEARCH_REINDEX_ENABLED=false` es el valor predeterminado; `/api/search/reindex` solo inserta datos demo y debe permanecer deshabilitado en producción.
 
-No pongas credenciales de producción en los YAML ni en Vercel. La URL pública del API sí se configura en el frontend como `API_URL`.
+No pongas credenciales de producción en los YAML ni en Vercel. La URL pública del API sí se configura en el frontend como `API_URL`, por ejemplo `https://luxray-gateway.onrender.com/api`.
 
 ## ❓ Problemas comunes
 

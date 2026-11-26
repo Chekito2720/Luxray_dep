@@ -3,7 +3,7 @@ package com.luxray.cursos.controller;
 import com.luxray.common.dto.ApiResponse;
 import com.luxray.cursos.service.EvidenciasService;
 import com.luxray.cursos.service.EvidenciasService.CompletarRequest;
-import com.luxray.cursos.service.EvidenciasService.EvidenciaResponse;
+import com.luxray.cursos.service.EvidenciasService.EntregaResponse;
 import com.luxray.cursos.service.EvidenciasService.IniciarRequest;
 import com.luxray.cursos.service.EvidenciasService.CancelarRequest;
 import com.luxray.cursos.service.StoragePresignService.InitMultipartDTO;
@@ -44,7 +44,7 @@ public class EvidenciasController {
 
     @PostMapping("/completar")
     @Operation(summary = "Confirma la subida con los ETags de cada parte y registra la evidencia")
-    public ResponseEntity<ApiResponse<EvidenciaResponse>> completar(
+    public ResponseEntity<ApiResponse<EntregaResponse>> completar(
             @RequestHeader("Authorization") String auth,
             @PathVariable UUID leccionId,
             @RequestBody CompletarRequest req) {
@@ -62,7 +62,7 @@ public class EvidenciasController {
 
     @GetMapping
     @Operation(summary = "Evidencias de práctica del usuario autenticado para la lección")
-    public ResponseEntity<ApiResponse<List<EvidenciaResponse>>> listar(
+    public ResponseEntity<ApiResponse<List<EntregaResponse>>> listar(
             @RequestHeader("Authorization") String auth,
             @PathVariable UUID leccionId) {
         return ResponseEntity.ok(service.listar(auth, leccionId));

@@ -90,6 +90,7 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
       # Dentro de la red de Docker el search-service no está en localhost
       SEARCH_URL: http://search-service:8084
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:4200}
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -129,6 +130,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://cursos-db:5432/cursos_db
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
       JWT_SECRET: luxray-jwt-secret-para-docker-compose-no-usar-en-produccion
+      # Validación de profesores asignados contra el auth-service.
+      AUTH_URL: http://auth-service:8081
       # Almacenamiento S3 emulado (evidencias de práctica)
       #   S3_ENDPOINT        = nombre INTERNO de Docker; lo usa solo el backend.
       #   S3_PUBLIC_ENDPOINT = host que verá el NAVEGADOR al abrir una URL
@@ -148,6 +151,8 @@ services:
       S3_SECRET_KEY: ${S3_SECRET_KEY:-S3RVER}
       S3_BUCKET: luxray-evidencias
       S3_PATH_STYLE: "true"
+      # Origenes permitidos por el handshake WebSocket del foro.
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:4200}
     depends_on:
       discovery-service:
         condition: service_healthy

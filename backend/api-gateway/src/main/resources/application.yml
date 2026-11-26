@@ -1,5 +1,6 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
+  address: 0.0.0.0
   forward-headers-strategy: framework
 
 spring:
@@ -35,7 +36,7 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: auth-service
-          uri: lb://auth-service
+          uri: ${AUTH_SERVICE_URL:lb://auth-service}
           predicates:
             - Path=/api/auth/**
           filters:
@@ -45,21 +46,25 @@ spring:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
         - id: cursos-service
-          uri: lb://cursos-service
+          uri: ${CURSOS_SERVICE_URL:lb://cursos-service}
           predicates:
             - Path=/api/cursos/**
           filters:
             - StripPrefix=1
         - id: analytics-service
-          uri: lb://analytics-service
+          uri: ${ANALYTICS_SERVICE_URL:lb://analytics-service}
           predicates:
             - Path=/api/analytics/**
           filters:
             - StripPrefix=1
-        - id: search-service
-          uri: ${SEARCH_URL:http://localhost:8084}
+        - id: buscador-cursos
+          # El buscador consolidated vive en cursos-service (/search). Evita
+          # depender de Elasticsearch en el despliegue de demostración.
+          uri: ${CURSOS_SERVICE_URL:lb://cursos-service}
           predicates:
             - Path=/api/search/**
+          filters:
+            - StripPrefix=1
 
 eureka:
   client:

@@ -10,11 +10,16 @@ import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 import software.amazon.awssdk.services.s3.S3Configuration;
 import software.amazon.awssdk.services.s3.model.AbortMultipartUploadRequest;
+import software.amazon.awssdk.services.s3.model.CreateBucketRequest;
+import software.amazon.awssdk.services.s3.model.HeadBucketRequest;
 import software.amazon.awssdk.services.s3.model.CompleteMultipartUploadRequest;
 import software.amazon.awssdk.services.s3.model.CompletedMultipartUpload;
 import software.amazon.awssdk.services.s3.model.CompletedPart;
 import software.amazon.awssdk.services.s3.model.CreateMultipartUploadRequest;
 import software.amazon.awssdk.services.s3.model.CreateMultipartUploadResponse;
+import software.amazon.awssdk.services.s3.model.DeleteObjectRequest;
+import software.amazon.awssdk.services.s3.model.GetObjectRequest;
+import software.amazon.awssdk.services.s3.model.HeadObjectResponse;
 import software.amazon.awssdk.services.s3.presigner.S3Presigner;
 import software.amazon.awssdk.services.s3.presigner.model.PresignedGetObjectRequest;
 import software.amazon.awssdk.services.s3.presigner.model.PresignedUploadPartRequest;
@@ -54,6 +59,7 @@ public class StoragePresignService {
     private final S3Presigner presigner;
     private final String bucket;
     private final String prefix;
+    private volatile boolean bucketVerificado;
 
     public StoragePresignService(
             @Value("${luxray.storage.endpoint:}") String endpoint,
@@ -132,9 +138,29 @@ public class StoragePresignService {
             long tamanoParte,
             List<ParteUploadDTO> partes) { }
 
+    /**
+     * Crea el bucket si el almacenamiento se ha reiniciado con un directorio
+     * vacío. Sólo se comprueba una vez por instancia; los errores se propagan
+     * para que el cliente pueda reintentar la subida.
+     */
+    private void asegurarBucket() {
+        if (bucketVerificado) return;
+        synchronized (this) {
+            if (bucketVerificado) return;
+            try {
+                s3.headBucket(HeadBucketRequest.builder().bucket(bucket).build());
+            } catch (software.amazon.awssdk.services.s3.model.S3Exception ex) {
+                if (ex.statusCode() != 404) throw ex;
+                s3.createBucket(CreateBucketRequest.builder().bucket(bucket).build());
+            }
+            bucketVerificado = true;
+        }
+    }
+
     /** Inicia el multipart y devuelve una URL prefirmada por cada parte. */
     public InitMultipartDTO iniciarMultipart(String clave, String contentType,
                                              long tamanoBytes, int tamanoParte) {
+        asegurarBucket();
         CreateMultipartUploadResponse create = s3.createMultipartUpload(
                 CreateMultipartUploadRequest.builder()
                         .bucket(bucket)
@@ -207,6 +233,10 @@ public class StoragePresignService {
                 // Storage no soporta abortar multipart: se ignora.
                 return;
             }
+            if (e.statusCode() == 404) {
+                // La subida ya fue completada o el multipart ya no existe.
+                return;
+            }
             throw e;
         }
     }
@@ -223,9 +253,46 @@ public class StoragePresignService {
 
     public record ParteConEtag(int numeroParte, String etag) { }
 
+    public record ObjetoMetadata(long tamanoBytes, String contentType) { }
+
+    /** Comprueba el objeto ya materializado después de completar el multipart. */
+    public ObjetoMetadata verificarObjeto(String clave) {
+        HeadObjectResponse head = s3.headObject(software.amazon.awssdk.services.s3.model.HeadObjectRequest.builder()
+                .bucket(bucket)
+                .key(clave)
+                .build());
+        long tamano = head.contentLength() == null ? -1 : head.contentLength();
+        return new ObjetoMetadata(tamano, head.contentType());
+    }
+
+    /** Lee sólo los primeros bytes para validar la firma binaria del archivo. */
+    public byte[] leerPrefijo(String clave, int maxBytes) {
+        int limite = Math.max(1, maxBytes);
+        try (var objeto = s3.getObject(GetObjectRequest.builder()
+                .bucket(bucket)
+                .key(clave)
+                .range("bytes=0-" + (limite - 1))
+                .build())) {
+            return objeto.readNBytes(limite);
+        } catch (java.io.IOException ex) {
+            throw new java.io.UncheckedIOException("No se pudo leer el contenido del archivo", ex);
+        }
+    }
+
+    /** Elimina un objeto que no superó la validación de contenido. */
+    public void eliminarObjeto(String clave) {
+        s3.deleteObject(DeleteObjectRequest.builder()
+                .bucket(bucket)
+                .key(clave)
+                .build());
+    }
+
     public String nuevaClave(UUID usuarioId, UUID leccionId, String nombreArchivo) {
         String limpio = nombreArchivo.replaceAll("[^a-zA-Z0-9._-]", "_");
-        return String.format("%s/%s/%s/%s", prefix, usuarioId, leccionId, limpio);
+        // El UUID hace que cada versión sea inmutable: dos archivos con el
+        // mismo nombre nunca apuntan al mismo objeto S3.
+        return String.format("%s/%s/%s/%s-%s", prefix, usuarioId, leccionId,
+                UUID.randomUUID(), limpio);
     }
 
     @PreDestroy

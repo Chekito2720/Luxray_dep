@@ -2,7 +2,8 @@ package com.luxray.cursos.controller;
 
 import com.luxray.common.dto.ApiResponse;
 import com.luxray.cursos.service.EvidenciasService;
-import com.luxray.cursos.service.EvidenciasService.EvidenciaDetalleResponse;
+import com.luxray.cursos.service.EvidenciasService.CursoActividadesResponse;
+import com.luxray.cursos.service.EvidenciasService.EntregaResponse;
 import com.luxray.cursos.service.EvidenciasService.RevisionRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -33,24 +34,33 @@ public class RevisionesController {
     @GetMapping("/revisiones")
     @PreAuthorize("hasAnyRole('PROFESOR','ADMIN')")
     @Operation(summary = "Cola de evidencias para revisar — solo PROFESOR/ADMIN (filtro opcional por estado)")
-    public ResponseEntity<ApiResponse<List<EvidenciaDetalleResponse>>> listar(
+    public ResponseEntity<ApiResponse<List<EntregaResponse>>> listar(
+            @RequestHeader("Authorization") String auth,
             @RequestParam(required = false) String estado) {
-        return ResponseEntity.ok(service.listarParaRevision(estado));
+        return ResponseEntity.ok(service.listarParaRevision(auth, estado));
     }
 
-    @PostMapping("/revisiones/{evidenciaId}")
+    @GetMapping("/revisiones/actividades")
     @PreAuthorize("hasAnyRole('PROFESOR','ADMIN')")
-    @Operation(summary = "Registra la revisión: APROBADA (práctica completada) o RECHAZADA con retroalimentación")
-    public ResponseEntity<ApiResponse<EvidenciaDetalleResponse>> revisar(
+    @Operation(summary = "Actividades de las clases asignadas, incluso sin entregas")
+    public ResponseEntity<ApiResponse<List<CursoActividadesResponse>>> actividades(
+            @RequestHeader("Authorization") String auth) {
+        return ResponseEntity.ok(service.listarActividades(auth));
+    }
+
+    @PostMapping("/revisiones/{entregaId}")
+    @PreAuthorize("hasAnyRole('PROFESOR','ADMIN')")
+    @Operation(summary = "Califica la entrega con lista de cotejo: APROBADA o RECHAZADA")
+    public ResponseEntity<ApiResponse<EntregaResponse>> revisar(
             @RequestHeader("Authorization") String auth,
-            @PathVariable UUID evidenciaId,
+            @PathVariable UUID entregaId,
             @RequestBody RevisionRequest req) {
-        return ResponseEntity.ok(service.revisar(auth, evidenciaId, req));
+        return ResponseEntity.ok(service.revisar(auth, entregaId, req));
     }
 
     @GetMapping("/expediente")
     @Operation(summary = "Expediente del alumno autenticado: todas sus evidencias con la retroalimentación del profesor")
-    public ResponseEntity<ApiResponse<List<EvidenciaDetalleResponse>>> expediente(
+    public ResponseEntity<ApiResponse<List<EntregaResponse>>> expediente(
             @RequestHeader("Authorization") String auth) {
         return ResponseEntity.ok(service.expediente(auth));
     }

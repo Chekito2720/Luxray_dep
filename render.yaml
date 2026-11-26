@@ -1,0 +1,177 @@
+# Infraestructura de Render para la demostración escolar de LuxRay.
+# Coste: todos los recursos son gratuitos. MinIO no tiene disco persistente,
+# así que las evidencias sobreviven al reinicio del servicio pero no a un
+# redespliegue. Es suficiente para la demostración escolar.
+# El backend se compila desde backend/Dockerfile y la variable SERVICE
+# selecciona qué microservicio ejecuta cada contenedor.
+previews:
+  generation: off
+
+envVarGroups:
+  - name: luxray-core
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://luxray-front-74c6.vercel.app
+      - key: EUREKA_CLIENT_ENABLED
+        value: "false"
+      - key: SPRING_CLOUD_GATEWAY_DISCOVERY_LOCATOR_ENABLED
+        value: "false"
+
+services:
+  - type: web
+    name: luxray-auth
+    runtime: docker
+    plan: free
+    region: oregon
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - backend/**
+    envVars:
+      - fromGroup: luxray-core
+      - key: SERVICE
+        value: auth-service
+      - key: DATABASE_URL
+        fromDatabase:
+          name: luxray-db
+          property: connectionString
+      - key: SPRING_FLYWAY_TABLE
+        value: flyway_auth_history
+      - key: DISABLE_SEED_ACCOUNTS
+        value: "false"
+
+  - type: web
+    name: luxray-cursos
+    runtime: docker
+    plan: free
+    region: oregon
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - backend/**
+    envVars:
+      - fromGroup: luxray-core
+      - key: SERVICE
+        value: cursos-service
+      - key: DATABASE_URL
+        fromDatabase:
+          name: luxray-db
+          property: connectionString
+      - key: SPRING_FLYWAY_TABLE
+        value: flyway_cursos_history
+      - key: AUTH_URL
+        value: https://luxray-auth.onrender.com
+      - key: LUXRAY_CURSOS_FALLBACKPROFESORGLOBAL
+        value: "false"
+      - key: S3_ENDPOINT
+        value: https://luxray-evidencias.onrender.com
+      - key: S3_PUBLIC_ENDPOINT
+        value: https://luxray-evidencias.onrender.com
+      - key: S3_REGION
+        value: us-east-1
+      - key: S3_BUCKET
+        value: luxray-evidencias
+      - key: S3_PATH_STYLE
+        value: "true"
+      - key: S3_PREFIX
+        value: evidencias
+      - key: S3_ACCESS_KEY
+        fromService:
+          name: luxray-evidencias
+          type: web
+          envVarKey: MINIO_ROOT_USER
+      - key: S3_SECRET_KEY
+        fromService:
+          name: luxray-evidencias
+          type: web
+          envVarKey: MINIO_ROOT_PASSWORD
+
+  - type: web
+    name: luxray-analytics
+    runtime: docker
+    plan: free
+    region: oregon
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - backend/**
+    envVars:
+      - fromGroup: luxray-core
+      - key: SERVICE
+        value: analytics-service
+      - key: DATABASE_URL
+        fromDatabase:
+          name: luxray-db
+          property: connectionString
+      - key: SPRING_FLYWAY_TABLE
+        value: flyway_analytics_history
+      - key: LUXRAY_GATEWAY_URL
+        value: https://luxray-gateway.onrender.com
+
+  - type: web
+    name: luxray-gateway
+    runtime: docker
+    plan: free
+    region: oregon
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /actuator/health
+    autoDeployTrigger: commit
+    buildFilter:
+      paths:
+        - backend/**
+    envVars:
+      - fromGroup: luxray-core
+      - key: SERVICE
+        value: api-gateway
+      - key: AUTH_SERVICE_URL
+        value: https://luxray-auth.onrender.com
+      - key: CURSOS_SERVICE_URL
+        value: https://luxray-cursos.onrender.com
+      - key: ANALYTICS_SERVICE_URL
+        value: https://luxray-analytics.onrender.com
+
+  # Almacenamiento S3 compatible sin coste. Sin disco persistente: válido para la demo.
+  - type: web
+    name: luxray-evidencias
+    runtime: docker
+    plan: free
+    region: oregon
+    rootDir: .
+    dockerfilePath: ./render/minio.Dockerfile
+    dockerContext: ./render
+    dockerCommand: server /data --console-address :9001
+    healthCheckPath: /minio/health/live
+    buildFilter:
+      paths:
+        - render/**
+    envVars:
+      - key: MINIO_ROOT_USER
+        generateValue: true
+      - key: MINIO_ROOT_PASSWORD
+        generateValue: true
+      - key: MINIO_API_CORS_ALLOW_ORIGIN
+        value: https://luxray-front-74c6.vercel.app,http://localhost:4200,http://127.0.0.1:4200
+
+databases:
+  - name: luxray-db
+    plan: free
+    region: oregon
+    postgresMajorVersion: "16"
+    databaseName: luxray
+    user: luxray
