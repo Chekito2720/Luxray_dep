@@ -1,0 +1,79 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: C:\DDI\luxray\practica-12\fase3-estres-api\estres_api.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 10 max VUs, 10m30s max duration (incl. graceful stop):
+              * carga: 20 iterations for each of 10 VUs (maxDuration: 10m0s, exec: escritura, gracefulStop: 30s)
+
+
+running (00m01.0s), 10/10 VUs, 10 complete and 0 interrupted iterations
+carga   [   5% ] 10 VUs  00m01.0s/10m0s  010/200 iters, 20 per VU
+
+running (00m02.0s), 10/10 VUs, 27 complete and 0 interrupted iterations
+carga   [  14% ] 10 VUs  00m02.0s/10m0s  027/200 iters, 20 per VU
+
+running (00m03.0s), 10/10 VUs, 40 complete and 0 interrupted iterations
+carga   [  20% ] 10 VUs  00m03.0s/10m0s  040/200 iters, 20 per VU
+
+running (00m04.0s), 10/10 VUs, 50 complete and 0 interrupted iterations
+carga   [  25% ] 10 VUs  00m04.0s/10m0s  050/200 iters, 20 per VU
+
+running (00m05.0s), 10/10 VUs, 64 complete and 0 interrupted iterations
+carga   [  32% ] 10 VUs  00m05.0s/10m0s  064/200 iters, 20 per VU
+
+running (00m06.0s), 10/10 VUs, 77 complete and 0 interrupted iterations
+carga   [  38% ] 10 VUs  00m06.0s/10m0s  077/200 iters, 20 per VU
+
+running (00m07.0s), 10/10 VUs, 90 complete and 0 interrupted iterations
+carga   [  45% ] 10 VUs  00m07.0s/10m0s  090/200 iters, 20 per VU
+
+running (00m08.0s), 10/10 VUs, 101 complete and 0 interrupted iterations
+carga   [  50% ] 10 VUs  00m08.0s/10m0s  101/200 iters, 20 per VU
+
+running (00m09.0s), 10/10 VUs, 113 complete and 0 interrupted iterations
+carga   [  56% ] 10 VUs  00m09.0s/10m0s  113/200 iters, 20 per VU
+
+running (00m10.0s), 10/10 VUs, 124 complete and 0 interrupted iterations
+carga   [  62% ] 10 VUs  00m10.0s/10m0s  124/200 iters, 20 per VU
+
+running (00m11.0s), 10/10 VUs, 134 complete and 0 interrupted iterations
+carga   [  67% ] 10 VUs  00m11.0s/10m0s  134/200 iters, 20 per VU
+
+running (00m12.0s), 10/10 VUs, 147 complete and 0 interrupted iterations
+carga   [  74% ] 10 VUs  00m12.0s/10m0s  147/200 iters, 20 per VU
+
+running (00m13.0s), 10/10 VUs, 158 complete and 0 interrupted iterations
+carga   [  79% ] 10 VUs  00m13.0s/10m0s  158/200 iters, 20 per VU
+
+running (00m14.0s), 10/10 VUs, 171 complete and 0 interrupted iterations
+carga   [  86% ] 10 VUs  00m14.0s/10m0s  171/200 iters, 20 per VU
+
+running (00m15.0s), 10/10 VUs, 188 complete and 0 interrupted iterations
+carga   [  94% ] 10 VUs  00m15.0s/10m0s  188/200 iters, 20 per VU
+
+running (00m16.0s), 02/10 VUs, 198 complete and 0 interrupted iterations
+carga   [  99% ] 10 VUs  00m16.0s/10m0s  198/200 iters, 20 per VU
+# Fase 3 — Escenario de estres: escritura con 10 usuarios concurrentes
+
+- **Iteraciones por usuario**: 20
+- **Peticiones totales**: 200
+- **RPS (tasa de peticiones)**: 12.43 req/s
+- **Latencia media**: 731.46 ms
+- **Latencia P90**: 904.59 ms
+- **Latencia P95**: 957.07 ms
+- **Latencia P99**: - ms
+- **Latencia máxima**: 1203.83 ms
+- **Latencia mínima**: 485.66 ms
+- **Tasa de fallo HTTP**: 0.00 %
+- **Checks correctos**: 100.00 %
+- **Datos recibidos**: 238.46 KB
+- **Datos enviados**: 60.74 KB
+running (00m16.1s), 00/10 VUs, 200 complete and 0 interrupted iterations
+carga ✓ [ 100% ] 10 VUs  00m16.1s/10m0s  200/200 iters, 20 per VU

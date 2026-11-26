@@ -1,0 +1,29 @@
+name: Mantener Render despierto
+
+# Los web services gratuitos de Render se suspenden tras 15 minutos sin
+# tráfico. Este ping evita el 502 de la primera petición del alumno sin
+# contratar planes de pago.
+on:
+  schedule:
+    - cron: '*/9 * * * *'
+  workflow_dispatch:
+
+jobs:
+  warmup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Ping de salud
+        run: |
+          set +e
+          for url in \
+            https://luxray-auth-q3l3.onrender.com/actuator/health \
+            https://luxray-cursos-q3l3.onrender.com/actuator/health \
+            https://luxray-analytics-q3l3.onrender.com/actuator/health \
+            https://luxray-gateway-q3l3.onrender.com/actuator/health \
+            https://luxray-evidencias-q3l3.onrender.com/minio/health/live
+          do
+            timeout 180 curl -fsS -o /dev/null "$url" &
+          done
+          wait
+          exit 0

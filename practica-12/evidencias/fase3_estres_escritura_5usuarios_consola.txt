@@ -1,0 +1,64 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+     execution: local
+        script: C:\DDI\luxray\practica-12\fase3-estres-api\estres_api.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 5 max VUs, 10m30s max duration (incl. graceful stop):
+              * carga: 20 iterations for each of 5 VUs (maxDuration: 10m0s, exec: escritura, gracefulStop: 30s)
+
+
+running (00m01.0s), 5/5 VUs, 5 complete and 0 interrupted iterations
+carga   [   5% ] 5 VUs  00m01.0s/10m0s  005/100 iters, 20 per VU
+
+running (00m02.0s), 5/5 VUs, 10 complete and 0 interrupted iterations
+carga   [  10% ] 5 VUs  00m02.0s/10m0s  010/100 iters, 20 per VU
+
+running (00m03.0s), 5/5 VUs, 20 complete and 0 interrupted iterations
+carga   [  20% ] 5 VUs  00m03.0s/10m0s  020/100 iters, 20 per VU
+
+running (00m04.0s), 5/5 VUs, 27 complete and 0 interrupted iterations
+carga   [  27% ] 5 VUs  00m04.0s/10m0s  027/100 iters, 20 per VU
+
+running (00m05.0s), 5/5 VUs, 38 complete and 0 interrupted iterations
+carga   [  38% ] 5 VUs  00m05.0s/10m0s  038/100 iters, 20 per VU
+
+running (00m06.0s), 5/5 VUs, 50 complete and 0 interrupted iterations
+carga   [  50% ] 5 VUs  00m06.0s/10m0s  050/100 iters, 20 per VU
+
+running (00m07.0s), 5/5 VUs, 58 complete and 0 interrupted iterations
+carga   [  58% ] 5 VUs  00m07.0s/10m0s  058/100 iters, 20 per VU
+
+running (00m08.0s), 5/5 VUs, 65 complete and 0 interrupted iterations
+carga   [  65% ] 5 VUs  00m08.0s/10m0s  065/100 iters, 20 per VU
+
+running (00m09.0s), 5/5 VUs, 73 complete and 0 interrupted iterations
+carga   [  73% ] 5 VUs  00m09.0s/10m0s  073/100 iters, 20 per VU
+
+running (00m10.0s), 5/5 VUs, 80 complete and 0 interrupted iterations
+carga   [  80% ] 5 VUs  00m10.0s/10m0s  080/100 iters, 20 per VU
+
+running (00m11.0s), 5/5 VUs, 90 complete and 0 interrupted iterations
+carga   [  90% ] 5 VUs  00m11.0s/10m0s  090/100 iters, 20 per VU
+# Fase 3 — Escenario de estres: escritura con 5 usuarios concurrentes
+
+- **Iteraciones por usuario**: 20
+- **Peticiones totales**: 100
+- **RPS (tasa de peticiones)**: 8.44 req/s
+- **Latencia media**: 537.61 ms
+- **Latencia P90**: 706.58 ms
+- **Latencia P95**: 745.35 ms
+- **Latencia P99**: - ms
+- **Latencia máxima**: 878.46 ms
+- **Latencia mínima**: 398.74 ms
+- **Tasa de fallo HTTP**: 0.00 %
+- **Checks correctos**: 100.00 %
+- **Datos recibidos**: 119.22 KB
+- **Datos enviados**: 30.37 KB
+running (00m11.9s), 0/5 VUs, 100 complete and 0 interrupted iterations
+carga ✓ [ 100% ] 5 VUs  00m11.9s/10m0s  100/100 iters, 20 per VU

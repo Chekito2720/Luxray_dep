@@ -30,6 +30,8 @@ public class CursosService {
     private final LeccionRepository lecciones;
     private final InscripcionRepository inscripciones;
     private final ProgresoLeccionRepository progreso;
+    private final EvidenciasService evidencias;
+    private final CursoAccesoService acceso;
 
     private final JwtTokenProvider jwt;
 
@@ -37,11 +39,15 @@ public class CursosService {
                          LeccionRepository lecciones,
                          InscripcionRepository inscripciones,
                          ProgresoLeccionRepository progreso,
+                         EvidenciasService evidencias,
+                         CursoAccesoService acceso,
                          JwtTokenProvider jwt) {
         this.cursos = cursos;
         this.lecciones = lecciones;
         this.inscripciones = inscripciones;
         this.progreso = progreso;
+        this.evidencias = evidencias;
+        this.acceso = acceso;
         this.jwt = jwt;
     }
 
@@ -213,9 +219,19 @@ public class CursosService {
     /* ───── Marcar lección completada ───── */
     @Transactional
     public ApiResponse<Void> marcarLeccionCompletada(String authHeader, UUID leccionId) {
-        UUID usuarioId = resolverUsuario(authHeader);
+        var cred = acceso.credenciales(authHeader);
+        acceso.requiereAlumnoInscrito(cred, leccionId);
+        UUID usuarioId = cred.usuarioId();
         Leccion leccion = lecciones.findById(leccionId)
                 .orElseThrow(() -> new ResourceNotFoundException("Lección no encontrada"));
+
+        // Regla de entrega: la versión vigente debe contener foto y PDF y
+        // haber sido aprobada por el profesor. Una entrega pendiente o
+        // rechazada no puede completar la actividad por sí sola.
+        if (!evidencias.puedeMarcarCompletadaBloqueado(usuarioId, leccionId)) {
+            throw new BusinessException(
+                    "La actividad sólo puede marcarse como completada cuando el profesor apruebe la entrega con foto y PDF");
+        }
 
         ProgresoLeccion p = progreso.findByUsuarioIdAndLeccionId(usuarioId, leccionId)
                 .orElseGet(() -> {
@@ -232,25 +248,27 @@ public class CursosService {
         Inscripcion insc = inscripciones.findByUsuarioIdAndCursoId(usuarioId, leccion.getCursoId())
                 .orElse(null);
         if (insc != null) {
-            int hechas = progreso.findByUsuarioId(usuarioId).stream()
-                    .filter(pr -> {
-                        try {
-                            return lecciones.findById(pr.getLeccionId())
-                                    .map(l -> l.getCursoId().equals(insc.getCursoId()))
-                                    .orElse(false);
-                        } catch (Exception e) { return false; }
-                    })
-                    .toList().size();
+            List<Leccion> leccionesCurso = lecciones.findByCursoIdOrderByOrdenAsc(insc.getCursoId());
+            Set<UUID> idsCurso = leccionesCurso.stream().map(Leccion::getId)
+                    .collect(Collectors.toSet());
+            Set<UUID> completadas = progreso.findByUsuarioId(usuarioId).stream()
+                    .filter(pr -> Boolean.TRUE.equals(pr.getCompletada()))
+                    .map(ProgresoLeccion::getLeccionId)
+                    .filter(idsCurso::contains)
+                    .collect(Collectors.toSet());
+            int hechas = completadas.size();
             insc.setLeccionesCompletadas(hechas);
-            int total = lecciones.findByCursoIdOrderByOrdenAsc(insc.getCursoId()).size();
+            int total = leccionesCurso.size();
             int pct = total == 0 ? 0 : (int) Math.round(hechas * 100.0 / total);
             insc.setPorcentaje(pct);
-            // Determinar próxima
-            lecciones.findByCursoIdOrderByOrdenAsc(insc.getCursoId()).stream()
-                    .filter(l -> !progreso.findByUsuarioIdAndLeccionId(usuarioId, l.getId())
-                            .map(ProgresoLeccion::getCompletada).orElse(false))
+            // Determinar la próxima lección pendiente o dejarla en null si ya
+            // terminó todas las actividades del curso.
+            String proxima = leccionesCurso.stream()
+                    .filter(l -> !completadas.contains(l.getId()))
+                    .map(Leccion::getTitulo)
                     .findFirst()
-                    .ifPresent(l -> insc.setProximaLeccion(l.getTitulo()));
+                    .orElse(null);
+            insc.setProximaLeccion(proxima);
             inscripciones.save(insc);
         }
         return ApiResponse.ok();

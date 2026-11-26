@@ -1,0 +1,12 @@
+﻿2026-11-18T18:03:41.0723493Z ##[group]Run flutter --version
+2026-11-18T18:03:41.0723738Z [36;1mflutter --version[0m
+2026-11-18T18:03:41.0770941Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:03:41.0771151Z env:
+2026-11-18T18:03:41.0771318Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:41.0771583Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.44.6-x64/flutter
+2026-11-18T18:03:41.0771911Z   PUB_CACHE: /home/runner/.pub-cache
+2026-11-18T18:03:41.0772122Z ##[endgroup]
+2026-11-18T18:03:41.3837952Z Flutter 3.44.6 • channel stable • https://github.com/flutter/flutter.git
+2026-11-18T18:03:41.3838642Z Framework • revision ee80f08bbf (4 months ago) • 2026-07-08 15:02:06 -0700
+2026-11-18T18:03:41.3839484Z Engine • hash d3a3293399556a85388faf8c6f0723a7a5597aa8 (revision 83675ed276) (4 months ago) • 2026-06-30 16:59:03.000Z
+2026-11-18T18:03:41.3840342Z Tools • Dart 3.12.2 • DevTools 2.57.0

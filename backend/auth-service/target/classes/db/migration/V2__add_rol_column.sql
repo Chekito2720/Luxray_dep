@@ -1,4 +1,0 @@
-ALTER TABLE usuarios
-    ADD COLUMN IF NOT EXISTS rol VARCHAR(20) NOT NULL DEFAULT 'USER';
-
-CREATE INDEX IF NOT EXISTS idx_usuarios_rol ON usuarios (rol);

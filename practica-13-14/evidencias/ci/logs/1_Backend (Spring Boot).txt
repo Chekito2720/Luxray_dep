@@ -1,0 +1,939 @@
+﻿2026-11-18T16:27:28.2103005Z Current runner version: '2.338.2'
+2026-11-18T16:27:28.2127808Z ##[group]Runner Image Provisioner
+2026-11-18T16:27:28.2128760Z Hosted Compute Agent
+2026-11-18T16:27:28.2129358Z Version: 20261103.629
+2026-11-18T16:27:28.2129983Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-18T16:27:28.2130789Z Build Date: 2026-11-03T17:26:59Z
+2026-11-18T16:27:28.2131506Z Worker ID: {54ff0f69-c9b4-4a37-ad6d-db4be5ffc169}
+2026-11-18T16:27:28.2132323Z Region: westus
+2026-11-18T16:27:28.2132892Z Cloud: Azure
+2026-11-18T16:27:28.2133412Z ##[endgroup]
+2026-11-18T16:27:28.2135201Z ##[group]Operating System
+2026-11-18T16:27:28.2135887Z Ubuntu
+2026-11-18T16:27:28.2136952Z 26.04.1
+2026-11-18T16:27:28.2137531Z LTS
+2026-11-18T16:27:28.2138050Z ##[endgroup]
+2026-11-18T16:27:28.2138654Z ##[group]Runner Image
+2026-11-18T16:27:28.2139294Z Image: ubuntu-26.04
+2026-11-18T16:27:28.2139927Z Version: 20261111.196.1
+2026-11-18T16:27:28.2141179Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-18T16:27:28.2142796Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+2026-11-18T16:27:28.2143806Z ##[endgroup]
+2026-11-18T16:27:28.2145039Z ##[group]GITHUB_TOKEN Permissions
+2026-11-18T16:27:28.2147513Z Contents: read
+2026-11-18T16:27:28.2148193Z Metadata: read
+2026-11-18T16:27:28.2148817Z Packages: read
+2026-11-18T16:27:28.2149374Z ##[endgroup]
+2026-11-18T16:27:28.2151669Z Secret source: Actions
+2026-11-18T16:27:28.2152661Z Cache mode: write
+2026-11-18T16:27:28.2153665Z Prepare workflow directory
+2026-11-18T16:27:28.2625146Z Prepare all required actions
+2026-11-18T16:27:28.2675867Z Getting action download info
+2026-11-18T16:27:28.6333380Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-18T16:27:28.7501950Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-11-18T16:27:29.1673673Z Download action repository 'dorny/test-reporter@v1' (SHA:3eeb9fc888e82e8be2fb356bbeec2750231672bc)
+2026-11-18T16:27:29.5812674Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-18T16:27:29.7740395Z Complete job name: Backend (Spring Boot)
+2026-11-18T16:27:29.8650167Z ##[group]Run actions/checkout@v4
+2026-11-18T16:27:29.8651127Z with:
+2026-11-18T16:27:29.8651622Z   repository: Chekito2720/Luxray_dep
+2026-11-18T16:27:29.8655832Z   token: ***
+2026-11-18T16:27:29.8656313Z   ssh-strict: true
+2026-11-18T16:27:29.8657095Z   ssh-user: git
+2026-11-18T16:27:29.8657603Z   persist-credentials: true
+2026-11-18T16:27:29.8658138Z   clean: true
+2026-11-18T16:27:29.8658612Z   sparse-checkout-cone-mode: true
+2026-11-18T16:27:29.8659192Z   fetch-depth: 1
+2026-11-18T16:27:29.8659656Z   fetch-tags: false
+2026-11-18T16:27:29.8660143Z   show-progress: true
+2026-11-18T16:27:29.8660632Z   lfs: false
+2026-11-18T16:27:29.8661084Z   submodules: false
+2026-11-18T16:27:29.8661571Z   set-safe-directory: true
+2026-11-18T16:27:29.8662333Z   allow-unsafe-pr-checkout: false
+2026-11-18T16:27:29.8663257Z env:
+2026-11-18T16:27:29.8663805Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:29.8664317Z ##[endgroup]
+2026-11-18T16:27:30.1277505Z Syncing repository: Chekito2720/Luxray_dep
+2026-11-18T16:27:30.1279890Z ##[group]Getting Git version info
+2026-11-18T16:27:30.1281446Z Working directory is '/home/runner/work/Luxray_dep/Luxray_dep'
+2026-11-18T16:27:30.1283164Z [command]/usr/bin/git version
+2026-11-18T16:27:30.1283778Z git version 2.56.1
+2026-11-18T16:27:30.1311860Z ##[endgroup]
+2026-11-18T16:27:30.1320258Z Temporarily overriding HOME='/home/runner/work/_temp/b7da42f0-2b73-49aa-8a61-acaec8ad16b6' before making global git config changes
+2026-11-18T16:27:30.1323548Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T16:27:30.1326161Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T16:27:30.1394978Z Deleting the contents of '/home/runner/work/Luxray_dep/Luxray_dep'
+2026-11-18T16:27:30.1400304Z ##[group]Initializing the repository
+2026-11-18T16:27:30.1406489Z [command]/usr/bin/git init /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T16:27:30.1518114Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-18T16:27:30.1519450Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-18T16:27:30.1520488Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-18T16:27:30.1521301Z hint: call:
+2026-11-18T16:27:30.1521744Z hint:
+2026-11-18T16:27:30.1522320Z hint: 	git config --global init.defaultBranch <name>
+2026-11-18T16:27:30.1522998Z hint:
+2026-11-18T16:27:30.1523633Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-18T16:27:30.1524652Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-18T16:27:30.1525468Z hint:
+2026-11-18T16:27:30.1525929Z hint: 	git branch -m <name>
+2026-11-18T16:27:30.1526480Z hint:
+2026-11-18T16:27:30.1527538Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-18T16:27:30.1533352Z Initialized empty Git repository in /home/runner/work/Luxray_dep/Luxray_dep/.git/
+2026-11-18T16:27:30.1547006Z [command]/usr/bin/git remote add origin https://github.com/Chekito2720/Luxray_dep
+2026-11-18T16:27:30.1602641Z ##[endgroup]
+2026-11-18T16:27:30.1604378Z ##[group]Disabling automatic garbage collection
+2026-11-18T16:27:30.1605759Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-18T16:27:30.1644784Z ##[endgroup]
+2026-11-18T16:27:30.1645843Z ##[group]Setting up auth
+2026-11-18T16:27:30.1652791Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T16:27:30.1691942Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T16:27:30.2238188Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T16:27:30.2277496Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T16:27:30.2550416Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T16:27:30.2585292Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T16:27:30.2871735Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-18T16:27:30.2919334Z ##[endgroup]
+2026-11-18T16:27:30.2920290Z ##[group]Fetching the repository
+2026-11-18T16:27:30.2933949Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +999306d36a3b566b1017a68c4ab63041174d6d29:refs/remotes/origin/practica-pruebas
+2026-11-18T16:27:33.6792258Z From https://github.com/Chekito2720/Luxray_dep
+2026-11-18T16:27:33.6794686Z  * [new ref]         999306d36a3b566b1017a68c4ab63041174d6d29 -> origin/practica-pruebas
+2026-11-18T16:27:33.6797982Z ##[endgroup]
+2026-11-18T16:27:33.6798612Z ##[group]Determining the checkout info
+2026-11-18T16:27:33.6801309Z ##[endgroup]
+2026-11-18T16:27:33.6809647Z [command]/usr/bin/git sparse-checkout disable
+2026-11-18T16:27:33.6864167Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-18T16:27:33.6895040Z ##[group]Checking out the ref
+2026-11-18T16:27:33.6900566Z [command]/usr/bin/git checkout --progress --force -B practica-pruebas refs/remotes/origin/practica-pruebas
+2026-11-18T16:27:34.7071394Z Updating files:  39% (212/536)
+2026-11-18T16:27:34.7097708Z Updating files:  40% (215/536)
+2026-11-18T16:27:34.7998427Z Updating files:  41% (220/536)
+2026-11-18T16:27:34.7999620Z Updating files:  42% (226/536)
+2026-11-18T16:27:34.8005373Z Updating files:  43% (231/536)
+2026-11-18T16:27:34.8011203Z Updating files:  44% (236/536)
+2026-11-18T16:27:34.8014300Z Updating files:  45% (242/536)
+2026-11-18T16:27:34.8015998Z Updating files:  46% (247/536)
+2026-11-18T16:27:34.8024704Z Updating files:  47% (252/536)
+2026-11-18T16:27:34.8027250Z Updating files:  48% (258/536)
+2026-11-18T16:27:34.8030844Z Updating files:  49% (263/536)
+2026-11-18T16:27:34.8036851Z Updating files:  50% (268/536)
+2026-11-18T16:27:34.8039690Z Updating files:  51% (274/536)
+2026-11-18T16:27:34.8042772Z Updating files:  52% (279/536)
+2026-11-18T16:27:34.8046139Z Updating files:  53% (285/536)
+2026-11-18T16:27:34.8049759Z Updating files:  54% (290/536)
+2026-11-18T16:27:34.8054999Z Updating files:  55% (295/536)
+2026-11-18T16:27:34.8058686Z Updating files:  56% (301/536)
+2026-11-18T16:27:34.8061883Z Updating files:  57% (306/536)
+2026-11-18T16:27:34.8065058Z Updating files:  58% (311/536)
+2026-11-18T16:27:34.8069079Z Updating files:  59% (317/536)
+2026-11-18T16:27:35.0057855Z Updating files:  60% (322/536)
+2026-11-18T16:27:35.0060060Z Updating files:  61% (327/536)
+2026-11-18T16:27:35.0064268Z Updating files:  62% (333/536)
+2026-11-18T16:27:35.0071987Z Updating files:  63% (338/536)
+2026-11-18T16:27:35.0076570Z Updating files:  64% (344/536)
+2026-11-18T16:27:35.0081202Z Updating files:  65% (349/536)
+2026-11-18T16:27:35.0089719Z Updating files:  66% (354/536)
+2026-11-18T16:27:35.0094010Z Updating files:  67% (360/536)
+2026-11-18T16:27:35.0099681Z Updating files:  68% (365/536)
+2026-11-18T16:27:35.0110918Z Updating files:  69% (370/536)
+2026-11-18T16:27:35.0117987Z Updating files:  70% (376/536)
+2026-11-18T16:27:35.0121575Z Updating files:  71% (381/536)
+2026-11-18T16:27:35.0138321Z Updating files:  72% (386/536)
+2026-11-18T16:27:35.0142665Z Updating files:  73% (392/536)
+2026-11-18T16:27:35.0146338Z Updating files:  74% (397/536)
+2026-11-18T16:27:35.0150306Z Updating files:  75% (402/536)
+2026-11-18T16:27:35.0153539Z Updating files:  76% (408/536)
+2026-11-18T16:27:35.0157442Z Updating files:  77% (413/536)
+2026-11-18T16:27:35.0165956Z Updating files:  78% (419/536)
+2026-11-18T16:27:35.0173503Z Updating files:  79% (424/536)
+2026-11-18T16:27:35.0184405Z Updating files:  80% (429/536)
+2026-11-18T16:27:35.0189825Z Updating files:  81% (435/536)
+2026-11-18T16:27:35.0195278Z Updating files:  82% (440/536)
+2026-11-18T16:27:35.0201406Z Updating files:  83% (445/536)
+2026-11-18T16:27:35.0209099Z Updating files:  84% (451/536)
+2026-11-18T16:27:35.0218327Z Updating files:  85% (456/536)
+2026-11-18T16:27:35.0230550Z Updating files:  86% (461/536)
+2026-11-18T16:27:35.0234488Z Updating files:  87% (467/536)
+2026-11-18T16:27:35.0238264Z Updating files:  88% (472/536)
+2026-11-18T16:27:35.0241846Z Updating files:  89% (478/536)
+2026-11-18T16:27:35.0244515Z Updating files:  90% (483/536)
+2026-11-18T16:27:35.0249179Z Updating files:  91% (488/536)
+2026-11-18T16:27:35.0252407Z Updating files:  92% (494/536)
+2026-11-18T16:27:35.0255779Z Updating files:  93% (499/536)
+2026-11-18T16:27:35.0259405Z Updating files:  94% (504/536)
+2026-11-18T16:27:35.0269342Z Updating files:  95% (510/536)
+2026-11-18T16:27:35.0273265Z Updating files:  96% (515/536)
+2026-11-18T16:27:35.0279786Z Updating files:  97% (520/536)
+2026-11-18T16:27:35.0284346Z Updating files:  98% (526/536)
+2026-11-18T16:27:35.0291754Z Updating files:  99% (531/536)
+2026-11-18T16:27:35.0292497Z Updating files: 100% (536/536)
+2026-11-18T16:27:35.0292995Z Updating files: 100% (536/536), done.
+2026-11-18T16:27:35.0315627Z Switched to a new branch 'practica-pruebas'
+2026-11-18T16:27:35.0321455Z branch 'practica-pruebas' set up to track 'origin/practica-pruebas'.
+2026-11-18T16:27:35.0404715Z ##[endgroup]
+2026-11-18T16:27:35.0455139Z [command]/usr/bin/git log -1 --format=%H
+2026-11-18T16:27:35.0481299Z 999306d36a3b566b1017a68c4ab63041174d6d29
+2026-11-18T16:27:35.0822150Z ##[group]Run actions/setup-java@v4
+2026-11-18T16:27:35.0822466Z with:
+2026-11-18T16:27:35.0822682Z   distribution: temurin
+2026-11-18T16:27:35.0822915Z   java-version: 21
+2026-11-18T16:27:35.0823133Z   cache: maven
+2026-11-18T16:27:35.0823539Z   java-package: jdk
+2026-11-18T16:27:35.0823760Z   check-latest: false
+2026-11-18T16:27:35.0823985Z   server-id: github
+2026-11-18T16:27:35.0824206Z   server-username: GITHUB_ACTOR
+2026-11-18T16:27:35.0824467Z   server-password: GITHUB_TOKEN
+2026-11-18T16:27:35.0824727Z   overwrite-settings: true
+2026-11-18T16:27:35.0824968Z   job-status: success
+2026-11-18T16:27:35.0827432Z   token: ***
+2026-11-18T16:27:35.0827643Z env:
+2026-11-18T16:27:35.0827834Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:35.0828057Z ##[endgroup]
+2026-11-18T16:27:35.2576625Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-11-18T16:27:35.2589832Z ##[group]Installed distributions
+2026-11-18T16:27:35.2697413Z Resolved Java 21.0.13+9 from tool-cache
+2026-11-18T16:27:35.2697980Z Setting Java 21.0.13+9 as the default
+2026-11-18T16:27:35.2708174Z (node:2383) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T16:27:35.2709136Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T16:27:35.2711559Z Creating toolchains.xml for JDK version 21 from temurin
+2026-11-18T16:27:35.2787675Z Writing to /home/runner/.m2/toolchains.xml
+2026-11-18T16:27:35.2788358Z 
+2026-11-18T16:27:35.2788610Z Java configuration:
+2026-11-18T16:27:35.2789071Z   Distribution: temurin
+2026-11-18T16:27:35.2789509Z   Version: 21.0.13+9
+2026-11-18T16:27:35.2790109Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:27:35.2790643Z 
+2026-11-18T16:27:35.2791206Z ##[endgroup]
+2026-11-18T16:27:35.2809530Z Creating settings.xml with server-id: github
+2026-11-18T16:27:35.2847127Z Writing to /home/runner/.m2/settings.xml
+2026-11-18T16:27:35.7054636Z Cache hit for: setup-java-Linux-x64-maven-716faa0275000aff9f6e3a4030be4b02263774503311da8a4e326c1d851d8e59
+2026-11-18T16:27:35.7172374Z (node:2383) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T16:27:36.9934544Z Received 4194304 of 111221852 (3.8%), 4.0 MBs/sec
+2026-11-18T16:27:37.8957545Z Received 111221852 of 111221852 (100.0%), 55.7 MBs/sec
+2026-11-18T16:27:37.8958057Z Cache Size: ~106 MB (111221852 B)
+2026-11-18T16:27:37.9015310Z [command]/usr/bin/tar -xf /home/runner/work/_temp/3df9ca54-2a17-4878-b87f-c8c24581293d/cache.tzst -P -C /home/runner/work/Luxray_dep/Luxray_dep --use-compress-program unzstd
+2026-11-18T16:27:38.2120194Z Cache restored successfully
+2026-11-18T16:27:38.2173906Z Cache restored from key: setup-java-Linux-x64-maven-716faa0275000aff9f6e3a4030be4b02263774503311da8a4e326c1d851d8e59
+2026-11-18T16:27:38.2471403Z ##[group]Run echo "JAVA_HOME=$JAVA_HOME"
+2026-11-18T16:27:38.2471807Z [36;1mecho "JAVA_HOME=$JAVA_HOME"[0m
+2026-11-18T16:27:38.2472140Z [36;1mjava -version[0m
+2026-11-18T16:27:38.2472378Z [36;1m./mvnw -v[0m
+2026-11-18T16:27:38.2531070Z shell: /usr/bin/bash -e {0}
+2026-11-18T16:27:38.2531367Z env:
+2026-11-18T16:27:38.2531588Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:38.2531964Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:27:38.2532530Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:27:38.2532956Z ##[endgroup]
+2026-11-18T16:27:38.2632208Z JAVA_HOME=/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:27:39.8682813Z openjdk version "21.0.13" 2026-10-20 LTS
+2026-11-18T16:27:39.8683566Z OpenJDK Runtime Environment Temurin-21.0.13+9 (build 21.0.13+9-LTS)
+2026-11-18T16:27:39.8684508Z OpenJDK 64-Bit Server VM Temurin-21.0.13+9 (build 21.0.13+9-LTS, mixed mode, sharing)
+2026-11-18T16:27:40.9154339Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+2026-11-18T16:27:40.9156149Z Maven home: /home/runner/.m2/wrapper/dists/apache-maven-3.9.16/56ba1f9f
+2026-11-18T16:27:40.9158091Z Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-21-jdk-amd64
+2026-11-18T16:27:40.9180263Z Default locale: en, platform encoding: UTF-8
+2026-11-18T16:27:40.9181324Z OS name: "linux", version: "7.0.0-1019-azure", arch: "amd64", family: "unix"
+2026-11-18T16:27:40.9739405Z ##[group]Run set -o pipefail
+2026-11-18T16:27:40.9739738Z [36;1mset -o pipefail[0m
+2026-11-18T16:27:40.9740019Z [36;1m./mvnw -B test 2>&1 | tee ../mvn.log[0m
+2026-11-18T16:27:40.9790021Z shell: /usr/bin/bash -e {0}
+2026-11-18T16:27:40.9790277Z env:
+2026-11-18T16:27:40.9790475Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:27:40.9790842Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:27:40.9791346Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:27:40.9791745Z ##[endgroup]
+2026-11-18T16:27:42.7111895Z [INFO] Scanning for projects...
+2026-11-18T16:27:43.0631600Z [INFO] ------------------------------------------------------------------------
+2026-11-18T16:27:43.0632702Z [INFO] Reactor Build Order:
+2026-11-18T16:27:43.0633270Z [INFO] 
+2026-11-18T16:27:43.0641810Z [INFO] LuxRay Backend (Parent)                                            [pom]
+2026-11-18T16:27:43.0658086Z [INFO] LuxRay :: Common Library                                           [jar]
+2026-11-18T16:27:43.0659170Z [INFO] LuxRay :: Discovery Service (Eureka)                               [jar]
+2026-11-18T16:27:43.0660186Z [INFO] LuxRay :: API Gateway                                              [jar]
+2026-11-18T16:27:43.0669637Z [INFO] LuxRay :: Auth Service                                             [jar]
+2026-11-18T16:27:43.0670943Z [INFO] LuxRay :: Cursos Service                                           [jar]
+2026-11-18T16:27:43.0672170Z [INFO] LuxRay :: Analytics Service                                        [jar]
+2026-11-18T16:27:43.0673216Z [INFO] LuxRay :: Search Service                                           [jar]
+2026-11-18T16:27:43.0888957Z [INFO] 
+2026-11-18T16:27:43.0893817Z [INFO] ---------------------< com.luxray:luxray-backend >----------------------
+2026-11-18T16:27:43.0894968Z [INFO] Building LuxRay Backend (Parent) 1.0.0-SNAPSHOT                    [1/8]
+2026-11-18T16:27:43.0895877Z [INFO]   from pom.xml
+2026-11-18T16:27:43.0896623Z [INFO] --------------------------------[ pom ]---------------------------------
+2026-11-18T16:27:43.0903168Z [INFO] 
+2026-11-18T16:27:43.0903909Z [INFO] -----------------------< com.luxray:common-lib >------------------------
+2026-11-18T16:27:43.0905008Z [INFO] Building LuxRay :: Common Library 1.0.0-SNAPSHOT                   [2/8]
+2026-11-18T16:27:43.0905894Z [INFO]   from common-lib/pom.xml
+2026-11-18T16:27:43.0926322Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T16:27:43.4700195Z [INFO] 
+2026-11-18T16:27:43.4702539Z [INFO] --- resources:3.3.1:resources (default-resources) @ common-lib ---
+2026-11-18T16:27:43.6687708Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/common-lib/src/main/resources
+2026-11-18T16:27:43.6688791Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/common-lib/src/main/resources
+2026-11-18T16:27:43.6695444Z [INFO] 
+2026-11-18T16:27:43.6696445Z [INFO] --- compiler:3.13.0:compile (default-compile) @ common-lib ---
+2026-11-18T16:27:43.9673182Z [INFO] Recompiling the module because of added or removed source files.
+2026-11-18T16:27:43.9862042Z [INFO] Compiling 8 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T16:27:46.4787955Z [INFO] 
+2026-11-18T16:27:46.4817664Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ common-lib ---
+2026-11-18T16:27:46.4869181Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/common-lib/src/test/resources
+2026-11-18T16:27:46.4884528Z [INFO] 
+2026-11-18T16:27:46.4895637Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ common-lib ---
+2026-11-18T16:27:46.4907744Z [INFO] No sources to compile
+2026-11-18T16:27:46.4909051Z [INFO] 
+2026-11-18T16:27:46.4909807Z [INFO] --- surefire:3.5.2:test (default-test) @ common-lib ---
+2026-11-18T16:27:46.6251176Z [INFO] No tests to run.
+2026-11-18T16:27:46.6636598Z [INFO] 
+2026-11-18T16:27:46.6643933Z [INFO] --------------------< com.luxray:discovery-service >--------------------
+2026-11-18T16:27:46.6645146Z [INFO] Building LuxRay :: Discovery Service (Eureka) 1.0.0-SNAPSHOT       [3/8]
+2026-11-18T16:27:46.6646072Z [INFO]   from discovery-service/pom.xml
+2026-11-18T16:27:46.6647001Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T16:27:46.9117734Z [INFO] 
+2026-11-18T16:27:46.9125217Z [INFO] --- resources:3.3.1:resources (default-resources) @ discovery-service ---
+2026-11-18T16:27:46.9136620Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T16:27:46.9328008Z [INFO] Copying 0 resource from src/main/resources to target/classes
+2026-11-18T16:27:46.9329469Z [INFO] 
+2026-11-18T16:27:46.9357623Z [INFO] --- compiler:3.13.0:compile (default-compile) @ discovery-service ---
+2026-11-18T16:27:46.9457936Z [INFO] Recompiling the module because of added or removed source files.
+2026-11-18T16:27:46.9467582Z [INFO] Compiling 1 source file with javac [debug parameters release 21] to target/classes
+2026-11-18T16:27:47.3151966Z [INFO] 
+2026-11-18T16:27:47.3197777Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery-service ---
+2026-11-18T16:27:47.3217955Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/discovery-service/src/test/resources
+2026-11-18T16:27:47.3247396Z [INFO] 
+2026-11-18T16:27:47.3248378Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ discovery-service ---
+2026-11-18T16:27:47.3277645Z [INFO] No sources to compile
+2026-11-18T16:27:47.3307276Z [INFO] 
+2026-11-18T16:27:47.3308031Z [INFO] --- surefire:3.5.2:test (default-test) @ discovery-service ---
+2026-11-18T16:27:47.3337246Z [INFO] No tests to run.
+2026-11-18T16:27:47.3367285Z [INFO] 
+2026-11-18T16:27:47.3397417Z [INFO] -----------------------< com.luxray:api-gateway >-----------------------
+2026-11-18T16:27:47.3398546Z [INFO] Building LuxRay :: API Gateway 1.0.0-SNAPSHOT                      [4/8]
+2026-11-18T16:27:47.3427307Z [INFO]   from api-gateway/pom.xml
+2026-11-18T16:27:47.3457408Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T16:27:47.4339778Z [INFO] 
+2026-11-18T16:27:47.4357874Z [INFO] --- resources:3.3.1:resources (default-resources) @ api-gateway ---
+2026-11-18T16:27:47.4386818Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T16:27:47.4527853Z [INFO] Copying 0 resource from src/main/resources to target/classes
+2026-11-18T16:27:47.4567291Z [INFO] 
+2026-11-18T16:27:47.4577539Z [INFO] --- compiler:3.13.0:compile (default-compile) @ api-gateway ---
+2026-11-18T16:27:47.4617567Z [INFO] Recompiling the module because of added or removed source files.
+2026-11-18T16:27:47.4647680Z [INFO] Compiling 2 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T16:27:47.8658628Z [INFO] 
+2026-11-18T16:27:47.8687677Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ api-gateway ---
+2026-11-18T16:27:47.8717854Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/api-gateway/src/test/resources
+2026-11-18T16:27:47.8747141Z [INFO] 
+2026-11-18T16:27:47.8768534Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ api-gateway ---
+2026-11-18T16:27:47.8787240Z [INFO] No sources to compile
+2026-11-18T16:27:47.8787700Z [INFO] 
+2026-11-18T16:27:47.8788209Z [INFO] --- surefire:3.5.2:test (default-test) @ api-gateway ---
+2026-11-18T16:27:47.8788885Z [INFO] No tests to run.
+2026-11-18T16:27:47.8799673Z [INFO] 
+2026-11-18T16:27:47.8800456Z [INFO] ----------------------< com.luxray:auth-service >-----------------------
+2026-11-18T16:27:47.8801649Z [INFO] Building LuxRay :: Auth Service 1.0.0-SNAPSHOT                     [5/8]
+2026-11-18T16:27:47.8803088Z [INFO]   from auth-service/pom.xml
+2026-11-18T16:27:47.8803941Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T16:27:47.9698179Z [INFO] 
+2026-11-18T16:27:47.9718089Z [INFO] --- resources:3.3.1:resources (default-resources) @ auth-service ---
+2026-11-18T16:27:47.9729448Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T16:27:47.9850984Z [INFO] Copying 4 resources from src/main/resources to target/classes
+2026-11-18T16:27:47.9877382Z [INFO] 
+2026-11-18T16:27:47.9887498Z [INFO] --- compiler:3.13.0:compile (default-compile) @ auth-service ---
+2026-11-18T16:27:47.9952677Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T16:27:47.9963070Z [INFO] Compiling 12 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T16:27:48.6788524Z [INFO] 
+2026-11-18T16:27:48.6789870Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ auth-service ---
+2026-11-18T16:27:48.6823712Z [INFO] Copying 1 resource from src/test/resources to target/test-classes
+2026-11-18T16:27:48.6834009Z [INFO] 
+2026-11-18T16:27:48.6839482Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ auth-service ---
+2026-11-18T16:27:48.6897722Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T16:27:48.6898932Z [INFO] Compiling 3 source files with javac [debug parameters release 21] to target/test-classes
+2026-11-18T16:27:49.1811390Z [INFO] 
+2026-11-18T16:27:49.1812416Z [INFO] --- surefire:3.5.2:test (default-test) @ auth-service ---
+2026-11-18T16:27:49.1927941Z [INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+2026-11-18T16:27:49.2352154Z [INFO] 
+2026-11-18T16:27:49.2357791Z [INFO] -------------------------------------------------------
+2026-11-18T16:27:49.2358734Z [INFO]  T E S T S
+2026-11-18T16:27:49.2359422Z [INFO] -------------------------------------------------------
+2026-11-18T16:27:50.0760234Z [INFO] Running com.luxray.auth.service.AuthServiceTest
+2026-11-18T16:27:50.2063397Z Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+2026-11-18T16:27:50.5592816Z OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-18T16:27:50.6002742Z WARNING: A Java agent has been loaded dynamically (/home/runner/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+2026-11-18T16:27:50.6005138Z WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+2026-11-18T16:27:50.6007305Z WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+2026-11-18T16:27:50.6009153Z WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-11-18T16:27:52.7789025Z [INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.622 s -- in com.luxray.auth.service.AuthServiceTest
+2026-11-18T16:27:52.7807743Z [INFO] Running com.luxray.auth.controller.AuthControllerIntegrationTest
+2026-11-18T16:27:52.9207427Z 16:27:52.829 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.luxray.auth.controller.AuthControllerIntegrationTest]: AuthControllerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T16:27:53.1222114Z 16:27:53.090 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.luxray.auth.AuthServiceApplication for test class com.luxray.auth.controller.AuthControllerIntegrationTest
+2026-11-18T16:27:54.0257439Z 
+2026-11-18T16:27:54.0258287Z   .   ____          _            __ _ _
+2026-11-18T16:27:54.0258827Z  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+2026-11-18T16:27:54.0259278Z ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+2026-11-18T16:27:54.0259984Z  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+2026-11-18T16:27:54.0260452Z   '  |____| .__|_| |_|_| |_\__, | / / / /
+2026-11-18T16:27:54.0260906Z  =========|_|==============|___/=/_/_/_/
+2026-11-18T16:27:54.0261206Z 
+2026-11-18T16:27:54.0270715Z  :: Spring Boot ::                (v3.4.1)
+2026-11-18T16:27:54.0271264Z 
+2026-11-18T16:27:54.1389499Z 2026-11-18T16:27:54.035Z  INFO 2789 --- [auth-service] [           main] c.l.a.c.AuthControllerIntegrationTest    : Starting AuthControllerIntegrationTest using Java 21.0.13 with PID 2789 (started by runner in /home/runner/work/Luxray_dep/Luxray_dep/backend/auth-service)
+2026-11-18T16:27:54.1399700Z 2026-11-18T16:27:54.036Z  INFO 2789 --- [auth-service] [           main] c.l.a.c.AuthControllerIntegrationTest    : The following 1 profile is active: "test"
+2026-11-18T16:27:55.2444512Z 2026-11-18T16:27:55.156Z  INFO 2789 --- [auth-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-18T16:27:55.3452086Z 2026-11-18T16:27:55.274Z  INFO 2789 --- [auth-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2026-11-18T16:27:55.5450184Z 2026-11-18T16:27:55.506Z  INFO 2789 --- [auth-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4f0df6f9-7d45-32f6-b66d-298bb7b0f6f5
+2026-11-18T16:27:56.1469407Z 2026-11-18T16:27:56.090Z  INFO 2789 --- [auth-service] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-18T16:27:56.1472641Z 2026-11-18T16:27:56.139Z  INFO 2789 --- [auth-service] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2026-11-18T16:27:56.2468166Z 2026-11-18T16:27:56.170Z  INFO 2789 --- [auth-service] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-18T16:27:56.3468284Z 2026-11-18T16:27:56.299Z  INFO 2789 --- [auth-service] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-18T16:27:56.3470370Z 2026-11-18T16:27:56.326Z  INFO 2789 --- [auth-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T16:27:56.5516850Z 2026-11-18T16:27:56.509Z  INFO 2789 --- [auth-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:auth_test_db user=SA
+2026-11-18T16:27:56.5532204Z 2026-11-18T16:27:56.511Z  INFO 2789 --- [auth-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T16:27:56.5535728Z 2026-11-18T16:27:56.528Z  WARN 2789 --- [auth-service] [           main] org.hibernate.dialect.Dialect            : HHH000511: The 2.3.232 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2026-11-18T16:27:56.5541193Z 2026-11-18T16:27:56.533Z  WARN 2789 --- [auth-service] [           main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-18T16:27:56.6498635Z 2026-11-18T16:27:56.549Z  INFO 2789 --- [auth-service] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-11-18T16:27:56.6507948Z 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+2026-11-18T16:27:56.6508998Z 	Database driver: undefined/unknown
+2026-11-18T16:27:56.6510168Z 	Database version: 2.3.232
+2026-11-18T16:27:56.6510860Z 	Autocommit mode: undefined/unknown
+2026-11-18T16:27:56.6511525Z 	Isolation level: undefined/unknown
+2026-11-18T16:27:56.6512186Z 	Minimum pool size: undefined/unknown
+2026-11-18T16:27:56.6513093Z 	Maximum pool size: undefined/unknown
+2026-11-18T16:27:57.2542111Z 2026-11-18T16:27:57.085Z  INFO 2789 --- [auth-service] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-18T16:27:57.2545761Z 2026-11-18T16:27:57.100Z  WARN 2789 --- [auth-service] [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "
+2026-11-18T16:27:57.2549868Z     set client_min_messages = WARNING" via JDBC [Syntax error in SQL statement "\000a    set [*]client_min_messages = WARNING"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, DATABASE, COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, SCHEMA, CATALOG, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, TIME, NON_KEYWORDS, DEFAULT_NULL_ORDERING";]
+2026-11-18T16:27:57.2552788Z 
+2026-11-18T16:27:57.2553474Z org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "
+2026-11-18T16:27:57.2556983Z     set client_min_messages = WARNING" via JDBC [Syntax error in SQL statement "\000a    set [*]client_min_messages = WARNING"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, DATABASE, COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, SCHEMA, CATALOG, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, TIME, NON_KEYWORDS, DEFAULT_NULL_ORDERING";]
+2026-11-18T16:27:57.2560959Z 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2563206Z 	at org.hibernate.tool.schema.internal.Helper.applySqlString(Helper.java:233) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2565107Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:213) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2567252Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:186) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2569224Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:156) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2571127Z 	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:116) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2573325Z 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:238) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2575765Z 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2577591Z 	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+2026-11-18T16:27:57.2579185Z 	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2581981Z 	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2584592Z 	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2586838Z 	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2589159Z 	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2591583Z 	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2594376Z 	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2597480Z 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2600284Z 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2602795Z 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2605433Z 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2608298Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2611042Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2613842Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2616472Z 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2619039Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2621352Z 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2623587Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2625595Z 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2628062Z 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2630489Z 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2632731Z 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2634521Z 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2636205Z 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2638593Z 	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2640539Z 	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2642145Z 	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2644262Z 	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1461) ~[spring-boot-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2646202Z 	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2648581Z 	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2650780Z 	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.4.1.jar:3.4.1]
+2026-11-18T16:27:57.2653318Z 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2656184Z 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2658857Z 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2661267Z 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2663908Z 	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2666220Z 	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2668637Z 	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:160) ~[spring-test-6.2.1.jar:6.2.1]
+2026-11-18T16:27:57.2671189Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2673820Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2682929Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$12(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2685044Z 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+2026-11-18T16:27:57.2686360Z 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+2026-11-18T16:27:57.2687909Z 	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+2026-11-18T16:27:57.2689252Z 	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+2026-11-18T16:27:57.2690681Z 	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+2026-11-18T16:27:57.2692155Z 	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+2026-11-18T16:27:57.2693499Z 	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+2026-11-18T16:27:57.2694997Z 	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+2026-11-18T16:27:57.2696504Z 	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+2026-11-18T16:27:57.2698088Z 	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+2026-11-18T16:27:57.2700626Z 	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[na:na]
+2026-11-18T16:27:57.2703296Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2710777Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$7(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2713402Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2715887Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2718711Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2720519Z 	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+2026-11-18T16:27:57.2722289Z 	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$6(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2724801Z 	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2727261Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$1(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2729555Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2731785Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:104) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2734112Z 	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:68) ~[junit-jupiter-engine-5.11.4.jar:5.11.4]
+2026-11-18T16:27:57.2736287Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2738595Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2740717Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:128) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2742721Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2744327Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-11-18T16:27:57.2746360Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2749233Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2753935Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2756136Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2758320Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2760324Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2762918Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2765337Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2767677Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2769249Z 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+2026-11-18T16:27:57.2771332Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2774044Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2776322Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2778774Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2780832Z 	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2782859Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2785134Z 	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2787509Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2789679Z 	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2792223Z 	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2794972Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2797546Z 	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2799894Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2802198Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2804487Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2806955Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2809556Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2811979Z 	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2814032Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2816377Z 	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2818592Z 	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.11.4.jar:1.11.4]
+2026-11-18T16:27:57.2820786Z 	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2822754Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2824966Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2827323Z 	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2829342Z 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2831075Z 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2832679Z 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2834322Z 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.5.2.jar:3.5.2]
+2026-11-18T16:27:57.2838050Z Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000a    set [*]client_min_messages = WARNING"; expected "@, AUTOCOMMIT, EXCLUSIVE, IGNORECASE, PASSWORD, SALT, MODE, DATABASE, COLLATION, CLUSTER, DATABASE_EVENT_LISTENER, ALLOW_LITERALS, DEFAULT_TABLE_TYPE, SCHEMA, CATALOG, SCHEMA_SEARCH_PATH, JAVA_OBJECT_SERIALIZER, IGNORE_CATALOGS, SESSION, TRANSACTION, TIME, NON_KEYWORDS, DEFAULT_NULL_ORDERING"; SQL statement:
+2026-11-18T16:27:57.2841300Z 
+2026-11-18T16:27:57.2841668Z     set client_min_messages = WARNING [42001-232]
+2026-11-18T16:27:57.2842706Z 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2844061Z 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2845362Z 	at org.h2.message.DbException.getSyntaxError(DbException.java:261) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2846613Z 	at org.h2.command.ParserBase.getSyntaxError(ParserBase.java:762) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2847925Z 	at org.h2.command.Parser.parseSet(Parser.java:7592) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2849000Z 	at org.h2.command.Parser.parsePrepared(Parser.java:614) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2850054Z 	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2851046Z 	at org.h2.command.Parser.parse(Parser.java:561) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2852088Z 	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2853290Z 	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2854542Z 	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2855823Z 	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2857271Z 	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2858497Z 	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
+2026-11-18T16:27:57.2859754Z 	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+2026-11-18T16:27:57.2861446Z 	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+2026-11-18T16:27:57.2863528Z 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+2026-11-18T16:27:57.2865001Z 	... 116 common frames omitted
+2026-11-18T16:27:57.2865422Z 
+2026-11-18T16:27:57.2866563Z 2026-11-18T16:27:57.118Z  INFO 2789 --- [auth-service] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-18T16:27:57.8538280Z 2026-11-18T16:27:57.798Z  WARN 2789 --- [auth-service] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+2026-11-18T16:27:57.8539095Z 
+2026-11-18T16:27:57.8539483Z Using generated security password: 8c629938-f633-46c0-aad5-391d003de74a
+2026-11-18T16:27:57.8540029Z 
+2026-11-18T16:27:57.8540875Z This generated password is for development use only. Your security configuration must be updated before running your application in production.
+2026-11-18T16:27:57.8541926Z 
+2026-11-18T16:27:57.8543258Z 2026-11-18T16:27:57.802Z  INFO 2789 --- [auth-service] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-11-18T16:27:58.4568553Z 2026-11-18T16:27:58.415Z  INFO 2789 --- [auth-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-11-18T16:27:59.4566560Z 2026-11-18T16:27:59.424Z  INFO 2789 --- [auth-service] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-18T16:27:59.4568794Z 2026-11-18T16:27:59.424Z  INFO 2789 --- [auth-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-18T16:27:59.4570650Z 2026-11-18T16:27:59.426Z  INFO 2789 --- [auth-service] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-11-18T16:27:59.5570524Z 2026-11-18T16:27:59.468Z  INFO 2789 --- [auth-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T16:27:59.5580755Z 2026-11-18T16:27:59.528Z  WARN 2789 --- [auth-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T16:27:59.6573115Z 2026-11-18T16:27:59.622Z  INFO 2789 --- [auth-service] [           main] c.l.a.c.AuthControllerIntegrationTest    : Started AuthControllerIntegrationTest in 6.081 seconds (process running for 10.249)
+2026-11-18T16:28:01.2488450Z [INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.479 s -- in com.luxray.auth.controller.AuthControllerIntegrationTest
+2026-11-18T16:28:01.2547553Z [INFO] Running com.luxray.auth.controller.RegistroIntegracionTest
+2026-11-18T16:28:01.2579313Z 2026-11-18T16:28:01.186Z  INFO 2789 --- [auth-service] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.luxray.auth.controller.RegistroIntegracionTest]: RegistroIntegracionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-18T16:28:01.2608730Z 2026-11-18T16:28:01.189Z  INFO 2789 --- [auth-service] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.luxray.auth.AuthServiceApplication for test class com.luxray.auth.controller.RegistroIntegracionTest
+2026-11-18T16:28:02.5739504Z 2026-11-18T16:28:02.567Z  WARN 2789 --- [auth-service] [           main] c.l.c.exception.GlobalExceptionHandler   : Solicitud malformada en /auth/registro: JSON parse error: Unexpected character ('e' (code 101)): was expecting double-quote to start field name
+2026-11-18T16:28:02.9072068Z [WARNING] Tests run: 7, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 1.708 s -- in com.luxray.auth.controller.RegistroIntegracionTest
+2026-11-18T16:28:02.9731789Z [INFO] 
+2026-11-18T16:28:02.9732196Z [INFO] Results:
+2026-11-18T16:28:02.9732564Z [INFO] 
+2026-11-18T16:28:02.9733062Z [WARNING] Tests run: 17, Failures: 0, Errors: 0, Skipped: 3
+2026-11-18T16:28:02.9733652Z [INFO] 
+2026-11-18T16:28:02.9760304Z [INFO] 
+2026-11-18T16:28:02.9760928Z [INFO] ---------------------< com.luxray:cursos-service >----------------------
+2026-11-18T16:28:02.9761956Z [INFO] Building LuxRay :: Cursos Service 1.0.0-SNAPSHOT                   [6/8]
+2026-11-18T16:28:02.9763318Z [INFO]   from cursos-service/pom.xml
+2026-11-18T16:28:02.9764190Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T16:28:03.0080740Z [INFO] 
+2026-11-18T16:28:03.0108162Z [INFO] --- resources:3.3.1:resources (default-resources) @ cursos-service ---
+2026-11-18T16:28:03.0118317Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T16:28:03.0141542Z [INFO] Copying 10 resources from src/main/resources to target/classes
+2026-11-18T16:28:03.0147576Z [INFO] 
+2026-11-18T16:28:03.0148321Z [INFO] --- compiler:3.13.0:compile (default-compile) @ cursos-service ---
+2026-11-18T16:28:03.0237514Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T16:28:03.0238756Z [INFO] Compiling 19 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T16:28:03.8778160Z [INFO] 
+2026-11-18T16:28:03.8793491Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ cursos-service ---
+2026-11-18T16:28:03.8808303Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/cursos-service/src/test/resources
+2026-11-18T16:28:03.8809531Z [INFO] 
+2026-11-18T16:28:03.8810304Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ cursos-service ---
+2026-11-18T16:28:03.8831851Z [INFO] No sources to compile
+2026-11-18T16:28:03.8857309Z [INFO] 
+2026-11-18T16:28:03.8858574Z [INFO] --- surefire:3.5.2:test (default-test) @ cursos-service ---
+2026-11-18T16:28:03.8863374Z [INFO] No tests to run.
+2026-11-18T16:28:03.8871603Z [INFO] 
+2026-11-18T16:28:03.8887865Z [INFO] --------------------< com.luxray:analytics-service >--------------------
+2026-11-18T16:28:03.8917857Z [INFO] Building LuxRay :: Analytics Service 1.0.0-SNAPSHOT                [7/8]
+2026-11-18T16:28:03.8949107Z [INFO]   from analytics-service/pom.xml
+2026-11-18T16:28:03.8968397Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T16:28:03.9169239Z [INFO] 
+2026-11-18T16:28:03.9173464Z [INFO] --- resources:3.3.1:resources (default-resources) @ analytics-service ---
+2026-11-18T16:28:03.9190134Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T16:28:03.9317803Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T16:28:03.9319009Z [INFO] 
+2026-11-18T16:28:03.9319752Z [INFO] --- compiler:3.13.0:compile (default-compile) @ analytics-service ---
+2026-11-18T16:28:03.9419390Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T16:28:03.9443027Z [INFO] Compiling 14 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T16:28:04.7081274Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java: /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java uses or overrides a deprecated API.
+2026-11-18T16:28:04.7084872Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java: Recompile with -Xlint:deprecation for details.
+2026-11-18T16:28:04.7086435Z [INFO] 
+2026-11-18T16:28:04.7087814Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ analytics-service ---
+2026-11-18T16:28:04.7121237Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/analytics-service/src/test/resources
+2026-11-18T16:28:04.7122492Z [INFO] 
+2026-11-18T16:28:04.7123201Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ analytics-service ---
+2026-11-18T16:28:04.7148684Z [INFO] No sources to compile
+2026-11-18T16:28:04.7149810Z [INFO] 
+2026-11-18T16:28:04.7150446Z [INFO] --- surefire:3.5.2:test (default-test) @ analytics-service ---
+2026-11-18T16:28:04.7188210Z [INFO] No tests to run.
+2026-11-18T16:28:04.7189068Z [INFO] 
+2026-11-18T16:28:04.7189813Z [INFO] ---------------------< com.luxray:search-service >----------------------
+2026-11-18T16:28:04.7190954Z [INFO] Building LuxRay :: Search Service 1.0.0-SNAPSHOT                   [8/8]
+2026-11-18T16:28:04.7192034Z [INFO]   from search-service/pom.xml
+2026-11-18T16:28:04.7192861Z [INFO] --------------------------------[ jar ]---------------------------------
+2026-11-18T16:28:05.0904188Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.pom
+2026-11-18T16:28:05.6959077Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.pom (2.6 kB at 4.2 kB/s)
+2026-11-18T16:28:05.7031062Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.pom
+2026-11-18T16:28:05.7289092Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.pom (12 kB at 476 kB/s)
+2026-11-18T16:28:05.7354013Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.pom
+2026-11-18T16:28:05.7633884Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.pom (2.5 kB at 87 kB/s)
+2026-11-18T16:28:05.7662120Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.pom
+2026-11-18T16:28:05.8035006Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.pom (3.4 kB at 90 kB/s)
+2026-11-18T16:28:05.8070728Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.pom
+2026-11-18T16:28:05.8338616Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.pom (5.9 kB at 227 kB/s)
+2026-11-18T16:28:05.8358460Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-asyncclient/4.1.5/httpcomponents-asyncclient-4.1.5.pom
+2026-11-18T16:28:05.8610263Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcomponents-asyncclient/4.1.5/httpcomponents-asyncclient-4.1.5.pom (10 kB at 393 kB/s)
+2026-11-18T16:28:05.8652212Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.pom
+2026-11-18T16:28:05.8849467Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.pom (5.5 kB at 275 kB/s)
+2026-11-18T16:28:05.8878876Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom
+2026-11-18T16:28:05.9108235Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.pom (4.3 kB at 186 kB/s)
+2026-11-18T16:28:05.9136392Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.pom
+2026-11-18T16:28:05.9448102Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.pom (19 kB at 583 kB/s)
+2026-11-18T16:28:05.9465160Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.8/project-1.0.8.pom
+2026-11-18T16:28:05.9817402Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/ee4j/project/1.0.8/project-1.0.8.pom (15 kB at 417 kB/s)
+2026-11-18T16:28:05.9835803Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.pom
+2026-11-18T16:28:06.0082829Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.pom (3.8 kB at 152 kB/s)
+2026-11-18T16:28:06.0094088Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/project/1.0.5/project-1.0.5.pom
+2026-11-18T16:28:06.0409091Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/project/1.0.5/project-1.0.5.pom (22 kB at 696 kB/s)
+2026-11-18T16:28:06.0434662Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.pom
+2026-11-18T16:28:06.0653259Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.pom (1.8 kB at 81 kB/s)
+2026-11-18T16:28:06.0672692Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.pom
+2026-11-18T16:28:06.0958219Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.pom (1.6 kB at 60 kB/s)
+2026-11-18T16:28:06.0970408Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.pom
+2026-11-18T16:28:06.1229698Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.pom (7.2 kB at 276 kB/s)
+2026-11-18T16:28:06.1248760Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix/4.1.0/spring-cloud-netflix-4.1.0.pom
+2026-11-18T16:28:06.1534956Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-netflix/4.1.0/spring-cloud-netflix-4.1.0.pom (4.6 kB at 158 kB/s)
+2026-11-18T16:28:06.1548370Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.0/spring-cloud-build-4.1.0.pom
+2026-11-18T16:28:06.1868609Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build/4.1.0/spring-cloud-build-4.1.0.pom (50 kB at 1.6 MB/s)
+2026-11-18T16:28:06.1918431Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.0/spring-cloud-build-dependencies-4.1.0.pom
+2026-11-18T16:28:06.2149173Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-build-dependencies/4.1.0/spring-cloud-build-dependencies-4.1.0.pom (3.2 kB at 128 kB/s)
+2026-11-18T16:28:06.2167926Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.2.0/spring-boot-dependencies-3.2.0.pom
+2026-11-18T16:28:06.2598524Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-dependencies/3.2.0/spring-boot-dependencies-3.2.0.pom (111 kB at 2.6 MB/s)
+2026-11-18T16:28:06.2629176Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-bom/3.24.2/assertj-bom-3.24.2.pom
+2026-11-18T16:28:06.2879907Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/assertj/assertj-bom/3.24.2/assertj-bom-3.24.2.pom (3.7 kB at 146 kB/s)
+2026-11-18T16:28:06.2897347Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/5.16.0/brave-bom-5.16.0.pom
+2026-11-18T16:28:06.3174157Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/brave/brave-bom/5.16.0/brave-bom-5.16.0.pom (12 kB at 434 kB/s)
+2026-11-18T16:28:06.3193540Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/2.16.3/zipkin-reporter-bom-2.16.3.pom
+2026-11-18T16:28:06.3402362Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/zipkin/reporter2/zipkin-reporter-bom/2.16.3/zipkin-reporter-bom-2.16.3.pom (6.9 kB at 344 kB/s)
+2026-11-18T16:28:06.3432431Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/datastax/oss/java-driver-bom/4.17.0/java-driver-bom-4.17.0.pom
+2026-11-18T16:28:06.3768784Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/datastax/oss/java-driver-bom/4.17.0/java-driver-bom-4.17.0.pom (4.1 kB at 122 kB/s)
+2026-11-18T16:28:06.3808520Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-bom/4.2.22/metrics-bom-4.2.22.pom
+2026-11-18T16:28:06.4068231Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-bom/4.2.22/metrics-bom-4.2.22.pom (8.2 kB at 293 kB/s)
+2026-11-18T16:28:06.4088100Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.2.22/metrics-parent-4.2.22.pom
+2026-11-18T16:28:06.4335646Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/dropwizard/metrics/metrics-parent/4.2.22/metrics-parent-4.2.22.pom (21 kB at 797 kB/s)
+2026-11-18T16:28:06.4357786Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/4.0.4/jaxb-bom-4.0.4.pom
+2026-11-18T16:28:06.4624870Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jaxb/jaxb-bom/4.0.4/jaxb-bom-4.0.4.pom (12 kB at 441 kB/s)
+2026-11-18T16:28:06.4645419Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.15/groovy-bom-4.0.15.pom
+2026-11-18T16:28:06.4965571Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/groovy/groovy-bom/4.0.15/groovy-bom-4.0.15.pom (27 kB at 852 kB/s)
+2026-11-18T16:28:06.4983491Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/14.0.21.Final/infinispan-bom-14.0.21.Final.pom
+2026-11-18T16:28:06.5278224Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-bom/14.0.21.Final/infinispan-bom-14.0.21.Final.pom (24 kB at 856 kB/s)
+2026-11-18T16:28:06.5298545Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/14.0.21.Final/infinispan-build-configuration-parent-14.0.21.Final.pom
+2026-11-18T16:28:06.5575658Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/infinispan/infinispan-build-configuration-parent/14.0.21.Final/infinispan-build-configuration-parent-14.0.21.Final.pom (24 kB at 820 kB/s)
+2026-11-18T16:28:06.5593323Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/39/jboss-parent-39.pom
+2026-11-18T16:28:06.5876076Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jboss/jboss-parent/39/jboss-parent-39.pom (68 kB at 2.4 MB/s)
+2026-11-18T16:28:06.5908071Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.15.3/jackson-bom-2.15.3.pom
+2026-11-18T16:28:06.6137102Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-bom/2.15.3/jackson-bom-2.15.3.pom (18 kB at 782 kB/s)
+2026-11-18T16:28:06.6155707Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.15/jackson-parent-2.15.pom
+2026-11-18T16:28:06.6538601Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/jackson/jackson-parent/2.15/jackson-parent-2.15.pom (6.5 kB at 181 kB/s)
+2026-11-18T16:28:06.6567906Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/50/oss-parent-50.pom
+2026-11-18T16:28:06.6796360Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/oss-parent/50/oss-parent-50.pom (24 kB at 945 kB/s)
+2026-11-18T16:28:06.6820701Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/3.1.3/jersey-bom-3.1.3.pom
+2026-11-18T16:28:06.7056130Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/glassfish/jersey/jersey-bom/3.1.3/jersey-bom-3.1.3.pom (19 kB at 803 kB/s)
+2026-11-18T16:28:06.7082400Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/ee10/jetty-ee10-bom/12.0.3/jetty-ee10-bom-12.0.3.pom
+2026-11-18T16:28:06.7378946Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/ee10/jetty-ee10-bom/12.0.3/jetty-ee10-bom-12.0.3.pom (9.2 kB at 308 kB/s)
+2026-11-18T16:28:06.7401109Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/12.0.3/jetty-bom-12.0.3.pom
+2026-11-18T16:28:06.7704391Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/jetty/jetty-bom/12.0.3/jetty-bom-12.0.3.pom (14 kB at 465 kB/s)
+2026-11-18T16:28:06.7723771Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom
+2026-11-18T16:28:06.8045657Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.10.1/junit-bom-5.10.1.pom (5.6 kB at 171 kB/s)
+2026-11-18T16:28:06.8073700Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.9.20/kotlin-bom-1.9.20.pom
+2026-11-18T16:28:06.8315276Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/kotlin-bom/1.9.20/kotlin-bom-1.9.20.pom (9.1 kB at 397 kB/s)
+2026-11-18T16:28:06.8341493Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.7.3/kotlinx-coroutines-bom-1.7.3.pom
+2026-11-18T16:28:06.8622843Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-bom/1.7.3/kotlinx-coroutines-bom-1.7.3.pom (4.3 kB at 153 kB/s)
+2026-11-18T16:28:06.8647622Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.6.1/kotlinx-serialization-bom-1.6.1.pom
+2026-11-18T16:28:06.8939643Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlinx/kotlinx-serialization-bom/1.6.1/kotlinx-serialization-bom-1.6.1.pom (3.8 kB at 139 kB/s)
+2026-11-18T16:28:06.8941936Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.21.1/log4j-bom-2.21.1.pom
+2026-11-18T16:28:06.9132803Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/log4j/log4j-bom/2.21.1/log4j-bom-2.21.1.pom (12 kB at 623 kB/s)
+2026-11-18T16:28:06.9151935Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/10.1.1/logging-parent-10.1.1.pom
+2026-11-18T16:28:06.9475111Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/logging/logging-parent/10.1.1/logging-parent-10.1.1.pom (39 kB at 1.2 MB/s)
+2026-11-18T16:28:06.9511693Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/30/apache-30.pom
+2026-11-18T16:28:06.9718274Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/30/apache-30.pom (23 kB at 1.1 MB/s)
+2026-11-18T16:28:06.9771157Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.0/micrometer-bom-1.12.0.pom
+2026-11-18T16:28:06.9959776Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-bom/1.12.0/micrometer-bom-1.12.0.pom (8.0 kB at 402 kB/s)
+2026-11-18T16:28:06.9976981Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.0/micrometer-tracing-bom-1.2.0.pom
+2026-11-18T16:28:07.0268297Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/micrometer/micrometer-tracing-bom/1.2.0/micrometer-tracing-bom-1.2.0.pom (4.7 kB at 161 kB/s)
+2026-11-18T16:28:07.0294441Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/5.7.0/mockito-bom-5.7.0.pom
+2026-11-18T16:28:07.0611348Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/mockito/mockito-bom/5.7.0/mockito-bom-5.7.0.pom (3.0 kB at 92 kB/s)
+2026-11-18T16:28:07.0626486Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.101.Final/netty-bom-4.1.101.Final.pom
+2026-11-18T16:28:07.0831448Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/netty/netty-bom/4.1.101.Final/netty-bom-4.1.101.Final.pom (13 kB at 664 kB/s)
+2026-11-18T16:28:07.0858154Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.31.0/opentelemetry-bom-1.31.0.pom
+2026-11-18T16:28:07.1078321Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-bom/1.31.0/opentelemetry-bom-1.31.0.pom (7.0 kB at 303 kB/s)
+2026-11-18T16:28:07.1101766Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc-bom/23.3.0.23.09/ojdbc-bom-23.3.0.23.09.pom
+2026-11-18T16:28:07.1450186Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/oracle/database/jdbc/ojdbc-bom/23.3.0.23.09/ojdbc-bom-23.3.0.23.09.pom (7.2 kB at 206 kB/s)
+2026-11-18T16:28:07.1465331Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.0.0/querydsl-bom-5.0.0.pom
+2026-11-18T16:28:07.1713902Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/querydsl/querydsl-bom/5.0.0/querydsl-bom-5.0.0.pom (7.2 kB at 286 kB/s)
+2026-11-18T16:28:07.1728229Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.0/reactor-bom-2023.0.0.pom
+2026-11-18T16:28:07.2008153Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/2023.0.0/reactor-bom-2023.0.0.pom (4.8 kB at 170 kB/s)
+2026-11-18T16:28:07.2027844Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/5.3.2/rest-assured-bom-5.3.2.pom
+2026-11-18T16:28:07.2359562Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/rest-assured/rest-assured-bom/5.3.2/rest-assured-bom-5.3.2.pom (4.3 kB at 142 kB/s)
+2026-11-18T16:28:07.2396208Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-bom/4.14.1/selenium-bom-4.14.1.pom
+2026-11-18T16:28:07.2768338Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-bom/4.14.1/selenium-bom-4.14.1.pom (6.0 kB at 177 kB/s)
+2026-11-18T16:28:07.2771220Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.0/spring-amqp-bom-3.1.0.pom
+2026-11-18T16:28:07.3278738Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/amqp/spring-amqp-bom/3.1.0/spring-amqp-bom-3.1.0.pom (3.4 kB at 69 kB/s)
+2026-11-18T16:28:07.3332628Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.0/spring-batch-bom-5.1.0.pom
+2026-11-18T16:28:07.3678814Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/batch/spring-batch-bom/5.1.0/spring-batch-bom-5.1.0.pom (3.2 kB at 90 kB/s)
+2026-11-18T16:28:07.3704146Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2023.1.0/spring-data-bom-2023.1.0.pom
+2026-11-18T16:28:07.3928639Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-bom/2023.1.0/spring-data-bom-2023.1.0.pom (5.5 kB at 250 kB/s)
+2026-11-18T16:28:07.3951383Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.1/spring-framework-bom-6.1.1.pom
+2026-11-18T16:28:07.4268452Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/spring-framework-bom/6.1.1/spring-framework-bom-6.1.1.pom (5.8 kB at 187 kB/s)
+2026-11-18T16:28:07.4291046Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.2.0/spring-integration-bom-6.2.0.pom
+2026-11-18T16:28:07.4528114Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/integration/spring-integration-bom/6.2.0/spring-integration-bom-6.2.0.pom (10 kB at 436 kB/s)
+2026-11-18T16:28:07.4556628Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.1/spring-restdocs-bom-3.0.1.pom
+2026-11-18T16:28:07.5039529Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/restdocs/spring-restdocs-bom/3.0.1/spring-restdocs-bom-3.0.1.pom (2.6 kB at 54 kB/s)
+2026-11-18T16:28:07.5068222Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.2.0/spring-security-bom-6.2.0.pom
+2026-11-18T16:28:07.5358649Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/security/spring-security-bom/6.2.0/spring-security-bom-6.2.0.pom (5.3 kB at 178 kB/s)
+2026-11-18T16:28:07.5380478Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.2.0/spring-session-bom-3.2.0.pom
+2026-11-18T16:28:07.5698753Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/session/spring-session-bom/3.2.0/spring-session-bom-3.2.0.pom (2.9 kB at 96 kB/s)
+2026-11-18T16:28:07.5720210Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.8/spring-ws-bom-4.0.8.pom
+2026-11-18T16:28:07.6054618Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/ws/spring-ws-bom/4.0.8/spring-ws-bom-4.0.8.pom (3.5 kB at 103 kB/s)
+2026-11-18T16:28:07.6074207Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.19.3/testcontainers-bom-1.19.3.pom
+2026-11-18T16:28:07.6323885Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/testcontainers/testcontainers-bom/1.19.3/testcontainers-bom-1.19.3.pom (9.0 kB at 359 kB/s)
+2026-11-18T16:28:07.6629271Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.jar
+2026-11-18T16:28:07.6920527Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/spring-boot-starter-data-elasticsearch/3.4.1/spring-boot-starter-data-elasticsearch-3.4.1.jar (4.8 kB at 165 kB/s)
+2026-11-18T16:28:07.6949694Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.jar
+2026-11-18T16:28:07.6961148Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/6.4.0/woodstox-core-6.4.0.jar
+2026-11-18T16:28:07.6973440Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.jar
+2026-11-18T16:28:07.6976385Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar
+2026-11-18T16:28:07.6985597Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.jar
+2026-11-18T16:28:07.7857266Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/woodstox/stax2-api/4.2.1/stax2-api-4.2.1.jar (196 kB at 2.3 MB/s)
+2026-11-18T16:28:07.7888093Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.jar
+2026-11-18T16:28:07.8058364Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/data/spring-data-elasticsearch/5.4.1/spring-data-elasticsearch-5.4.1.jar (1.0 MB at 9.1 MB/s)
+2026-11-18T16:28:07.8097857Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.jar
+2026-11-18T16:28:07.8128396Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-starter-netflix-eureka-client/4.1.0/spring-cloud-starter-netflix-eureka-client-4.1.0.jar (2.9 kB at 25 kB/s)
+2026-11-18T16:28:07.8158039Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.jar
+2026-11-18T16:28:07.8258086Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/elasticsearch/client/elasticsearch-rest-client/8.15.5/elasticsearch-rest-client-8.15.5.jar (74 kB at 594 kB/s)
+2026-11-18T16:28:07.8287830Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
+2026-11-18T16:28:07.8418170Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.jar (182 kB at 1.3 MB/s)
+2026-11-18T16:28:07.8437985Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.jar
+2026-11-18T16:28:07.8439817Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/fasterxml/woodstox/woodstox-core/6.4.0/woodstox-core-6.4.0.jar (1.6 MB at 11 MB/s)
+2026-11-18T16:28:07.8441722Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.jar
+2026-11-18T16:28:07.8528120Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar (20 kB at 129 kB/s)
+2026-11-18T16:28:07.8530484Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.jar
+2026-11-18T16:28:07.8678490Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/httpcomponents/httpcore-nio/4.4.16/httpcore-nio-4.4.16.jar (369 kB at 2.2 MB/s)
+2026-11-18T16:28:07.8687933Z [INFO] Downloading from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.jar
+2026-11-18T16:28:07.8690083Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/jakarta/json/jakarta.json-api/2.1.3/jakarta.json-api-2.1.3.jar (49 kB at 284 kB/s)
+2026-11-18T16:28:07.8723113Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/eclipse/parsson/parsson/1.0.5/parsson-1.0.5.jar (119 kB at 679 kB/s)
+2026-11-18T16:28:07.8865508Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-api/1.43.0/opentelemetry-api-1.43.0.jar (158 kB at 835 kB/s)
+2026-11-18T16:28:07.8909558Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/io/opentelemetry/opentelemetry-context/1.43.0/opentelemetry-context-1.43.0.jar (48 kB at 252 kB/s)
+2026-11-18T16:28:08.0642318Z [INFO] Downloaded from central: https://repo.maven.apache.org/maven2/co/elastic/clients/elasticsearch-java/8.15.5/elasticsearch-java-8.15.5.jar (13 MB at 34 MB/s)
+2026-11-18T16:28:08.0737402Z [INFO] 
+2026-11-18T16:28:08.0767644Z [INFO] --- resources:3.3.1:resources (default-resources) @ search-service ---
+2026-11-18T16:28:08.0797477Z [INFO] Copying 1 resource from src/main/resources to target/classes
+2026-11-18T16:28:08.0807782Z [INFO] Copying 4 resources from src/main/resources to target/classes
+2026-11-18T16:28:08.0808473Z [INFO] 
+2026-11-18T16:28:08.0809028Z [INFO] --- compiler:3.13.0:compile (default-compile) @ search-service ---
+2026-11-18T16:28:08.0857451Z [INFO] Recompiling the module because of changed dependency.
+2026-11-18T16:28:08.0887637Z [INFO] Compiling 19 source files with javac [debug parameters release 21] to target/classes
+2026-11-18T16:28:09.6372447Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/main/java/com/luxray/search/service/SearchService.java: /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/main/java/com/luxray/search/service/SearchService.java uses unchecked or unsafe operations.
+2026-11-18T16:28:09.6394596Z [INFO] /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/main/java/com/luxray/search/service/SearchService.java: Recompile with -Xlint:unchecked for details.
+2026-11-18T16:28:09.6396466Z [INFO] 
+2026-11-18T16:28:09.6397581Z [INFO] --- resources:3.3.1:testResources (default-testResources) @ search-service ---
+2026-11-18T16:28:09.6408607Z [INFO] skip non existing resourceDirectory /home/runner/work/Luxray_dep/Luxray_dep/backend/search-service/src/test/resources
+2026-11-18T16:28:09.6422096Z [INFO] 
+2026-11-18T16:28:09.6423035Z [INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ search-service ---
+2026-11-18T16:28:09.6424163Z [INFO] No sources to compile
+2026-11-18T16:28:09.6439195Z [INFO] 
+2026-11-18T16:28:09.6440381Z [INFO] --- surefire:3.5.2:test (default-test) @ search-service ---
+2026-11-18T16:28:09.6451918Z [INFO] No tests to run.
+2026-11-18T16:28:09.6458390Z [INFO] ------------------------------------------------------------------------
+2026-11-18T16:28:09.6459560Z [INFO] Reactor Summary for LuxRay Backend (Parent) 1.0.0-SNAPSHOT:
+2026-11-18T16:28:09.6460509Z [INFO] 
+2026-11-18T16:28:09.6461375Z [INFO] LuxRay Backend (Parent) ............................ SUCCESS [  0.002 s]
+2026-11-18T16:28:09.6462627Z [INFO] LuxRay :: Common Library ........................... SUCCESS [  3.574 s]
+2026-11-18T16:28:09.6463727Z [INFO] LuxRay :: Discovery Service (Eureka) ............... SUCCESS [  0.662 s]
+2026-11-18T16:28:09.6464855Z [INFO] LuxRay :: API Gateway .............................. SUCCESS [  0.549 s]
+2026-11-18T16:28:09.6465923Z [INFO] LuxRay :: Auth Service ............................. SUCCESS [ 15.101 s]
+2026-11-18T16:28:09.6467298Z [INFO] LuxRay :: Cursos Service ........................... SUCCESS [  0.911 s]
+2026-11-18T16:28:09.6477930Z [INFO] LuxRay :: Analytics Service ........................ SUCCESS [  0.831 s]
+2026-11-18T16:28:09.6481011Z [INFO] LuxRay :: Search Service ........................... SUCCESS [  4.927 s]
+2026-11-18T16:28:09.6482080Z [INFO] ------------------------------------------------------------------------
+2026-11-18T16:28:09.6486530Z [INFO] BUILD SUCCESS
+2026-11-18T16:28:09.6487515Z [INFO] ------------------------------------------------------------------------
+2026-11-18T16:28:09.6488349Z [INFO] Total time:  26.966 s
+2026-11-18T16:28:09.6488986Z [INFO] Finished at: 2026-11-18T16:28:09Z
+2026-11-18T16:28:09.6489790Z [INFO] ------------------------------------------------------------------------
+2026-11-18T16:28:09.7336019Z ##[group]Run dorny/test-reporter@v1
+2026-11-18T16:28:09.7336332Z with:
+2026-11-18T16:28:09.7336548Z   name: Backend (microservicios)
+2026-11-18T16:28:09.7337295Z   path: **/target/surefire-reports/*.xml
+2026-11-18T16:28:09.7337585Z   reporter: java-junit
+2026-11-18T16:28:09.7337821Z   fail-on-error: false
+2026-11-18T16:28:09.7340107Z   token: ***
+2026-11-18T16:28:09.7340346Z   path-replace-backslashes: false
+2026-11-18T16:28:09.7340624Z   list-suites: all
+2026-11-18T16:28:09.7340832Z   list-tests: all
+2026-11-18T16:28:09.7341038Z   max-annotations: 10
+2026-11-18T16:28:09.7341257Z   fail-on-empty: true
+2026-11-18T16:28:09.7341474Z   only-summary: false
+2026-11-18T16:28:09.7341691Z   use-actions-summary: true
+2026-11-18T16:28:09.7341929Z   badge-title: tests
+2026-11-18T16:28:09.7342135Z env:
+2026-11-18T16:28:09.7342331Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:28:09.7342669Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:28:09.7343191Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:28:09.7343578Z ##[endgroup]
+2026-11-18T16:28:09.8388513Z Check runs will be created with SHA=999306d36a3b566b1017a68c4ab63041174d6d29
+2026-11-18T16:28:09.8392865Z ##[group]Listing all files tracked by git
+2026-11-18T16:28:09.8449233Z [command]/usr/bin/git ls-files -z
+2026-11-18T16:28:09.8777791Z .dockerignore .github/workflows/ci-luxray.yml .gitignore Dockerfile INFORME-PRUEBAS.md backend/.dockerignore backend/.mvn/wrapper/maven-wrapper.properties backend/Dockerfile backend/README.md backend/analytics-service/Dockerfile backend/analytics-service/pom.xml backend/analytics-service/src/main/java/com/luxray/analytics/AnalyticsServiceApplication.java backend/analytics-service/src/main/java/com/luxray/analytics/config/AnalyticsSecurityConfig.java backend/analytics-service/src/main/java/com/luxray/analytics/config/OpenApiConfig.java backend/analytics-service/src/main/java/com/luxray/analytics/config/WebClientConfig.java backend/analytics-service/src/main/java/com/luxray/analytics/controller/AnalyticsController.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/CursoAdminDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/CursoInscripcionDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/DashboardResponse.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/KpiDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/TopCursoDto.java backend/analytics-service/src/main/java/com/luxray/analytics/dto/UsuarioAdminDto.java backend/analytics-service/src/main/java/com/luxray/analytics/model/AnalyticsSnapshot.java backend/analytics-service/src/main/java/com/luxray/analytics/repository/AnalyticsRepository.java backend/analytics-service/src/main/java/com/luxray/analytics/service/DashboardService.java backend/analytics-service/src/main/resources/application.yml backend/analytics-service/src/main/resources/db/migration/V1__init.sql backend/analytics-service/target/analytics-service-1.0.0-SNAPSHOT.jar backend/analytics-service/target/analytics-service-1.0.0-SNAPSHOT.jar.original backend/analytics-service/target/classes/application.yml backend/analytics-service/target/classes/com/luxray/analytics/AnalyticsServiceApplication.class backend/analytics-service/target/classes/com/luxray/analytics/config/AnalyticsSecurityConfig.class backend/analytics-service/target/classes/com/luxray/analytics/config/OpenApiConfig.class backend/analytics-service/target/classes/com/luxray/analytics/config/WebClientConfig.class backend/analytics-service/target/classes/com/luxray/analytics/controller/AnalyticsController.class backend/analytics-service/target/classes/com/luxray/analytics/dto/CursoAdminDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/CursoInscripcionDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/DashboardResponse$DistNivelesDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/DashboardResponse$InscripcionesDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/DashboardResponse$ProgresoDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/DashboardResponse$TiempoModuloDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/DashboardResponse.class backend/analytics-service/target/classes/com/luxray/analytics/dto/KpiDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/TopCursoDto.class backend/analytics-service/target/classes/com/luxray/analytics/dto/UsuarioAdminDto.class backend/analytics-service/target/classes/com/luxray/analytics/model/AnalyticsSnapshot.class backend/analytics-service/target/classes/com/luxray/analytics/repository/AnalyticsRepository.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$1.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$2.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$3.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$4.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$5.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$6.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$7.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService$8.class backend/analytics-service/target/classes/com/luxray/analytics/service/DashboardService.class backend/analytics-service/target/classes/db/migration/V1__init.sql backend/analytics-service/target/maven-archiver/pom.properties backend/analytics-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst backend/analytics-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst backend/api-gateway/Dockerfile backend/api-gateway/pom.xml backend/api-gateway/src/main/java/com/luxray/gateway/ApiGatewayApplication.java backend/api-gateway/src/main/java/com/luxray/gateway/RequestIdLoggingFilter.java backend/api-gateway/src/main/resources/application.yml backend/api-gateway/target/api-gateway-1.0.0-SNAPSHOT.jar backend/api-gateway/target/api-gateway-1.0.0-SNAPSHOT.jar.original backend/api-gateway/target/classes/application.yml backend/api-gateway/target/classes/com/luxray/gateway/ApiGatewayApplication.class backend/api-gateway/target/classes/com/luxray/gateway/RequestIdLoggingFilter.class backend/api-gateway/target/maven-archiver/pom.properties backend/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst backend/api-gateway/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst backend/auth-service/Dockerfile backend/auth-service/pom.xml backend/auth-service/src/main/java/com/luxray/auth/AuthServiceApplication.java backend/auth-service/src/main/java/com/luxray/auth/config/AuthSecurityConfig.java backend/auth-service/src/main/java/com/luxray/auth/config/OpenApiConfig.java backend/auth-service/src/main/java/com/luxray/auth/controller/AuthController.java backend/auth-service/src/main/java/com/luxray/auth/dto/AuthResponse.java backend/auth-service/src/main/java/com/luxray/auth/dto/LoginRequest.java backend/auth-service/src/main/java/com/luxray/auth/dto/RegisterRequest.java backend/auth-service/src/main/java/com/luxray/auth/dto/UsuarioRequest.java backend/auth-service/src/main/java/com/luxray/auth/dto/UsuarioResponse.java backend/auth-service/src/main/java/com/luxray/auth/model/Usuario.java backend/auth-service/src/main/java/com/luxray/auth/repository/UsuarioRepository.java backend/auth-service/src/main/java/com/luxray/auth/service/AuthService.java backend/auth-service/src/main/resources/application.yml backend/auth-service/src/main/resources/db/migration/V1__init.sql backend/auth-service/src/main/resources/db/migration/V2__add_rol_column.sql backend/auth-service/src/main/resources/db/migration/V3__seed_admin_and_fix_user.sql backend/auth-service/src/main/resources/db/migration/V4__add_activo_column.sql backend/auth-service/src/test/java/com/luxray/auth/controller/AuthControllerIntegrationTest.java backend/auth-service/src/test/java/com/luxray/auth/controller/RegistroIntegracionTest.java backend/auth-service/src/test/java/com/luxray/auth/service/AuthServiceTest.java backend/auth-service/src/test/resources/application-test.properties backend/auth-service/target/auth-service-1.0.0-SNAPSHOT.jar backend/auth-service/target/auth-service-1.0.0-SNAPSHOT.jar.original backend/auth-service/target/classes/application.yml backend/auth-service/target/classes/com/luxray/auth/AuthServiceApplication.class backend/auth-service/target/classes/com/luxray/auth/config/AuthSecurityConfig.class backend/auth-service/target/classes/com/luxray/auth/config/OpenApiConfig.class backend/auth-service/target/classes/com/luxray/auth/controller/AuthController.class backend/auth-service/target/classes/com/luxray/auth/dto/AuthResponse.class backend/auth-service/target/classes/com/luxray/auth/dto/LoginRequest.class backend/auth-service/target/classes/com/luxray/auth/dto/RegisterRequest.class backend/auth-service/target/classes/com/luxray/auth/dto/UsuarioRequest.class backend/auth-service/target/classes/com/luxray/auth/dto/UsuarioResponse.class backend/auth-service/target/classes/com/luxray/auth/model/Usuario.class backend/auth-service/target/classes/com/luxray/auth/repository/UsuarioRepository.class backend/auth-service/target/classes/com/luxray/auth/service/AuthService.class backend/auth-service/target/classes/db/migration/V1__init.sql backend/auth-service/target/classes/db/migration/V2__add_rol_column.sql backend/auth-service/target/classes/db/migration/V3__seed_admin_and_fix_user.sql backend/auth-service/target/classes/db/migration/V4__add_activo_column.sql backend/auth-service/target/maven-archiver/pom.properties backend/auth-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst backend/auth-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst backend/common-lib/pom.xml backend/common-lib/src/main/java/com/luxray/common/dto/ApiError.java backend/common-lib/src/main/java/com/luxray/common/dto/ApiResponse.java backend/common-lib/src/main/java/com/luxray/common/exception/BusinessException.java backend/common-lib/src/main/java/com/luxray/common/exception/GlobalExceptionHandler.java backend/common-lib/src/main/java/com/luxray/common/exception/ResourceNotFoundException.java backend/common-lib/src/main/java/com/luxray/common/jwt/JwtTokenProvider.java backend/common-lib/src/main/java/com/luxray/common/security/BaseSecurityConfig.java backend/common-lib/src/main/java/com/luxray/common/security/JwtAuthenticationFilter.java backend/common-lib/target/classes/com/luxray/common/dto/ApiError.class backend/common-lib/target/classes/com/luxray/common/dto/ApiResponse.class backend/common-lib/target/classes/com/luxray/common/exception/BusinessException.class backend/common-lib/target/classes/com/luxray/common/exception/GlobalExceptionHandler.class backend/common-lib/target/classes/com/luxray/common/exception/ResourceNotFoundException.class backend/common-lib/target/classes/com/luxray/common/jwt/JwtTokenProvider.class backend/common-lib/target/classes/com/luxray/common/security/BaseSecurityConfig.class backend/common-lib/target/classes/com/luxray/common/security/JwtAuthenticationFilter.class backend/common-lib/target/common-lib-1.0.0-SNAPSHOT.jar backend/common-lib/target/maven-archiver/pom.properties backend/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst backend/common-lib/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst backend/cursos-service/Dockerfile backend/cursos-service/pom.xml backend/cursos-service/src/main/java/com/luxray/cursos/CursosServiceApplication.java backend/cursos-service/src/main/java/com/luxray/cursos/config/CursosSecurityConfig.java backend/cursos-service/src/main/java/com/luxray/cursos/config/OpenApiConfig.java backend/cursos-service/src/main/java/com/luxray/cursos/controller/CursosController.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/BusquedaResponse.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/CursoRequest.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/CursoResponse.java backend/cursos-service/src/main/java/com/luxray/cursos/dto/InscripcionResponse.java backend/cursos-service/src/main/java/com/luxray/cursos/model/Curso.java backend/cursos-service/src/main/java/com/luxray/cursos/model/Inscripcion.java backend/cursos-service/src/main/java/com/luxray/cursos/model/Leccion.java backend/cursos-service/src/main/java/com/luxray/cursos/model/ProgresoLeccion.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/CursoRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/InscripcionRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/LeccionRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/repository/ProgresoLeccionRepository.java backend/cursos-service/src/main/java/com/luxray/cursos/service/CursosService.java backend/cursos-service/src/main/java/com/luxray/cursos/service/FaqElectrico.java backend/cursos-service/src/main/java/com/luxray/cursos/service/GlosarioElectrico.java backend/cursos-service/src/main/resources/application.yml backend/cursos-service/src/main/resources/db/migration/V10__fix_youtube_urls_verified.sql backend/cursos-service/src/main/resources/db/migration/V1__init.sql backend/cursos-service/src/main/resources/db/migration/V2__lecciones.sql backend/cursos-service/src/main/resources/db/migration/V3__inscripciones_progreso.sql backend/cursos-service/src/main/resources/db/migration/V4__seed_lecciones.sql backend/cursos-service/src/main/resources/db/migration/V5__add_contenido_to_lecciones.sql backend/cursos-service/src/main/resources/db/migration/V6__widen_icon_color.sql backend/cursos-service/src/main/resources/db/migration/V7__add_preguntas_to_lecciones.sql backend/cursos-service/src/main/resources/db/migration/V8__seed_quiz_preguntas_fix_videos.sql backend/cursos-service/src/main/resources/db/migration/V9__fix_youtube_urls.sql backend/cursos-service/target/classes/application.yml backend/cursos-service/target/classes/com/luxray/cursos/CursosServiceApplication.class backend/cursos-service/target/classes/com/luxray/cursos/config/CursosSecurityConfig.class backend/cursos-service/target/classes/com/luxray/cursos/config/OpenApiConfig.class backend/cursos-service/target/classes/com/luxray/cursos/controller/CursosController.class backend/cursos-service/target/classes/com/luxray/cursos/dto/BusquedaResponse$ConceptoHit.class backend/cursos-service/target/classes/com/luxray/cursos/dto/BusquedaResponse$CursoHit.class backend/cursos-service/target/classes/com/luxray/cursos/dto/BusquedaResponse$FaqHit.class backend/cursos-service/target/classes/com/luxray/cursos/dto/BusquedaResponse$LeccionHit.class backend/cursos-service/target/classes/com/luxray/cursos/dto/BusquedaResponse.class backend/cursos-service/target/classes/com/luxray/cursos/dto/CursoRequest.class backend/cursos-service/target/classes/com/luxray/cursos/dto/CursoResponse.class backend/cursos-service/target/classes/com/luxray/cursos/dto/InscripcionResponse.class backend/cursos-service/target/classes/com/luxray/cursos/model/Curso$Nivel.class backend/cursos-service/target/classes/com/luxray/cursos/model/Curso.class backend/cursos-service/target/classes/com/luxray/cursos/model/Inscripcion.class backend/cursos-service/target/classes/com/luxray/cursos/model/Leccion$Tipo.class backend/cursos-service/target/classes/com/luxray/cursos/model/Leccion.class backend/cursos-service/target/classes/com/luxray/cursos/model/ProgresoLeccion.class backend/cursos-service/target/classes/com/luxray/cursos/repository/CursoRepository.class backend/cursos-service/target/classes/com/luxray/cursos/repository/InscripcionRepository.class backend/cursos-service/target/classes/com/luxray/cursos/repository/LeccionRepository.class backend/cursos-service/target/classes/com/luxray/cursos/repository/ProgresoLeccionRepository.class backend/cursos-service/target/classes/com/luxray/cursos/service/CursosService$CursoDetalleResponse.class backend/cursos-service/target/classes/com/luxray/cursos/service/CursosService$LeccionDetalleDTO.class backend/cursos-service/target/classes/com/luxray/cursos/service/CursosService$PreguntaDTO.class backend/cursos-service/target/classes/com/luxray/cursos/service/CursosService.class backend/cursos-service/target/classes/com/luxray/cursos/service/FaqElectrico$Faq.class backend/cursos-service/target/classes/com/luxray/cursos/service/FaqElectrico.class backend/cursos-service/target/classes/com/luxray/cursos/service/GlosarioElectrico.class backend/cursos-service/target/classes/db/migration/V10__fix_youtube_urls_verified.sql backend/cursos-service/target/classes/db/migration/V1__init.sql backend/cursos-service/target/classes/db/migration/V2__lecciones.sql backend/cursos-service/target/classes/db/migration/V3__inscripciones_progreso.sql backend/cursos-service/target/classes/db/migration/V4__seed_lecciones.sql backend/cursos-service/target/classes/db/migration/V5__add_contenido_to_lecciones.sql backend/cursos-service/target/classes/db/migration/V6__widen_icon_color.sql backend/cursos-service/target/classes/db/migration/V7__add_preguntas_to_lecciones.sql backend/cursos-service/target/classes/db/migration/V8__seed_quiz_preguntas_fix_videos.sql backend/cursos-service/target/classes/db/migration/V9__fix_youtube_urls.sql backend/cursos-service/target/cursos-service-1.0.0-SNAPSHOT.jar backend/cursos-service/target/cursos-service-1.0.0-SNAPSHOT.jar.original backend/cursos-service/target/maven-archiver/pom.properties backend/cursos-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst backend/cursos-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst backend/discovery-service/Dockerfile backend/discovery-service/pom.xml backend/discovery-service/src/main/java/com/luxray/discovery/DiscoveryServiceApplication.java backend/discovery-service/src/main/resources/application.yml backend/discovery-service/target/classes/application.yml backend/discovery-service/target/classes/com/luxray/discovery/DiscoveryServiceApplication.class backend/discovery-service/target/discovery-service-1.0.0-SNAPSHOT.jar backend/discovery-service/target/discovery-service-1.0.0-SNAPSHOT.jar.original backend/discovery-service/target/maven-archiver/pom.properties backend/discovery-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst backend/discovery-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst backend/docker-compose.elasticsearch.yml backend/entrypoint.sh backend/inicio.ps1 backend/inicio2.ps1 backend/logs/analytics-service.err backend/logs/analytics-service.out backend/logs/analytics.err backend/logs/analytics.out backend/logs/analytics_final.log backend/logs/analytics_new.log backend/logs/api-gateway.err backend/logs/api-gateway.out backend/logs/auth-job.out backend/logs/auth-service.err backend/logs/auth-service.out backend/logs/auth.err backend/logs/auth.out backend/logs/auth4.out backend/logs/auth_final.err backend/logs/auth_final.log backend/logs/auth_new.log backend/logs/control.out backend/logs/cursos-service.err backend/logs/cursos-service.out backend/logs/cursos.err backend/logs/cursos.out backend/logs/cursos_final.log backend/logs/cursos_new.log backend/logs/discovery.err backend/logs/discovery.out backend/logs/gateway.err backend/logs/gateway.log backend/logs/gateway.out backend/logs/inicio.err backend/logs/inicio.out backend/logs/search.err backend/logs/search.out backend/logs/search_new.log backend/mvnw backend/mvnw.cmd backend/pom.xml backend/search-service/Dockerfile backend/search-service/pom.xml backend/search-service/src/main/java/com/luxray/search/SearchServiceApplication.java backend/search-service/src/main/java/com/luxray/search/controller/SearchController.java backend/search-service/src/main/java/com/luxray/search/document/ConceptoDocument.java backend/search-service/src/main/java/com/luxray/search/document/CursoDocument.java backend/search-service/src/main/java/com/luxray/search/document/FaqDocument.java backend/search-service/src/main/java/com/luxray/search/document/LeccionDocument.java backend/search-service/src/main/java/com/luxray/search/dto/ConceptoHit.java backend/search-service/src/main/java/com/luxray/search/dto/CursoHit.java backend/search-service/src/main/java/com/luxray/search/dto/FaqHit.java backend/search-service/src/main/java/com/luxray/search/dto/HighlightDTO.java backend/search-service/src/main/java/com/luxray/search/dto/LeccionHit.java backend/search-service/src/main/java/com/luxray/search/dto/SearchHitDTO.java backend/search-service/src/main/java/com/luxray/search/dto/SearchRequest.java backend/search-service/src/main/java/com/luxray/search/dto/SearchResponse.java backend/search-service/src/main/java/com/luxray/search/repository/ConceptoDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/repository/CursoDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/repository/FaqDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/repository/LeccionDocumentRepository.java backend/search-service/src/main/java/com/luxray/search/service/SearchService.java backend/search-service/src/main/resources/application.yml backend/search-service/src/main/resources/elasticsearch/conceptos-settings.json backend/search-service/src/main/resources/elasticsearch/cursos-settings.json backend/search-service/src/main/resources/elasticsearch/faqs-settings.json backend/search-service/src/main/resources/elasticsearch/lecciones-settings.json backend/search-service/target/classes/application.yml backend/search-service/target/classes/com/luxray/search/SearchServiceApplication.class backend/search-service/target/classes/com/luxray/search/controller/SearchController.class backend/search-service/target/classes/com/luxray/search/document/ConceptoDocument$ConceptoDocumentBuilder.class backend/search-service/target/classes/com/luxray/search/document/ConceptoDocument.class backend/search-service/target/classes/com/luxray/search/document/CursoDocument$CursoDocumentBuilder.class backend/search-service/target/classes/com/luxray/search/document/CursoDocument.class backend/search-service/target/classes/com/luxray/search/document/FaqDocument$FaqDocumentBuilder.class backend/search-service/target/classes/com/luxray/search/document/FaqDocument.class backend/search-service/target/classes/com/luxray/search/document/LeccionDocument$LeccionDocumentBuilder.class backend/search-service/target/classes/com/luxray/search/document/LeccionDocument.class backend/search-service/target/classes/com/luxray/search/dto/ConceptoHit.class backend/search-service/target/classes/com/luxray/search/dto/CursoHit.class backend/search-service/target/classes/com/luxray/search/dto/FaqHit.class backend/search-service/target/classes/com/luxray/search/dto/HighlightDTO.class backend/search-service/target/classes/com/luxray/search/dto/LeccionHit.class backend/search-service/target/classes/com/luxray/search/dto/SearchHitDTO.class backend/search-service/target/classes/com/luxray/search/dto/SearchRequest.class backend/search-service/target/classes/com/luxray/search/dto/SearchResponse.class backend/search-service/target/classes/com/luxray/search/repository/ConceptoDocumentRepository.class backend/search-service/target/classes/com/luxray/search/repository/CursoDocumentRepository.class backend/search-service/target/classes/com/luxray/search/repository/FaqDocumentRepository.class backend/search-service/target/classes/com/luxray/search/repository/LeccionDocumentRepository.class backend/search-service/target/classes/com/luxray/search/service/SearchService.class backend/search-service/target/classes/elasticsearch/conceptos-settings.json backend/search-service/target/classes/elasticsearch/cursos-settings.json backend/search-service/target/classes/elasticsearch/faqs-settings.json backend/search-service/target/classes/elasticsearch/lecciones-settings.json backend/search-service/target/maven-archiver/pom.properties backend/search-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst backend/search-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst backend/search-service/target/search-service-1.0.0-SNAPSHOT.jar backend/search-service/target/search-service-1.0.0-SNAPSHOT.jar.original backend/start-auth.bat backend/start-one.ps1 docker-compose.yml luxraywaer/.gitignore luxraywaer/.metadata luxraywaer/README.md luxraywaer/analysis_options.yaml luxraywaer/android/.gitignore luxraywaer/android/app/build.gradle.kts luxraywaer/android/app/src/debug/AndroidManifest.xml luxraywaer/android/app/src/main/AndroidManifest.xml luxraywaer/android/app/src/main/kotlin/com/luxray/waer/MainActivity.kt luxraywaer/android/app/src/main/res/drawable-v21/launch_background.xml luxraywaer/android/app/src/main/res/drawable/launch_background.xml luxraywaer/android/app/src/main/res/mipmap-hdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-mdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png luxraywaer/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png luxraywaer/android/app/src/main/res/values-night/styles.xml luxraywaer/android/app/src/main/res/values/styles.xml luxraywaer/android/app/src/profile/AndroidManifest.xml luxraywaer/android/build.gradle.kts luxraywaer/android/gradle.properties luxraywaer/android/gradle/wrapper/gradle-wrapper.properties luxraywaer/android/settings.gradle.kts luxraywaer/lib/main.dart luxraywaer/lib/models/busqueda.dart luxraywaer/lib/screens/detalle_concepto_screen.dart luxraywaer/lib/screens/home_screen.dart luxraywaer/lib/screens/resultados_screen.dart luxraywaer/lib/services/luxray_api.dart luxraywaer/lib/theme/wear_theme.dart luxraywaer/lib/widgets/circular_safe_area.dart luxraywaer/pubspec.lock luxraywaer/pubspec.yaml luxraywaer/test/fase2_whitebox_detalle_test.dart luxraywaer/test/fase2_whitebox_navegacion_test.dart luxraywaer/test/fase2_whitebox_tema_test.dart luxraywaer/test/fase2_whitebox_test.dart luxraywaer/test/practica12_optimizacion_test.dart luxraywaer/test/practica12_resiliencia_test.dart luxraywaer/test/practica13_integracion_test.dart luxraywaer/test/practica13_unitarias_test.dart luxraywaer/test/regresion_def04_navegacion_test.dart luxraywaer/test/seguridad_test.dart luxraywaer/test/widget_test.dart practica-11/ENTREGABLE-PRACTICA-11.md practica-11/INFORME-PRUEBA-11-WHITEBOX.md practica-11/README.md practica-11/evidencias/fase1_flutter_analyze.txt practica-11/evidencias/fase1_mvn_test_jacoco.txt practica-11/evidencias/fase1_ng_build.txt practica-11/evidencias/fase1_ng_test.txt practica-11/evidencias/fase2_cobertura_movil.json practica-11/evidencias/fase2_cobertura_movil.md practica-11/evidencias/fase2_mutacion_condiciones.json practica-11/evidencias/fase2_mutacion_condiciones.md practica-11/evidencias/fase2_mutacion_consola.txt practica-11/evidencias/fase3_mvn_test_jacoco.txt practica-11/evidencias/fase3_newman.json practica-11/evidencias/fase3_newman_consola.txt practica-11/evidencias/fase3_sonda_http.json practica-11/evidencias/fase4_concurrencia.txt practica-11/evidencias/fase4_crud_integridad.txt practica-11/evidencias/fase4_planes_ejecucion.txt practica-11/evidencias/fase5_carga_consola.txt practica-11/evidencias/fase5_carga_consolidado.json practica-11/evidencias/fase5_carga_consolidado.md practica-11/evidencias/fase5_carga_escritura_10usuarios.json practica-11/evidencias/fase5_carga_escritura_10usuarios.md practica-11/evidencias/fase5_carga_escritura_10usuarios_consola.txt practica-11/evidencias/fase5_carga_escritura_1usuarios.json practica-11/evidencias/fase5_carga_escritura_1usuarios.md practica-11/evidencias/fase5_carga_escritura_1usuarios_consola.txt practica-11/evidencias/fase5_carga_escritura_5usuarios.json practica-11/evidencias/fase5_carga_escritura_5usuarios.md practica-11/evidencias/fase5_carga_escritura_5usuarios_consola.txt practica-11/evidencias/fase5_carga_k6.json practica-11/evidencias/fase5_carga_k6_consola.txt practica-11/evidencias/fase5_carga_lectura_10usuarios.json practica-11/evidencias/fase5_carga_lectura_10usuarios.md practica-11/evidencias/fase5_carga_lectura_10usuarios_consola.txt practica-11/evidencias/fase5_carga_lectura_1usuarios.json practica-11/evidencias/fase5_carga_lectura_1usuarios.md practica-11/evidencias/fase5_carga_lectura_1usuarios_consola.txt practica-11/evidencias/fase5_carga_lectura_5usuarios.json practica-11/evidencias/fase5_carga_lectura_5usuarios.md practica-11/evidencias/fase5_carga_lectura_5usuarios_consola.txt practica-11/evidencias/fase5_consola.txt practica-11/evidencias/fase5_mediciones.json practica-11/evidencias/relay_consola.txt practica-11/evidencias/wb11_disp_antes_buscar.png practica-11/evidencias/wb11_disp_estado_inicial.png practica-11/evidencias/wb11_disp_home_corregido.png practica-11/evidencias/wb11_disp_home_limpio.png practica-11/evidencias/wb11_disp_recuperacion.png practica-11/evidencias/wb11_disp_resultado_real.png practica-11/evidencias/wb11_disp_sin_conectividad.png practica-11/evidencias/wb11_disp_sugerencias.png practica-11/evidencias/wb11_dispositivo_busqueda.png practica-11/evidencias/wb11_dispositivo_home.png practica-11/evidencias/wb11_dispositivo_home4.png practica-11/evidencias/wb11_dispositivo_teclado.png practica-11/fase1-analisis-estatico/REPORTE-ANALISIS-ESTATICO.md practica-11/fase2-movil-whitebox/FLUJOS-CONTROL.md practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_detalle_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_navegacion_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_tema_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/fase2_whitebox_test.dart practica-11/fase2-movil-whitebox/codigo-fuente/regresion_def04_navegacion_test.dart practica-11/fase3-web-api/luxray-whitebox-fase3.postman_collection.json practica-11/fase4-base-datos/01_crud_integridad_cursos.sql practica-11/fase4-base-datos/02a_conc_s1_A.sql practica-11/fase4-base-datos/02b_conc_s1_B.sql practica-11/fase4-base-datos/03_planes_ejecucion.sql practica-11/fase5-conectividad/carga_k6.js practica-11/fase6-defectos/DEFECTOS.md practica-11/tools/analizar_cobertura.py practica-11/tools/ejecutar_carga.py practica-11/tools/ejecutar_concurrencia.py practica-11/tools/medir_conectividad.py practica-11/tools/mutacion_condiciones.py practica-11/tools/relay_dispositivo.py practica-11/tools/sonda_http.py practica-12/INFORME-PRACTICA-12.md practica-12/README.md practica-12/evidencias/codigo-optimizado/luxray_api.dart practica-12/evidencias/codigo-optimizado/main.dart practica-12/evidencias/codigo-optimizado/resultados_screen.dart practica-12/evidencias/codigo-original/luxray_api.dart practica-12/evidencias/codigo-original/main.dart practica-12/evidencias/fase3_codigos_escritura.jsonl practica-12/evidencias/fase3_codigos_http.json practica-12/evidencias/fase3_codigos_http.md practica-12/evidencias/fase3_codigos_lectura.jsonl practica-12/evidencias/fase3_estres_consola.txt practica-12/evidencias/fase3_estres_consolidado.json practica-12/evidencias/fase3_estres_consolidado.md practica-12/evidencias/fase3_estres_escritura_10usuarios.json practica-12/evidencias/fase3_estres_escritura_10usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_1usuarios.json practica-12/evidencias/fase3_estres_escritura_1usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_20usuarios.json practica-12/evidencias/fase3_estres_escritura_20usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_40usuarios.json practica-12/evidencias/fase3_estres_escritura_40usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_5usuarios.json practica-12/evidencias/fase3_estres_escritura_5usuarios_consola.txt practica-12/evidencias/fase3_estres_escritura_80usuarios.json practica-12/evidencias/fase3_estres_escritura_80usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_10usuarios.json practica-12/evidencias/fase3_estres_lectura_10usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_1usuarios.json practica-12/evidencias/fase3_estres_lectura_1usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_20usuarios.json practica-12/evidencias/fase3_estres_lectura_20usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_40usuarios.json practica-12/evidencias/fase3_estres_lectura_40usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_5usuarios.json practica-12/evidencias/fase3_estres_lectura_5usuarios_consola.txt practica-12/evidencias/fase3_estres_lectura_80usuarios.json practica-12/evidencias/fase3_estres_lectura_80usuarios_consola.txt practica-12/evidencias/fase4_comparativa_bd.txt practica-12/evidencias/fase4_optimizacion_bd.txt practica-12/evidencias/fase4_pruebas_avanzadas.txt practica-12/evidencias/fase5_resiliencia_api.json practica-12/evidencias/fase5_resiliencia_api.md practica-12/evidencias/fase5_resiliencia_consola.txt practica-12/evidencias/fase6_comparativa_api_bd.json practica-12/evidencias/fase6_comparativa_api_bd.txt practica-12/evidencias/perfil_consola_antes.txt practica-12/evidencias/perfil_consola_antes_release.txt practica-12/evidencias/perfil_consola_antes_release_m2.txt practica-12/evidencias/perfil_consola_despues_release.txt practica-12/evidencias/perfil_movil_antes.json practica-12/evidencias/perfil_movil_antes_release.json practica-12/evidencias/perfil_movil_antes_release_m2.json practica-12/evidencias/perfil_movil_despues_release.json practica-12/evidencias/relay2.txt practica-12/evidencias/relay_8099.txt practica-12/evidencias/relay_consola.txt practica-12/evidencias/relay_estado.json practica-12/evidencias/wb11_disp_estado_inicial.png practica-12/evidencias/wb11_disp_home_corregido.png practica-12/evidencias/wb11_disp_recuperacion.png practica-12/evidencias/wb11_disp_resultado_real.png practica-12/evidencias/wb11_disp_sin_conectividad.png practica-12/fase1-diagnostico/DIAGNOSTICO-HEREDADO.md practica-12/fase3-estres-api/estres_api.js practica-12/fase4-bd/01_pruebas_avanzadas.sql practica-12/fase4-bd/02_optimizacion_bd.sql practica-12/fase4-bd/03_comparativa_antes_despues.sql practica-12/fase5-resiliencia/MATRIZ-RESILIENCIA.md practica-12/tools/comparar_api_bd.py practica-12/tools/ejecutar_estres.py practica-12/tools/perfil_movil.py practica-12/tools/resiliencia_api.py practica-12/tools/validar_entrega.py practica-12/tools/verificar_codigos_http.py practica-13-14/MATRIZ-AUTOMATIZACION.md practica-13-14/evidencias/flutter_stderr.txt practica-13-14/evidencias/flutter_test.xml practica-13-14/evidencias/flutter_test_err.txt practica-13-14/evidencias/flutter_test_machine.json practica-13-14/tools/flutter_junit.py prueba-caja-roja/PRUEBA-CAJA-ROJA-LUXRAY.md railway.toml start-all.sh 
+2026-11-18T16:28:09.9003132Z ##[endgroup]
+2026-11-18T16:28:09.9003562Z Found 536 files tracked by GitHub
+2026-11-18T16:28:09.9004054Z Using test report parser 'java-junit'
+2026-11-18T16:28:09.9004898Z ##[group]Creating test report Backend (microservicios)
+2026-11-18T16:28:09.9005623Z Processing test results for check run Backend (microservicios)
+2026-11-18T16:28:09.9188739Z Generating check run summary
+2026-11-18T16:28:09.9839168Z Summary content:
+2026-11-18T16:28:09.9840196Z ![Tests passed successfully](https://img.shields.io/badge/tests-14%20passed%2C%203%20skipped-success)
+2026-11-18T16:28:09.9841205Z <details><summary>Expand for details</summary>
+2026-11-18T16:28:09.9841738Z  
+2026-11-18T16:28:09.9842100Z |Report|Passed|Failed|Skipped|Time|
+2026-11-18T16:28:09.9842639Z |:---|---:|---:|---:|---:|
+2026-11-18T16:28:09.9844017Z |backend/auth-service/target/surefire-reports/TEST-com.luxray.auth.controller.AuthControllerIntegrationTest.xml|2 ✅|||8s|
+2026-11-18T16:28:09.9845886Z |backend/auth-service/target/surefire-reports/TEST-com.luxray.auth.controller.RegistroIntegracionTest.xml|4 ✅||3 ⚪|2s|
+2026-11-18T16:28:09.9847822Z |backend/auth-service/target/surefire-reports/TEST-com.luxray.auth.service.AuthServiceTest.xml|8 ✅|||3s|
+2026-11-18T16:28:09.9850159Z ## ✅ <a id="user-content-r0" href="#r0">backend/auth-service/target/surefire-reports/TEST-com.luxray.auth.controller.AuthControllerIntegrationTest.xml</a>
+2026-11-18T16:28:09.9851737Z **2** tests were completed in **8s** with **2** passed, **0** failed and **0** skipped.
+2026-11-18T16:28:09.9852804Z |Test suite|Passed|Failed|Skipped|Time|
+2026-11-18T16:28:09.9853281Z |:---|---:|---:|---:|---:|
+2026-11-18T16:28:09.9854125Z |[com.luxray.auth.controller.AuthControllerIntegrationTest](#r0s0)|2 ✅|||8s|
+2026-11-18T16:28:09.9855450Z ### ✅ <a id="user-content-r0s0" href="#r0s0">com.luxray.auth.controller.AuthControllerIntegrationTest</a>
+2026-11-18T16:28:09.9856369Z ```
+2026-11-18T16:28:09.9857078Z ✅ registro_duplicado_devuelve_400
+2026-11-18T16:28:09.9857783Z ✅ registro_persiste_en_bd_con_password_hasheada
+2026-11-18T16:28:09.9858326Z ```
+2026-11-18T16:28:09.9859576Z ## ✅ <a id="user-content-r1" href="#r1">backend/auth-service/target/surefire-reports/TEST-com.luxray.auth.controller.RegistroIntegracionTest.xml</a>
+2026-11-18T16:28:09.9860902Z **7** tests were completed in **2s** with **4** passed, **0** failed and **3** skipped.
+2026-11-18T16:28:09.9861581Z |Test suite|Passed|Failed|Skipped|Time|
+2026-11-18T16:28:09.9862032Z |:---|---:|---:|---:|---:|
+2026-11-18T16:28:09.9862829Z |[com.luxray.auth.controller.RegistroIntegracionTest](#r1s0)|4 ✅||3 ⚪|2s|
+2026-11-18T16:28:09.9864040Z ### ✅ <a id="user-content-r1s0" href="#r1s0">com.luxray.auth.controller.RegistroIntegracionTest</a>
+2026-11-18T16:28:09.9864890Z ```
+2026-11-18T16:28:09.9865298Z ⚪ uuid_malformado_deberia_devolver_400
+2026-11-18T16:28:09.9865781Z ✅ me_con_token_valido
+2026-11-18T16:28:09.9866286Z ✅ registro_almacena_correctamente
+2026-11-18T16:28:09.9867085Z ⚪ duplicado_deberia_devolver_409
+2026-11-18T16:28:09.9867644Z ✅ codigos_http_esperados
+2026-11-18T16:28:09.9868167Z ⚪ sin_cabecera_deberia_devolver_401
+2026-11-18T16:28:09.9868791Z ✅ registro_duplicado_no_duplica_filas
+2026-11-18T16:28:09.9869244Z ```
+2026-11-18T16:28:09.9870349Z ## ✅ <a id="user-content-r2" href="#r2">backend/auth-service/target/surefire-reports/TEST-com.luxray.auth.service.AuthServiceTest.xml</a>
+2026-11-18T16:28:09.9871650Z **8** tests were completed in **3s** with **8** passed, **0** failed and **0** skipped.
+2026-11-18T16:28:09.9872321Z |Test suite|Passed|Failed|Skipped|Time|
+2026-11-18T16:28:09.9872751Z |:---|---:|---:|---:|---:|
+2026-11-18T16:28:09.9873324Z |[com.luxray.auth.service.AuthServiceTest](#r2s0)|8 ✅|||3s|
+2026-11-18T16:28:09.9874285Z ### ✅ <a id="user-content-r2s0" href="#r2s0">com.luxray.auth.service.AuthServiceTest</a>
+2026-11-18T16:28:09.9875011Z ```
+2026-11-18T16:28:09.9875487Z ✅ terminos_no_aceptados_lanza_excepcion_y_no_guarda
+2026-11-18T16:28:09.9876207Z ✅ registro_valido_guarda_usuario_con_password_hasheada
+2026-11-18T16:28:09.9877152Z ✅ loginExitoso_laPasswordNuncaApareceEnLaRespuesta
+2026-11-18T16:28:09.9877863Z ✅ password_de_8_caracteres_limite_es_aceptada
+2026-11-18T16:28:09.9878600Z ✅ usuarioInexistente_mismoMensajeQuePasswordIncorrecta
+2026-11-18T16:28:09.9879356Z ✅ usuarioInexistente_ejecutaBcryptDeTodasFormas
+2026-11-18T16:28:09.9880077Z ✅ email_duplicado_lanza_excepcion_y_no_guarda
+2026-11-18T16:28:09.9880867Z ✅ passwordIncorrecta_mensajeIdentico_alDeUsuarioInexistente
+2026-11-18T16:28:09.9881465Z ```
+2026-11-18T16:28:09.9881779Z </details>
+2026-11-18T16:28:09.9882567Z ##[endgroup]
+2026-11-18T16:28:10.0045275Z ##[group]Run actions/upload-artifact@v4
+2026-11-18T16:28:10.0045571Z with:
+2026-11-18T16:28:10.0045786Z   name: backend-test-results
+2026-11-18T16:28:10.0046077Z   path: **/target/surefire-reports/*.xml
+mvn.log
+
+2026-11-18T16:28:10.0046389Z   if-no-files-found: warn
+2026-11-18T16:28:10.0046628Z   compression-level: 6
+2026-11-18T16:28:10.0046999Z   overwrite: false
+2026-11-18T16:28:10.0047218Z   include-hidden-files: false
+2026-11-18T16:28:10.0047457Z env:
+2026-11-18T16:28:10.0047643Z   MAVEN_VERSION: 3.9.16
+2026-11-18T16:28:10.0047972Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:28:10.0048473Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T16:28:10.0048857Z ##[endgroup]
+2026-11-18T16:28:10.1761254Z (node:2888) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T16:28:10.1762542Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T16:28:10.2990896Z With the provided path, there will be 4 files uploaded
+2026-11-18T16:28:10.2996542Z Artifact name is valid!
+2026-11-18T16:28:10.2998031Z Root directory input is valid!
+2026-11-18T16:28:10.6859050Z Beginning upload of artifact content to blob storage
+2026-11-18T16:28:10.7186540Z (node:2888) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-18T16:28:11.0522414Z Uploaded bytes 30120
+2026-11-18T16:28:11.1272411Z Finished uploading artifact content to blob storage!
+2026-11-18T16:28:11.1273409Z SHA256 digest of uploaded artifact zip is 6f683ce39f0d702c68d3369a1d66bfad721cb034a72c8527146ee2c1deb9e360
+2026-11-18T16:28:11.1275497Z Finalizing artifact upload
+2026-11-18T16:28:11.5408242Z Artifact backend-test-results.zip successfully finalized. Artifact ID 14445249687
+2026-11-18T16:28:11.5409645Z Artifact backend-test-results has been successfully uploaded! Final size is 30120 bytes. Artifact ID is 14445249687
+2026-11-18T16:28:11.5415632Z Artifact download URL: https://github.com/Chekito2720/Luxray_dep/actions/runs/44347435232/artifacts/14445249687
+2026-11-18T16:28:11.5620136Z Post job cleanup.
+2026-11-18T16:28:11.7045313Z (node:2900) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-18T16:28:11.7046397Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-18T16:28:11.7051810Z Cache hit occurred on the primary key setup-java-Linux-x64-maven-716faa0275000aff9f6e3a4030be4b02263774503311da8a4e326c1d851d8e59, not saving cache.
+2026-11-18T16:28:11.7201579Z Post job cleanup.
+2026-11-18T16:28:11.8140976Z [command]/usr/bin/git version
+2026-11-18T16:28:11.8187402Z git version 2.56.1
+2026-11-18T16:28:11.8227326Z Temporarily overriding HOME='/home/runner/work/_temp/3a8113c2-5cfc-46ad-a0aa-b2d98e518327' before making global git config changes
+2026-11-18T16:28:11.8228712Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-18T16:28:11.8233608Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Luxray_dep/Luxray_dep
+2026-11-18T16:28:11.8276043Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-18T16:28:11.8318516Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-18T16:28:11.8648348Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-18T16:28:11.8675509Z http.https://github.com/.extraheader
+2026-11-18T16:28:11.8690609Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-18T16:28:11.8732043Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-18T16:28:11.9073645Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-18T16:28:11.9116127Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-18T16:28:11.9557850Z Cleaning up orphan processes
+2026-11-18T16:28:12.0034807Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, actions/upload-artifact@v4, dorny/test-reporter@v1. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

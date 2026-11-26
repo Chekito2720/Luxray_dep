@@ -1,5 +1,6 @@
 server:
-  port: 8080
+  port: ${PORT:8080}
+  address: 0.0.0.0
   forward-headers-strategy: framework
 
 spring:
@@ -15,7 +16,10 @@ spring:
               - "http://localhost:4200"
               - "http://localhost:4300"
               - "http://127.0.0.1:4200"
-              - "https://luxray-front-74c6.vercel.app"
+              - "http://10.13.58.24:4200"
+              # Cualquier IP local en el puerto de la PWA (desarrollo por WiFi)
+              - "http://*:4200"
+              - "${FRONTEND_URL:https://luxray-front-74c6.vercel.app}"
             allowedMethods:
               - GET
               - POST
@@ -32,7 +36,7 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: auth-service
-          uri: lb://auth-service
+          uri: ${AUTH_SERVICE_URL:lb://auth-service}
           predicates:
             - Path=/api/auth/**
           filters:
@@ -42,26 +46,32 @@ spring:
                 retries: 3
                 statuses: BAD_GATEWAY,SERVICE_UNAVAILABLE
         - id: cursos-service
-          uri: lb://cursos-service
+          uri: ${CURSOS_SERVICE_URL:lb://cursos-service}
           predicates:
             - Path=/api/cursos/**
           filters:
             - StripPrefix=1
         - id: analytics-service
-          uri: lb://analytics-service
+          uri: ${ANALYTICS_SERVICE_URL:lb://analytics-service}
           predicates:
             - Path=/api/analytics/**
           filters:
             - StripPrefix=1
-        - id: search-service
-          uri: http://localhost:8084
+        - id: buscador-cursos
+          # El buscador consolidated vive en cursos-service (/search). Evita
+          # depender de Elasticsearch en el despliegue de demostración.
+          uri: ${CURSOS_SERVICE_URL:lb://cursos-service}
           predicates:
             - Path=/api/search/**
+          filters:
+            # El controlador vive bajo /cursos; StripPrefix dejaría /search,
+            # que no existe y Spring lo intenta servir como recurso estático.
+            - SetPath=/cursos/search
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
 
 management:
   endpoints:

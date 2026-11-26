@@ -1,0 +1,19 @@
+﻿2026-11-18T18:03:04.3054927Z ##[group]Run echo "JAVA_HOME=$JAVA_HOME"
+2026-11-18T18:03:04.3055424Z [36;1mecho "JAVA_HOME=$JAVA_HOME"[0m
+2026-11-18T18:03:04.3055775Z [36;1mjava -version[0m
+2026-11-18T18:03:04.3056069Z [36;1m./mvnw -v[0m
+2026-11-18T18:03:04.3093836Z shell: /usr/bin/bash -e {0}
+2026-11-18T18:03:04.3094191Z env:
+2026-11-18T18:03:04.3094452Z   MAVEN_VERSION: 3.9.16
+2026-11-18T18:03:04.3094867Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:03:04.3095452Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:03:04.3095900Z ##[endgroup]
+2026-11-18T18:03:04.3172219Z JAVA_HOME=/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+2026-11-18T18:03:11.8776717Z openjdk version "21.0.13" 2026-10-20 LTS
+2026-11-18T18:03:11.8777830Z OpenJDK Runtime Environment Temurin-21.0.13+9 (build 21.0.13+9-LTS)
+2026-11-18T18:03:11.8779485Z OpenJDK 64-Bit Server VM Temurin-21.0.13+9 (build 21.0.13+9-LTS, mixed mode, sharing)
+2026-11-18T18:03:14.7752630Z Apache Maven 3.9.16 (2bdd9fddda4b155ebf8000e807eb73fd829a51d5)
+2026-11-18T18:03:14.7754053Z Maven home: /home/runner/.m2/wrapper/dists/apache-maven-3.9.16/56ba1f9f
+2026-11-18T18:03:14.7755216Z Java version: 21.0.13, vendor: Eclipse Adoptium, runtime: /usr/lib/jvm/temurin-21-jdk-amd64
+2026-11-18T18:03:14.7756230Z Default locale: en, platform encoding: UTF-8
+2026-11-18T18:03:14.8895865Z OS name: "linux", version: "7.0.0-1020-azure", arch: "amd64", family: "unix"

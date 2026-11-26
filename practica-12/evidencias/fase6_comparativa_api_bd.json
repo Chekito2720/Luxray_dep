@@ -1,0 +1,284 @@
+{
+  "endpoint": "http://[::1]:8080/api/cursos/buscar?q=electricidad",
+  "metodo": "A/B intercalado",
+  "antes": {
+    "avg_ms": 27.25,
+    "p90_ms": 42.93,
+    "p95_ms": 43.44,
+    "max_ms": 44.75,
+    "min_ms": 16.08,
+    "bytes_promedio": 2418.0,
+    "http": [
+      200
+    ],
+    "detalle": {
+      "bloque_A1": {
+        "detalle": [
+          {
+            "http": 200,
+            "ms": 24.827100001857616,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 19.606699999712873,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 19.075899999734247,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 29.385400001046946,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 16.107299998111557,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 29.729800000495743,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 21.856899998965673,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 16.594699998677243,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 35.56400000161375,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 17.371199999615783,
+            "bytes": 2418
+          }
+        ],
+        "avg_ms": 23.01,
+        "p90_ms": 29.73,
+        "p95_ms": 29.73,
+        "max_ms": 35.56,
+        "min_ms": 16.11,
+        "bytes_promedio": 2418,
+        "http": [
+          200
+        ]
+      },
+      "bloque_A2": {
+        "detalle": [
+          {
+            "http": 200,
+            "ms": 37.07439999925555,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 16.084200000477722,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 43.44090000085998,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 42.93129999859957,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 33.801300000050105,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 22.43330000055721,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 44.75250000177766,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 36.598300001060124,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 16.51289999790606,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 21.247399999992922,
+            "bytes": 2418
+          }
+        ],
+        "avg_ms": 31.49,
+        "p90_ms": 43.44,
+        "p95_ms": 43.44,
+        "max_ms": 44.75,
+        "min_ms": 16.08,
+        "bytes_promedio": 2418,
+        "http": [
+          200
+        ]
+      }
+    }
+  },
+  "despues": {
+    "avg_ms": 23.36,
+    "p90_ms": 30.5,
+    "p95_ms": 35.33,
+    "max_ms": 41.2,
+    "min_ms": 10.64,
+    "bytes_promedio": 2418.0,
+    "http": [
+      200
+    ],
+    "detalle": {
+      "bloque_B1": {
+        "detalle": [
+          {
+            "http": 200,
+            "ms": 19.61730000039097,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 20.77139999892097,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 10.635500002535991,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 17.58949999930337,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 24.518099999113474,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 23.30670000083046,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 28.93229999972391,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 35.33430000243243,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 18.23829999921145,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 14.474600000539795,
+            "bytes": 2418
+          }
+        ],
+        "avg_ms": 21.34,
+        "p90_ms": 28.93,
+        "p95_ms": 28.93,
+        "max_ms": 35.33,
+        "min_ms": 10.64,
+        "bytes_promedio": 2418,
+        "http": [
+          200
+        ]
+      },
+      "bloque_B2": {
+        "detalle": [
+          {
+            "http": 200,
+            "ms": 30.436100001679733,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 14.685199999803444,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 26.034800001070835,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 22.507800000312272,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 16.11849999972037,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 41.202400003385264,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 22.785699999076314,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 30.496499999571824,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 21.346100002119783,
+            "bytes": 2418
+          },
+          {
+            "http": 200,
+            "ms": 28.243199998541968,
+            "bytes": 2418
+          }
+        ],
+        "avg_ms": 25.39,
+        "p90_ms": 30.5,
+        "p95_ms": 30.5,
+        "max_ms": 41.2,
+        "min_ms": 14.69,
+        "bytes_promedio": 2418,
+        "http": [
+          200
+        ]
+      }
+    }
+  },
+  "plan_antes": "                                                       QUERY PLAN                                                        \n-------------------------------------------------------------------------------------------------------------------------\n Seq Scan on cursos  (cost=0.00..1.12 rows=1 width=125) (actual time=0.058..0.059 rows=1 loops=1)\n   Filter: ((lower((titulo)::text) ~~ '%electricidad%'::text) OR (lower((descripcion)::text) ~~ '%electricidad%'::text))\n   Rows Removed by Filter: 5\n   Buffers: shared hit=1\n Planning:\n   Buffers: shared hit=95\n Planning Time: 0.184 ms\n Execution Time: 0.086 ms\n(8 rows)\n\n",
+  "plan_despues": "                                                       QUERY PLAN                                                        \n-------------------------------------------------------------------------------------------------------------------------\n Seq Scan on cursos  (cost=0.00..1.12 rows=1 width=125) (actual time=0.021..0.021 rows=1 loops=1)\n   Filter: ((lower((titulo)::text) ~~ '%electricidad%'::text) OR (lower((descripcion)::text) ~~ '%electricidad%'::text))\n   Rows Removed by Filter: 5\n   Buffers: shared hit=1\n Planning:\n   Buffers: shared hit=144\n Planning Time: 0.745 ms\n Execution Time: 0.056 ms\n(8 rows)\n\n"
+}

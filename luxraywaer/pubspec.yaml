@@ -1,0 +1,26 @@
+name: luxraywaer
+description: "LuxRay Wear OS — buscador interno de cursos, lecciones y conceptos eléctricos en pantalla redonda."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Material icons
+  cupertino_icons: ^1.0.8
+
+  # ── Red ──────────────────────────────────────────────────
+  # Cliente HTTP para llamar al API de LuxRay (cursos-service)
+  http: ^1.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

@@ -1,8 +1,11 @@
-version: "3.9"
-
 # ============================================================
 # LuxRay — Docker Compose
-# Levanta: 3 PostgreSQL + Eureka + Gateway + 3 microservicios
+# Levanta: 3 PostgreSQL + Eureka + Gateway + 4 microservicios
+#          + S3 emulado (evidencias) + Frontend PWA (nginx)
+#
+#   docker compose up -d --build     → enciende todo
+#   docker compose logs -f           → ver logs
+#   docker compose stop              → apagar (conserva datos)
 # ============================================================
 
 services:
@@ -85,6 +88,9 @@ services:
     container_name: luxray-gateway
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+      # Dentro de la red de Docker el search-service no está en localhost
+      SEARCH_URL: http://search-service:8084
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:4200}
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -101,6 +107,10 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://auth-db:5432/auth_db
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+      # Secreto compartido por los servicios que validan JWT (solo desarrollo)
+      JWT_SECRET: luxray-jwt-secret-para-docker-compose-no-usar-en-produccion
+      # Las cuentas demo solo se habilitan en el entorno local de desarrollo.
+      DISABLE_SEED_ACCOUNTS: "false"
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -119,11 +129,37 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://cursos-db:5432/cursos_db
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+      JWT_SECRET: luxray-jwt-secret-para-docker-compose-no-usar-en-produccion
+      # Validación de profesores asignados contra el auth-service.
+      AUTH_URL: http://auth-service:8081
+      # Almacenamiento S3 emulado (evidencias de práctica)
+      #   S3_ENDPOINT        = nombre INTERNO de Docker; lo usa solo el backend.
+      #   S3_PUBLIC_ENDPOINT = host que verá el NAVEGADOR al abrir una URL
+      #                        prefirmada. Sin esto las fotos no se ven:
+      #                        "s3" no existe fuera de la red de Docker.
+      #                        Apunta al Nginx del FRONTEND (puerto 4200), que
+      #                        proxifica /luxray-evidencias/* -> s3:9000/... conservando
+      #                        path y Host → la firma SigV4 valida en s3rver.
+      #                        - misma PC:      http://localhost:4200
+      #                        - universidad:   http://10.13.58.24:4200
+      #                          (WiFi de la escuela; tu IP actual)
+      #   S3_ACCESS_KEY/S3_SECRET_KEY = credenciales que acepta s3rver
+      #                        (su cuenta por defecto es S3RVER / S3RVER).
+      S3_ENDPOINT: http://s3:9000
+      S3_PUBLIC_ENDPOINT: ${S3_PUBLIC_ENDPOINT:-http://10.13.58.24:4200}
+      S3_ACCESS_KEY: ${S3_ACCESS_KEY:-S3RVER}
+      S3_SECRET_KEY: ${S3_SECRET_KEY:-S3RVER}
+      S3_BUCKET: luxray-evidencias
+      S3_PATH_STYLE: "true"
+      # Origenes permitidos por el handshake WebSocket del foro.
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:4200}
     depends_on:
       discovery-service:
         condition: service_healthy
       cursos-db:
         condition: service_healthy
+      s3:
+        condition: service_started
     ports:
       - "8082:8082"
     networks: [luxnet]
@@ -137,6 +173,9 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:postgresql://analytics-db:5432/analytics_db
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+      JWT_SECRET: luxray-jwt-secret-para-docker-compose-no-usar-en-produccion
+      # El WebClient llama al gateway por la red interna de Docker
+      LUXRAY_GATEWAY_URL: http://api-gateway:8080
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -155,6 +194,8 @@ services:
     environment:
       ELASTICSEARCH_URL: http://elasticsearch:9200
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+      # Solo para poblar los índices demo en desarrollo; en producción es false.
+      SEARCH_REINDEX_ENABLED: "true"
     depends_on:
       discovery-service:
         condition: service_healthy
@@ -162,6 +203,34 @@ services:
         condition: service_healthy
     ports:
       - "8084:8084"
+    networks: [luxnet]
+
+  # ───── S3 emulado (evidencias de práctica) ─────
+  s3:
+    build:
+      context: ./docker/s3rver
+    container_name: luxray-s3
+    ports:
+      - "9000:9000"
+    volumes:
+      - s3-data:/s3
+    networks: [luxnet]
+
+  # ───── Frontend PWA (Angular + nginx) ─────
+  frontend:
+    build:
+      context: ./frontend-web
+      args:
+        # URL del gateway. Usamos "/api" RELATIVA: el Nginx del contenedor
+        # proxifica /api -> api-gateway:8080, así funciona en cualquier
+        # máquina/IP (universidad, casa, otra WiFi) sin recompilar. En Vercel
+        # se inyecta API_URL=https://...onrender.com/api por variable de entorno.
+        API_URL: /api
+    container_name: luxray-front
+    depends_on:
+      - api-gateway
+    ports:
+      - "4200:80"
     networks: [luxnet]
 
   # ───── Elasticsearch ─────
@@ -191,6 +260,7 @@ volumes:
   cursos-db-volume:
   analytics-db-volume:
   elasticsearch_data:
+  s3-data:
 
 networks:
   luxnet:
