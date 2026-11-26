@@ -15,8 +15,18 @@ if [ -n "${DATABASE_URL:-}" ]; then
   credenciales="${sin_esquema%@*}"
   host_puerto="${host_bd%%/*}"
   base_datos="${host_bd#*/}"
-  host="${host_puerto%:*}"
-  puerto="${host_puerto##*:}"
+  # Render puede omitir el puerto en connectionString; en ese caso URL es
+  # postgresql://usuario:password@host/bd y el puerto Postgres es 5432.
+  case "$host_puerto" in
+    *:*)
+      host="${host_puerto%:*}"
+      puerto="${host_puerto##*:}"
+      ;;
+    *)
+      host="$host_puerto"
+      puerto=5432
+      ;;
+  esac
   usuario="${credenciales%%:*}"
   password="${credenciales#*:}"
   export PGHOST="$host"
