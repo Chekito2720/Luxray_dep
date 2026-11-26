@@ -155,7 +155,8 @@ services:
     rootDir: .
     dockerfilePath: ./render/minio.Dockerfile
     dockerContext: ./render
-    dockerCommand: server /data --address :9000 --console-address :9001
+    # La imagen ya trae CMD `server /data --console-address :9001`; no se
+    # sobrescribe para evitar problemas de paso de argumentos en Render.
     healthCheckPath: /minio/health/live
     buildFilter:
       paths:
