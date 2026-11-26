@@ -102,7 +102,7 @@ Variables externas necesarias:
 
 `SEARCH_REINDEX_ENABLED=false` es el valor predeterminado; `/api/search/reindex` solo inserta datos demo y debe permanecer deshabilitado en producción.
 
-No pongas credenciales de producción en los YAML ni en Vercel. La URL pública del API sí se configura en el frontend como `API_URL`, por ejemplo `https://luxray-gateway.onrender.com/api`.
+No pongas credenciales de producción en los YAML ni en Vercel. La URL pública del API sí se configura en el frontend como `API_URL`, por ejemplo `https://luxray-gateway-q3l3.onrender.com/api`.
 
 ## ❓ Problemas comunes
 

@@ -70,13 +70,13 @@ services:
       - key: SPRING_FLYWAY_TABLE
         value: flyway_cursos_history
       - key: AUTH_URL
-        value: https://luxray-auth.onrender.com
+        value: https://luxray-auth-q3l3.onrender.com
       - key: LUXRAY_CURSOS_FALLBACKPROFESORGLOBAL
         value: "false"
       - key: S3_ENDPOINT
-        value: https://luxray-evidencias.onrender.com
+        value: https://luxray-evidencias-q3l3.onrender.com
       - key: S3_PUBLIC_ENDPOINT
-        value: https://luxray-evidencias.onrender.com
+        value: https://luxray-evidencias-q3l3.onrender.com
       - key: S3_REGION
         value: us-east-1
       - key: S3_BUCKET
@@ -120,7 +120,7 @@ services:
       - key: SPRING_FLYWAY_TABLE
         value: flyway_analytics_history
       - key: LUXRAY_GATEWAY_URL
-        value: https://luxray-gateway.onrender.com
+        value: https://luxray-gateway-q3l3.onrender.com
 
   - type: web
     name: luxray-gateway
@@ -140,11 +140,11 @@ services:
       - key: SERVICE
         value: api-gateway
       - key: AUTH_SERVICE_URL
-        value: https://luxray-auth.onrender.com
+        value: https://luxray-auth-q3l3.onrender.com
       - key: CURSOS_SERVICE_URL
-        value: https://luxray-cursos.onrender.com
+        value: https://luxray-cursos-q3l3.onrender.com
       - key: ANALYTICS_SERVICE_URL
-        value: https://luxray-analytics.onrender.com
+        value: https://luxray-analytics-q3l3.onrender.com
 
   # Almacenamiento S3 compatible sin coste. Sin disco persistente: válido para la demo.
   - type: web
