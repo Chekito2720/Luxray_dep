@@ -26,6 +26,7 @@ public class CursosSecurityConfig {
                 .authorizeHttpRequests(reg -> reg
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/cursos").permitAll()
                         .requestMatchers(org.springframework.http.HttpMethod.GET, "/cursos/*").permitAll()
+                        .requestMatchers(org.springframework.http.HttpMethod.GET, "/buscar", "/search").permitAll()
                         .requestMatchers("/cursos/ws", "/cursos/ws/**", "/ws", "/ws/**").permitAll()
                         .requestMatchers("/actuator/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .anyRequest().authenticated()
